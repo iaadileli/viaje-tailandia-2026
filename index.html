@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tailandia 2026 · 29 oct – 20 nov</title>
+<title>Tailandia 2026 · 30 oct – 20 nov</title>
 <style>
   :root{
     --crema:#faf6ef; --tinta:#2b2620; --tinta2:#6b5f4f;
@@ -20,7 +20,7 @@
     background:linear-gradient(180deg,rgba(20,15,5,.25),rgba(20,15,5,.65)),url('img/bangkok-wat-arun.jpg') center/cover no-repeat;color:#fff}
   .hero-inner{max-width:1050px;margin:0 auto;padding:60px 24px 48px;width:100%}
   .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:normal;letter-spacing:.5px;text-shadow:0 2px 12px rgba(0,0,0,.5)}
-  .hero .fechas{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.05rem;letter-spacing:2px;text-transform:uppercase;opacity:.95;margin-top:10px}
+  .hero .fechas{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.02rem;letter-spacing:1.5px;text-transform:uppercase;opacity:.95;margin-top:10px}
   .hero .sub{margin-top:14px;font-style:italic;font-size:1.15rem;max-width:640px;opacity:.95}
 
   /* ---------- NAV ---------- */
@@ -57,6 +57,20 @@
   .clave .n{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.5rem;font-weight:700;color:var(--teca)}
   .clave .t{font-size:.9rem;color:var(--tinta2)}
 
+  /* ---------- MAPA ---------- */
+  .mapa-wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:26px;align-items:start;margin:24px 0 10px}
+  .mapa-svg svg{width:100%;height:auto;max-width:470px;display:block;margin:0 auto;
+    background:#eef4f2;border-radius:16px;border:1px solid var(--linea)}
+  .leyenda{background:var(--card);border:1px solid var(--linea);border-radius:14px;padding:20px 22px;box-shadow:var(--sombra)}
+  .leyenda h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:12px}
+  .leyenda .lg{display:flex;align-items:flex-start;gap:10px;font-family:-apple-system,'Segoe UI',sans-serif;
+    font-size:.88rem;margin-bottom:11px;color:#3d362c}
+  .leyenda .lg .ic{font-size:1.05rem;line-height:1.3}
+  .leyenda .vuelos{margin-top:14px;padding-top:14px;border-top:1px dashed var(--linea);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.82rem;color:var(--tinta2)}
+  .leyenda .vuelos b{color:var(--mar)}
+  @media(max-width:760px){.mapa-wrap{grid-template-columns:1fr}}
+
   /* ---------- ETAPAS ---------- */
   section.etapa-sec{padding:44px 0 18px;border-top:1px solid var(--linea)}
   .banner{position:relative;border-radius:16px;overflow:hidden;margin:20px 0 26px;box-shadow:var(--sombra)}
@@ -88,7 +102,7 @@
     color:var(--tinta2);padding:6px 9px;background:#fff;text-align:center}
   .platos{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
   .plato{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.85rem;background:#fff;
-    border:1px solid #e5d3a8;border-radius:999px;padding:5px 13px;color:#7a5а00;color:#7a5a10}
+    border:1px solid #e5d3a8;border-radius:999px;padding:5px 13px;color:#7a5a10}
   .comer p{font-size:.93rem;color:var(--tinta2)}
 
   .duo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:8px 0 24px}
@@ -108,6 +122,23 @@
   .bcard p{font-size:.93rem;color:#3d362c}
   .excel-nota{background:#fdf8ee;border:1px solid #ecdcb8;border-radius:12px;padding:16px 20px;
     margin:20px 0 8px;font-size:.95rem;color:#5c4a22}
+
+  /* ---------- PRESUPUESTO ---------- */
+  .presu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:24px 0 18px}
+  .pline{background:var(--card);border:1px solid var(--linea);border-radius:12px;padding:16px 18px;box-shadow:var(--sombra)}
+  .pline .cat{font-family:-apple-system,'Segoe UI',sans-serif;font-weight:600;font-size:.95rem;color:var(--teca);margin-bottom:4px}
+  .pline .cat .ic{margin-right:6px}
+  .pline .imp{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.25rem;font-weight:700;color:var(--tinta)}
+  .pline .nota{font-size:.85rem;color:var(--tinta2);margin-top:4px}
+  .totales{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:8px 0 18px}
+  .total{border-radius:14px;padding:22px;color:#fff;box-shadow:var(--sombra)}
+  .total.t1{background:linear-gradient(135deg,#6b8f7a,#3d6b52)}
+  .total.t2{background:linear-gradient(135deg,#d69a2e,#c8891a)}
+  .total.t3{background:linear-gradient(135deg,#a5623f,#8a4a2b)}
+  .total .lbl{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;letter-spacing:2px;text-transform:uppercase;opacity:.92}
+  .total .val{font-family:-apple-system,'Segoe UI',sans-serif;font-size:1.9rem;font-weight:700;margin:6px 0 2px}
+  .total .pp{font-size:.85rem;opacity:.92;font-family:-apple-system,'Segoe UI',sans-serif}
+  .presu-nota{font-size:.9rem;color:var(--tinta2);font-style:italic;margin-top:6px}
 
   img.fallo{display:none}
   figure.sinfoto{min-height:120px;display:flex;align-items:center;justify-content:center;
@@ -138,7 +169,7 @@
 
 <header class="hero">
   <div class="hero-inner">
-    <div class="fechas">29 de octubre – 20 de noviembre de 2026 · 23 días</div>
+    <div class="fechas">Salida de Madrid el 29 oct · en Tailandia del 30 oct al 20 nov de 2026 · 21 noches</div>
     <h1>Tailandia con calma</h1>
     <p class="sub">Bangkok, las montañas del norte y las islas tranquilas del mar de Andamán.
     Templos, elefantes, khao soi y atardeceres — sin prisas y con una mochila de 10 kilos.</p>
@@ -147,6 +178,7 @@
 
 <nav class="sans"><div class="wrap">
   <a href="#ruta">La ruta</a>
+  <a href="#mapa">Mapa</a>
   <a href="#bangkok1">Bangkok</a>
   <a href="#chiangrai">Chiang Rai</a>
   <a href="#chiangdao">Chiang Dao</a>
@@ -157,6 +189,7 @@
   <a href="#kohlanta">Koh Lanta</a>
   <a href="#bangkok2">Bangkok final</a>
   <a href="#barrios">Barrios &amp; hoteles</a>
+  <a href="#presupuesto">Presupuesto</a>
   <a href="#practico">Práctico</a>
 </div></nav>
 
@@ -166,34 +199,129 @@
 <section id="ruta" class="resumen">
   <div class="kicker">Visión general</div>
   <h2>La ruta, de un vistazo</h2>
-  <p class="intro">22 noches con solo <strong>3 vuelos internos</strong> y sin retrocesos: se entra al norte
-  por Chiang Rai y se baja por carretera hasta Chiang Mai, así el trayecto se convierte en parte del viaje.
-  En el sur, mar de Andamán: en noviembre empieza allí la temporada seca (el golfo de Samui, en cambio,
-  está en su época más lluviosa — por eso lo evitamos).</p>
+  <p class="intro">21 noches en Tailandia (salís de Madrid el 29 de octubre y llegáis el 30) con solo
+  <strong>3 vuelos internos</strong> y sin retrocesos: se entra al norte por Chiang Rai y se baja por
+  carretera hasta Chiang Mai, así el trayecto se convierte en parte del viaje. En el sur, mar de Andamán:
+  en noviembre empieza allí la temporada seca (el golfo de Samui, en cambio, está en su época más
+  lluviosa — por eso lo evitamos).</p>
 
   <ul class="timeline">
-    <li><span class="etapa">Bangkok</span><br><span class="det">jue 29 oct → dom 1 nov · 3 noches — templos, río y comida callejera</span></li>
+    <li><span class="etapa">Bangkok</span><br><span class="det">vie 30 oct → lun 2 nov · 3 noches — templos, río y comida callejera</span></li>
     <li class="tr-li"><span class="tr">Vuelo Bangkok → Chiang Rai (1 h 20)</span></li>
-    <li><span class="etapa">Chiang Rai</span><br><span class="det">dom 1 → mar 3 nov · 2 noches — Templo Blanco, Templo Azul, plantaciones de té</span></li>
+    <li><span class="etapa">Chiang Rai</span><br><span class="det">lun 2 → mié 4 nov · 2 noches — Templo Blanco, Templo Azul, plantaciones de té</span></li>
     <li class="tr-li coche"><span class="tr">Coche con conductor Chiang Rai → Chiang Dao (3 h por la montaña)</span></li>
-    <li><span class="etapa">Chiang Dao</span><br><span class="det">mar 3 → jue 5 nov · 2 noches — montaña sagrada, silencio y naturaleza</span></li>
+    <li><span class="etapa">Chiang Dao</span><br><span class="det">mié 4 → vie 6 nov · 2 noches — montaña sagrada, silencio y naturaleza</span></li>
     <li class="tr-li coche"><span class="tr">Coche Chiang Dao → Chiang Mai (1 h 30)</span></li>
-    <li><span class="etapa">Chiang Mai</span><br><span class="det">jue 5 → lun 9 nov · 4 noches — casco antiguo, santuario de elefantes, mercados</span></li>
+    <li><span class="etapa">Chiang Mai</span><br><span class="det">vie 6 → mar 10 nov · 4 noches — casco antiguo, santuario de elefantes, mercados</span></li>
     <li class="tr-li"><span class="tr">Vuelo directo Chiang Mai → Krabi (2 h, AirAsia)</span></li>
-    <li><span class="etapa">Krabi town</span><br><span class="det">lun 9 → mar 10 nov · 1 noche — parada técnica con encanto</span></li>
+    <li><span class="etapa">Krabi town</span><br><span class="det">mar 10 → mié 11 nov · 1 noche — parada técnica con encanto</span></li>
     <li class="tr-li barco"><span class="tr">Coche + lancha a Koh Yao Noi (1 h en total)</span></li>
-    <li><span class="etapa">Koh Yao Noi</span><br><span class="det">mar 10 → vie 13 nov · 3 noches — la isla tranquila de la bahía de Phang Nga</span></li>
+    <li><span class="etapa">Koh Yao Noi</span><br><span class="det">mié 11 → sáb 14 nov · 3 noches — la isla tranquila de la bahía de Phang Nga</span></li>
     <li class="tr-li barco"><span class="tr">Lancha + coche a Koh Lanta (medio día, vía Krabi)</span></li>
-    <li><span class="etapa">Koh Lanta</span><br><span class="det">vie 13 → mié 18 nov · 5 noches — playas largas, Old Town y excursión a Koh Rok</span></li>
+    <li><span class="etapa">Koh Lanta</span><br><span class="det">sáb 14 → mié 18 nov · 4 noches — playas largas, Old Town y excursión a Koh Rok</span></li>
     <li class="tr-li"><span class="tr">Vuelo Krabi → Bangkok (1 h 20)</span></li>
     <li><span class="etapa">Bangkok</span><br><span class="det">mié 18 → vie 20 nov · 2 noches — despedida, compras y último masaje</span></li>
   </ul>
 
   <div class="claves sans">
     <div class="clave"><div class="n">3</div><div class="t">vuelos internos, ninguno de madrugada</div></div>
-    <div class="clave"><div class="n">8 + 9</div><div class="t">noches en el norte / noches en el sur</div></div>
+    <div class="clave"><div class="n">8 + 8</div><div class="t">noches en el norte / noches en el sur</div></div>
+    <div class="clave"><div class="n">5</div><div class="t">noches en Bangkok (3 al llegar + 2 al final)</div></div>
     <div class="clave"><div class="n">1–2</div><div class="t">cosas al día como máximo: el resto, pasear</div></div>
-    <div class="clave"><div class="n">10 kg</div><div class="t">mochila de cabina (ver consejos abajo)</div></div>
+  </div>
+</section>
+
+<!-- ============ MAPA ============ -->
+<section id="mapa" class="etapa-sec">
+  <div class="kicker">El recorrido</div>
+  <h2>El mapa de la ruta</h2>
+  <p class="intro">Norte arriba, sur abajo y Bangkok en el centro, de donde se sale y a donde se vuelve.
+  El orden de los números es el del viaje; los colores, el medio de transporte.</p>
+
+  <div class="mapa-wrap">
+    <div class="mapa-svg">
+      <svg viewBox="0 0 480 700" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,sans-serif" role="img" aria-label="Mapa de la ruta por Tailandia">
+        <rect x="0" y="0" width="480" height="700" fill="#eef4f2"/>
+        <path d="M 180 60 L 215 75 L 240 110 L 255 150 L 300 155 L 355 175 L 375 215 L 360 250
+          L 320 255 L 300 285 L 270 300 L 250 300 L 235 320 L 245 345 L 225 362 L 210 385 L 200 420
+          L 185 445 L 180 480 L 175 515 L 168 545 L 162 580 L 155 615 L 148 640 L 135 622 L 142 580
+          L 148 545 L 152 510 L 158 470 L 165 430 L 160 400 L 150 375 L 140 350 L 120 320 L 110 285
+          L 100 250 L 110 210 L 130 175 L 135 135 L 150 100 L 165 75 Z"
+          fill="#dbe8dc" stroke="#a9c3ac" stroke-width="1.5" stroke-linejoin="round"/>
+
+        <text x="328" y="132" fill="#bcac8c" font-size="15" font-weight="700" letter-spacing="3">NORTE</text>
+        <text x="352" y="300" fill="#bcac8c" font-size="15" font-weight="700" letter-spacing="3">CENTRO</text>
+        <text x="250" y="648" fill="#bcac8c" font-size="15" font-weight="700" letter-spacing="3">SUR</text>
+
+        <g fill="none" stroke-linecap="round">
+          <path d="M 217 330 Q 150 200 193 84" stroke="#1f6e8c" stroke-width="2.4" stroke-dasharray="1 7"/>
+          <path d="M 193 84 L 165 106" stroke="#8a4a2b" stroke-width="2.6"/>
+          <path d="M 165 106 L 167 130" stroke="#8a4a2b" stroke-width="2.6"/>
+          <path d="M 167 130 Q 70 340 168 543" stroke="#1f6e8c" stroke-width="2.4" stroke-dasharray="1 7"/>
+          <path d="M 168 543 L 150 562" stroke="#2a9d8f" stroke-width="2.6" stroke-dasharray="0.5 5"/>
+          <path d="M 150 562 L 160 590" stroke="#2a9d8f" stroke-width="2.6" stroke-dasharray="0.5 5"/>
+          <path d="M 160 590 Q 300 430 217 330" stroke="#1f6e8c" stroke-width="2.4" stroke-dasharray="1 7"/>
+        </g>
+
+        <g font-size="15" text-anchor="middle">
+          <text x="150" y="205">✈️</text>
+          <text x="88" y="345">✈️</text>
+          <text x="278" y="430">✈️</text>
+        </g>
+
+        <g font-weight="700">
+          <circle cx="217" cy="330" r="13" fill="#c8891a" stroke="#fff" stroke-width="2.5"/>
+          <text x="217" y="334.5" fill="#fff" text-anchor="middle" font-size="10.5">1·8</text>
+          <text x="235" y="328" fill="#2b2620" font-size="14">Bangkok</text>
+          <text x="235" y="344" fill="#6b5f4f" font-size="10.5" font-weight="400">3 + 2 noches</text>
+
+          <circle cx="193" cy="84" r="12" fill="#3d6b52" stroke="#fff" stroke-width="2.5"/>
+          <text x="193" y="88.5" fill="#fff" text-anchor="middle" font-size="13">2</text>
+          <text x="211" y="82" fill="#2b2620" font-size="13.5">Chiang Rai</text>
+          <text x="211" y="97" fill="#6b5f4f" font-size="10.5" font-weight="400">2 noches</text>
+
+          <circle cx="165" cy="106" r="12" fill="#3d6b52" stroke="#fff" stroke-width="2.5"/>
+          <text x="165" y="110.5" fill="#fff" text-anchor="middle" font-size="13">3</text>
+          <text x="40" y="128" fill="#2b2620" font-size="13.5">Chiang Dao</text>
+          <text x="40" y="143" fill="#6b5f4f" font-size="10.5" font-weight="400">2 noches</text>
+          <line x1="73" y1="124" x2="154" y2="108" stroke="#c9bda6" stroke-width="1"/>
+
+          <circle cx="167" cy="130" r="12" fill="#3d6b52" stroke="#fff" stroke-width="2.5"/>
+          <text x="167" y="134.5" fill="#fff" text-anchor="middle" font-size="13">4</text>
+          <text x="185" y="150" fill="#2b2620" font-size="13.5">Chiang Mai</text>
+          <text x="185" y="165" fill="#6b5f4f" font-size="10.5" font-weight="400">4 noches · 🐘 elefantes</text>
+
+          <circle cx="168" cy="543" r="12" fill="#1f6e8c" stroke="#fff" stroke-width="2.5"/>
+          <text x="168" y="547.5" fill="#fff" text-anchor="middle" font-size="13">5</text>
+          <text x="188" y="540" fill="#2b2620" font-size="13.5">Krabi</text>
+          <text x="188" y="554" fill="#6b5f4f" font-size="10.5" font-weight="400">1 noche</text>
+
+          <circle cx="150" cy="562" r="12" fill="#1f6e8c" stroke="#fff" stroke-width="2.5"/>
+          <text x="150" y="566.5" fill="#fff" text-anchor="middle" font-size="13">6</text>
+          <text x="40" y="572" fill="#2b2620" font-size="13.5">Koh Yao Noi</text>
+          <text x="40" y="587" fill="#6b5f4f" font-size="10.5" font-weight="400">3 noches</text>
+          <line x1="112" y1="571" x2="139" y2="564" stroke="#c9bda6" stroke-width="1"/>
+
+          <circle cx="160" cy="590" r="12" fill="#1f6e8c" stroke="#fff" stroke-width="2.5"/>
+          <text x="160" y="594.5" fill="#fff" text-anchor="middle" font-size="13">7</text>
+          <text x="182" y="596" fill="#2b2620" font-size="13.5">Koh Lanta</text>
+          <text x="182" y="611" fill="#6b5f4f" font-size="10.5" font-weight="400">4 noches · Koh Rok</text>
+        </g>
+      </svg>
+    </div>
+
+    <div class="leyenda">
+      <h4>Cómo se mueve uno</h4>
+      <div class="lg"><span class="ic">✈️</span><span><b>Vuelo interno</b> (línea azul discontinua) — los 3 grandes saltos: al norte, al sur y de vuelta.</span></div>
+      <div class="lg"><span class="ic">🚗</span><span><b>Coche con conductor</b> (línea marrón) — entre las ciudades del norte, con paradas por el camino.</span></div>
+      <div class="lg"><span class="ic">⛵</span><span><b>Lancha / barco</b> (línea turquesa) — entre las islas del Andamán.</span></div>
+      <div class="vuelos">
+        <b>Los 3 vuelos:</b><br>
+        ① Bangkok → Chiang Rai<br>
+        ④ Chiang Mai → Krabi<br>
+        ⑦ Krabi → Bangkok
+      </div>
+    </div>
   </div>
 </section>
 
@@ -201,7 +329,7 @@
 <section id="bangkok1" class="etapa-sec">
   <div class="kicker">Etapa 1 · 3 noches</div>
   <h2>Bangkok — llegar y aterrizar despacio</h2>
-  <span class="fechas-chip">Jueves 29 oct → domingo 1 nov</span>
+  <span class="fechas-chip">Viernes 30 oct → lunes 2 nov</span>
   <div class="banner">
     <img src="img/bangkok-gran-palacio.jpg" alt="Gran Palacio de Bangkok" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
     <div class="pie">Gran Palacio y Wat Phra Kaew — ir a primera hora, cuando abre (8:30)</div>
@@ -211,24 +339,25 @@
   grande al día. El resto del tiempo, callejear, comer y dejarse llevar.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 1 · Llegada <span class="fecha">jueves 29 oct</span></h4>
-      <p>Llegada, traslado al hotel y nada más: un paseo corto por el barrio para estirar las piernas,
-      primera cena de comida callejera y a dormir pronto para ajustar el jet lag.</p>
+    <div class="dia"><h4>Día 1 · Llegada <span class="fecha">viernes 30 oct</span></h4>
+      <p>Llegáis de Madrid (habéis salido el 29). Traslado al hotel y nada más: un paseo corto por el
+      barrio para estirar las piernas, primera cena de comida callejera y a dormir pronto para ajustar
+      el jet lag.</p>
       <div class="tip">Pedid un Grab o el taxi oficial del aeropuerto; unos 45 min hasta el centro.</div></div>
-    <div class="dia"><h4>Día 2 · Los imprescindibles del río <span class="fecha">viernes 30 oct</span></h4>
+    <div class="dia"><h4>Día 2 · Los imprescindibles del río <span class="fecha">sábado 31 oct</span></h4>
       <p><strong>Mañana:</strong> Gran Palacio y Wat Phra Kaew a primera hora, y a 10 minutos a pie, el
       Buda reclinado de <strong>Wat Pho</strong> (y un masaje en su escuela, la más antigua de Tailandia).
       <strong>Tarde:</strong> siesta y al caer el sol, cruzar en ferry (5 THB) a <strong>Wat Arun</strong>,
       precioso al atardecer. <strong>Noche:</strong> cena en <strong>Yaowarat</strong> (Chinatown), el mejor
       street food de la ciudad.</p>
       <div class="tip">Hombros y rodillas cubiertos en el Gran Palacio. Ignorad a quien os diga en la calle que "está cerrado": es el timo clásico.</div></div>
-    <div class="dia"><h4>Día 3 · La Bangkok que no corre <span class="fecha">sábado 31 oct</span></h4>
-      <p><strong>Mañana:</strong> al ser sábado, mercado de <strong>Chatuchak</strong> (id pronto, a las 9);
+    <div class="dia"><h4>Día 3 · La Bangkok que no corre <span class="fecha">domingo 1 nov</span></h4>
+      <p><strong>Mañana:</strong> al ser fin de semana, mercado de <strong>Chatuchak</strong> (id pronto, a las 9);
       si no os apetece mercado gigante, alternativa: paseo en barca longtail por los <strong>canales de
       Thonburi</strong>, la Bangkok de casas sobre el agua. <strong>Tarde:</strong> barrio de
       <strong>Talat Noi</strong> — callejones con arte urbano, talleres y cafés junto al río.
       <strong>Noche:</strong> una copa tranquila en un rooftop con vistas al Chao Phraya.</p></div>
-    <div class="dia"><h4>Día 4 · Rumbo al norte <span class="fecha">domingo 1 nov</span></h4>
+    <div class="dia"><h4>Día 4 · Rumbo al norte <span class="fecha">lunes 2 nov</span></h4>
       <p>Mañana relajada y vuelo a <strong>Chiang Rai</strong> (1 h 20). Por la tarde ya estaréis paseando
       por una ciudad pequeña y amable, a otro ritmo.</p></div>
   </div>
@@ -263,7 +392,7 @@
 <section id="chiangrai" class="etapa-sec">
   <div class="kicker">Etapa 2 · 2 noches</div>
   <h2>Chiang Rai — templos de otro planeta</h2>
-  <span class="fechas-chip">Domingo 1 → martes 3 nov</span>
+  <span class="fechas-chip">Lunes 2 → miércoles 4 nov</span>
   <div class="banner">
     <img src="img/chiang-rai-wat-rong-khun.jpg" alt="Wat Rong Khun, el Templo Blanco" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
     <div class="pie">Wat Rong Khun, el Templo Blanco — obra del artista Chalermchai Kositpipat</div>
@@ -273,16 +402,16 @@
   montañas y plantaciones de té.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 4 · Tarde de llegada <span class="fecha">domingo 1 nov</span></h4>
+    <div class="dia"><h4>Día 4 · Tarde de llegada <span class="fecha">lunes 2 nov</span></h4>
       <p>Paseo por el centro, la torre del reloj dorada y cena en el <strong>night bazaar</strong>:
       pequeño, nada agobiante, con mesas comunes y música en directo suave.</p></div>
-    <div class="dia"><h4>Día 5 · Los tres templos <span class="fecha">lunes 2 nov</span></h4>
+    <div class="dia"><h4>Día 5 · Los tres templos <span class="fecha">martes 3 nov</span></h4>
       <p><strong>Mañana:</strong> <strong>Wat Rong Khun</strong> (Templo Blanco) nada más abrir (8:00) para
       evitar grupos, después el <strong>Templo Azul</strong> (Wat Rong Suea Ten) y la <strong>Casa Negra</strong>
       (Baan Dam) del artista Thawan Duchanee. <strong>Tarde:</strong> café con vistas infinitas en la
       plantación de té de <strong>Choui Fong</strong>, entre colinas verdes.</p>
       <div class="tip">Un conductor de Grab o un tuk-tuk por horas os hace la ruta completa sin prisa por unos 1.000–1.500 THB.</div></div>
-    <div class="dia"><h4>Día 6 · Carretera de montaña <span class="fecha">martes 3 nov</span></h4>
+    <div class="dia"><h4>Día 6 · Carretera de montaña <span class="fecha">miércoles 4 nov</span></h4>
       <p>Coche con conductor hacia <strong>Chiang Dao</strong> (~3 h). Es una carretera bonita de montaña;
       se puede parar en ruta en Mae Salong o Tha Ton (templo con vistas al río Kok) para comer.</p></div>
   </div>
@@ -312,7 +441,7 @@
 <section id="chiangdao" class="etapa-sec">
   <div class="kicker">Etapa 3 · 2 noches</div>
   <h2>Chiang Dao — la montaña y el silencio</h2>
-  <span class="fechas-chip">Martes 3 → jueves 5 nov</span>
+  <span class="fechas-chip">Miércoles 4 → viernes 6 nov</span>
   <div class="banner">
     <img src="img/chiang-dao.jpg" alt="Doi Luang Chiang Dao" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
     <div class="pie">Doi Luang Chiang Dao (2.175 m), la tercera montaña de Tailandia, preside el valle</div>
@@ -322,17 +451,17 @@
   Aquí no se viene a "ver cosas": se viene a estar.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 6 · Llegada al valle <span class="fecha">martes 3 nov</span></h4>
+    <div class="dia"><h4>Día 6 · Llegada al valle <span class="fecha">miércoles 4 nov</span></h4>
       <p>Llegada a mediodía, comida tranquila y por la tarde las <strong>cuevas de Chiang Dao</strong>
       (Wat Tham Chiang Dao): un complejo de grutas con budas dentro de la montaña. Cena en el alojamiento
       viendo cómo se enciende la montaña al atardecer.</p></div>
-    <div class="dia"><h4>Día 7 · Bosque, escaleras y aguas termales <span class="fecha">miércoles 4 nov</span></h4>
+    <div class="dia"><h4>Día 7 · Bosque, escaleras y aguas termales <span class="fecha">jueves 5 nov</span></h4>
       <p><strong>Mañana:</strong> subir los 500 escalones entre bosque hasta <strong>Wat Tham Pha Plong</strong>,
       un monasterio encajado en el acantilado — probablemente el momento más sereno del viaje.
       <strong>Tarde:</strong> baño en las <strong>aguas termales</strong> del valle o simplemente hamaca,
       libro y sonido de cigarras. Si hay mercado matinal ese día, es pequeño y auténtico: desayunad allí.</p>
       <div class="tip">Por la noche refresca (15–18 °C): la capa fina de manga larga que llevéis para los aviones aquí se usa de verdad.</div></div>
-    <div class="dia"><h4>Día 8 · Bajada a Chiang Mai <span class="fecha">jueves 5 nov</span></h4>
+    <div class="dia"><h4>Día 8 · Bajada a Chiang Mai <span class="fecha">viernes 6 nov</span></h4>
       <p>Mañana lenta y coche a <strong>Chiang Mai</strong> (1 h 30). Llegaréis para comer.</p></div>
   </div>
 
@@ -361,36 +490,37 @@
 <section id="chiangmai" class="etapa-sec">
   <div class="kicker">Etapa 4 · 4 noches</div>
   <h2>Chiang Mai — la capital del norte</h2>
-  <span class="fechas-chip">Jueves 5 → lunes 9 nov</span>
+  <span class="fechas-chip">Viernes 6 → martes 10 nov</span>
   <div class="banner">
     <img src="img/chiang-mai-chedi-luang.jpg" alt="Wat Chedi Luang" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
     <div class="pie">Wat Chedi Luang: la gran estupa del siglo XV en el corazón del casco antiguo</div>
   </div>
   <p class="intro">Una ciudad amurallada llena de templos, cafés y mercados que se recorre andando.
   Dormid dentro del casco antiguo o en el barrio de Nimman. Aquí está el plato fuerte del viaje:
-  el día con los elefantes. Y con suerte de calendario, os pilla el mercado nocturno del sábado
+  el día con los elefantes. Y como caéis en fin de semana, os pilla el mercado nocturno del sábado
   <em>y</em> el del domingo.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 8 · El casco antiguo <span class="fecha">jueves 5 nov</span></h4>
-      <p>Tarde de templos sin prisa: <strong>Wat Phra Singh</strong>, <strong>Wat Chedi Luang</strong>
-      (impresionante iluminado al anochecer) y callejones con cafés. Primer <strong>khao soi</strong>
-      "oficial" para cenar.</p></div>
-    <div class="dia"><h4>Día 9 · Día de elefantes 🐘 <span class="fecha">viernes 6 nov</span></h4>
-      <p>Día completo en el <strong>santuario de elefantes</strong> (ver bloque verde más abajo).
-      Os recogen en el hotel por la mañana y os devuelven a media tarde. Noche tranquila.</p></div>
-    <div class="dia"><h4>Día 10 · La montaña del templo dorado <span class="fecha">sábado 7 nov</span></h4>
+    <div class="dia"><h4>Día 8 · El casco antiguo <span class="fecha">viernes 6 nov</span></h4>
+      <p>Llegáis de Chiang Dao para comer. Tarde de templos sin prisa: <strong>Wat Phra Singh</strong>,
+      <strong>Wat Chedi Luang</strong> (impresionante iluminado al anochecer) y callejones con cafés.
+      Primer <strong>khao soi</strong> "oficial" para cenar.</p></div>
+    <div class="dia"><h4>Día 9 · La montaña del templo dorado <span class="fecha">sábado 7 nov</span></h4>
       <p><strong>Mañana:</strong> subir temprano a <strong>Doi Suthep</strong>, el templo dorado que vigila
       la ciudad (id a las 8:00 y lo tendréis casi vacío). A la bajada, parada en <strong>Baan Kang Wat</strong>,
       un pueblito de artistas con talleres de cerámica y cafés entre árboles. <strong>Tarde:</strong> masaje.
       <strong>Noche:</strong> <strong>Saturday Walking Street</strong> en la calle Wua Lai: artesanía y puestos
       de comida en ambiente local.</p></div>
-    <div class="dia"><h4>Día 11 · Cocinar, pasear, despedirse del norte <span class="fecha">domingo 8 nov</span></h4>
+    <div class="dia"><h4>Día 10 · Cocinar y mercados <span class="fecha">domingo 8 nov</span></h4>
       <p><strong>Mañana:</strong> <strong>clase de cocina tailandesa</strong> (medio día, muchas incluyen visita
       al mercado; es divertidísimo y os lleváis las recetas) o mercado de <strong>Warorot</strong>, el de los
       locales. <strong>Tarde:</strong> café en Nimman. <strong>Noche:</strong> la gran <strong>Sunday Walking
       Street</strong> de Ratchadamnoen, el mejor mercado nocturno del norte.</p></div>
-    <div class="dia"><h4>Día 12 · Vuelo al sur <span class="fecha">lunes 9 nov</span></h4>
+    <div class="dia"><h4>Día 11 · Día de elefantes 🐘 <span class="fecha">lunes 9 nov</span></h4>
+      <p>Día completo en el <strong>santuario de elefantes</strong> (ver bloque verde más abajo).
+      Os recogen en el hotel por la mañana y os devuelven a media tarde. Noche tranquila y última cena
+      norteña.</p></div>
+    <div class="dia"><h4>Día 12 · Vuelo al sur <span class="fecha">martes 10 nov</span></h4>
       <p>Vuelo directo <strong>Chiang Mai → Krabi</strong> (~2 h). Del fresco de la montaña al calor del mar.</p></div>
   </div>
 
@@ -447,7 +577,7 @@
 <section id="krabi" class="etapa-sec">
   <div class="kicker">Etapa 5 · 1 noche</div>
   <h2>Krabi town — puerta del Andamán</h2>
-  <span class="fechas-chip">Lunes 9 → martes 10 nov</span>
+  <span class="fechas-chip">Martes 10 → miércoles 11 nov</span>
   <div class="banner">
     <img src="img/krabi.jpg" alt="Krabi y los peñones de Khao Khanab Nam" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
     <div class="pie">Los peñones gemelos de Khao Khanab Nam custodian el río de Krabi</div>
@@ -456,11 +586,11 @@
   pequeña de río, manglares y mercados, sin playa y por eso sin masas. Perfecta para llegar del vuelo,
   cenar bien y coger la lancha por la mañana con calma.</p>
   <div class="dias">
-    <div class="dia"><h4>Día 12 · Tarde y noche de mercado <span class="fecha">lunes 9 nov</span></h4>
+    <div class="dia"><h4>Día 12 · Tarde y noche de mercado <span class="fecha">martes 10 nov</span></h4>
       <p>Paseo al atardecer por el río (los peñones de Khao Khanab Nam, los manglares) y cena en el
       <strong>mercado nocturno del muelle</strong> (Chao Fah): marisco, curries del sur y postres, todo
       de puestos y a precio local.</p></div>
-    <div class="dia"><h4>Día 13 · A la isla tranquila <span class="fecha">martes 10 nov</span></h4>
+    <div class="dia"><h4>Día 13 · A la isla tranquila <span class="fecha">miércoles 11 nov</span></h4>
       <p>Traslado corto al embarcadero y lancha a <strong>Koh Yao Noi</strong> (~30–45 min por la bahía
       de Phang Nga, entre islotes de piedra que salen del mar).</p></div>
   </div>
@@ -484,7 +614,7 @@
 <section id="kohyaonoi" class="etapa-sec">
   <div class="kicker">Etapa 6 · 3 noches</div>
   <h2>Koh Yao Noi — la isla que se salvó</h2>
-  <span class="fechas-chip">Martes 10 → viernes 13 nov</span>
+  <span class="fechas-chip">Miércoles 11 → sábado 14 nov</span>
   <div class="banner">
     <img src="img/koh-yao-noi.jpg" alt="Koh Yao Noi" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
     <div class="pie">Koh Yao Noi: arrozales, búfalos, pueblos pesqueros y la bahía de Phang Nga de fondo</div>
@@ -494,18 +624,18 @@
   islotes kársticos. Es el "nada masivo" que buscáis, en estado puro.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 13 · Modo isla <span class="fecha">martes 10 nov</span></h4>
+    <div class="dia"><h4>Día 13 · Modo isla <span class="fecha">miércoles 11 nov</span></h4>
       <p>Llegada, bungalow y tarde de playa en <strong>Pasai</strong> o <strong>Klong Jark</strong>.
       Cena de pescado con los pies casi en el agua.</p></div>
-    <div class="dia"><h4>Día 14 · La isla en scooter o bici <span class="fecha">miércoles 11 nov</span></h4>
+    <div class="dia"><h4>Día 14 · La isla en scooter o bici <span class="fecha">jueves 12 nov</span></h4>
       <p>Vuelta a la isla (una carretera tranquila la rodea entera): arrozales, miradores, el pueblo
       pescador, cafés escondidos y paradas de baño. Atardecer en la costa oeste mirando los islotes.</p>
       <div class="tip">La isla es musulmana: en los pueblos, mejor con camiseta y sin bikini fuera de la playa. Todo cierra pronto — cenad antes de las 21:00.</div></div>
-    <div class="dia"><h4>Día 15 · La laguna secreta <span class="fecha">jueves 12 nov</span></h4>
+    <div class="dia"><h4>Día 15 · La laguna secreta <span class="fecha">viernes 13 nov</span></h4>
       <p>Excursión en barca longtail a <strong>Koh Hong</strong> y su laguna interior turquesa, o kayak
       entre los manglares. Son salidas de medio día en grupos pequeños desde la propia isla.
       Tarde de hamaca y masaje.</p></div>
-    <div class="dia"><h4>Día 16 · Rumbo a Lanta <span class="fecha">viernes 13 nov</span></h4>
+    <div class="dia"><h4>Día 16 · Rumbo a Lanta <span class="fecha">sábado 14 nov</span></h4>
       <p>Lancha de vuelta y traslado a <strong>Koh Lanta</strong> (combinado lancha + furgoneta, medio día).
       Llegada a media tarde, a tiempo del primer atardecer lanteño.</p></div>
   </div>
@@ -534,9 +664,9 @@
 
 <!-- ============ KOH LANTA ============ -->
 <section id="kohlanta" class="etapa-sec">
-  <div class="kicker">Etapa 7 · 5 noches</div>
+  <div class="kicker">Etapa 7 · 4 noches</div>
   <h2>Koh Lanta — playas largas y calma</h2>
-  <span class="fechas-chip">Viernes 13 → miércoles 18 nov</span>
+  <span class="fechas-chip">Sábado 14 → miércoles 18 nov</span>
   <div class="banner">
     <img src="img/koh-lanta.jpg" alt="Atardecer en Koh Lanta" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
     <div class="pie">Los atardeceres de la costa oeste de Lanta, cada día un espectáculo distinto</div>
@@ -547,25 +677,25 @@
   no tener plan.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Días 16–17 · Ritmo Lanta <span class="fecha">viernes 13 y sábado 14 nov</span></h4>
-      <p>Playa, baño, comida, siesta, paseo, atardecer. Elegid base en <strong>Klong Nin</strong> o
-      <strong>Long Beach</strong> (Phra Ae). Un día, acercaos en scooter al sur hasta la bahía de
+    <div class="dia"><h4>Día 16 · Llegada y primer atardecer <span class="fecha">sábado 14 nov</span></h4>
+      <p>Llegada a media tarde, bungalow y primer baño. Elegid base en <strong>Klong Nin</strong> o
+      <strong>Long Beach</strong> (Phra Ae). Cena en la arena viendo el atardecer sobre el Andamán.</p></div>
+    <div class="dia"><h4>Día 17 · La isla a vuestro ritmo <span class="fecha">domingo 15 nov</span></h4>
+      <p>Playa, baño, comida, siesta, paseo. Un día para bajar al sur en scooter hasta la bahía de
       <strong>Kantiang</strong> y el <strong>parque nacional de Mu Ko Lanta</strong>, con su faro sobre
-      los acantilados en la punta de la isla.</p></div>
-    <div class="dia"><h4>Día 18 · Lanta Old Town <span class="fecha">domingo 15 nov</span></h4>
-      <p>La antigua capital, en la costa este: casas centenarias de madera sobre pilotes en el mar,
-      comunidad chino-malaya y de gitanos del mar, tiendecitas y cafés con terraza sobre el agua.
-      Comida con vistas y vuelta lenta parando donde apetezca.</p></div>
-    <div class="dia"><h4>Día 19 · El paraíso de postre: Koh Rok <span class="fecha">lunes 16 nov</span></h4>
+      los acantilados en la punta de la isla. Sin prisa.</p></div>
+    <div class="dia"><h4>Día 18 · El paraíso de postre: Koh Rok <span class="fecha">lunes 16 nov</span></h4>
       <p>Excursión en barco a <strong>Koh Rok</strong>, dos islas vírgenes de parque nacional al sur de
       Lanta: el mejor esnórquel de la zona, arena blanca y agua transparente. Alternativa: las
       <strong>4 Islands</strong> con la cueva Esmeralda de <strong>Koh Mook</strong> (se entra nadando por
       un túnel hasta una playa interior escondida).</p>
       <div class="tip">Contratad la versión en lancha con grupo reducido y salida temprana: llegaréis antes que los barcos grandes.</div></div>
-    <div class="dia"><h4>Día 20 · El último día de mar <span class="fecha">martes 17 nov</span></h4>
-      <p>Sin plan: la playa que más os haya gustado, un último masaje frente al mar y cena de despedida
-      del sur viendo el atardecer.</p></div>
-    <div class="dia"><h4>Día 21 · Vuelta a Bangkok <span class="fecha">miércoles 18 nov</span></h4>
+    <div class="dia"><h4>Día 19 · Lanta Old Town y despedida del sur <span class="fecha">martes 17 nov</span></h4>
+      <p><strong>Día:</strong> la antigua capital, en la costa este: casas centenarias de madera sobre
+      pilotes en el mar, comunidad chino-malaya y de gitanos del mar, tiendecitas y cafés con terraza
+      sobre el agua. <strong>Tarde:</strong> la playa que más os haya gustado, un último masaje frente al
+      mar y cena de despedida del sur viendo el atardecer.</p></div>
+    <div class="dia"><h4>Día 20 · Vuelta a Bangkok <span class="fecha">miércoles 18 nov</span></h4>
       <p>Furgoneta + puente a tierra firme y vuelo <strong>Krabi → Bangkok</strong> (1 h 20) a media tarde.</p></div>
   </div>
 
@@ -604,16 +734,16 @@
   <p class="intro">Dos noches para cerrar el círculo, esta vez en la zona moderna (Sukhumvit o Siam)
   para variar de ambiente, comprar los últimos regalos y despedirse comiendo bien.</p>
   <div class="dias">
-    <div class="dia"><h4>Día 21 · Llegada y barrio nuevo <span class="fecha">miércoles 18 nov</span></h4>
+    <div class="dia"><h4>Día 20 · Llegada y barrio nuevo <span class="fecha">miércoles 18 nov</span></h4>
       <p>Llegada a media tarde. Paseo por el barrio y cena en algún mercado nocturno moderno
       (Jodd Fairs) o en uno de los restaurantes que os hayáis guardado en la lista de pendientes.</p></div>
-    <div class="dia"><h4>Día 22 · Seda, compras y último masaje <span class="fecha">jueves 19 nov</span></h4>
+    <div class="dia"><h4>Día 21 · Seda, compras y último masaje <span class="fecha">jueves 19 nov</span></h4>
       <p><strong>Mañana:</strong> la <strong>casa de Jim Thompson</strong>, el americano de la seda tailandesa:
       visita corta, preciosa y con muy buena tienda para regalos. <strong>Tarde:</strong> compras finales
       (centros de Siam, o artesanía en las tiendas de diseño tailandés) y <strong>masaje de despedida</strong>
       de dos horas. <strong>Noche:</strong> gran cena final — un thai de mantel o volver a Yaowarat,
       que siempre apetece.</p></div>
-    <div class="dia"><h4>Día 23 · A casa <span class="fecha">viernes 20 nov</span></h4>
+    <div class="dia"><h4>Día 22 · A casa <span class="fecha">viernes 20 nov</span></h4>
       <p>Vuelo de vuelta con la mochila (algo más llena) y muchas ganas de volver.</p></div>
   </div>
   <div class="comer">
@@ -677,6 +807,44 @@
   </div>
 </section>
 
+<!-- ============ PRESUPUESTO ============ -->
+<section id="presupuesto" class="etapa-sec">
+  <div class="kicker">Cuánto cuesta</div>
+  <h2>Presupuesto orientativo</h2>
+  <p class="intro">Estimación <strong>para los dos</strong>, el viaje completo (21 noches), en un nivel
+  cómodo pero sensato: hoteles boutique-medios, comer sobre todo de mercado y restaurante local, y los
+  caprichos que ya tenéis fichados (elefantes, algún barco, masajes). Los importes son de referencia
+  para 2026 — la gran variable son los vuelos internacionales.</p>
+
+  <div class="presu-grid">
+    <div class="pline"><div class="cat"><span class="ic">✈️</span>Vuelos Madrid–Bangkok</div>
+      <div class="imp">1.400–1.800 €</div><div class="nota">Ida y vuelta, los dos. Reservando pronto, más cerca de 1.400.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🛫</span>3 vuelos internos</div>
+      <div class="imp">300–420 €</div><div class="nota">Los dos, con equipaje facturado incluido.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🏨</span>Alojamiento · 21 noches</div>
+      <div class="imp">1.700–2.400 €</div><div class="nota">Media ~90–115 €/noche en pareja. Ver Excel.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🍜</span>Comida y bebida</div>
+      <div class="imp">700–1.000 €</div><div class="nota">Los dos, 22 días. Street food + restaurantes locales.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🐘</span>Actividades y excursiones</div>
+      <div class="imp">450–650 €</div><div class="nota">Elefantes, barcos (Koh Rok, Koh Hong), clase de cocina, masajes.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🚕</span>Transporte terrestre y barcos</div>
+      <div class="imp">280–380 €</div><div class="nota">Coches con conductor en el norte, traslados de islas, Grabs.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🛡️</span>Seguro de viaje</div>
+      <div class="imp">140–200 €</div><div class="nota">Los dos, con buena cobertura médica. Imprescindible.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🛍️</span>eSIM, compras y varios</div>
+      <div class="imp">250–400 €</div><div class="nota">Datos, propinas, regalos y algún imprevisto.</div></div>
+  </div>
+
+  <div class="totales">
+    <div class="total t1"><div class="lbl">Ajustado</div><div class="val">≈ 5.200 €</div><div class="pp">≈ 2.600 € por persona</div></div>
+    <div class="total t2"><div class="lbl">Cómodo (esta ruta)</div><div class="val">≈ 6.200 €</div><div class="pp">≈ 3.100 € por persona</div></div>
+    <div class="total t3"><div class="lbl">Con caprichos</div><div class="val">≈ 7.800 €</div><div class="pp">≈ 3.900 € por persona</div></div>
+  </div>
+  <p class="presu-nota">No incluye gastos previos en casa (vacunas/farmacia, equipo). Tailandia es
+  barata sobre el terreno: lo que dispara el total es el vuelo internacional y el nivel de hotel.
+  Reservando vuelos y los hoteles del norte/islas con antelación se ahorra bastante.</p>
+</section>
+
 <!-- ============ PRÁCTICO ============ -->
 <section id="practico" class="etapa-sec">
   <div class="kicker">Logística</div>
@@ -728,7 +896,7 @@
 </main>
 
 <footer>
-  Tailandia · 29 de octubre – 20 de noviembre de 2026 · hecho en casa con calma, como el viaje.<br>
+  Tailandia · salida de Madrid el 29 oct · en el país del 30 oct al 20 nov de 2026 · hecho en casa con calma, como el viaje.<br>
   <span class="sans" style="font-size:.75rem">Fotos: Wikimedia Commons (dominio público / CC). Dato curioso: Loy Krathong, la fiesta de los farolillos, cae el 24–25 de noviembre de 2026 — os la perderéis por cuatro días, pero a cambio: menos gente y hoteles más baratos.</span>
 </footer>
 
