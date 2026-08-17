@@ -4,6 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tailandia 2026 · 30 oct – 20 nov</title>
+<meta name="description" content="Guía del viaje a Tailandia del 30 de octubre al 20 de noviembre de 2026: itinerario día a día, mapa, qué y dónde comer, hoteles, presupuesto y consejos.">
+<meta name="theme-color" content="#c8891a">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="img/icono-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Tailandia 2026">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐘</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tailandia 2026">
+<meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://iaadileli.github.io/viaje-tailandia-2026/">
+<meta property="og:title" content="Tailandia 2026 · Bangkok, el norte y las islas del Andamán">
+<meta property="og:description" content="Itinerario día a día, mapa, qué y dónde comer en cada parada, hoteles y consejos prácticos. Del 29 de octubre al 20 de noviembre de 2026.">
+<meta property="og:image" content="https://iaadileli.github.io/viaje-tailandia-2026/img/portada.jpg">
+<meta property="og:image:secure_url" content="https://iaadileli.github.io/viaje-tailandia-2026/img/portada.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wat Arun, el templo del amanecer de Bangkok">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tailandia 2026 · Bangkok, el norte y las islas del Andamán">
+<meta name="twitter:description" content="Itinerario día a día, mapa, qué y dónde comer, hoteles y consejos prácticos.">
+<meta name="twitter:image" content="https://iaadileli.github.io/viaje-tailandia-2026/img/portada.jpg">
 <style>
   :root{
     --crema:#faf6ef; --tinta:#2b2620; --tinta2:#6b5f4f;
@@ -183,6 +206,40 @@
   .total .pp{font-size:.85rem;opacity:.92;font-family:-apple-system,'Segoe UI',sans-serif}
   .presu-nota{font-size:.9rem;color:var(--tinta2);font-style:italic;margin-top:6px}
 
+  .sitios{list-style:none;margin:6px 0 12px}
+  .sitios li{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;color:#3d362c;
+    padding:9px 0;border-top:1px dashed #e5d3a8}
+  .sitios li:first-child{border-top:none}
+  .sitios .nombre{font-weight:700;color:var(--teca)}
+  .sitios .dir{color:var(--tinta2);font-size:.83rem}
+  .sitios a{color:var(--mar);text-decoration:none;border-bottom:1px dotted var(--mar);font-size:.83rem}
+  .sitios a:hover{color:var(--teca);border-bottom-color:var(--teca)}
+
+  .trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:8px 0 24px}
+  .trio figure{border-radius:12px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
+  .trio img{width:100%;height:180px;object-fit:cover;display:block}
+  .trio figcaption{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;color:var(--tinta2);
+    padding:8px 11px;background:var(--card)}
+
+  table.tab{border-collapse:collapse;width:100%;min-width:640px;background:var(--card);
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem}
+  table.tab thead th{background:var(--teca);color:#fff;text-align:left;padding:12px 14px;
+    font-size:.78rem;letter-spacing:.6px;text-transform:uppercase;white-space:nowrap}
+  table.tab td{padding:11px 14px;border-top:1px solid var(--linea);vertical-align:top;color:#3d362c}
+  table.tab td b{color:var(--tinta)}
+
+  .btn-guardar{display:inline-flex;align-items:center;gap:9px;background:#fff;color:#2f5f47;border:none;
+    border-radius:10px;padding:13px 22px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:1rem;
+    font-weight:700;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.18)}
+  .btn-guardar:hover{background:#eef6f1}
+  .btn-guardar[disabled]{opacity:.65;cursor:default}
+  .btn-zip{display:inline-flex;align-items:center;gap:8px;color:#fff;text-decoration:none;
+    border:1.5px solid rgba(255,255,255,.6);border-radius:10px;padding:12px 20px;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;font-weight:600}
+  .btn-zip:hover{background:rgba(255,255,255,.14)}
+  .botonera{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:16px 0 6px}
+  .estado-offline{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.92rem;margin-top:10px;min-height:1.3em}
+
   img.fallo{display:none}
   figure.sinfoto{min-height:120px;display:flex;align-items:center;justify-content:center;
     background:linear-gradient(135deg,#f3e3c3,#e8d0a0);color:#8a6a20;font-family:sans-serif;font-size:.9rem}
@@ -237,10 +294,12 @@
   </button>
   <div class="menu-panel" id="menuInfo">
     <div class="cab">Info práctica</div>
+    <a href="#comer" onclick="cerrarMenuInfo()">🍜 Guía de comida</a>
     <a href="#barrios" onclick="cerrarMenuInfo()">🛏️ Barrios</a>
     <a href="#hoteles" onclick="cerrarMenuInfo()">★ Hoteles</a>
     <a href="#presupuesto" onclick="cerrarMenuInfo()">💰 Presupuesto</a>
     <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica</a>
+    <a href="#offline" onclick="cerrarMenuInfo()">📥 Verla sin conexión</a>
   </div>
 </div></nav>
 
@@ -420,7 +479,7 @@
   </div>
 
   <div class="comer">
-    <h3>Qué comer en Bangkok</h3>
+    <h3>Qué y dónde comer en Bangkok</h3>
     <div class="comer-fotos">
       <figure><img src="img/pad-thai.jpg" alt="Pad thai" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Pad thai</figcaption></figure>
       <figure><img src="img/comida-boat-noodles.jpg" alt="Boat noodles" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Boat noodles</figcaption></figure>
@@ -434,6 +493,27 @@
       <span class="plato">Marisco a la brasa en Yaowarat</span><span class="plato">Mango sticky rice</span>
       <span class="plato">Pato asado estilo chino</span>
     </div>
+    <ul class="sitios">
+      <li><span class="nombre">Thipsamai</span> — <span class="dir">313 Th. Maha Chai, Phra Nakhon</span> · el pad thai más famoso de la ciudad desde 1966, envuelto en tortilla. Abre por la tarde y se llena.
+        <a href="https://www.google.com/maps/search/?api=1&query=Thipsamai%20Pad%20Thai%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Jay Fai</span> — <span class="dir">327 Th. Maha Chai</span> · la tortilla de cangrejo con estrella Michelin. Carísima para lo que es Bangkok y con esperas largas: id solo si os apetece el ritual.
+        <a href="https://www.google.com/maps/search/?api=1&query=Jay%20Fai%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Krua Apsorn</span> — <span class="dir">Th. Dinso, junto al Monumento a la Democracia</span> · cocina tailandesa casera de altísimo nivel, llena de locales. La mejor comida "normal" de Bangkok.
+        <a href="https://www.google.com/maps/search/?api=1&query=Krua%20Apsorn%20Dinso%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Nai Ek Roll Noodles</span> — <span class="dir">Soi Yaowarat 9, Chinatown</span> · kuay jab: fideos enrollados en caldo de pimienta con cerdo. Bib Gourmand y barato.
+        <a href="https://www.google.com/maps/search/?api=1&query=Nai%20Ek%20Roll%20Noodles%20Yaowarat%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">T&amp;K Seafood</span> — <span class="dir">esquina Yaowarat con Phadungdao</span> · el marisco a la brasa de los delantales verdes, en plena calle de Chinatown. Ambientazo nocturno.
+        <a href="https://www.google.com/maps/search/?api=1&query=T%20and%20K%20Seafood%20Yaowarat%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Rue Thong Boat Noodle</span> — <span class="dir">Victory Monument</span> · los boat noodles clásicos: cuencos pequeños de caldo intenso, se piden de tres en tres.
+        <a href="https://www.google.com/maps/search/?api=1&query=Rue%20Thong%20Boat%20Noodle%20Victory%20Monument%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Mae Varee</span> — <span class="dir">Thong Lo, junto al BTS</span> · mango sticky rice para llevar, el de referencia de la ciudad. Abierto casi todo el día.
+        <a href="https://www.google.com/maps/search/?api=1&query=Mae%20Varee%20Thong%20Lo%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Or Tor Kor Market</span> — <span class="dir">junto a Chatuchak (MRT Kamphaeng Phet)</span> · mercado gourmet cubierto: fruta perfecta, curries y puestos para comer allí mismo. Cómodo con calor.
+        <a href="https://www.google.com/maps/search/?api=1&query=Or%20Tor%20Kor%20Market%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Jodd Fairs</span> — <span class="dir">Rama IX (MRT Phra Ram 9)</span> · mercado nocturno moderno: leng saap (costillas picantes), mariscos y postres. El plan de cena fácil.
+        <a href="https://www.google.com/maps/search/?api=1&query=Jodd%20Fairs%20Rama%209%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+
     <p>Bangkok es la capital mundial de la comida callejera: comed donde haya cola de locales.
     Los boat noodles (cuencos pequeños de fideos con caldo intenso) son la merienda perfecta;
     y el mango con arroz glutinoso y leche de coco, la religión local de postre.</p>
@@ -474,7 +554,7 @@
   </div>
 
   <div class="comer">
-    <h3>Qué comer en Chiang Rai</h3>
+    <h3>Qué y dónde comer en Chiang Rai</h3>
     <div class="comer-fotos">
       <figure><img src="img/comida-nam-ngiao.jpg" alt="Nam ngiao" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Nam ngiao</figcaption></figure>
       <figure><img src="img/comida-sai-ua.jpg" alt="Sai ua" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Sai ua</figcaption></figure>
@@ -484,6 +564,21 @@
       <span class="plato">Khao soi (primer contacto)</span><span class="plato">Nam ngiao (fideos con tomate y cerdo)</span>
       <span class="plato">Sai ua (salchicha norteña)</span><span class="plato">Té oolong de montaña</span>
     </div>
+    <ul class="sitios">
+      <li><span class="nombre">Lung Eed</span> — <span class="dir">Th. Jetyod</span> · larb gai de pollo con piel crujiente, Bib Gourmand. Local minúsculo y cierra a media tarde: id pronto.
+        <a href="https://www.google.com/maps/search/?api=1&query=Lung%20Eed%20Chiang%20Rai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Khao Soi Phor Jai</span> — <span class="dir">Th. Jetyod</span> · el khao soi de toda la vida de la ciudad, por menos de dos euros. Solo mañanas y mediodía.
+        <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Phor%20Jai%20Chiang%20Rai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Puestos del mercado matinal</span> — <span class="dir">Th. Sathanpayabarn</span> · donde encontrar el nam ngiao de verdad, el plato local que casi ningún turista prueba.
+        <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20morning%20market" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Chivit Thamma Da</span> — <span class="dir">orilla del río Kok</span> · casa colonial con jardín junto al río: desayunos, tartas y buen café. El sitio bonito de Chiang Rai.
+        <a href="https://www.google.com/maps/search/?api=1&query=Chivit%20Thamma%20Da%20Coffee%20House%20Chiang%20Rai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Choui Fong Tea Cafe</span> — <span class="dir">plantación de té, 25 km al norte</span> · la parada del día de los templos: té oolong y tarta de té verde con vistas a las colinas.
+        <a href="https://www.google.com/maps/search/?api=1&query=Choui%20Fong%20Tea%20Plantation%20Cafe" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Night Bazaar</span> — <span class="dir">junto a la estación de autobuses</span> · patio de comidas con mesas comunes y música en directo. Nada agobiante, perfecto para cenar el día de llegada.
+        <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Night%20Bazaar" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+
     <p>Aquí empieza la cocina del norte (Lanna): menos coco y más hierbas, especias y sabores ahumados.
     El <em>nam ngiao</em> es la especialidad local que casi nadie prueba — buscadlo en los mercados matinales.</p>
   </div>
@@ -523,7 +618,7 @@
   </div>
 
   <div class="comer">
-    <h3>Qué comer en Chiang Dao</h3>
+    <h3>Qué y dónde comer en Chiang Dao</h3>
     <div class="comer-fotos">
       <figure><img src="img/comida-hang-lay.jpg" alt="Gaeng hang lay" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Gaeng hang lay</figcaption></figure>
       <figure><img src="img/comida-sai-ua.jpg" alt="Sai ua" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Sai ua</figcaption></figure>
@@ -532,6 +627,15 @@
       <span class="plato">Cocina casera norteña</span><span class="plato">Verduras y setas de montaña</span>
       <span class="plato">Café de cultivo local</span><span class="plato">Gaeng hang lay (curry birmano de cerdo)</span>
     </div>
+    <ul class="sitios">
+      <li><span class="nombre">Chiang Dao Nest</span> — <span class="dir">carretera del valle, a los pies del Doi Luang</span> · el restaurante con más fama del valle: cocina occidental de nivel sorprendente en mitad de la montaña. Reservad.
+        <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Nest%20restaurant" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Mercado de los martes</span> — <span class="dir">centro de Chiang Dao</span> · el gran mercado semanal, con puestos de comida de las montañas. Si caéis en martes, es el plan.
+        <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20market" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Puestos junto a las cuevas</span> — <span class="dir">Wat Tham Chiang Dao</span> · khao soi, fideos y curries a precio local, para comer después de la visita.
+        <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Cave" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+
     <p>Aquí se come donde se duerme o en los pocos restaurantes familiares del pueblo — y precisamente
     por eso se come de maravilla: producto de la huerta del valle. Hay un par de cafés de especialidad
     con grano de las montañas de alrededor.</p>
@@ -582,7 +686,7 @@
   </div>
 
   <div class="comer">
-    <h3>Qué comer en Chiang Mai</h3>
+    <h3>Qué y dónde comer en Chiang Mai</h3>
     <div class="comer-fotos">
       <figure><img src="img/khao-soi.jpg" alt="Khao soi" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Khao soi (el rey aquí)</figcaption></figure>
       <figure><img src="img/comida-sai-ua.jpg" alt="Sai ua" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Sai ua</figcaption></figure>
@@ -594,6 +698,25 @@
       <span class="plato">Nam prik ong con verduras</span><span class="plato">Café de especialidad</span>
       <span class="plato">Khao kha moo (codillo, puesto de la "Cowboy Hat Lady")</span>
     </div>
+    <ul class="sitios">
+      <li><span class="nombre">Khao Soi Khun Yai</span> — <span class="dir">Sri Poom Soi 8, casco antiguo</span> · para muchos, el mejor khao soi de la ciudad. Solo de 10:00 a 14:00 y cierra los domingos.
+        <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Khun%20Yai%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Khao Soi Mae Sai</span> — <span class="dir">Th. Ratchaphuek</span> · la alternativa clásica, más cómoda de horario y con el mismo nivel.
+        <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Mae%20Sai%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Cowboy Hat Lady</span> — <span class="dir">puerta de Chang Phuak</span> · khao kha moo: codillo de cerdo estofado sobre arroz, servido por la señora del sombrero vaquero. Solo de noche.
+        <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Kha%20Moo%20Chang%20Phuak%20Cowboy%20Hat%20Lady%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">SP Chicken</span> — <span class="dir">Th. Samlarn, junto a Wat Phra Singh</span> · pollo asado al estilo del norte, jugoso y barato. Media ración por persona va sobrada.
+        <a href="https://www.google.com/maps/search/?api=1&query=SP%20Chicken%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Huen Phen</span> — <span class="dir">112 Th. Rachamanka</span> · la casa de la cocina Lanna: nam prik ong, gaeng hang lay y sai ua. A mediodía es cantina; de noche, restaurante.
+        <a href="https://www.google.com/maps/search/?api=1&query=Huen%20Phen%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Warorot Market (Kad Luang)</span> — <span class="dir">junto al río Ping</span> · el mercado de los locales: sai ua, chicharrones, pastas de curry y fruta. Ideal por la mañana.
+        <a href="https://www.google.com/maps/search/?api=1&query=Warorot%20Market%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Ristr8to</span> — <span class="dir">Nimmanhaemin</span> · café de especialidad con grano del norte; de los mejores del país. Para la tarde de Nimman.
+        <a href="https://www.google.com/maps/search/?api=1&query=Ristr8to%20Coffee%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Sunday Walking Street</span> — <span class="dir">Th. Ratchadamnoen</span> · cenar de puesto en puesto entre artesanía: el domingo por la noche no hay plan mejor.
+        <a href="https://www.google.com/maps/search/?api=1&query=Sunday%20Walking%20Street%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+
     <p>Chiang Mai es la capital gastronómica del norte y del café tailandés. Un buen khao soi cuesta
     60–80 THB; probadlo en varios sitios y elegid vuestro favorito. En los mercados nocturnos del fin
     de semana se cena de puesto en puesto.</p>
@@ -647,7 +770,7 @@
       de Phang Nga, entre islotes de piedra que salen del mar).</p></div>
   </div>
   <div class="comer">
-    <h3>Qué comer en Krabi</h3>
+    <h3>Qué y dónde comer en Krabi</h3>
     <div class="comer-fotos">
       <figure><img src="img/comida-curry-crab.jpg" alt="Curry de cangrejo" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Curry de cangrejo</figcaption></figure>
       <figure><img src="img/comida-roti.jpg" alt="Roti" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Roti con curry</figcaption></figure>
@@ -657,6 +780,15 @@
       <span class="plato">Curry de cangrejo con fideos (kanom jeen)</span><span class="plato">Gaeng som (curry ácido del sur)</span>
       <span class="plato">Pescado a la brasa</span><span class="plato">Roti con curry</span>
     </div>
+    <ul class="sitios">
+      <li><span class="nombre">Mercado nocturno del muelle</span> — <span class="dir">Chao Fah Pier</span> · marisco a la plancha, curries del sur y postres, todo a precio local y con mesas junto al río.
+        <a href="https://www.google.com/maps/search/?api=1&query=Chao%20Fah%20Night%20Market%20Krabi%20Town" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Ruen Mai</span> — <span class="dir">Th. Maharaj (norte de la ciudad)</span> · el mejor restaurante de Krabi town: cocina del sur en un jardín tropical. Pedid el gaeng som.
+        <a href="https://www.google.com/maps/search/?api=1&query=Ruen%20Mai%20Restaurant%20Krabi" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Puestos de kanom jeen</span> — <span class="dir">mercado de la mañana</span> · fideos de arroz con curry servidos con hierbas a discreción: el desayuno del sur.
+        <a href="https://www.google.com/maps/search/?api=1&query=Krabi%20Town%20morning%20market" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+
     <p>Empieza la cocina del sur: más picante, con cúrcuma, marisco y herencia musulmana (los roti,
     los curries tipo massaman). En el mercado nocturno podéis probar de todo en una cena.</p>
   </div>
@@ -698,7 +830,7 @@
   </div>
 
   <div class="comer">
-    <h3>Qué comer en Koh Yao Noi</h3>
+    <h3>Qué y dónde comer en Koh Yao Noi</h3>
     <div class="comer-fotos">
       <figure><img src="img/comida-seafood-bbq.jpg" alt="Marisco a la brasa" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Marisco a la brasa</figcaption></figure>
       <figure><img src="img/massaman.jpg" alt="Massaman" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Curry massaman</figcaption></figure>
@@ -709,6 +841,15 @@
       <span class="plato">Roti recién hecho</span><span class="plato">Gambas al ajillo tailandés</span>
       <span class="plato">Batidos de fruta y coco frío</span>
     </div>
+    <ul class="sitios">
+      <li><span class="nombre">Rice Paddy Restaurant</span> — <span class="dir">interior de la isla</span> · cocina tailandesa y europea muy bien hecha, en mitad de los arrozales. El sitio "de salir a cenar" de la isla.
+        <a href="https://www.google.com/maps/search/?api=1&query=Rice%20Paddy%20Restaurant%20Koh%20Yao%20Noi" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Chiringuitos de Pasai y Klong Jark</span> — <span class="dir">costa este y sur</span> · pescado del día a la brasa con los pies casi en la arena. Se elige en la nevera y se paga por peso.
+        <a href="https://www.google.com/maps/search/?api=1&query=Pasai%20Beach%20Koh%20Yao%20Noi%20restaurants" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Puestos del pueblo (Tha Khao)</span> — <span class="dir">embarcadero norte</span> · roti, curries y comida musulmana del sur a precio de isla, sin turismo alrededor.
+        <a href="https://www.google.com/maps/search/?api=1&query=Tha%20Khao%20Pier%20Koh%20Yao%20Noi" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+
     <p>Restaurantes familiares donde cocina la abuela y el pescado lo trajo el padre por la mañana.
     Al ser isla musulmana apenas hay alcohol fuera de los resorts — perfecto para el plan tranquilo.</p>
   </div>
@@ -757,7 +898,7 @@
   </div>
 
   <div class="comer">
-    <h3>Qué comer en Koh Lanta</h3>
+    <h3>Qué y dónde comer en Koh Lanta</h3>
     <div class="comer-fotos">
       <figure><img src="img/comida-seafood-bbq.jpg" alt="Barbacoa de marisco" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Barbacoa de marisco</figcaption></figure>
       <figure><img src="img/comida-curry-crab.jpg" alt="Curry de cangrejo" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Curry amarillo de cangrejo</figcaption></figure>
@@ -768,6 +909,17 @@
       <span class="plato">Pad see ew</span><span class="plato">Cocina del sur picante (pedid "medium spicy")</span>
       <span class="plato">Desayunos de fruta, café y pancakes</span>
     </div>
+    <ul class="sitios">
+      <li><span class="nombre">Same Same But Different</span> — <span class="dir">Kantiang Bay</span> · mesas en la arena bajo los árboles, con el mar a un metro. El restaurante más famoso de Lanta: reservad al atardecer.
+        <a href="https://www.google.com/maps/search/?api=1&query=Same%20Same%20But%20Different%20Koh%20Lanta" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Beautiful Restaurant</span> — <span class="dir">Lanta Old Town</span> · comedor sobre pilotes en el mar, marisco al peso y atardeceres. Muy típico y muy bien de precio.
+        <a href="https://www.google.com/maps/search/?api=1&query=Beautiful%20Restaurant%20Lanta%20Old%20Town" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Cook Kai</span> — <span class="dir">Klong Nin</span> · thai casero, barato y consistente; el sitio al que se acaba volviendo cada noche.
+        <a href="https://www.google.com/maps/search/?api=1&query=Cook%20Kai%20Restaurant%20Koh%20Lanta" target="_blank" rel="noopener">📍 Maps</a></li>
+      <li><span class="nombre">Time for Lime</span> — <span class="dir">Klong Dao</span> · escuela de cocina con restaurante en la playa; los beneficios van a un centro de rescate de animales de la isla.
+        <a href="https://www.google.com/maps/search/?api=1&query=Time%20for%20Lime%20Koh%20Lanta" target="_blank" rel="noopener">📍 Maps</a></li>
+    </ul>
+
     <p>Las mesas en la arena con el marisco del día expuesto en hielo son la cena clásica de Lanta.
     En Old Town, los restaurantes sobre pilotes sirven curry de cangrejo con vistas; y por toda la isla
     hay cafés estupendos para desayunar sin reloj.</p>
@@ -811,6 +963,60 @@
     <p>Último día: repetir el plato del viaje. Y en el aeropuerto, comprar pasta de curry y salsas
     para intentar (en vano) reproducirlo en casa.</p>
   </div>
+</section>
+
+<!-- ============ GUÍA DE COMIDA ============ -->
+<section id="comer" class="etapa-sec">
+  <div class="kicker">La parte importante</div>
+  <h2>Guía de comida tailandesa</h2>
+  <p class="intro">Tailandia se come en la calle, en mesas de plástico y señalando con el dedo. La cocina
+  cambia mucho según dónde estéis: en Bangkok manda la comida china-tailandesa y los fideos; en el norte,
+  la cocina <strong>Lanna</strong>, con hierbas, ahumados y poco coco; en el sur, curries potentes con
+  cúrcuma, marisco y herencia musulmana. Estos son los platos que hay que cazar en cada etapa.</p>
+
+  <div class="trio">
+    <figure><img src="img/pad-thai.jpg" alt="Pad thai" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Pad thai: el plato-bandera, mejor en puesto que en restaurante</figcaption></figure>
+    <figure><img src="img/khao-soi.jpg" alt="Khao soi" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Khao soi: el curry de coco con fideos del norte, el rey del viaje</figcaption></figure>
+    <figure><img src="img/mango-sticky-rice.jpg" alt="Mango sticky rice" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Mango sticky rice: la religión local del postre</figcaption></figure>
+  </div>
+
+  <div class="tabla-wrap">
+    <table class="tab">
+      <thead><tr><th>Dónde</th><th>Lo que no os podéis ir sin probar</th><th>Truco</th></tr></thead>
+      <tbody>
+        <tr><td><b>Bangkok</b></td><td>Pad thai · boat noodles · som tam · tom yum goong · kuay jab · pato asado · mango sticky rice</td>
+          <td>Cenad en Yaowarat (Chinatown) al menos una noche. Los boat noodles se piden de tres en tres: los cuencos son minúsculos.</td></tr>
+        <tr><td><b>Chiang Rai</b></td><td>Khao soi · nam ngiao · sai ua · larb gai · té oolong de montaña</td>
+          <td>El nam ngiao (fideos con tomate y cerdo) es lo local que casi nadie prueba: buscadlo en el mercado matinal.</td></tr>
+        <tr><td><b>Chiang Dao</b></td><td>Cocina casera del valle · verduras y setas de montaña · gaeng hang lay · café de la zona</td>
+          <td>Hay pocos sitios: reservad la cena en el alojamiento y aprovechad el mercado si caéis en martes.</td></tr>
+        <tr><td><b>Chiang Mai</b></td><td>Khao soi · khao kha moo · sai ua · nam prik ong · gaeng hang lay · laab del norte</td>
+          <td>Es la capital gastronómica del norte: probad el khao soi en tres sitios distintos y elegid el vuestro.</td></tr>
+        <tr><td><b>Krabi</b></td><td>Curry de cangrejo con kanom jeen · gaeng som · pescado a la brasa · roti</td>
+          <td>Empieza la cocina del sur: más picante y con cúrcuma. El mercado nocturno del muelle es la cena perfecta.</td></tr>
+        <tr><td><b>Islas (Yao Noi y Lanta)</b></td><td>Pescado del día a la brasa · massaman · gambas al ajillo · roti recién hecho · batidos de fruta</td>
+          <td>En Koh Yao Noi, isla musulmana, apenas hay alcohol fuera de los resorts. Se cena pronto: antes de las 21:00.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="comer" style="margin-top:26px">
+    <h3>Cómo pedir sin meter la pata</h3>
+    <div class="platos">
+      <span class="plato">Mai phet = sin picante</span><span class="plato">Phet nit noi = poco picante</span>
+      <span class="plato">Jay = vegetariano</span><span class="plato">Mai sai nam pla = sin salsa de pescado</span>
+      <span class="plato">Chek bin = la cuenta</span><span class="plato">Aroi mak = ¡buenísimo!</span>
+      <span class="plato">Khop khun khrap / khá = gracias</span>
+    </div>
+    <p><strong>Reglas que funcionan siempre:</strong> comer donde haya cola de tailandeses; los puestos que
+    hacen un solo plato lo bordan; "poco picante" para un tailandés sigue siendo picante para nosotros;
+    el hielo con agujero en el centro es industrial y seguro; y llevad billetes pequeños, porque en la
+    calle nadie tiene cambio de 1.000 baht. La comida no se regatea nunca.</p>
+  </div>
+
+  <p class="presu-nota">Los restaurantes que aparecen en cada etapa son referencias contrastadas, pero en
+  Tailandia los horarios cambian y algunos puestos cierran un día a la semana: comprobadlo en Google Maps
+  antes de cruzar la ciudad.</p>
 </section>
 
 <!-- ============ BARRIOS ============ -->
@@ -1018,6 +1224,28 @@
   </div>
 </section>
 
+<!-- ============ OFFLINE ============ -->
+<section id="offline" class="etapa-sec">
+  <div class="kicker">Para llevarla encima</div>
+  <h2>Verla sin conexión</h2>
+  <p class="intro">En las islas y en la montaña la cobertura va y viene, así que la web se puede
+  <strong>guardar entera en el móvil</strong>, fotos incluidas, y seguir funcionando en modo avión.</p>
+
+  <div class="destacado">
+    <h3>📥 Guardarla en el móvil</h3>
+    <p>Pulsa el botón y espera unos segundos: se descargan la página y todas las fotos (unos 25 MB).
+    A partir de ahí, este enlace se abre sin conexión. En el menú del navegador podéis además usar
+    <strong>"Añadir a la pantalla de inicio"</strong> y quedará como una app.</p>
+    <div class="botonera">
+      <button id="btnGuardar" class="btn-guardar" onclick="guardarOffline()">📥 Guardar para usar sin conexión</button>
+      <a class="btn-zip" id="btnZip" href="viaje-tailandia-2026.zip">💾 Descargar en ZIP (ordenador)</a>
+    </div>
+    <div class="estado-offline" id="estadoOffline"></div>
+    <div class="ojo">🗺️ El mapa de la ruta es un dibujo propio, así que también funciona sin datos. Para los
+    mapas de calles, descargad la zona en la app de Google Maps con "Descargar mapa sin conexión".</div>
+  </div>
+</section>
+
 </main>
 
 <footer>
@@ -1043,6 +1271,53 @@
     if(p.classList.contains('abierto') && !p.contains(e.target) && !b.contains(e.target)) cerrarMenuInfo();
   });
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') cerrarMenuInfo(); });
+
+  // ---- Guardar la web para verla sin conexión ----
+  var elEstado = document.getElementById('estadoOffline');
+  var elBoton  = document.getElementById('btnGuardar');
+
+  function esWeb(){ return location.protocol === 'https:' || location.hostname === 'localhost'; }
+
+  if (!esWeb()) {
+    if (elBoton) elBoton.style.display = 'none';
+    var elZip = document.getElementById('btnZip');
+    if (elZip) elZip.style.display = 'none';
+    if (elEstado) elEstado.textContent = 'Esta es la copia descargada: ya funciona sin conexión.';
+  } else if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').catch(function(){});
+    if (window.caches) {
+      caches.match('img/portada.jpg', {ignoreSearch:true}).then(function(hit){
+        if (hit && elEstado) {
+          elEstado.textContent = '✓ Ya está guardada en este dispositivo.';
+          if (elBoton) elBoton.textContent = '🔄 Volver a guardar (actualizar)';
+        }
+      }).catch(function(){});
+    }
+    navigator.serviceWorker.addEventListener('message', function(e){
+      if (!e.data || !elEstado) return;
+      if (e.data.tipo === 'PROGRESO') {
+        elEstado.textContent = 'Guardando… ' + e.data.hechos + ' de ' + e.data.total;
+      } else if (e.data.tipo === 'LISTO') {
+        elEstado.textContent = '✓ Guardada. Ya podéis abrirla en modo avión.';
+        if (elBoton) { elBoton.disabled = false; elBoton.textContent = '🔄 Volver a guardar (actualizar)'; }
+      }
+    });
+  } else {
+    if (elBoton) elBoton.style.display = 'none';
+    if (elEstado) elEstado.textContent = 'Este navegador no permite guardar la web; usad la descarga en ZIP.';
+  }
+
+  function guardarOffline(){
+    if (!('serviceWorker' in navigator)) return;
+    elBoton.disabled = true;
+    elEstado.textContent = 'Preparando la descarga…';
+    navigator.serviceWorker.ready.then(function(reg){
+      var sw = reg.active || navigator.serviceWorker.controller;
+      if (sw) { sw.postMessage({tipo:'GUARDAR'}); }
+      else { elEstado.textContent = 'Recargad la página e intentadlo otra vez.'; elBoton.disabled = false; }
+    });
+  }
+
 </script>
 
 </body>

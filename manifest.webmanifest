@@ -1,0 +1,15 @@
+{
+  "name": "Tailandia 2026 · Bangkok, el norte y las islas del Andamán",
+  "short_name": "Tailandia 2026",
+  "description": "Itinerario día a día, mapa, qué y dónde comer, hoteles y consejos prácticos.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf6ef",
+  "theme_color": "#c8891a",
+  "lang": "es",
+  "icons": [
+    { "src": "img/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}
