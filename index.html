@@ -269,6 +269,60 @@
 
   footer{border-top:1px solid var(--linea);padding:30px 24px 50px;text-align:center;
     color:var(--tinta2);font-size:.85rem;font-style:italic}
+
+  /* ---------- AUDIOGUÍA ---------- */
+  .audioguia{background:linear-gradient(180deg,#fffdf8,#fdf7ea);border:1px solid var(--oro-suave);
+    border-radius:14px;padding:18px 20px;margin:22px 0 26px;box-shadow:var(--sombra)}
+  .audioguia .cab{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;letter-spacing:1.6px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;display:flex;align-items:center;
+    gap:8px;flex-wrap:wrap;margin-bottom:4px}
+  .audioguia .expl{font-size:.93rem;color:var(--tinta2);font-style:italic;margin-bottom:12px}
+  .pistas{display:flex;flex-direction:column;gap:7px}
+  .pista{display:flex;align-items:center;gap:11px;width:100%;text-align:left;background:var(--card);
+    border:1px solid var(--linea);border-radius:10px;padding:10px 13px;cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.94rem;color:var(--tinta);
+    transition:border-color .15s,transform .1s}
+  .pista:hover{border-color:var(--oro);transform:translateX(2px)}
+  .pista .ico{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--oro);color:#fff;
+    display:grid;place-items:center;font-size:.8rem;padding-left:2px}
+  .pista.sonando .ico{background:var(--verde)}
+  .pista.sonando{border-color:var(--verde);background:#f4faf6}
+  .pista .txt{flex:1 1 auto;min-width:0}
+  .pista .nom{display:block;line-height:1.35}
+  .pista .meta{display:block;font-size:.78rem;color:var(--tinta2);margin-top:2px}
+  .etiq{display:inline-block;font-size:.68rem;letter-spacing:.6px;text-transform:uppercase;
+    padding:2px 7px;border-radius:20px;vertical-align:1px;margin-left:6px;font-weight:600}
+  .etiq.capsula{background:var(--oro-suave);color:#8a5e10}
+  .etiq.guia{background:#e3eee7;color:var(--verde)}
+  .etiq.fondo{background:#e4eef2;color:var(--mar)}
+  .btn-bajar{margin-top:12px;width:100%;background:none;border:1px dashed var(--oro);color:var(--oro);
+    border-radius:10px;padding:9px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.86rem;
+    cursor:pointer}
+  .btn-bajar:hover{background:var(--oro);color:#fff;border-style:solid}
+  .btn-bajar[disabled]{opacity:.65;cursor:default;border-style:solid}
+
+  /* ---------- REPRODUCTOR FLOTANTE ---------- */
+  #player{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(43,38,32,.97);
+    backdrop-filter:blur(8px);color:#fff;transform:translateY(105%);transition:transform .25s ease;
+    box-shadow:0 -4px 20px rgba(0,0,0,.25);font-family:-apple-system,'Segoe UI',sans-serif}
+  #player.visible{transform:translateY(0)}
+  .pl-inner{max-width:1050px;margin:0 auto;padding:11px 16px 13px;display:flex;align-items:center;gap:13px}
+  .pl-play{flex:0 0 auto;width:46px;height:46px;border-radius:50%;background:var(--oro);color:#fff;
+    border:none;font-size:1.1rem;cursor:pointer;display:grid;place-items:center}
+  .pl-mid{flex:1 1 auto;min-width:0}
+  .pl-tit{font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .pl-barra{margin-top:7px;height:5px;background:rgba(255,255,255,.22);border-radius:4px;cursor:pointer;position:relative}
+  .pl-prog{height:100%;background:var(--oro);border-radius:4px;width:0}
+  .pl-t{font-size:.74rem;opacity:.75;margin-top:4px;display:flex;justify-content:space-between}
+  .pl-x{flex:0 0 auto;background:none;border:none;color:#fff;opacity:.6;font-size:1.3rem;cursor:pointer;padding:4px 8px}
+  .pl-x:hover{opacity:1}
+  .pl-vel{flex:0 0 auto;background:rgba(255,255,255,.14);border:none;color:#fff;border-radius:7px;
+    padding:6px 9px;font-size:.78rem;cursor:pointer}
+  @media(max-width:560px){
+    .pl-inner{gap:10px;padding:9px 12px 11px}
+    .pl-play{width:42px;height:42px}
+    .audioguia{padding:15px 14px}
+  }
 </style>
 </head>
 <body>
@@ -1330,5 +1384,156 @@
 
 </script>
 
+<!-- ============ REPRODUCTOR DE LA AUDIOGUÍA ============ -->
+<div id="player" class="sans" aria-live="polite">
+  <div class="pl-inner">
+    <button class="pl-play" id="plPlay" aria-label="Reproducir o pausar">⏸</button>
+    <div class="pl-mid">
+      <div class="pl-tit" id="plTit">—</div>
+      <div class="pl-barra" id="plBarra"><div class="pl-prog" id="plProg"></div></div>
+      <div class="pl-t"><span id="plAhora">0:00</span><span id="plTotal">0:00</span></div>
+    </div>
+    <button class="pl-vel" id="plVel" aria-label="Velocidad de reproducción">1×</button>
+    <button class="pl-x" id="plX" aria-label="Cerrar reproductor">✕</button>
+  </div>
+</div>
+<audio id="plAudio" preload="none"></audio>
+<script src="audio/catalogo.js"></script>
+<script>
+/* ---------- AUDIOGUÍA ---------- */
+(function(){
+  if (typeof AUDIOS === 'undefined') return;
+
+  var au = document.getElementById('plAudio'), pl = document.getElementById('player');
+  var elTit = document.getElementById('plTit'), elProg = document.getElementById('plProg');
+  var elAhora = document.getElementById('plAhora'), elTotal = document.getElementById('plTotal');
+  var btPlay = document.getElementById('plPlay'), btVel = document.getElementById('plVel');
+  var actual = null, velocidades = [1, 1.25, 1.5, 0.85], iVel = 0;
+
+  function mmss(s){ s = Math.max(0, Math.round(s || 0)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
+
+  var TXT = {capsula:'cápsula', guia:'audioguía', fondo:'historia'};
+
+  function sonar(p){
+    if (actual === p.id && !au.paused) { au.pause(); return; }
+    if (actual === p.id) { au.play(); return; }
+    actual = p.id;
+    au.src = 'audio/' + p.id + '.mp3';
+    au.playbackRate = velocidades[iVel];
+    au.play().catch(function(){});
+    elTit.textContent = p.t;
+    elTotal.textContent = mmss(p.d);
+    pl.classList.add('visible');
+    marcar();
+  }
+
+  function marcar(){
+    document.querySelectorAll('.pista').forEach(function(b){
+      b.classList.toggle('sonando', b.dataset.id === actual && !au.paused);
+      var i = b.querySelector('.ico');
+      if (i) i.textContent = (b.dataset.id === actual && !au.paused) ? '❚❚' : '▶';
+    });
+    btPlay.textContent = au.paused ? '▶' : '⏸';
+  }
+
+  au.addEventListener('timeupdate', function(){
+    if (!au.duration) return;
+    elProg.style.width = (au.currentTime / au.duration * 100) + '%';
+    elAhora.textContent = mmss(au.currentTime);
+    elTotal.textContent = mmss(au.duration);
+  });
+  au.addEventListener('play', marcar);
+  au.addEventListener('pause', marcar);
+  au.addEventListener('ended', function(){ elProg.style.width = '0'; marcar(); });
+
+  btPlay.onclick = function(){ au.paused ? au.play() : au.pause(); };
+  document.getElementById('plX').onclick = function(){ au.pause(); pl.classList.remove('visible'); };
+  btVel.onclick = function(){
+    iVel = (iVel + 1) % velocidades.length;
+    au.playbackRate = velocidades[iVel];
+    btVel.textContent = velocidades[iVel] + '×';
+  };
+  document.getElementById('plBarra').onclick = function(e){
+    if (!au.duration) return;
+    var r = this.getBoundingClientRect();
+    au.currentTime = (e.clientX - r.left) / r.width * au.duration;
+  };
+
+  /* --- construir los bloques de cada etapa --- */
+  function bloque(pistas, titulo, expl, clave){
+    var d = document.createElement('div');
+    d.className = 'audioguia sans';
+    var mb = pistas.reduce(function(a,p){ return a + p.mb; }, 0);
+    var h = '<div class="cab">🎧 ' + titulo + '</div>';
+    if (expl) h += '<div class="expl">' + expl + '</div>';
+    h += '<div class="pistas">';
+    pistas.forEach(function(p){
+      h += '<button class="pista" data-id="' + p.id + '">' +
+             '<span class="ico">▶</span><span class="txt">' +
+             '<span class="nom">' + p.t + '<span class="etiq ' + p.k + '">' + TXT[p.k] + '</span></span>' +
+             '<span class="meta">' + mmss(p.d) + ' · ' + p.mb.toFixed(1) + ' MB</span>' +
+           '</span></button>';
+    });
+    h += '</div><button class="btn-bajar" data-grupo="' + clave + '">⬇ Guardar estos ' +
+         pistas.length + ' audios en el móvil (' + mb.toFixed(0) + ' MB)</button>';
+    d.innerHTML = h;
+    d.querySelectorAll('.pista').forEach(function(b){
+      b.onclick = function(){ sonar(pistas.find(function(p){ return p.id === b.dataset.id; })); };
+    });
+    d.querySelector('.btn-bajar').onclick = function(){ guardar(this, pistas); };
+    return d;
+  }
+
+  var ORDEN = {capsula:0, guia:1, fondo:2};
+  function porSeccion(sec){
+    return AUDIOS.filter(function(p){ return p.s === sec; })
+                 .sort(function(a,b){ return (ORDEN[a.k]-ORDEN[b.k]) || a.id.localeCompare(b.id); });
+  }
+
+  // 1) bloque "para el avión", al final de la sección de la ruta
+  var avion = porSeccion('avion');
+  if (avion.length) {
+    var host = document.getElementById('ruta');
+    if (host) host.appendChild(bloque(avion,
+      'Audioguía · para el avión',
+      'Escúchalos antes de llegar: con esto entiendes casi todo lo que vas a ver. Se pueden guardar en el móvil y funcionan sin conexión.',
+      'avion'));
+  }
+
+  // 2) un bloque por etapa, justo después del texto de introducción
+  document.querySelectorAll('section.etapa-sec').forEach(function(sec){
+    var pistas = porSeccion(sec.id);
+    if (!pistas.length) return;
+    var b = bloque(pistas, 'Audioguía de esta etapa',
+      'Dale al play delante del sitio. Las <b>cápsulas</b> duran un par de minutos; las <b>audioguías</b>, entre cinco y diez.',
+      sec.id);
+    var ancla = sec.querySelector('p.intro') || sec.querySelector('.banner') || sec.querySelector('h2');
+    ancla ? ancla.insertAdjacentElement('afterend', b) : sec.appendChild(b);
+  });
+
+  /* --- descarga por etapa mediante el service worker --- */
+  function guardar(boton, pistas){
+    var rutas = pistas.map(function(p){ return 'audio/' + p.id + '.mp3'; });
+    boton.disabled = true;
+    if (!('caches' in window)) { boton.textContent = 'Tu navegador no permite guardarlos'; return; }
+    var hechos = 0;
+    caches.open('tailandia2026-v2').then(function(c){
+      return rutas.reduce(function(cadena, r){
+        return cadena.then(function(){
+          return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){
+            hechos++;
+            boton.textContent = '⬇ Guardando… ' + hechos + ' de ' + rutas.length;
+          });
+        });
+      }, Promise.resolve());
+    }).then(function(){
+      boton.textContent = '✓ Guardados en el móvil · funcionan sin conexión';
+    }).catch(function(){
+      boton.textContent = '✗ No se han podido guardar. Inténtalo con wifi.';
+      boton.disabled = false;
+    });
+  }
+})();
+</script>
 </body>
 </html>

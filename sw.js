@@ -3,6 +3,7 @@ const RECURSOS = [
   './',
   'index.html',
   'manifest.webmanifest',
+  'audio/catalogo.js',
   'img/portada.jpg',
   'img/icono-192.png',
   'img/icono-512.png',
@@ -50,13 +51,43 @@ self.addEventListener('activate', e => e.waitUntil(
 ));
 
 // Cache-first para lo nuestro: una vez guardado, funciona sin conexión.
+// Los audios se piden por trozos (cabecera Range). Si están en la caché hay que
+// servirlos troceados a mano, o el navegador no deja avanzar ni retroceder la pista.
+async function desdeCache(peticion) {
+  const guardado = await caches.match(peticion, {ignoreSearch: true});
+  const rango = peticion.headers.get('range');
+  if (!guardado || !rango) return guardado;
+
+  const datos = await guardado.arrayBuffer();
+  const trozos = /bytes=(\d*)-(\d*)/.exec(rango);
+  let ini = trozos && trozos[1] ? parseInt(trozos[1], 10) : 0;
+  let fin = trozos && trozos[2] ? parseInt(trozos[2], 10) : datos.byteLength - 1;
+  if (isNaN(ini) || ini >= datos.byteLength) ini = 0;
+  if (isNaN(fin) || fin >= datos.byteLength) fin = datos.byteLength - 1;
+
+  return new Response(datos.slice(ini, fin + 1), {
+    status: 206,
+    statusText: 'Partial Content',
+    headers: {
+      'Content-Type': guardado.headers.get('Content-Type') || 'application/octet-stream',
+      'Content-Range': 'bytes ' + ini + '-' + fin + '/' + datos.byteLength,
+      'Content-Length': String(fin - ini + 1),
+      'Accept-Ranges': 'bytes'
+    }
+  });
+}
+
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
   e.respondWith(
-    caches.match(e.request, {ignoreSearch: true}).then(hit =>
+    desdeCache(e.request).then(hit =>
       hit || fetch(e.request).then(resp => {
-        if (resp.ok) { const copia = resp.clone(); caches.open(CACHE).then(c => c.put(e.request, copia)); }
+        // Sólo se guardan respuestas completas: una parcial (206) no se puede cachear.
+        if (resp.ok && resp.status === 200) {
+          const copia = resp.clone();
+          caches.open(CACHE).then(c => c.put(e.request, copia)).catch(() => {});
+        }
         return resp;
       }).catch(() => caches.match('index.html', {ignoreSearch: true}))
     )
