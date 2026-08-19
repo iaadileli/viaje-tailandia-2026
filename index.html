@@ -271,35 +271,47 @@
     color:var(--tinta2);font-size:.85rem;font-style:italic}
 
   /* ---------- AUDIOGUÍA ---------- */
+  /* bloque grande: sólo el de "para el avión" */
   .audioguia{background:linear-gradient(180deg,#fffdf8,#fdf7ea);border:1px solid var(--oro-suave);
-    border-radius:14px;padding:18px 20px;margin:22px 0 26px;box-shadow:var(--sombra)}
+    border-radius:14px;padding:18px 20px;margin:22px 0 6px;box-shadow:var(--sombra)}
   .audioguia .cab{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;letter-spacing:1.6px;
     text-transform:uppercase;color:var(--oro);font-weight:700;display:flex;align-items:center;
     gap:8px;flex-wrap:wrap;margin-bottom:4px}
   .audioguia .expl{font-size:.93rem;color:var(--tinta2);font-style:italic;margin-bottom:12px}
-  .pistas{display:flex;flex-direction:column;gap:7px}
-  .pista{display:flex;align-items:center;gap:11px;width:100%;text-align:left;background:var(--card);
-    border:1px solid var(--linea);border-radius:10px;padding:10px 13px;cursor:pointer;
-    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.94rem;color:var(--tinta);
+
+  /* bloque dentro de la pastilla de cada día */
+  .audios-dia{margin-top:13px;padding-top:11px;border-top:1px dashed var(--linea)}
+  .audios-dia .tit{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.7rem;letter-spacing:1.4px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin-bottom:7px;display:flex;
+    align-items:center;gap:6px}
+  .audios-dia .tit svg{width:15px;height:15px;flex:0 0 auto}
+
+  .pistas{display:flex;flex-direction:column;gap:6px}
+  .pista{display:flex;align-items:center;gap:10px;width:100%;text-align:left;background:var(--card);
+    border:1px solid var(--linea);border-radius:10px;padding:9px 12px;cursor:pointer;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.92rem;color:var(--tinta);
     transition:border-color .15s,transform .1s}
   .pista:hover{border-color:var(--oro);transform:translateX(2px)}
-  .pista .ico{flex:0 0 auto;width:30px;height:30px;border-radius:50%;background:var(--oro);color:#fff;
-    display:grid;place-items:center;font-size:.8rem;padding-left:2px}
-  .pista.sonando .ico{background:var(--verde)}
+  .pista .ico{flex:0 0 auto;width:32px;height:32px;border-radius:9px;display:grid;place-items:center;
+    border:1.5px solid currentColor}
+  .pista .ico svg{width:19px;height:19px;display:block}
+  /* cada tipo, con su color y su icono */
+  .pista.k-capsula .ico{color:var(--oro);background:#fdf6e7}
+  .pista.k-guia    .ico{color:var(--verde);background:#f1f8f3}
+  .pista.k-fondo   .ico{color:var(--mar);background:#eef5f8}
   .pista.sonando{border-color:var(--verde);background:#f4faf6}
+  .pista.sonando .ico{color:#fff;background:var(--verde);border-color:var(--verde)}
   .pista .txt{flex:1 1 auto;min-width:0}
   .pista .nom{display:block;line-height:1.35}
-  .pista .meta{display:block;font-size:.78rem;color:var(--tinta2);margin-top:2px}
-  .etiq{display:inline-block;font-size:.68rem;letter-spacing:.6px;text-transform:uppercase;
-    padding:2px 7px;border-radius:20px;vertical-align:1px;margin-left:6px;font-weight:600}
-  .etiq.capsula{background:var(--oro-suave);color:#8a5e10}
-  .etiq.guia{background:#e3eee7;color:var(--verde)}
-  .etiq.fondo{background:#e4eef2;color:var(--mar)}
-  .btn-bajar{margin-top:12px;width:100%;background:none;border:1px dashed var(--oro);color:var(--oro);
+  .pista .meta{display:block;font-size:.77rem;color:var(--tinta2);margin-top:1px}
+
+  .btn-bajar{margin-top:14px;width:100%;background:none;border:1px dashed var(--oro);color:var(--oro);
     border-radius:10px;padding:9px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.86rem;
-    cursor:pointer}
+    cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px}
+  .btn-bajar svg{width:16px;height:16px;flex:0 0 auto}
   .btn-bajar:hover{background:var(--oro);color:#fff;border-style:solid}
-  .btn-bajar[disabled]{opacity:.65;cursor:default;border-style:solid}
+  .btn-bajar[disabled]{opacity:.7;cursor:default;border-style:solid}
+  .bajar-etapa{margin:20px 0 4px}
 
   /* ---------- REPRODUCTOR FLOTANTE ---------- */
   #player{position:fixed;left:0;right:0;bottom:0;z-index:80;background:rgba(43,38,32,.97);
@@ -510,25 +522,25 @@
   el máximo de Bangkok en poco tiempo. Es enorme y caótica, y justo por eso engancha.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 1 · Llegada y primer asalto <span class="fecha">viernes 30 oct</span></h4>
+    <div class="dia" data-dia="bangkok1-1"><h4>Día 1 · Llegada y primer asalto <span class="fecha">viernes 30 oct</span></h4>
       <p>Llegáis de Madrid (salisteis el 29). Check-in en Siam y, como está todo a mano, a moverse:
       paseo por el centro para ubicaros, subida a un <strong>mirador</strong> o vuelta por los grandes
       centros de Siam, y cena en el mercado nocturno de <strong>Jodd Fairs</strong> (Rama IX, a un metro
       de distancia) o en Chinatown.</p>
       <div class="tip">Del aeropuerto, el <strong>Airport Rail Link</strong> hasta Phaya Thai y BTS: rápido, barato y sin atascos.</div></div>
-    <div class="dia"><h4>Día 2 · Los grandes templos y el río <span class="fecha">sábado 31 oct</span></h4>
+    <div class="dia" data-dia="bangkok1-2"><h4>Día 2 · Los grandes templos y el río <span class="fecha">sábado 31 oct</span></h4>
       <p>Día potente. <strong>Mañana:</strong> <strong>Gran Palacio</strong> y Wat Phra Kaew a primera hora
       (metro MRT hasta Sanam Chai) y, al lado, el Buda reclinado de <strong>Wat Pho</strong>.
       <strong>Mediodía:</strong> cruzar en ferry (5 THB) a <strong>Wat Arun</strong>. <strong>Tarde:</strong>
       callejear por Rattanakosin. <strong>Noche:</strong> cena a tope en <strong>Yaowarat</strong>
       (Chinatown), el mejor street food de la ciudad.</p>
       <div class="tip">Hombros y rodillas cubiertos en el Gran Palacio. Ignorad a quien os diga en la calle que "está cerrado": es el timo clásico.</div></div>
-    <div class="dia"><h4>Día 3 · Mercados, arte y azoteas <span class="fecha">domingo 1 nov</span></h4>
+    <div class="dia" data-dia="bangkok1-3"><h4>Día 3 · Mercados, arte y azoteas <span class="fecha">domingo 1 nov</span></h4>
       <p><strong>Mañana:</strong> al ser fin de semana, el mercado gigante de <strong>Chatuchak</strong>
       (id pronto); alternativa, paseo en barca longtail por los <strong>canales de Thonburi</strong>.
       <strong>Tarde:</strong> barrio de <strong>Talat Noi</strong> (arte urbano y cafés) y compras por Siam.
       <strong>Noche:</strong> una copa en un <strong>rooftop</strong> con vistas a la ciudad iluminada.</p></div>
-    <div class="dia"><h4>Día 4 · Rumbo al norte <span class="fecha">lunes 2 nov</span></h4>
+    <div class="dia" data-dia="bangkok1-4"><h4>Día 4 · Rumbo al norte <span class="fecha">lunes 2 nov</span></h4>
       <p>Última mañana para algo pendiente y vuelo a <strong>Chiang Rai</strong> (1 h 20). Por la tarde ya
       estaréis paseando por una ciudad pequeña y amable, a otro ritmo.</p></div>
   </div>
@@ -594,16 +606,16 @@
   montañas y plantaciones de té.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 4 · Tarde de llegada <span class="fecha">lunes 2 nov</span></h4>
+    <div class="dia" data-dia="chiangrai-1"><h4>Día 4 · Tarde de llegada <span class="fecha">lunes 2 nov</span></h4>
       <p>Paseo por el centro, la torre del reloj dorada y cena en el <strong>night bazaar</strong>:
       pequeño, nada agobiante, con mesas comunes y música en directo suave.</p></div>
-    <div class="dia"><h4>Día 5 · Los tres templos <span class="fecha">martes 3 nov</span></h4>
+    <div class="dia" data-dia="chiangrai-2"><h4>Día 5 · Los tres templos <span class="fecha">martes 3 nov</span></h4>
       <p><strong>Mañana:</strong> <strong>Wat Rong Khun</strong> (Templo Blanco) nada más abrir (8:00) para
       evitar grupos, después el <strong>Templo Azul</strong> (Wat Rong Suea Ten) y la <strong>Casa Negra</strong>
       (Baan Dam) del artista Thawan Duchanee. <strong>Tarde:</strong> café con vistas infinitas en la
       plantación de té de <strong>Choui Fong</strong>, entre colinas verdes.</p>
       <div class="tip">Un conductor de Grab o un tuk-tuk por horas os hace la ruta completa sin prisa por unos 1.000–1.500 THB.</div></div>
-    <div class="dia"><h4>Día 6 · Carretera de montaña <span class="fecha">miércoles 4 nov</span></h4>
+    <div class="dia" data-dia="chiangrai-3"><h4>Día 6 · Carretera de montaña <span class="fecha">miércoles 4 nov</span></h4>
       <p>Coche con conductor hacia <strong>Chiang Dao</strong> (~3 h). Es una carretera bonita de montaña;
       se puede parar en ruta en Mae Salong o Tha Ton (templo con vistas al río Kok) para comer.</p></div>
   </div>
@@ -658,17 +670,17 @@
   Aquí no se viene a "ver cosas": se viene a estar.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 6 · Llegada al valle <span class="fecha">miércoles 4 nov</span></h4>
+    <div class="dia" data-dia="chiangdao-1"><h4>Día 6 · Llegada al valle <span class="fecha">miércoles 4 nov</span></h4>
       <p>Llegada a mediodía, comida tranquila y por la tarde las <strong>cuevas de Chiang Dao</strong>
       (Wat Tham Chiang Dao): un complejo de grutas con budas dentro de la montaña. Cena en el alojamiento
       viendo cómo se enciende la montaña al atardecer.</p></div>
-    <div class="dia"><h4>Día 7 · Bosque, escaleras y aguas termales <span class="fecha">jueves 5 nov</span></h4>
+    <div class="dia" data-dia="chiangdao-2"><h4>Día 7 · Bosque, escaleras y aguas termales <span class="fecha">jueves 5 nov</span></h4>
       <p><strong>Mañana:</strong> subir los 500 escalones entre bosque hasta <strong>Wat Tham Pha Plong</strong>,
       un monasterio encajado en el acantilado — probablemente el momento más sereno del viaje.
       <strong>Tarde:</strong> baño en las <strong>aguas termales</strong> del valle o simplemente hamaca,
       libro y sonido de cigarras. Si hay mercado matinal ese día, es pequeño y auténtico: desayunad allí.</p>
       <div class="tip">Por la noche refresca (15–18 °C): la capa fina de manga larga que llevéis para los aviones aquí se usa de verdad.</div></div>
-    <div class="dia"><h4>Día 8 · Bajada a Chiang Mai <span class="fecha">viernes 6 nov</span></h4>
+    <div class="dia" data-dia="chiangdao-3"><h4>Día 8 · Bajada a Chiang Mai <span class="fecha">viernes 6 nov</span></h4>
       <p>Mañana lenta y coche a <strong>Chiang Mai</strong> (1 h 30). Llegaréis para comer.</p></div>
   </div>
 
@@ -717,26 +729,26 @@
   <em>y</em> el del domingo.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 8 · El casco antiguo <span class="fecha">viernes 6 nov</span></h4>
+    <div class="dia" data-dia="chiangmai-1"><h4>Día 8 · El casco antiguo <span class="fecha">viernes 6 nov</span></h4>
       <p>Llegáis de Chiang Dao para comer. Tarde de templos sin prisa: <strong>Wat Phra Singh</strong>,
       <strong>Wat Chedi Luang</strong> (impresionante iluminado al anochecer) y callejones con cafés.
       Primer <strong>khao soi</strong> "oficial" para cenar.</p></div>
-    <div class="dia"><h4>Día 9 · La montaña del templo dorado <span class="fecha">sábado 7 nov</span></h4>
+    <div class="dia" data-dia="chiangmai-2"><h4>Día 9 · La montaña del templo dorado <span class="fecha">sábado 7 nov</span></h4>
       <p><strong>Mañana:</strong> subir temprano a <strong>Doi Suthep</strong>, el templo dorado que vigila
       la ciudad (id a las 8:00 y lo tendréis casi vacío). A la bajada, parada en <strong>Baan Kang Wat</strong>,
       un pueblito de artistas con talleres de cerámica y cafés entre árboles. <strong>Tarde:</strong> masaje.
       <strong>Noche:</strong> <strong>Saturday Walking Street</strong> en la calle Wua Lai: artesanía y puestos
       de comida en ambiente local.</p></div>
-    <div class="dia"><h4>Día 10 · Cocinar y mercados <span class="fecha">domingo 8 nov</span></h4>
+    <div class="dia" data-dia="chiangmai-3"><h4>Día 10 · Cocinar y mercados <span class="fecha">domingo 8 nov</span></h4>
       <p><strong>Mañana:</strong> <strong>clase de cocina tailandesa</strong> (medio día, muchas incluyen visita
       al mercado; es divertidísimo y os lleváis las recetas) o mercado de <strong>Warorot</strong>, el de los
       locales. <strong>Tarde:</strong> café en Nimman. <strong>Noche:</strong> la gran <strong>Sunday Walking
       Street</strong> de Ratchadamnoen, el mejor mercado nocturno del norte.</p></div>
-    <div class="dia"><h4>Día 11 · Día de elefantes 🐘 <span class="fecha">lunes 9 nov</span></h4>
+    <div class="dia" data-dia="chiangmai-4"><h4>Día 11 · Día de elefantes 🐘 <span class="fecha">lunes 9 nov</span></h4>
       <p>Día completo en el <strong>santuario de elefantes</strong> (ver bloque verde más abajo).
       Os recogen en el hotel por la mañana y os devuelven a media tarde. Noche tranquila y última cena
       norteña.</p></div>
-    <div class="dia"><h4>Día 12 · Vuelo al sur <span class="fecha">martes 10 nov</span></h4>
+    <div class="dia" data-dia="chiangmai-5"><h4>Día 12 · Vuelo al sur <span class="fecha">martes 10 nov</span></h4>
       <p>Vuelo directo <strong>Chiang Mai → Krabi</strong> (~2 h). Del fresco de la montaña al calor del mar.</p></div>
   </div>
 
@@ -821,11 +833,11 @@
   pequeña de río, manglares y mercados, sin playa y por eso sin masas. Perfecta para llegar del vuelo,
   cenar bien y coger la lancha por la mañana con calma.</p>
   <div class="dias">
-    <div class="dia"><h4>Día 12 · Tarde y noche de mercado <span class="fecha">martes 10 nov</span></h4>
+    <div class="dia" data-dia="krabi-1"><h4>Día 12 · Tarde y noche de mercado <span class="fecha">martes 10 nov</span></h4>
       <p>Paseo al atardecer por el río (los peñones de Khao Khanab Nam, los manglares) y cena en el
       <strong>mercado nocturno del muelle</strong> (Chao Fah): marisco, curries del sur y postres, todo
       de puestos y a precio local.</p></div>
-    <div class="dia"><h4>Día 13 · A la isla tranquila <span class="fecha">miércoles 11 nov</span></h4>
+    <div class="dia" data-dia="krabi-2"><h4>Día 13 · A la isla tranquila <span class="fecha">miércoles 11 nov</span></h4>
       <p>Traslado corto al embarcadero y lancha a <strong>Koh Yao Noi</strong> (~30–45 min por la bahía
       de Phang Nga, entre islotes de piedra que salen del mar).</p></div>
   </div>
@@ -868,18 +880,18 @@
   islotes kársticos. Es el "nada masivo" que buscáis, en estado puro.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 13 · Modo isla <span class="fecha">miércoles 11 nov</span></h4>
+    <div class="dia" data-dia="kohyaonoi-1"><h4>Día 13 · Modo isla <span class="fecha">miércoles 11 nov</span></h4>
       <p>Llegada, bungalow y tarde de playa en <strong>Pasai</strong> o <strong>Klong Jark</strong>.
       Cena de pescado con los pies casi en el agua.</p></div>
-    <div class="dia"><h4>Día 14 · La isla en scooter o bici <span class="fecha">jueves 12 nov</span></h4>
+    <div class="dia" data-dia="kohyaonoi-2"><h4>Día 14 · La isla en scooter o bici <span class="fecha">jueves 12 nov</span></h4>
       <p>Vuelta a la isla (una carretera tranquila la rodea entera): arrozales, miradores, el pueblo
       pescador, cafés escondidos y paradas de baño. Atardecer en la costa oeste mirando los islotes.</p>
       <div class="tip">La isla es musulmana: en los pueblos, mejor con camiseta y sin bikini fuera de la playa. Todo cierra pronto — cenad antes de las 21:00.</div></div>
-    <div class="dia"><h4>Día 15 · La laguna secreta <span class="fecha">viernes 13 nov</span></h4>
+    <div class="dia" data-dia="kohyaonoi-3"><h4>Día 15 · La laguna secreta <span class="fecha">viernes 13 nov</span></h4>
       <p>Excursión en barca longtail a <strong>Koh Hong</strong> y su laguna interior turquesa, o kayak
       entre los manglares. Son salidas de medio día en grupos pequeños desde la propia isla.
       Tarde de hamaca y masaje.</p></div>
-    <div class="dia"><h4>Día 16 · Rumbo a Lanta <span class="fecha">sábado 14 nov</span></h4>
+    <div class="dia" data-dia="kohyaonoi-4"><h4>Día 16 · Rumbo a Lanta <span class="fecha">sábado 14 nov</span></h4>
       <p>Lancha de vuelta y traslado a <strong>Koh Lanta</strong> (combinado lancha + furgoneta, medio día).
       Llegada a media tarde, a tiempo del primer atardecer lanteño.</p></div>
   </div>
@@ -930,25 +942,25 @@
   no tener plan.</p>
 
   <div class="dias">
-    <div class="dia"><h4>Día 16 · Llegada y primer atardecer <span class="fecha">sábado 14 nov</span></h4>
+    <div class="dia" data-dia="kohlanta-1"><h4>Día 16 · Llegada y primer atardecer <span class="fecha">sábado 14 nov</span></h4>
       <p>Llegada a media tarde, bungalow y primer baño. Elegid base en <strong>Klong Nin</strong> o
       <strong>Long Beach</strong> (Phra Ae). Cena en la arena viendo el atardecer sobre el Andamán.</p></div>
-    <div class="dia"><h4>Día 17 · La isla a vuestro ritmo <span class="fecha">domingo 15 nov</span></h4>
+    <div class="dia" data-dia="kohlanta-2"><h4>Día 17 · La isla a vuestro ritmo <span class="fecha">domingo 15 nov</span></h4>
       <p>Playa, baño, comida, siesta, paseo. Un día para bajar al sur en scooter hasta la bahía de
       <strong>Kantiang</strong> y el <strong>parque nacional de Mu Ko Lanta</strong>, con su faro sobre
       los acantilados en la punta de la isla. Sin prisa.</p></div>
-    <div class="dia"><h4>Día 18 · El paraíso de postre: Koh Rok <span class="fecha">lunes 16 nov</span></h4>
+    <div class="dia" data-dia="kohlanta-3"><h4>Día 18 · El paraíso de postre: Koh Rok <span class="fecha">lunes 16 nov</span></h4>
       <p>Excursión en barco a <strong>Koh Rok</strong>, dos islas vírgenes de parque nacional al sur de
       Lanta: el mejor esnórquel de la zona, arena blanca y agua transparente. Alternativa: las
       <strong>4 Islands</strong> con la cueva Esmeralda de <strong>Koh Mook</strong> (se entra nadando por
       un túnel hasta una playa interior escondida).</p>
       <div class="tip">Contratad la versión en lancha con grupo reducido y salida temprana: llegaréis antes que los barcos grandes.</div></div>
-    <div class="dia"><h4>Día 19 · Lanta Old Town y despedida del sur <span class="fecha">martes 17 nov</span></h4>
+    <div class="dia" data-dia="kohlanta-4"><h4>Día 19 · Lanta Old Town y despedida del sur <span class="fecha">martes 17 nov</span></h4>
       <p><strong>Día:</strong> la antigua capital, en la costa este: casas centenarias de madera sobre
       pilotes en el mar, comunidad chino-malaya y de gitanos del mar, tiendecitas y cafés con terraza
       sobre el agua. <strong>Tarde:</strong> la playa que más os haya gustado, un último masaje frente al
       mar y cena de despedida del sur viendo el atardecer.</p></div>
-    <div class="dia"><h4>Día 20 · Vuelta a Bangkok <span class="fecha">miércoles 18 nov</span></h4>
+    <div class="dia" data-dia="kohlanta-5"><h4>Día 20 · Vuelta a Bangkok <span class="fecha">miércoles 18 nov</span></h4>
       <p>Furgoneta + puente a tierra firme y vuelo <strong>Krabi → Bangkok</strong> (1 h 20) a media tarde.</p></div>
   </div>
 
@@ -999,15 +1011,15 @@
   al río</strong>, en el casco antiguo (Rattanakosin / Riverside). Atardeceres sobre el Chao Phraya, un
   último masaje largo y despedirse comiendo bien, sin prisa ni planes de reloj.</p>
   <div class="dias">
-    <div class="dia"><h4>Día 20 · Llegada y atardecer en el río <span class="fecha">miércoles 18 nov</span></h4>
+    <div class="dia" data-dia="bangkok2-1"><h4>Día 20 · Llegada y atardecer en el río <span class="fecha">miércoles 18 nov</span></h4>
       <p>Llegáis del sur a media tarde. Check-in junto al río y, sin más plan, ver <strong>Wat Arun</strong>
       encenderse al atardecer desde la orilla o desde una terraza tranquila. Cena relajada en el barrio.</p></div>
-    <div class="dia"><h4>Día 21 · Calma, seda y último masaje <span class="fecha">jueves 19 nov</span></h4>
+    <div class="dia" data-dia="bangkok2-2"><h4>Día 21 · Calma, seda y último masaje <span class="fecha">jueves 19 nov</span></h4>
       <p><strong>Mañana lenta.</strong> Visita tranquila a la <strong>casa de Jim Thompson</strong> (teca,
       seda y jardín, un oasis) y sus tiendas para los últimos regalos. <strong>Tarde:</strong> un buen
       <strong>masaje de despedida</strong> de dos horas y paseo sin reloj por el casco antiguo.
       <strong>Noche:</strong> gran cena final — un thai de mantel o volver a Yaowarat, que siempre apetece.</p></div>
-    <div class="dia"><h4>Día 22 · A casa <span class="fecha">viernes 20 nov</span></h4>
+    <div class="dia" data-dia="bangkok2-3"><h4>Día 22 · A casa <span class="fecha">viernes 20 nov</span></h4>
       <p>Vuelo de vuelta con la mochila (algo más llena) y muchas ganas de volver.</p></div>
   </div>
   <div class="comer">
@@ -1414,6 +1426,25 @@
 
   function mmss(s){ s = Math.max(0, Math.round(s || 0)); return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
 
+  /* Iconos: trazo simple, heredan el color del tipo.
+     cápsula = una pastilla · audioguía = libro que suena · historia = ondas que cuentan algo */
+  var SVG = {
+    capsula: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+           + '<rect x="1.7" y="8.2" width="20.6" height="7.6" rx="3.8" transform="rotate(-45 12 12)"/>'
+           + '<line x1="9.2" y1="9.2" x2="14.8" y2="14.8"/></svg>',
+    guia:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
+           + '<path d="M4 4.6h6.4a1.6 1.6 0 0 1 1.6 1.6v13a1.6 1.6 0 0 0-1.6-1.6H4z"/>'
+           + '<line x1="6.4" y1="4.6" x2="6.4" y2="17.6"/>'
+           + '<path d="M15.4 9.6a3.6 3.6 0 0 1 0 4.8"/>'
+           + '<path d="M18.4 7.2a7.4 7.4 0 0 1 0 9.6"/></svg>',
+    fondo:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round">'
+           + '<circle cx="6.2" cy="12" r="1.7" fill="currentColor" stroke="none"/>'
+           + '<path d="M10.4 8.6a4.8 4.8 0 0 1 0 6.8"/>'
+           + '<path d="M14 6.2a9 9 0 0 1 0 11.6"/>'
+           + '<path d="M17.6 3.8a13.2 13.2 0 0 1 0 16.4"/></svg>',
+    bajar:   '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'
+           + '<path d="M12 3.5v11"/><path d="M7.5 10.5 12 15l4.5-4.5"/><path d="M4.5 19.5h15"/></svg>'
+  };
   var TXT = {capsula:'cápsula', guia:'audioguía', fondo:'historia'};
 
   function sonar(p){
@@ -1432,8 +1463,6 @@
   function marcar(){
     document.querySelectorAll('.pista').forEach(function(b){
       b.classList.toggle('sonando', b.dataset.id === actual && !au.paused);
-      var i = b.querySelector('.ico');
-      if (i) i.textContent = (b.dataset.id === actual && !au.paused) ? '❚❚' : '▶';
     });
     btPlay.textContent = au.paused ? '▶' : '⏸';
   }
@@ -1461,77 +1490,90 @@
     au.currentTime = (e.clientX - r.left) / r.width * au.duration;
   };
 
-  /* --- construir los bloques de cada etapa --- */
-  function bloque(pistas, titulo, expl, clave){
+  /* --- lista de pistas --- */
+  var ORDEN = {capsula:0, guia:1, fondo:2};
+  function lista(pistas){
     var d = document.createElement('div');
-    d.className = 'audioguia sans';
-    var mb = pistas.reduce(function(a,p){ return a + p.mb; }, 0);
-    var h = '<div class="cab">🎧 ' + titulo + '</div>';
-    if (expl) h += '<div class="expl">' + expl + '</div>';
-    h += '<div class="pistas">';
-    pistas.forEach(function(p){
-      h += '<button class="pista" data-id="' + p.id + '">' +
-             '<span class="ico">▶</span><span class="txt">' +
-             '<span class="nom">' + p.t + '<span class="etiq ' + p.k + '">' + TXT[p.k] + '</span></span>' +
-             '<span class="meta">' + mmss(p.d) + ' · ' + p.mb.toFixed(1) + ' MB</span>' +
-           '</span></button>';
-    });
-    h += '</div><button class="btn-bajar" data-grupo="' + clave + '">⬇ Guardar estos ' +
-         pistas.length + ' audios en el móvil (' + mb.toFixed(0) + ' MB)</button>';
-    d.innerHTML = h;
-    d.querySelectorAll('.pista').forEach(function(b){
-      b.onclick = function(){ sonar(pistas.find(function(p){ return p.id === b.dataset.id; })); };
-    });
-    d.querySelector('.btn-bajar').onclick = function(){ guardar(this, pistas); };
+    d.className = 'pistas';
+    pistas.slice().sort(function(a,b){ return (ORDEN[a.k]-ORDEN[b.k]) || a.id.localeCompare(b.id); })
+      .forEach(function(p){
+        var b = document.createElement('button');
+        b.className = 'pista k-' + p.k;
+        b.dataset.id = p.id;
+        b.innerHTML = '<span class="ico">' + SVG[p.k] + '</span><span class="txt">' +
+                      '<span class="nom">' + p.t + '</span>' +
+                      '<span class="meta">' + TXT[p.k] + ' · ' + mmss(p.d) + ' · ' + p.mb.toFixed(1) + ' MB</span>' +
+                      '</span>';
+        b.onclick = function(){ sonar(p); };
+        d.appendChild(b);
+      });
     return d;
   }
 
-  var ORDEN = {capsula:0, guia:1, fondo:2};
-  function porSeccion(sec){
-    return AUDIOS.filter(function(p){ return p.s === sec; })
-                 .sort(function(a,b){ return (ORDEN[a.k]-ORDEN[b.k]) || a.id.localeCompare(b.id); });
+  function botonBajar(pistas, texto){
+    var b = document.createElement('button');
+    b.className = 'btn-bajar sans';
+    var mb = pistas.reduce(function(a,p){ return a + p.mb; }, 0);
+    b.innerHTML = SVG.bajar + '<span>' + texto.replace('{n}', pistas.length).replace('{mb}', mb.toFixed(0)) + '</span>';
+    b.onclick = function(){ guardar(b, pistas); };
+    return b;
   }
 
-  // 1) bloque "para el avión", al final de la sección de la ruta
-  var avion = porSeccion('avion');
-  if (avion.length) {
-    var host = document.getElementById('ruta');
-    if (host) host.appendChild(bloque(avion,
-      'Audioguía · para el avión',
-      'Escúchalos antes de llegar: con esto entiendes casi todo lo que vas a ver. Se pueden guardar en el móvil y funcionan sin conexión.',
-      'avion'));
+  /* --- 1) bloque "para el avión", en la sección de la ruta --- */
+  var avion = AUDIOS.filter(function(p){ return p.s === 'avion'; });
+  var host = document.getElementById('ruta');
+  if (avion.length && host) {
+    var caja = document.createElement('div');
+    caja.className = 'audioguia sans';
+    caja.innerHTML = '<div class="cab">🎧 Audioguía · para el avión</div>' +
+      '<div class="expl">Escúchalos antes de llegar: con esto entiendes casi todo lo que vas a ver. ' +
+      'Los demás están repartidos por los días, cada uno donde toca.</div>';
+    caja.appendChild(lista(avion));
+    caja.appendChild(botonBajar(avion, 'Guardar estos {n} audios en el móvil ({mb} MB)'));
+    host.appendChild(caja);
   }
 
-  // 2) un bloque por etapa, justo después del texto de introducción
-  document.querySelectorAll('section.etapa-sec').forEach(function(sec){
-    var pistas = porSeccion(sec.id);
+  /* --- 2) las demás pistas, dentro de la pastilla de su día --- */
+  document.querySelectorAll('[data-dia]').forEach(function(dia){
+    var pistas = AUDIOS.filter(function(p){ return p.s === dia.dataset.dia; });
     if (!pistas.length) return;
-    var b = bloque(pistas, 'Audioguía de esta etapa',
-      'Dale al play delante del sitio. Las <b>cápsulas</b> duran un par de minutos; las <b>audioguías</b>, entre cinco y diez.',
-      sec.id);
-    var ancla = sec.querySelector('p.intro') || sec.querySelector('.banner') || sec.querySelector('h2');
-    ancla ? ancla.insertAdjacentElement('afterend', b) : sec.appendChild(b);
+    var caja = document.createElement('div');
+    caja.className = 'audios-dia sans';
+    caja.innerHTML = '<div class="tit">' + SVG.guia + 'Para escuchar este día</div>';
+    caja.appendChild(lista(pistas));
+    dia.appendChild(caja);
   });
 
-  /* --- descarga por etapa mediante el service worker --- */
+  /* --- 3) al final de cada etapa, guardar todos sus audios de una vez --- */
+  document.querySelectorAll('section.etapa-sec').forEach(function(sec){
+    var suyas = AUDIOS.filter(function(p){ return p.s.indexOf(sec.id + '-') === 0; });
+    if (!suyas.length) return;
+    var b = botonBajar(suyas, 'Guardar los {n} audios de esta etapa en el móvil ({mb} MB)');
+    b.classList.add('bajar-etapa');
+    var ultimo = sec.querySelector('.dias') || sec;
+    ultimo.appendChild(b);
+  });
+
+  /* --- descarga mediante el service worker --- */
   function guardar(boton, pistas){
     var rutas = pistas.map(function(p){ return 'audio/' + p.id + '.mp3'; });
+    var texto = boton.querySelector('span:last-child');
     boton.disabled = true;
-    if (!('caches' in window)) { boton.textContent = 'Tu navegador no permite guardarlos'; return; }
+    if (!('caches' in window)) { texto.textContent = 'Tu navegador no permite guardarlos'; return; }
     var hechos = 0;
     caches.open('tailandia2026-v2').then(function(c){
       return rutas.reduce(function(cadena, r){
         return cadena.then(function(){
           return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){
             hechos++;
-            boton.textContent = '⬇ Guardando… ' + hechos + ' de ' + rutas.length;
+            texto.textContent = 'Guardando… ' + hechos + ' de ' + rutas.length;
           });
         });
       }, Promise.resolve());
     }).then(function(){
-      boton.textContent = '✓ Guardados en el móvil · funcionan sin conexión';
+      texto.textContent = '✓ Guardados · funcionan sin conexión';
     }).catch(function(){
-      boton.textContent = '✗ No se han podido guardar. Inténtalo con wifi.';
+      texto.textContent = 'No se han podido guardar. Inténtalo con wifi.';
       boton.disabled = false;
     });
   }
