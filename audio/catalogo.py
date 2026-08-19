@@ -43,6 +43,12 @@ META = {
  '07-chao-ley-gitanos-del-mar':('Los chao ley, gitanos del mar', 'kohlanta', 'fondo'),
  '07-koh-rok-capsula':     ('Koh Rok', 'kohlanta', 'capsula'),
  '08-jim-thompson':        ('Jim Thompson: la seda y la desaparición', 'bangkok2', 'fondo'),
+ '00-masaje-tailandes':    ('El masaje tailandés', 'avion', 'fondo'),
+ '01-wat-traimit-capsula': ('Wat Traimit, el Buda de oro', 'bangkok1', 'capsula'),
+ '04-mercados-chiang-mai': ('Los mercados de Chiang Mai', 'chiangmai', 'fondo'),
+ '05-railay-capsula':      ('Railay', 'krabi', 'capsula'),
+ '05-phang-nga-capsula':   ('La bahía de Phang Nga', 'kohyaonoi', 'capsula'),
+ '07-playas-koh-lanta':    ('Las playas, una por una', 'kohlanta', 'fondo'),
 }
 
 pistas = []
