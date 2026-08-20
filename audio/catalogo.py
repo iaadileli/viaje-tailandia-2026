@@ -38,7 +38,7 @@ META = {
  '04-elefantes':           ('El elefante en Tailandia', 'chiangmai-4', 'fondo'),
  '05-krabi-historia':      ('Krabi y el mar de Andamán', 'krabi-1', 'fondo'),
  '05-tsunami-2004':        ('El tsunami de 2004', 'krabi-1', 'fondo'),
- '06-koh-yao-noi-historia':('Koh Yao Noi: la isla que no se vendió', 'kohyaonoi-1', 'fondo'),
+ '06-koh-jum-historia':    ('Koh Jum: la isla que casi nadie pisa', 'kohjum-1', 'fondo'),
  '07-koh-lanta-historia':  ('Historia de Koh Lanta', 'kohlanta-1', 'fondo'),
  '07-chao-ley-gitanos-del-mar':('Los chao ley, gitanos del mar', 'kohlanta-4', 'fondo'),
  '07-koh-rok-capsula':     ('Koh Rok', 'kohlanta-3', 'capsula'),
@@ -47,7 +47,7 @@ META = {
  '01-wat-traimit-capsula': ('Wat Traimit, el Buda de oro', 'bangkok1-2', 'capsula'),
  '04-mercados-chiang-mai': ('Los mercados de Chiang Mai', 'chiangmai-3', 'fondo'),
  '05-railay-capsula':      ('Railay', 'krabi-1', 'capsula'),
- '05-phang-nga-capsula':   ('La bahía de Phang Nga', 'kohyaonoi-3', 'capsula'),
+ '05-phang-nga-capsula':   ('La bahía de Phang Nga', 'krabi-1', 'capsula'),
  '07-playas-koh-lanta':    ('Las playas, una por una', 'kohlanta-2', 'fondo'),
 }
 

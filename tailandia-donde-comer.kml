@@ -335,35 +335,35 @@
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
 </Folder>
-<Folder><name>Koh Yao Noi</name>
+<Folder><name>Koh Jum</name>
 <Placemark>
-  <name>Rice Paddy / restaurantes del arrozal</name>
-  <description><![CDATA[Comedores familiares entre arrozales, con cuatro mesas y cocina casera.<br><br>PIDE: curry massaman de pollo y arroz frito con gamba<br><br>Horario: 11:00–21:00<br>Precio: 120–250 THB<br>Zona: interior de la isla]]></description>
-  <address>Koh Yao Noi restaurant, Ko Yao Noi, Phang-nga, Tailandia</address>
-  <styleUrl>#s_normal</styleUrl>
-</Placemark>
-<Placemark>
-  <name>Chaba Cafe &amp; Gallery</name>
-  <description><![CDATA[Cafetería-galería con jardín, la parada agradable de la isla.<br><br>PIDE: desayuno y café decente, difícil de encontrar aquí<br><br>Horario: 8:00–17:00<br>Precio: 120–250 THB<br>Zona: cerca de Pasai Beach]]></description>
-  <address>Chaba Cafe Koh Yao Noi, Ko Yao Noi, Phang-nga, Tailandia</address>
-  <styleUrl>#s_normal</styleUrl>
-</Placemark>
-<Placemark>
-  <name>Marisco en Klong Jark</name>
-  <description><![CDATA[Mesas literalmente en la arena, pescado del día de los pescadores de la isla.<br><br>PIDE: el pescado que haya, a la brasa, con salsa de marisco picante<br><br>Horario: 17:00–22:00<br>Precio: 300–600 THB para dos<br>Zona: playa de Klong Jark]]></description>
-  <address>Klong Jark Beach restaurant Koh Yao Noi, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <name>Ban Ban Restaurant</name>
+  <description><![CDATA[El sitio de referencia de la isla: cocina tailandesa y algo occidental, llevado por una familia.<br><br>PIDE: curry massaman y, de desayuno, sus rollos de canela caseros, que son famosos en la isla<br><br>Horario: 8:00–21:00 aprox.<br>Precio: 150–300 THB<br>Zona: carretera principal, cerca de Ting Rai]]></description>
+  <address>Ban Ban Restaurant Koh Jum, Ko Jum, Krabi, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
 <Placemark>
-  <name>Mercado del pueblo</name>
-  <description><![CDATA[Puestos de comida preparada donde compran los isleños. Sin nada de turismo.<br><br>PIDE: curries del sur para llevar y roti recién hecho<br><br>Horario: mañana y tarde<br>Precio: 30–60 THB<br>Zona: Ban Tha Khao]]></description>
-  <address>Koh Yao Noi market, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <name>Restaurantes halal del pueblo</name>
+  <description><![CDATA[Comedores musulmanes sencillos donde come la gente de la isla. Baratísimos y auténticos.<br><br>PIDE: roti recién hecho, curry del sur y pescado del día<br><br>Horario: todo el día<br>Precio: 40–100 THB<br>Zona: Ban Ko Jum, en el sur]]></description>
+  <address>Koh Jum village restaurant, Ko Jum, Krabi, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
 <Placemark>
-  <name>Ojo: isla musulmana</name>
-  <description><![CDATA[El 90% de la población es musulmana: fuera de los resorts casi no hay alcohol y se cena pronto.<br><br>PIDE: cenar antes de las 21:00 y no contar con vinos<br><br>Horario: —<br>Precio: —<br>Zona: toda la isla]]></description>
-  <address>Koh Yao Noi, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <name>Luboa Café</name>
+  <description><![CDATA[La cafetería de la isla, para el café decente y el wifi que en los bungalows a veces falla.<br><br>PIDE: café con hielo y algo dulce mientras cargáis el móvil<br><br>Horario: 8:00–17:00<br>Precio: 60–120 THB<br>Zona: Luboa, pueblo principal]]></description>
+  <address>Luboa Cafe Koh Jum, Ko Jum, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Cenar en el alojamiento</name>
+  <description><![CDATA[Aquí es lo normal: casi todos los alojamientos tienen cocina y sirven pescado del día a la brasa.<br><br>PIDE: el pescado que hayan traído los pescadores, y avisad por la mañana<br><br>Horario: cena, avisando antes<br>Precio: 200–400 THB para dos<br>Zona: vuestro bungalow]]></description>
+  <address>Koh Jum, Ko Jum, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Ojo: no hay cajeros</name>
+  <description><![CDATA[No hay ni un solo cajero automático en Koh Jum, y muchos sitios no aceptan tarjeta.<br><br>PIDE: sacad efectivo en Krabi antes de embarcar, y de sobra<br><br>Horario: —<br>Precio: —<br>Zona: en toda la isla]]></description>
+  <address>Krabi, Ko Jum, Krabi, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
 </Folder>
