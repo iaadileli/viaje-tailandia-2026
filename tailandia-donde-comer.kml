@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>51 sitios de comida, una capa por etapa. ★ lleva décadas abierto · ◆ guía Michelin · ● donde come la gente de aquí</description>
+<description>64 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
