@@ -64,7 +64,6 @@ const RECURSOS = [
   'img/comida-tom-yum.jpg',
   'img/elefantes.jpg',
   'img/khao-soi.jpg',
-  'img/koh-hong.jpg',
   'img/koh-lanta.jpg',
   'img/koh-rok.jpg',
   'img/koh-jum.jpg',
@@ -110,19 +109,46 @@ async function desdeCache(peticion) {
   });
 }
 
+// La página y el catálogo cambian; las fotos y los audios, no.
+// Por eso van con estrategias distintas: si todo fuera cache-first, una vez
+// guardada la web nunca se verían las actualizaciones.
+function esContenidoVivo(peticion, url) {
+  return peticion.mode === 'navigate' ||
+         url.pathname.endsWith('/') ||
+         url.pathname.endsWith('.html') ||
+         url.pathname.endsWith('catalogo.js');
+}
+
+function guarda(peticion, resp) {
+  if (resp && resp.ok && resp.status === 200) {
+    const copia = resp.clone();
+    caches.open(CACHE).then(c => c.put(peticion, copia)).catch(() => {});
+  }
+  return resp;
+}
+
 self.addEventListener('fetch', e => {
   const url = new URL(e.request.url);
   if (e.request.method !== 'GET' || url.origin !== location.origin) return;
+
+  if (esContenidoVivo(e.request, url)) {
+    // Primero la red, para ver siempre la última versión. Si no hay cobertura,
+    // se tira de lo guardado, que es justo lo que hace falta en el viaje.
+    e.respondWith(
+      fetch(e.request)
+        .then(resp => guarda(e.request, resp))
+        .catch(() => caches.match(e.request, {ignoreSearch: true})
+          .then(hit => hit || caches.match('index.html', {ignoreSearch: true})))
+    );
+    return;
+  }
+
+  // Fotos, audios y demás: de la caché, que no cambian y pesan.
   e.respondWith(
     desdeCache(e.request).then(hit =>
-      hit || fetch(e.request).then(resp => {
-        // Sólo se guardan respuestas completas: una parcial (206) no se puede cachear.
-        if (resp.ok && resp.status === 200) {
-          const copia = resp.clone();
-          caches.open(CACHE).then(c => c.put(e.request, copia)).catch(() => {});
-        }
-        return resp;
-      }).catch(() => caches.match('index.html', {ignoreSearch: true}))
+      hit || fetch(e.request)
+        .then(resp => guarda(e.request, resp))
+        .catch(() => caches.match('index.html', {ignoreSearch: true}))
     )
   );
 });
