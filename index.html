@@ -560,9 +560,29 @@
     font-family:-apple-system,'Segoe UI',sans-serif}
   @media(max-width:760px){
     nav .wrap{display:none}
-    .etapas-sel{display:block}
-    .buscador input{width:110px}
-    .buscador input:focus{width:150px}
+    /* La barra pasa a dos filas: arriba lo que se usa a diario y, debajo,
+       el desplegable de etapas a todo lo ancho. Si no, en un móvil estrecho
+       se apelotonan cinco controles en la misma línea. */
+    .nav-inner{flex-wrap:wrap;padding-bottom:8px}
+    .etapas-sel{display:block;order:10;flex-basis:100%;width:100%;margin:0}
+    .buscador{flex:1 1 auto}
+    .buscador input{width:100%}
+    .buscador input:focus{width:100%}
+  }
+
+  /* ---------- BOTÓN HOY, SIEMPRE A LA VISTA ---------- */
+  .btn-hoy{flex:0 0 auto;display:inline-flex;align-items:center;gap:7px;background:var(--verde);
+    color:#fff;border-radius:9px;padding:8px 14px 8px 11px;font-size:.92rem;font-weight:700;
+    text-decoration:none;margin-right:12px;box-shadow:0 2px 8px rgba(45,80,60,.22);
+    font-family:-apple-system,'Segoe UI',sans-serif;letter-spacing:.3px;white-space:nowrap}
+  .btn-hoy:hover{background:#2f5540;color:#fff}
+  .btn-hoy svg{width:17px;height:17px;flex:0 0 auto}
+  @media(max-width:560px){
+    .btn-hoy{padding:8px 11px;font-size:.88rem;margin-right:8px}
+    .btn-hoy svg{width:15px;height:15px}
+    .nav-inner{padding:0 10px}
+    .menu-btn{margin-left:8px;padding:8px 10px}
+    .menu-btn .bars{display:none}
   }
 </style>
 </head>
@@ -577,7 +597,7 @@
   </div>
 </header>
 
-<nav class="sans"><div class="nav-inner"><div class="wrap">
+<nav class="sans"><div class="nav-inner"><a href="#hoy" class="btn-hoy" aria-label="Ir al plan de hoy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="16" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg><span>Hoy</span></a><div class="wrap">
   <a href="#ruta">La ruta</a>
   <a href="#mapa">Mapa</a>
   <a href="#bangkok1">Bangkok</a>
@@ -2858,7 +2878,6 @@
   });
 
   var ACCESOS = [
-    {ic:'📅', t:'Hoy',       a:'#hoy'},
     {ic:'🗣️', t:'Frases',    a:'#hablar'},
     {ic:'🆘', t:'Urgencias', a:'#acaso'},
     {ic:'↑',  t:'Arriba',    a:'top'}
