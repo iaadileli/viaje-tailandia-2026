@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2"><Document>
+<name>Tailandia 2026 · dónde comer</name>
+<description>51 sitios de comida, una capa por etapa. ★ lleva décadas abierto · ◆ guía Michelin · ● donde come la gente de aquí</description>
+<Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
+<Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
+<Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_local"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_normal"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
+<Folder><name>Bangkok</name>
+<Placemark>
+  <name>Thipsamai</name>
+  <description><![CDATA[El pad thai más famoso del mundo, desde 1966. Lo hacen a fuego de carbón, no de gas.<br><br>PIDE: el pad thai envuelto en huevo (hor khai) y un zumo de naranja recién exprimido, que aquí es legendario<br><br>Horario: 9:00–24:00 · cierra los martes<br>Precio: 60–250 THB<br>Zona: Th. Maha Chai, Old Town]]></description>
+  <address>Thipsamai Pad Thai Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_leyenda</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Nai Ek Roll Noodle</name>
+  <description><![CDATA[El cuenco más reconfortante de Chinatown, en la guía Michelin desde hace años.<br><br>PIDE: kuay jab: fideos de arroz enrollados en caldo de pimienta blanca, con panceta crujiente<br><br>Horario: 8:00–24:00 · todos los días<br>Precio: 60–120 THB<br>Zona: Yaowarat (Chinatown)]]></description>
+  <address>Nai Ek Roll Noodle Yaowarat, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>T&amp;K Seafood</name>
+  <description><![CDATA[El de las camisetas verdes. Marisco a la parrilla en plena calle, el clásico nocturno de Chinatown.<br><br>PIDE: gambas gigantes a la plancha y cangrejo al curry en polvo<br><br>Horario: 16:30–2:00<br>Precio: 400–900 THB para dos<br>Zona: esquina de Yaowarat con Th. Phadungdao]]></description>
+  <address>T&amp;K Seafood Yaowarat, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Guay Jub Ouan Pochana</name>
+  <description><![CDATA[Rival eterno de Nai Ek. Aquí el caldo pica más de pimienta y la cola es de tailandeses.<br><br>PIDE: kuay jab con huevo cocido y todos los extras de cerdo<br><br>Horario: 18:00–2:00 aprox.<br>Precio: 60–100 THB<br>Zona: Yaowarat, junto al callejón Texas]]></description>
+  <address>Guay Jub Ouan Pochana Yaowarat, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Wattana Panich</name>
+  <description><![CDATA[Su olla de caldo de ternera lleva más de 45 años sin apagarse: cada día añaden encima. Es una reliquia viva.<br><br>PIDE: neua tune: estofado de ternera con hierbas chinas. Y ver la olla<br><br>Horario: 9:00–19:30 · cierra los lunes<br>Precio: 100–250 THB<br>Zona: Ekkamai]]></description>
+  <address>Wattana Panich Ekkamai, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_leyenda</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Or Tor Kor Market</name>
+  <description><![CDATA[El mejor mercado de producto del país y uno de los mejores del mundo. Fruta perfecta, curries y comida preparada.<br><br>PIDE: durián si te atreves, mango, y un plato de curry en el patio de comidas<br><br>Horario: 6:00–18:00<br>Precio: 50–200 THB<br>Zona: frente a Chatuchak (MRT Kamphaeng Phet)]]></description>
+  <address>Or Tor Kor Market Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Khao Gaeng Jek Pui</name>
+  <description><![CDATA[Curries sobre arroz servidos desde una olla. No tiene mesas: se come de pie o sentado en un taburete en la acera.<br><br>PIDE: dos curries sobre arroz, señalando lo que te apetezca<br><br>Horario: 15:00–20:00 · cierra los lunes<br>Precio: 50–80 THB<br>Zona: Chinatown, Th. Mangkon]]></description>
+  <address>Khao Gaeng Jek Pui Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_leyenda</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Sanguan Sri</name>
+  <description><![CDATA[Comedor de oficinistas de los años 60, sin concesiones al turista. Cocina tailandesa casera de verdad.<br><br>PIDE: gaeng kiew wan (curry verde) y khao kluk kapi<br><br>Horario: solo mediodía, hasta ~15:00 · cierra domingos<br>Precio: 80–150 THB<br>Zona: Th. Witthayu (Ploenchit)]]></description>
+  <address>Sanguan Sri Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Somtum Der</name>
+  <description><![CDATA[Cocina de Isaan, el noreste. Ganó estrella Michelin en su sucursal de Nueva York.<br><br>PIDE: som tam (ensalada de papaya), gai yang (pollo a la brasa) y arroz glutinoso<br><br>Horario: 11:00–22:30<br>Precio: 150–350 THB<br>Zona: Saladaeng (Silom)]]></description>
+  <address>Somtum Der Saladaeng, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mae Varee</name>
+  <description><![CDATA[El mango con arroz glutinoso de referencia en Bangkok. Abre 24 horas.<br><br>PIDE: khao niao mamuang para llevar; te lo dan con la leche de coco aparte<br><br>Horario: 24 horas<br>Precio: 120–180 THB<br>Zona: Thong Lo (BTS Thong Lo)]]></description>
+  <address>Mae Varee Thonglor, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_leyenda</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Boat noodles de Victory Monument</name>
+  <description><![CDATA[Callejón entero de fideos de barca junto al canal. Los cuencos son diminutos a propósito.<br><br>PIDE: cuatro o cinco cuencos por cabeza: se apilan y te cobran por torre<br><br>Horario: 9:00–20:00 aprox.<br>Precio: 15–20 THB el cuenco<br>Zona: Soi Ratchawithi 18]]></description>
+  <address>Victory Monument Boat Noodle Alley, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Krua Apsorn</name>
+  <description><![CDATA[Cocina tailandesa casera de las que quedan pocas. Fue la favorita de la casa real y sigue llena de familias.<br><br>PIDE: el huevo revuelto con carne de cangrejo y el curry amarillo de cangrejo. Son sus dos platos legendarios<br><br>Horario: 10:30–19:30 aprox. · cierra los domingos<br>Precio: 300–600 THB para dos<br>Zona: 503-505 Sam Sen Rd, Dusit]]></description>
+  <address>Krua Apsorn Samsen, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Pad Thai Fai Ta Lu</name>
+  <description><![CDATA[El pad thai de los que saben, sin la cola de tres horas del de al lado. El nombre significa fuego que atraviesa: lo saltean a llama viva.<br><br>PIDE: pad thai de gamba de río y, si vais dos, uno con cangrejo para comparar<br><br>Horario: 9:00–21:00 aprox.<br>Precio: 80–200 THB<br>Zona: 115 Dinso Rd, Phra Nakhon]]></description>
+  <address>Pad Thai Fai Ta Lu Dinso Road, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Here Hai</name>
+  <description><![CDATA[Arroz frito con cangrejo que se ha hecho famoso por la cantidad de carne que lleva. Nada de trampa.<br><br>PIDE: khao pad pu: arroz frito con cangrejo. Un plato entre dos ya llena<br><br>Horario: 10:00–20:00 · cierra los lunes<br>Precio: 400–700 THB para dos<br>Zona: 112/1 Soi Sukhumvit 63, Ekkamai]]></description>
+  <address>Here Hai Ekkamai, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Somsak Pu Ob</name>
+  <description><![CDATA[Cangrejo al vapor en olla de barro sobre fideos de cristal, en un puesto de Thonburi. Solo de noche.<br><br>PIDE: pu ob wun sen: la olla de cangrejo con fideos. Se pide por tamaño de cangrejo<br><br>Horario: 16:00–24:00 · cierra los lunes<br>Precio: 500–900 THB para dos<br>Zona: 199-205 Soi Charoen Rat 1, Khlong San]]></description>
+  <address>Somsak Pu Ob Charoen Rat, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>K. Panich</name>
+  <description><![CDATA[Haciendo mango con arroz glutinoso desde 1932. El arroz lo cuecen al vapor con leche de coco de verdad.<br><br>PIDE: khao niao mamuang. Y si no es temporada de mango, el de durián<br><br>Horario: 8:00–17:00<br>Precio: 80–150 THB<br>Zona: 431-433 Tanao Rd, Phra Nakhon]]></description>
+  <address>K Panich Tanao Road Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Ten Suns</name>
+  <description><![CDATA[Caldo de ternera cocido durante horas, en un local diminuto del casco antiguo.<br><br>PIDE: el cuenco mixto de ternera braseada con fideos y el caldo aparte<br><br>Horario: 9:00–15:00 aprox. · cierra los jueves<br>Precio: 80–150 THB<br>Zona: 456 Wisut Kasat Rd, Phra Nakhon]]></description>
+  <address>Ten Suns Wisut Kasat, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Jeh O Chula</name>
+  <description><![CDATA[El tom yum más famoso de Bangkok, en una fuente metálica gigante. Solo de noche y con una cola de leyenda.<br><br>PIDE: tom yum mama: fideos instantáneos en caldo picante y cremoso con albóndigas, marisco y dos yemas crudas<br><br>Horario: 16:30–24:00 · la cola puede ser de 1–2 h, id al abrir<br>Precio: 220–320 THB<br>Zona: Rong Muang, Pathum Wan (junto a Chulalongkorn)]]></description>
+  <address>Jeh O Chula Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Go-Ang Kaomunkai Pratunam</name>
+  <description><![CDATA[El khao man gai de referencia: pollo hervido sobre arroz cocido en su caldo. Sencillísimo y perfecto.<br><br>PIDE: khao man gai, y no te dejes la salsa de soja fermentada con jengibre y chile<br><br>Horario: 6:00–14:00 y 17:00–2:00<br>Precio: 40–60 THB<br>Zona: Pratunam · los de las camisetas rosas]]></description>
+  <address>Go-Ang Kaomunkai Pratunam, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Rung Rueang</name>
+  <description><![CDATA[Más de 50 años con los fideos de cerdo. Curiosidad: por una pelea familiar hay dos locales pegados, y los dos son buenos.<br><br>PIDE: tom yum pork noodles; pídelos secos (haeng) para probar algo distinto<br><br>Horario: 8:00–17:00<br>Precio: 60–100 THB<br>Zona: Soi Sukhumvit 26 (BTS Phrom Phong)]]></description>
+  <address>Rung Rueang Pork Noodle Sukhumvit 26, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+</Folder>
+<Folder><name>Chiang Rai</name>
+<Placemark>
+  <name>Khao Soi Phor Jai</name>
+  <description><![CDATA[El khao soi de referencia en Chiang Rai, en un local sencillo lleno de gente del sitio.<br><br>PIDE: khao soi de pollo y, si te va, uno de ternera para comparar<br><br>Horario: 8:00–16:00 aprox.<br>Precio: 50–70 THB<br>Zona: Th. Jetyod, centro]]></description>
+  <address>Khao Soi Phor Jai Chiang Rai, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Lung Eed</name>
+  <description><![CDATA[Bib Gourmand de Michelin en un local de cuatro mesas. Uno de los mejores laab del país.<br><br>PIDE: laab gai: pollo picado con hierbas y piel crujiente por encima<br><br>Horario: 11:30–19:00 aprox. · cierra domingos<br>Precio: 60–100 THB<br>Zona: Th. Watpranorn]]></description>
+  <address>Lung Eed Chiang Rai, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mercado matinal (Kad Luang)</name>
+  <description><![CDATA[Donde compra y desayuna la ciudad. Aquí está el nam ngiao, el plato local que casi ningún turista prueba.<br><br>PIDE: nam ngiao: fideos con tomate, cerdo y flor de algodón. Y patongo con leche de soja<br><br>Horario: 5:00–11:00<br>Precio: 40–60 THB<br>Zona: centro, junto a Th. Uttarakit]]></description>
+  <address>Chiang Rai Municipality Market, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Night Bazaar</name>
+  <description><![CDATA[Patio de comidas con mesas comunes y música en directo suave. Pequeño y nada agobiante.<br><br>PIDE: una ronda de platos del norte para compartir y cerveza Chang<br><br>Horario: 18:00–23:00<br>Precio: 100–200 THB por cabeza<br>Zona: junto a la estación de autobuses]]></description>
+  <address>Chiang Rai Night Bazaar, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Chivit Thamma Da</name>
+  <description><![CDATA[Casa colonial junto al río, con jardín. El sitio bonito para desayunar o merendar.<br><br>PIDE: desayuno completo o el té de la tarde con el río delante<br><br>Horario: 8:00–18:00<br>Precio: 200–400 THB<br>Zona: orilla del río Kok]]></description>
+  <address>Chivit Thamma Da Coffee House Chiang Rai, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Cafés de té y café de montaña</name>
+  <description><![CDATA[Estas montañas producen el mejor café y té de Tailandia, en las laderas donde antes había amapola.<br><br>PIDE: un café de Doi Chang y té oolong de Doi Mae Salong<br><br>Horario: según el sitio<br>Precio: 60–120 THB<br>Zona: Doi Chang / Doi Tung]]></description>
+  <address>Doi Chang Coffee Chiang Rai, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+</Folder>
+<Folder><name>Chiang Dao</name>
+<Placemark>
+  <name>Cena en el alojamiento</name>
+  <description><![CDATA[En el valle hay poquísimos sitios y cierran temprano. Aquí la cena se reserva por la mañana.<br><br>PIDE: lo que tengan del día: verduras y setas de montaña, y gaeng hang lay si lo hacen<br><br>Horario: avisar antes de las 17:00<br>Precio: 150–300 THB<br>Zona: vuestro hotel]]></description>
+  <address>Chiang Dao, Chiang Dao, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mercado de Chiang Dao</name>
+  <description><![CDATA[El mercado grande es los martes por la mañana y bajan las comunidades de la montaña a vender. Si caéis en martes, no lo perdáis.<br><br>PIDE: sai ua a la brasa, arroz glutinoso y fruta de la zona<br><br>Horario: martes 6:00–12:00 · el resto de días, más pequeño<br>Precio: 20–60 THB<br>Zona: centro del pueblo]]></description>
+  <address>Chiang Dao Market, Chiang Dao, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Chiang Dao Nest</name>
+  <description><![CDATA[El sitio con nombre del valle: cocina occidental de nivel sorprendentemente alto en medio de la nada.<br><br>PIDE: el menú del día y una copa de vino mirando la montaña<br><br>Horario: 12:00–21:00<br>Precio: 400–700 THB<br>Zona: camino de la cueva]]></description>
+  <address>Chiang Dao Nest Restaurant, Chiang Dao, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Puestos de la carretera 1096</name>
+  <description><![CDATA[Cocinas familiares al borde de la carretera. Es donde para la gente del valle.<br><br>PIDE: khao soi, khao man gai o una tortilla con arroz<br><br>Horario: todo el día<br>Precio: 40–70 THB<br>Zona: de camino a las aguas termales]]></description>
+  <address>Chiang Dao restaurants, Chiang Dao, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+</Folder>
+<Folder><name>Chiang Mai</name>
+<Placemark>
+  <name>Khao Soi Khun Yai</name>
+  <description><![CDATA[Para mucha gente, el mejor khao soi de la ciudad. Lo cocina una familia en el patio de un templo.<br><br>PIDE: khao soi de pollo, y si aún hay, uno de ternera. Añade encurtidos y lima<br><br>Horario: lun–vie 10:00–14:00 · CIERRA FINES DE SEMANA<br>Precio: 50–70 THB<br>Zona: Sri Poom Soi 8, junto al foso norte]]></description>
+  <address>Khao Soi Khun Yai Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Khao Soi Mae Sai</name>
+  <description><![CDATA[En la guía Michelin. Mismo nivel que Khun Yai y con horario mucho más cómodo.<br><br>PIDE: khao soi de ternera, que aquí lo bordan<br><br>Horario: 8:00–16:00 aprox.<br>Precio: 50–80 THB<br>Zona: Th. Ratchaphuek]]></description>
+  <address>Khao Soi Mae Sai Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Khao Soi Lam Duan Fah Ham</name>
+  <description><![CDATA[Abierto desde los años 60, en la calle donde nació la fama del khao soi en Chiang Mai.<br><br>PIDE: khao soi de ternera estofada, que es su seña<br><br>Horario: 9:00–17:00<br>Precio: 50–80 THB<br>Zona: Th. Charoenrat (Faham)]]></description>
+  <address>Khao Soi Lam Duan Fah Ham, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_leyenda</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Cowboy Hat Lady</name>
+  <description><![CDATA[Un puesto callejero que salió en Netflix y sigue igual. La señora del sombrero vaquero lleva décadas ahí.<br><br>PIDE: khao kha moo: codillo de cerdo estofado sobre arroz, con huevo y verdura encurtida<br><br>Horario: 17:00–24:00 aprox.<br>Precio: 50–70 THB<br>Zona: puerta de Chang Phuak]]></description>
+  <address>Cowboy Hat Lady Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_leyenda</styleUrl>
+</Placemark>
+<Placemark>
+  <name>SP Chicken</name>
+  <description><![CDATA[Pollo a la brasa girando en un asador de leña, a la vista desde la calle.<br><br>PIDE: medio pollo asado, som tam y arroz glutinoso. El combo perfecto<br><br>Horario: 10:00–17:00 · cierra los lunes<br>Precio: 150–250 THB para dos<br>Zona: junto a Wat Phra Singh]]></description>
+  <address>SP Chicken Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Huen Phen</name>
+  <description><![CDATA[La casa de la cocina Lanna. De día es un comedor sencillo; de noche, un restaurante lleno de antigüedades.<br><br>PIDE: nam prik ong y nam prik noom con chicharrones, sai ua y gaeng hang lay<br><br>Horario: 8:30–16:00 y 17:00–22:00<br>Precio: 150–350 THB<br>Zona: Th. Ratchamanka, casco antiguo]]></description>
+  <address>Huen Phen Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_leyenda</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Tong Tem Toh</name>
+  <description><![CDATA[Cocina del norte en Nimman, siempre con cola. Ambiente joven y muy buen producto.<br><br>PIDE: cerdo a la brasa (kor moo yang) y las setas de temporada<br><br>Horario: 11:00–22:00<br>Precio: 200–400 THB<br>Zona: Nimman Soi 13]]></description>
+  <address>Tong Tem Toh Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mercado de Warorot (Kad Luang)</name>
+  <description><![CDATA[El mercado de siempre, de tres plantas. Aquí se compran los embutidos del norte.<br><br>PIDE: sai ua (salchicha de hierbas) y naem para llevar, y chicharrones<br><br>Horario: 6:00–17:00<br>Precio: 50–150 THB<br>Zona: junto al río Ping]]></description>
+  <address>Warorot Market Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mercado del domingo</name>
+  <description><![CDATA[El gran mercado semanal. Lo importante: los patios de los templos se llenan de puestos de comida con mesas.<br><br>PIDE: cena entera de puesto en puesto por el patio de un templo<br><br>Horario: domingos 16:00–22:00<br>Precio: 30–80 THB por plato<br>Zona: Th. Ratchadamnoen, casco antiguo]]></description>
+  <address>Sunday Walking Street Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Chang Phuak Night Market</name>
+  <description><![CDATA[El mercado nocturno donde cenan los de Chiang Mai, no los turistas. Está el de la Cowboy Hat Lady.<br><br>PIDE: khao kha moo, satay y roti de postre<br><br>Horario: 17:00–24:00<br>Precio: 30–70 THB<br>Zona: fuera de la puerta norte]]></description>
+  <address>Chang Phuak Gate Night Market, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Akha Ama Coffee</name>
+  <description><![CDATA[Café de una familia akha de la montaña, tostado aquí. Historia y taza excelentes.<br><br>PIDE: un filtrado del origen del día, mejor que el café con leche condensada<br><br>Horario: 8:00–18:00<br>Precio: 70–120 THB<br>Zona: casco antiguo y La Fattoria]]></description>
+  <address>Akha Ama Coffee Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Clase de cocina</name>
+  <description><![CDATA[Media jornada, con visita al mercado incluida. Se aprende a hacer khao soi y curry desde la pasta.<br><br>PIDE: reservar la que incluya mercado y os llevéis el recetario<br><br>Horario: mañana o tarde<br>Precio: 900–1.400 THB por persona<br>Zona: varias escuelas]]></description>
+  <address>Thai cooking class Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Ong Tong Khao Soi</name>
+  <description><![CDATA[Bib Gourmand y de los pocos con horario amplio. Michelin lo cita como ejemplo de comer bien por menos de 100 baht.<br><br>PIDE: khao soi de ternera y una ronda de sai ua para picar<br><br>Horario: 9:00–20:00<br>Precio: 60–100 THB<br>Zona: Nimman y casco antiguo]]></description>
+  <address>Ong Tong Khao Soi Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Huen Muan Jai</name>
+  <description><![CDATA[La mejor cocina Lanna de la ciudad según Michelin, y con razón. Aquí es donde hay que entender el norte.<br><br>PIDE: gaeng hang lay (curry birmano de cerdo), nam prik ong y sai ua<br><br>Horario: 11:00–21:00 · cierra los miércoles<br>Precio: 300–600 THB para dos<br>Zona: 24 Ratchaphruek Rd, Chang Phueak]]></description>
+  <address>Huen Muan Jai Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Meena Rice Based Cuisine</name>
+  <description><![CDATA[En medio de los arrozales, a 20 min del centro. Sirven arroces teñidos con flores y plantas, en vajilla de cerámica preciosa.<br><br>PIDE: el arroz azul de flor de guisante mariposa con curry, y sentaos fuera<br><br>Horario: 9:00–17:00<br>Precio: 300–500 THB para dos<br>Zona: 13/5 Mu 2, San Klang, San Kamphaeng]]></description>
+  <address>Meena Rice Based Cuisine Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Guay Jub Chang Moi</name>
+  <description><![CDATA[Fideos de arroz enrollados en caldo de pimienta, la versión del norte. Local de barrio de toda la vida.<br><br>PIDE: guay jub con panceta crujiente y huevo<br><br>Horario: 8:00–15:00 aprox.<br>Precio: 50–80 THB<br>Zona: 99/11-12 Chang Moi Tat Mai Rd]]></description>
+  <address>Guay Jub Chang Moi Tat Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Roti Pa Day</name>
+  <description><![CDATA[Un carrito de roti musulmán delante de un templo. Bib Gourmand por 30 baht.<br><br>PIDE: roti con huevo y plátano, y un té con leche<br><br>Horario: tarde y noche<br>Precio: 30–50 THB<br>Zona: frente a Wat Mahawan, Thapae Soi 4]]></description>
+  <address>Roti Pa Day Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+</Folder>
+<Folder><name>Krabi</name>
+<Placemark>
+  <name>Ruen Mai</name>
+  <description><![CDATA[El mejor restaurante de la zona: cocina del sur de verdad, en un jardín tropical. Aquí come la gente de Krabi.<br><br>PIDE: gaeng som (curry ácido de pescado) y sato (brotes de judía amarga) si os atrevéis<br><br>Horario: 10:00–21:00<br>Precio: 300–600 THB para dos<br>Zona: Th. Maharaj, norte de Krabi town]]></description>
+  <address>Ruen Mai Restaurant Krabi, Krabi, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mercado nocturno de Chao Fah</name>
+  <description><![CDATA[Mesas comunes junto al río, marisco a la plancha y curries del sur a precio local.<br><br>PIDE: pescado entero a la brasa y pad thai de gamba, con vistas al río<br><br>Horario: 17:00–22:00<br>Precio: 150–300 THB por cabeza<br>Zona: junto al muelle, Krabi town]]></description>
+  <address>Chao Fah Night Market Krabi, Krabi, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Puestos de kanom jeen</name>
+  <description><![CDATA[El desayuno del sur: fideos de arroz frescos ahogados en curry, con verduras y hierbas a discreción.<br><br>PIDE: kanom jeen con curry de cangrejo y todas las verduras que quepan<br><br>Horario: 6:00–11:00<br>Precio: 40–60 THB<br>Zona: mercado de la mañana]]></description>
+  <address>Krabi morning market kanom jeen, Krabi, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Roti de la calle</name>
+  <description><![CDATA[Herencia musulmana del sur: masa estirada y frita en plancha, dulce o salada.<br><br>PIDE: roti con plátano y leche condensada de postre; o roti con curry de desayuno<br><br>Horario: tarde y noche<br>Precio: 30–60 THB<br>Zona: por todo el centro, tarde y noche]]></description>
+  <address>roti Krabi town, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Marisco de Ao Nang</name>
+  <description><![CDATA[Los expositores de hielo del paseo. Se elige la pieza y se paga al peso.<br><br>PIDE: gambas gigantes o pescado del día a la sal, y confirmad el precio por kilo ANTES<br><br>Horario: 17:00–23:00<br>Precio: 600–1.200 THB para dos<br>Zona: paseo marítimo de Ao Nang]]></description>
+  <address>Ao Nang seafood restaurants, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Café Andaman / cafés del muelle</name>
+  <description><![CDATA[Para el café de después, mirando los peñones de Khao Khanab Nam.<br><br>PIDE: café tailandés con hielo y leche condensada<br><br>Horario: 8:00–18:00<br>Precio: 60–100 THB<br>Zona: Krabi town]]></description>
+  <address>coffee Krabi town riverside, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+</Folder>
+<Folder><name>Koh Yao Noi</name>
+<Placemark>
+  <name>Rice Paddy / restaurantes del arrozal</name>
+  <description><![CDATA[Comedores familiares entre arrozales, con cuatro mesas y cocina casera.<br><br>PIDE: curry massaman de pollo y arroz frito con gamba<br><br>Horario: 11:00–21:00<br>Precio: 120–250 THB<br>Zona: interior de la isla]]></description>
+  <address>Koh Yao Noi restaurant, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Chaba Cafe &amp; Gallery</name>
+  <description><![CDATA[Cafetería-galería con jardín, la parada agradable de la isla.<br><br>PIDE: desayuno y café decente, difícil de encontrar aquí<br><br>Horario: 8:00–17:00<br>Precio: 120–250 THB<br>Zona: cerca de Pasai Beach]]></description>
+  <address>Chaba Cafe Koh Yao Noi, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Marisco en Klong Jark</name>
+  <description><![CDATA[Mesas literalmente en la arena, pescado del día de los pescadores de la isla.<br><br>PIDE: el pescado que haya, a la brasa, con salsa de marisco picante<br><br>Horario: 17:00–22:00<br>Precio: 300–600 THB para dos<br>Zona: playa de Klong Jark]]></description>
+  <address>Klong Jark Beach restaurant Koh Yao Noi, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mercado del pueblo</name>
+  <description><![CDATA[Puestos de comida preparada donde compran los isleños. Sin nada de turismo.<br><br>PIDE: curries del sur para llevar y roti recién hecho<br><br>Horario: mañana y tarde<br>Precio: 30–60 THB<br>Zona: Ban Tha Khao]]></description>
+  <address>Koh Yao Noi market, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Ojo: isla musulmana</name>
+  <description><![CDATA[El 90% de la población es musulmana: fuera de los resorts casi no hay alcohol y se cena pronto.<br><br>PIDE: cenar antes de las 21:00 y no contar con vinos<br><br>Horario: —<br>Precio: —<br>Zona: toda la isla]]></description>
+  <address>Koh Yao Noi, Ko Yao Noi, Phang-nga, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+</Folder>
+<Folder><name>Koh Lanta</name>
+<Placemark>
+  <name>Caoutchouc</name>
+  <description><![CDATA[En una casa de madera sobre el agua, en el pueblo viejo. El sitio con más encanto de la isla.<br><br>PIDE: curry de cangrejo y pescado al vapor con lima, con el mar bajo los pies<br><br>Horario: 11:00–22:00<br>Precio: 400–700 THB para dos<br>Zona: Lanta Old Town]]></description>
+  <address>Caoutchouc Restaurant Lanta Old Town, Ko Lanta, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Mangrove / terrazas del pueblo viejo</name>
+  <description><![CDATA[La hilera de terrazas de madera sobre el mar en la calle principal del pueblo viejo.<br><br>PIDE: marisco a la plancha al atardecer, viendo volver las barcas<br><br>Horario: 11:00–22:00<br>Precio: 300–600 THB<br>Zona: Lanta Old Town]]></description>
+  <address>Lanta Old Town seafood restaurant, Ko Lanta, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Fresh Restaurant</name>
+  <description><![CDATA[Cocina tailandesa honesta a pie de playa, sin florituras y a precio razonable.<br><br>PIDE: massaman de ternera y som tam<br><br>Horario: 11:00–22:00<br>Precio: 250–450 THB<br>Zona: Klong Nin]]></description>
+  <address>Fresh Restaurant Klong Nin Koh Lanta, Ko Lanta, Krabi, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Puestos de roti de la carretera</name>
+  <description><![CDATA[Carritos de roti al borde de la carretera, sobre todo al caer la tarde.<br><br>PIDE: roti con plátano, huevo y leche condensada<br><br>Horario: 16:00–22:00<br>Precio: 30–50 THB<br>Zona: carretera oeste]]></description>
+  <address>roti Koh Lanta, Ko Lanta, Krabi, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>May &amp; Mark&#x27;s</name>
+  <description><![CDATA[El desayuno de la isla: pan hecho por ellos, café decente y huevos como es debido.<br><br>PIDE: desayuno completo y pan para llevar<br><br>Horario: 7:00–21:00<br>Precio: 150–300 THB<br>Zona: Saladan]]></description>
+  <address>May and Mark&#x27;s Koh Lanta, Ko Lanta, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Time For Lime</name>
+  <description><![CDATA[Escuela de cocina en la playa que financia un refugio de animales de la isla.<br><br>PIDE: la clase de tarde, que acaba cenando lo que habéis cocinado<br><br>Horario: clases por la tarde<br>Precio: 1.800 THB por persona<br>Zona: Klong Dao]]></description>
+  <address>Time For Lime Koh Lanta, Ko Lanta, Krabi, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+</Folder>
+</Document></kml>
