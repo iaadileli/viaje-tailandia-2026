@@ -228,17 +228,19 @@
     border-left:3px solid var(--oro);border-radius:0 7px 7px 0;font-size:.87rem;color:#5c4a24}
   .sitios .pedir b{color:var(--teca);text-transform:uppercase;font-size:.81rem;letter-spacing:.8px;margin-right:5px}
   .sitios .datos{display:block;margin-top:5px;font-size:.8rem;color:var(--tinta2)}
-  .sitios .sello{display:inline-block;width:17px;height:17px;line-height:17px;text-align:center;
-    border-radius:50%;font-size:.78rem;margin-left:5px;vertical-align:2px;color:#fff;cursor:help}
+  .sitios .sello{display:inline-grid;place-items:center;width:18px;height:18px;
+    border-radius:50%;margin-left:6px;vertical-align:-3px;color:#fff;cursor:help}
+  .sitios .sello svg{width:10px;height:10px;display:block}
   .sitios .sello.leyenda{background:var(--teca)}
   .sitios .sello.estrella{background:#b31b34}
-  .sitios .sello.bib{background:#b31b34;font-weight:700;font-size:.79rem}
+  .sitios .sello.bib{background:#b31b34}
   .sitios .sello.local{background:var(--verde)}
   .leyenda-sellos{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.78rem;color:var(--tinta2);
     display:flex;gap:16px;flex-wrap:wrap;margin:2px 0 10px}
   .leyenda-sellos span{display:inline-flex;align-items:center;gap:5px}
-  .leyenda-sellos i{width:15px;height:15px;border-radius:50%;display:inline-block;font-style:normal;
-    color:#fff;font-size:.78rem;text-align:center;line-height:15px}
+  .leyenda-sellos i{width:16px;height:16px;border-radius:50%;display:inline-grid;place-items:center;
+    font-style:normal;color:#fff;flex:0 0 auto}
+  .leyenda-sellos i svg{width:9px;height:9px;display:block}
 
   .trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin:8px 0 24px}
   .trio figure{border-radius:12px;overflow:hidden;box-shadow:var(--sombra);background:#eee}
@@ -804,13 +806,13 @@
       <span class="plato">Marisco a la brasa en Yaowarat</span><span class="plato">Mango sticky rice</span>
       <span class="plato">Pato asado estilo chino</span>
     </div>
-    <div class="leyenda-sellos"><span><i style="background:var(--teca)">★</i>lleva décadas abierto</span><span><i style="background:#b31b34">B</i>Bib Gourmand</span><span><i style="background:var(--verde)">●</i>donde come la gente de aquí</span></div>
+    <div class="leyenda-sellos"><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:#b31b34"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></i>Bib Gourmand</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
     <ul class="sitios">
-      <li><span class="nombre">Thipsamai</span><span class="sello leyenda" title="lleva décadas abierto">★</span> — <span class="dir">Th. Maha Chai, Old Town</span> · El pad thai más famoso del mundo, desde 1966. Lo hacen a fuego de carbón, no de gas.
+      <li><span class="nombre">Thipsamai</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Th. Maha Chai, Old Town</span> · El pad thai más famoso del mundo, desde 1966. Lo hacen a fuego de carbón, no de gas.
         <span class="pedir"><b>Pide</b> el pad thai envuelto en huevo (hor khai) y un zumo de naranja recién exprimido, que aquí es legendario</span>
         <span class="datos">🕐 9:00–24:00 · cierra los martes · 💵 60–250 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Thipsamai%20Pad%20Thai%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Nai Ek Roll Noodle</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Yaowarat (Chinatown)</span> · El cuenco más reconfortante de Chinatown, en la guía Michelin desde hace años.
+      <li><span class="nombre">Nai Ek Roll Noodle</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Yaowarat (Chinatown)</span> · El cuenco más reconfortante de Chinatown, en la guía Michelin desde hace años.
         <span class="pedir"><b>Pide</b> kuay jab: fideos de arroz enrollados en caldo de pimienta blanca, con panceta crujiente</span>
         <span class="datos">🕐 8:00–24:00 · todos los días · 💵 60–120 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Nai%20Ek%20Roll%20Noodle%20Yaowarat" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -818,11 +820,11 @@
         <span class="pedir"><b>Pide</b> gambas gigantes a la plancha y cangrejo al curry en polvo</span>
         <span class="datos">🕐 16:30–2:00 · 💵 400–900 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=T%26K%20Seafood%20Yaowarat" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Guay Jub Ouan Pochana</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Yaowarat, junto al callejón Texas</span> · Rival eterno de Nai Ek. Aquí el caldo pica más de pimienta y la cola es de tailandeses.
+      <li><span class="nombre">Guay Jub Ouan Pochana</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Yaowarat, junto al callejón Texas</span> · Rival eterno de Nai Ek. Aquí el caldo pica más de pimienta y la cola es de tailandeses.
         <span class="pedir"><b>Pide</b> kuay jab con huevo cocido y todos los extras de cerdo</span>
         <span class="datos">🕐 18:00–2:00 aprox. · 💵 60–100 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Guay%20Jub%20Ouan%20Pochana%20Yaowarat" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Wattana Panich</span><span class="sello leyenda" title="lleva décadas abierto">★</span> — <span class="dir">Ekkamai</span> · Su olla de caldo de ternera lleva más de 45 años sin apagarse: cada día añaden encima. Es una reliquia viva.
+      <li><span class="nombre">Wattana Panich</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Ekkamai</span> · Su olla de caldo de ternera lleva más de 45 años sin apagarse: cada día añaden encima. Es una reliquia viva.
         <span class="pedir"><b>Pide</b> neua tune: estofado de ternera con hierbas chinas. Y ver la olla</span>
         <span class="datos">🕐 9:00–19:30 · cierra los lunes · 💵 100–250 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Wattana%20Panich%20Ekkamai" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -830,59 +832,59 @@
         <span class="pedir"><b>Pide</b> durián si te atreves, mango, y un plato de curry en el patio de comidas</span>
         <span class="datos">🕐 6:00–18:00 · 💵 50–200 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Or%20Tor%20Kor%20Market%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Khao Gaeng Jek Pui</span><span class="sello leyenda" title="lleva décadas abierto">★</span> — <span class="dir">Chinatown, Th. Mangkon</span> · Curries sobre arroz servidos desde una olla. No tiene mesas: se come de pie o sentado en un taburete en la acera.
+      <li><span class="nombre">Khao Gaeng Jek Pui</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Chinatown, Th. Mangkon</span> · Curries sobre arroz servidos desde una olla. No tiene mesas: se come de pie o sentado en un taburete en la acera.
         <span class="pedir"><b>Pide</b> dos curries sobre arroz, señalando lo que te apetezca</span>
         <span class="datos">🕐 15:00–20:00 · cierra los lunes · 💵 50–80 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Gaeng%20Jek%20Pui%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Sanguan Sri</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Th. Witthayu (Ploenchit)</span> · Comedor de oficinistas de los años 60, sin concesiones al turista. Cocina tailandesa casera de verdad.
+      <li><span class="nombre">Sanguan Sri</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Th. Witthayu (Ploenchit)</span> · Comedor de oficinistas de los años 60, sin concesiones al turista. Cocina tailandesa casera de verdad.
         <span class="pedir"><b>Pide</b> gaeng kiew wan (curry verde) y khao kluk kapi</span>
         <span class="datos">🕐 solo mediodía, hasta ~15:00 · cierra domingos · 💵 80–150 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Sanguan%20Sri%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Somtum Der</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Saladaeng (Silom)</span> · Cocina de Isaan, el noreste. Ganó estrella Michelin en su sucursal de Nueva York.
+      <li><span class="nombre">Somtum Der</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Saladaeng (Silom)</span> · Cocina de Isaan, el noreste. Ganó estrella Michelin en su sucursal de Nueva York.
         <span class="pedir"><b>Pide</b> som tam (ensalada de papaya), gai yang (pollo a la brasa) y arroz glutinoso</span>
         <span class="datos">🕐 11:00–22:30 · 💵 150–350 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Somtum%20Der%20Saladaeng" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Mae Varee</span><span class="sello leyenda" title="lleva décadas abierto">★</span> — <span class="dir">Thong Lo (BTS Thong Lo)</span> · El mango con arroz glutinoso de referencia en Bangkok. Abre 24 horas.
+      <li><span class="nombre">Mae Varee</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Thong Lo (BTS Thong Lo)</span> · El mango con arroz glutinoso de referencia en Bangkok. Abre 24 horas.
         <span class="pedir"><b>Pide</b> khao niao mamuang para llevar; te lo dan con la leche de coco aparte</span>
         <span class="datos">🕐 24 horas · 💵 120–180 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Mae%20Varee%20Thonglor" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Boat noodles de Victory Monument</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Soi Ratchawithi 18</span> · Callejón entero de fideos de barca junto al canal. Los cuencos son diminutos a propósito.
+      <li><span class="nombre">Boat noodles de Victory Monument</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Soi Ratchawithi 18</span> · Callejón entero de fideos de barca junto al canal. Los cuencos son diminutos a propósito.
         <span class="pedir"><b>Pide</b> cuatro o cinco cuencos por cabeza: se apilan y te cobran por torre</span>
         <span class="datos">🕐 9:00–20:00 aprox. · 💵 15–20 THB el cuenco</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Victory%20Monument%20Boat%20Noodle%20Alley" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Krua Apsorn</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">503-505 Sam Sen Rd, Dusit</span> · Cocina tailandesa casera de las que quedan pocas. Fue la favorita de la casa real y sigue llena de familias.
+      <li><span class="nombre">Krua Apsorn</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">503-505 Sam Sen Rd, Dusit</span> · Cocina tailandesa casera de las que quedan pocas. Fue la favorita de la casa real y sigue llena de familias.
         <span class="pedir"><b>Pide</b> el huevo revuelto con carne de cangrejo y el curry amarillo de cangrejo. Son sus dos platos legendarios</span>
         <span class="datos">🕐 10:30–19:30 aprox. · cierra los domingos · 💵 300–600 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Krua%20Apsorn%20Samsen" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Pad Thai Fai Ta Lu</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">115 Dinso Rd, Phra Nakhon</span> · El pad thai de los que saben, sin la cola de tres horas del de al lado. El nombre significa fuego que atraviesa: lo saltean a llama viva.
+      <li><span class="nombre">Pad Thai Fai Ta Lu</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">115 Dinso Rd, Phra Nakhon</span> · El pad thai de los que saben, sin la cola de tres horas del de al lado. El nombre significa fuego que atraviesa: lo saltean a llama viva.
         <span class="pedir"><b>Pide</b> pad thai de gamba de río y, si vais dos, uno con cangrejo para comparar</span>
         <span class="datos">🕐 9:00–21:00 aprox. · 💵 80–200 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Pad%20Thai%20Fai%20Ta%20Lu%20Dinso%20Road" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Here Hai</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">112/1 Soi Sukhumvit 63, Ekkamai</span> · Arroz frito con cangrejo que se ha hecho famoso por la cantidad de carne que lleva. Nada de trampa.
+      <li><span class="nombre">Here Hai</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">112/1 Soi Sukhumvit 63, Ekkamai</span> · Arroz frito con cangrejo que se ha hecho famoso por la cantidad de carne que lleva. Nada de trampa.
         <span class="pedir"><b>Pide</b> khao pad pu: arroz frito con cangrejo. Un plato entre dos ya llena</span>
         <span class="datos">🕐 10:00–20:00 · cierra los lunes · 💵 400–700 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Here%20Hai%20Ekkamai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Somsak Pu Ob</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">199-205 Soi Charoen Rat 1, Khlong San</span> · Cangrejo al vapor en olla de barro sobre fideos de cristal, en un puesto de Thonburi. Solo de noche.
+      <li><span class="nombre">Somsak Pu Ob</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">199-205 Soi Charoen Rat 1, Khlong San</span> · Cangrejo al vapor en olla de barro sobre fideos de cristal, en un puesto de Thonburi. Solo de noche.
         <span class="pedir"><b>Pide</b> pu ob wun sen: la olla de cangrejo con fideos. Se pide por tamaño de cangrejo</span>
         <span class="datos">🕐 16:00–24:00 · cierra los lunes · 💵 500–900 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Somsak%20Pu%20Ob%20Charoen%20Rat" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">K. Panich</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">431-433 Tanao Rd, Phra Nakhon</span> · Haciendo mango con arroz glutinoso desde 1932. El arroz lo cuecen al vapor con leche de coco de verdad.
+      <li><span class="nombre">K. Panich</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">431-433 Tanao Rd, Phra Nakhon</span> · Haciendo mango con arroz glutinoso desde 1932. El arroz lo cuecen al vapor con leche de coco de verdad.
         <span class="pedir"><b>Pide</b> khao niao mamuang. Y si no es temporada de mango, el de durián</span>
         <span class="datos">🕐 8:00–17:00 · 💵 80–150 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=K%20Panich%20Tanao%20Road%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Ten Suns</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">456 Wisut Kasat Rd, Phra Nakhon</span> · Caldo de ternera cocido durante horas, en un local diminuto del casco antiguo.
+      <li><span class="nombre">Ten Suns</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">456 Wisut Kasat Rd, Phra Nakhon</span> · Caldo de ternera cocido durante horas, en un local diminuto del casco antiguo.
         <span class="pedir"><b>Pide</b> el cuenco mixto de ternera braseada con fideos y el caldo aparte</span>
         <span class="datos">🕐 9:00–15:00 aprox. · cierra los jueves · 💵 80–150 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Ten%20Suns%20Wisut%20Kasat" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Jeh O Chula</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Rong Muang, Pathum Wan (junto a Chulalongkorn)</span> · El tom yum más famoso de Bangkok, en una fuente metálica gigante. Solo de noche y con una cola de leyenda.
+      <li><span class="nombre">Jeh O Chula</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Rong Muang, Pathum Wan (junto a Chulalongkorn)</span> · El tom yum más famoso de Bangkok, en una fuente metálica gigante. Solo de noche y con una cola de leyenda.
         <span class="pedir"><b>Pide</b> tom yum mama: fideos instantáneos en caldo picante y cremoso con albóndigas, marisco y dos yemas crudas</span>
         <span class="datos">🕐 16:30–24:00 · la cola puede ser de 1–2 h, id al abrir · 💵 220–320 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Jeh%20O%20Chula%20Bangkok" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Go-Ang Kaomunkai Pratunam</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Pratunam · los de las camisetas rosas</span> · El khao man gai de referencia: pollo hervido sobre arroz cocido en su caldo. Sencillísimo y perfecto.
+      <li><span class="nombre">Go-Ang Kaomunkai Pratunam</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Pratunam · los de las camisetas rosas</span> · El khao man gai de referencia: pollo hervido sobre arroz cocido en su caldo. Sencillísimo y perfecto.
         <span class="pedir"><b>Pide</b> khao man gai, y no te dejes la salsa de soja fermentada con jengibre y chile</span>
         <span class="datos">🕐 6:00–14:00 y 17:00–2:00 · 💵 40–60 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Go-Ang%20Kaomunkai%20Pratunam" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Rung Rueang</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Soi Sukhumvit 26 (BTS Phrom Phong)</span> · Más de 50 años con los fideos de cerdo. Curiosidad: por una pelea familiar hay dos locales pegados, y los dos son buenos.
+      <li><span class="nombre">Rung Rueang</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Soi Sukhumvit 26 (BTS Phrom Phong)</span> · Más de 50 años con los fideos de cerdo. Curiosidad: por una pelea familiar hay dos locales pegados, y los dos son buenos.
         <span class="pedir"><b>Pide</b> tom yum pork noodles; pídelos secos (haeng) para probar algo distinto</span>
         <span class="datos">🕐 8:00–17:00 · 💵 60–100 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Rung%20Rueang%20Pork%20Noodle%20Sukhumvit%2026" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -938,17 +940,17 @@
       <span class="plato">Khao soi (primer contacto)</span><span class="plato">Nam ngiao (fideos con tomate y cerdo)</span>
       <span class="plato">Sai ua (salchicha norteña)</span><span class="plato">Té oolong de montaña</span>
     </div>
-    <div class="leyenda-sellos"><span><i style="background:var(--teca)">★</i>lleva décadas abierto</span><span><i style="background:#b31b34">B</i>Bib Gourmand</span><span><i style="background:var(--verde)">●</i>donde come la gente de aquí</span></div>
+    <div class="leyenda-sellos"><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:#b31b34"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></i>Bib Gourmand</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
     <ul class="sitios">
-      <li><span class="nombre">Khao Soi Phor Jai</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Th. Jetyod, centro</span> · El khao soi de referencia en Chiang Rai, en un local sencillo lleno de gente del sitio.
+      <li><span class="nombre">Khao Soi Phor Jai</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Th. Jetyod, centro</span> · El khao soi de referencia en Chiang Rai, en un local sencillo lleno de gente del sitio.
         <span class="pedir"><b>Pide</b> khao soi de pollo y, si te va, uno de ternera para comparar</span>
         <span class="datos">🕐 8:00–16:00 aprox. · 💵 50–70 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Phor%20Jai%20Chiang%20Rai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Lung Eed</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Th. Watpranorn</span> · Bib Gourmand de Michelin en un local de cuatro mesas. Uno de los mejores laab del país.
+      <li><span class="nombre">Lung Eed</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Th. Watpranorn</span> · Bib Gourmand de Michelin en un local de cuatro mesas. Uno de los mejores laab del país.
         <span class="pedir"><b>Pide</b> laab gai: pollo picado con hierbas y piel crujiente por encima</span>
         <span class="datos">🕐 11:30–19:00 aprox. · cierra domingos · 💵 60–100 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Lung%20Eed%20Chiang%20Rai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Mercado matinal (Kad Luang)</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">centro, junto a Th. Uttarakit</span> · Donde compra y desayuna la ciudad. Aquí está el nam ngiao, el plato local que casi ningún turista prueba.
+      <li><span class="nombre">Mercado matinal (Kad Luang)</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">centro, junto a Th. Uttarakit</span> · Donde compra y desayuna la ciudad. Aquí está el nam ngiao, el plato local que casi ningún turista prueba.
         <span class="pedir"><b>Pide</b> nam ngiao: fideos con tomate, cerdo y flor de algodón. Y patongo con leche de soja</span>
         <span class="datos">🕐 5:00–11:00 · 💵 40–60 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Municipality%20Market" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1014,13 +1016,13 @@
       <span class="plato">Cocina casera norteña</span><span class="plato">Verduras y setas de montaña</span>
       <span class="plato">Café de cultivo local</span><span class="plato">Gaeng hang lay (curry birmano de cerdo)</span>
     </div>
-    <div class="leyenda-sellos"><span><i style="background:var(--teca)">★</i>lleva décadas abierto</span><span><i style="background:#b31b34">B</i>Bib Gourmand</span><span><i style="background:var(--verde)">●</i>donde come la gente de aquí</span></div>
+    <div class="leyenda-sellos"><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:#b31b34"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></i>Bib Gourmand</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
     <ul class="sitios">
       <li><span class="nombre">Cena en el alojamiento</span> — <span class="dir">vuestro hotel</span> · En el valle hay poquísimos sitios y cierran temprano. Aquí la cena se reserva por la mañana.
         <span class="pedir"><b>Pide</b> lo que tengan del día: verduras y setas de montaña, y gaeng hang lay si lo hacen</span>
         <span class="datos">🕐 avisar antes de las 17:00 · 💵 150–300 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Mercado de Chiang Dao</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">centro del pueblo</span> · El mercado grande es los martes por la mañana y bajan las comunidades de la montaña a vender. Si caéis en martes, no lo perdáis.
+      <li><span class="nombre">Mercado de Chiang Dao</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">centro del pueblo</span> · El mercado grande es los martes por la mañana y bajan las comunidades de la montaña a vender. Si caéis en martes, no lo perdáis.
         <span class="pedir"><b>Pide</b> sai ua a la brasa, arroz glutinoso y fruta de la zona</span>
         <span class="datos">🕐 martes 6:00–12:00 · el resto de días, más pequeño · 💵 20–60 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Market" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1028,7 +1030,7 @@
         <span class="pedir"><b>Pide</b> el menú del día y una copa de vino mirando la montaña</span>
         <span class="datos">🕐 12:00–21:00 · 💵 400–700 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Nest%20Restaurant" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Puestos de la carretera 1096</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">de camino a las aguas termales</span> · Cocinas familiares al borde de la carretera. Es donde para la gente del valle.
+      <li><span class="nombre">Puestos de la carretera 1096</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">de camino a las aguas termales</span> · Cocinas familiares al borde de la carretera. Es donde para la gente del valle.
         <span class="pedir"><b>Pide</b> khao soi, khao man gai o una tortilla con arroz</span>
         <span class="datos">🕐 todo el día · 💵 40–70 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20restaurants" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1096,29 +1098,29 @@
       <span class="plato">Nam prik ong con verduras</span><span class="plato">Café de especialidad</span>
       <span class="plato">Khao kha moo (codillo, puesto de la "Cowboy Hat Lady")</span>
     </div>
-    <div class="leyenda-sellos"><span><i style="background:var(--teca)">★</i>lleva décadas abierto</span><span><i style="background:#b31b34">B</i>Bib Gourmand</span><span><i style="background:var(--verde)">●</i>donde come la gente de aquí</span></div>
+    <div class="leyenda-sellos"><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:#b31b34"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></i>Bib Gourmand</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
     <ul class="sitios">
-      <li><span class="nombre">Khao Soi Khun Yai</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Sri Poom Soi 8, junto al foso norte</span> · Para mucha gente, el mejor khao soi de la ciudad. Lo cocina una familia en el patio de un templo.
+      <li><span class="nombre">Khao Soi Khun Yai</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Sri Poom Soi 8, junto al foso norte</span> · Para mucha gente, el mejor khao soi de la ciudad. Lo cocina una familia en el patio de un templo.
         <span class="pedir"><b>Pide</b> khao soi de pollo, y si aún hay, uno de ternera. Añade encurtidos y lima</span>
         <span class="datos">🕐 lun–vie 10:00–14:00 · CIERRA FINES DE SEMANA · 💵 50–70 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Khun%20Yai%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Khao Soi Mae Sai</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Th. Ratchaphuek</span> · En la guía Michelin. Mismo nivel que Khun Yai y con horario mucho más cómodo.
+      <li><span class="nombre">Khao Soi Mae Sai</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Th. Ratchaphuek</span> · En la guía Michelin. Mismo nivel que Khun Yai y con horario mucho más cómodo.
         <span class="pedir"><b>Pide</b> khao soi de ternera, que aquí lo bordan</span>
         <span class="datos">🕐 8:00–16:00 aprox. · 💵 50–80 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Mae%20Sai%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Khao Soi Lam Duan Fah Ham</span><span class="sello leyenda" title="lleva décadas abierto">★</span> — <span class="dir">Th. Charoenrat (Faham)</span> · Abierto desde los años 60, en la calle donde nació la fama del khao soi en Chiang Mai.
+      <li><span class="nombre">Khao Soi Lam Duan Fah Ham</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Th. Charoenrat (Faham)</span> · Abierto desde los años 60, en la calle donde nació la fama del khao soi en Chiang Mai.
         <span class="pedir"><b>Pide</b> khao soi de ternera estofada, que es su seña</span>
         <span class="datos">🕐 9:00–17:00 · 💵 50–80 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Lam%20Duan%20Fah%20Ham" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Cowboy Hat Lady</span><span class="sello leyenda" title="lleva décadas abierto">★</span> — <span class="dir">puerta de Chang Phuak</span> · Un puesto callejero que salió en Netflix y sigue igual. La señora del sombrero vaquero lleva décadas ahí.
+      <li><span class="nombre">Cowboy Hat Lady</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">puerta de Chang Phuak</span> · Un puesto callejero que salió en Netflix y sigue igual. La señora del sombrero vaquero lleva décadas ahí.
         <span class="pedir"><b>Pide</b> khao kha moo: codillo de cerdo estofado sobre arroz, con huevo y verdura encurtida</span>
         <span class="datos">🕐 17:00–24:00 aprox. · 💵 50–70 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Cowboy%20Hat%20Lady%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">SP Chicken</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">junto a Wat Phra Singh</span> · Pollo a la brasa girando en un asador de leña, a la vista desde la calle.
+      <li><span class="nombre">SP Chicken</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">junto a Wat Phra Singh</span> · Pollo a la brasa girando en un asador de leña, a la vista desde la calle.
         <span class="pedir"><b>Pide</b> medio pollo asado, som tam y arroz glutinoso. El combo perfecto</span>
         <span class="datos">🕐 10:00–17:00 · cierra los lunes · 💵 150–250 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=SP%20Chicken%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Huen Phen</span><span class="sello leyenda" title="lleva décadas abierto">★</span> — <span class="dir">Th. Ratchamanka, casco antiguo</span> · La casa de la cocina Lanna. De día es un comedor sencillo; de noche, un restaurante lleno de antigüedades.
+      <li><span class="nombre">Huen Phen</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Th. Ratchamanka, casco antiguo</span> · La casa de la cocina Lanna. De día es un comedor sencillo; de noche, un restaurante lleno de antigüedades.
         <span class="pedir"><b>Pide</b> nam prik ong y nam prik noom con chicharrones, sai ua y gaeng hang lay</span>
         <span class="datos">🕐 8:30–16:00 y 17:00–22:00 · 💵 150–350 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Huen%20Phen%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1126,7 +1128,7 @@
         <span class="pedir"><b>Pide</b> cerdo a la brasa (kor moo yang) y las setas de temporada</span>
         <span class="datos">🕐 11:00–22:00 · 💵 200–400 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Tong%20Tem%20Toh%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Mercado de Warorot (Kad Luang)</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">junto al río Ping</span> · El mercado de siempre, de tres plantas. Aquí se compran los embutidos del norte.
+      <li><span class="nombre">Mercado de Warorot (Kad Luang)</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">junto al río Ping</span> · El mercado de siempre, de tres plantas. Aquí se compran los embutidos del norte.
         <span class="pedir"><b>Pide</b> sai ua (salchicha de hierbas) y naem para llevar, y chicharrones</span>
         <span class="datos">🕐 6:00–17:00 · 💵 50–150 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Warorot%20Market%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1134,7 +1136,7 @@
         <span class="pedir"><b>Pide</b> cena entera de puesto en puesto por el patio de un templo</span>
         <span class="datos">🕐 domingos 16:00–22:00 · 💵 30–80 THB por plato</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Sunday%20Walking%20Street%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Chang Phuak Night Market</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">fuera de la puerta norte</span> · El mercado nocturno donde cenan los de Chiang Mai, no los turistas. Está el de la Cowboy Hat Lady.
+      <li><span class="nombre">Chang Phuak Night Market</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">fuera de la puerta norte</span> · El mercado nocturno donde cenan los de Chiang Mai, no los turistas. Está el de la Cowboy Hat Lady.
         <span class="pedir"><b>Pide</b> khao kha moo, satay y roti de postre</span>
         <span class="datos">🕐 17:00–24:00 · 💵 30–70 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Chang%20Phuak%20Gate%20Night%20Market" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1146,23 +1148,23 @@
         <span class="pedir"><b>Pide</b> reservar la que incluya mercado y os llevéis el recetario</span>
         <span class="datos">🕐 mañana o tarde · 💵 900–1.400 THB por persona</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Thai%20cooking%20class%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Ong Tong Khao Soi</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">Nimman y casco antiguo</span> · Bib Gourmand y de los pocos con horario amplio. Michelin lo cita como ejemplo de comer bien por menos de 100 baht.
+      <li><span class="nombre">Ong Tong Khao Soi</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">Nimman y casco antiguo</span> · Bib Gourmand y de los pocos con horario amplio. Michelin lo cita como ejemplo de comer bien por menos de 100 baht.
         <span class="pedir"><b>Pide</b> khao soi de ternera y una ronda de sai ua para picar</span>
         <span class="datos">🕐 9:00–20:00 · 💵 60–100 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Ong%20Tong%20Khao%20Soi%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Huen Muan Jai</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">24 Ratchaphruek Rd, Chang Phueak</span> · La mejor cocina Lanna de la ciudad según Michelin, y con razón. Aquí es donde hay que entender el norte.
+      <li><span class="nombre">Huen Muan Jai</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">24 Ratchaphruek Rd, Chang Phueak</span> · La mejor cocina Lanna de la ciudad según Michelin, y con razón. Aquí es donde hay que entender el norte.
         <span class="pedir"><b>Pide</b> gaeng hang lay (curry birmano de cerdo), nam prik ong y sai ua</span>
         <span class="datos">🕐 11:00–21:00 · cierra los miércoles · 💵 300–600 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Huen%20Muan%20Jai%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Meena Rice Based Cuisine</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">13/5 Mu 2, San Klang, San Kamphaeng</span> · En medio de los arrozales, a 20 min del centro. Sirven arroces teñidos con flores y plantas, en vajilla de cerámica preciosa.
+      <li><span class="nombre">Meena Rice Based Cuisine</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">13/5 Mu 2, San Klang, San Kamphaeng</span> · En medio de los arrozales, a 20 min del centro. Sirven arroces teñidos con flores y plantas, en vajilla de cerámica preciosa.
         <span class="pedir"><b>Pide</b> el arroz azul de flor de guisante mariposa con curry, y sentaos fuera</span>
         <span class="datos">🕐 9:00–17:00 · 💵 300–500 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Meena%20Rice%20Based%20Cuisine%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Guay Jub Chang Moi</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">99/11-12 Chang Moi Tat Mai Rd</span> · Fideos de arroz enrollados en caldo de pimienta, la versión del norte. Local de barrio de toda la vida.
+      <li><span class="nombre">Guay Jub Chang Moi</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">99/11-12 Chang Moi Tat Mai Rd</span> · Fideos de arroz enrollados en caldo de pimienta, la versión del norte. Local de barrio de toda la vida.
         <span class="pedir"><b>Pide</b> guay jub con panceta crujiente y huevo</span>
         <span class="datos">🕐 8:00–15:00 aprox. · 💵 50–80 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Guay%20Jub%20Chang%20Moi%20Tat%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Roti Pa Day</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato">B</span> — <span class="dir">frente a Wat Mahawan, Thapae Soi 4</span> · Un carrito de roti musulmán delante de un templo. Bib Gourmand por 30 baht.
+      <li><span class="nombre">Roti Pa Day</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">frente a Wat Mahawan, Thapae Soi 4</span> · Un carrito de roti musulmán delante de un templo. Bib Gourmand por 30 baht.
         <span class="pedir"><b>Pide</b> roti con huevo y plátano, y un té con leche</span>
         <span class="datos">🕐 tarde y noche · 💵 30–50 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Roti%20Pa%20Day%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1231,17 +1233,17 @@
       <span class="plato">Curry de cangrejo con fideos (kanom jeen)</span><span class="plato">Gaeng som (curry ácido del sur)</span>
       <span class="plato">Pescado a la brasa</span><span class="plato">Roti con curry</span>
     </div>
-    <div class="leyenda-sellos"><span><i style="background:var(--teca)">★</i>lleva décadas abierto</span><span><i style="background:#b31b34">B</i>Bib Gourmand</span><span><i style="background:var(--verde)">●</i>donde come la gente de aquí</span></div>
+    <div class="leyenda-sellos"><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:#b31b34"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></i>Bib Gourmand</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
     <ul class="sitios">
-      <li><span class="nombre">Ruen Mai</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Th. Maharaj, norte de Krabi town</span> · El mejor restaurante de la zona: cocina del sur de verdad, en un jardín tropical. Aquí come la gente de Krabi.
+      <li><span class="nombre">Ruen Mai</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Th. Maharaj, norte de Krabi town</span> · El mejor restaurante de la zona: cocina del sur de verdad, en un jardín tropical. Aquí come la gente de Krabi.
         <span class="pedir"><b>Pide</b> gaeng som (curry ácido de pescado) y sato (brotes de judía amarga) si os atrevéis</span>
         <span class="datos">🕐 10:00–21:00 · 💵 300–600 THB para dos</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Ruen%20Mai%20Restaurant%20Krabi" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Mercado nocturno de Chao Fah</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">junto al muelle, Krabi town</span> · Mesas comunes junto al río, marisco a la plancha y curries del sur a precio local.
+      <li><span class="nombre">Mercado nocturno de Chao Fah</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">junto al muelle, Krabi town</span> · Mesas comunes junto al río, marisco a la plancha y curries del sur a precio local.
         <span class="pedir"><b>Pide</b> pescado entero a la brasa y pad thai de gamba, con vistas al río</span>
         <span class="datos">🕐 17:00–22:00 · 💵 150–300 THB por cabeza</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Chao%20Fah%20Night%20Market%20Krabi" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Puestos de kanom jeen</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">mercado de la mañana</span> · El desayuno del sur: fideos de arroz frescos ahogados en curry, con verduras y hierbas a discreción.
+      <li><span class="nombre">Puestos de kanom jeen</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">mercado de la mañana</span> · El desayuno del sur: fideos de arroz frescos ahogados en curry, con verduras y hierbas a discreción.
         <span class="pedir"><b>Pide</b> kanom jeen con curry de cangrejo y todas las verduras que quepan</span>
         <span class="datos">🕐 6:00–11:00 · 💵 40–60 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Krabi%20morning%20market%20kanom%20jeen" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1280,13 +1282,18 @@
 
   <div class="dias">
     <div class="dia" data-dia="kohjum-1" data-fecha="2026-11-11"><h4>Día 13 · Llegada a la isla <span class="fecha">miércoles 11 nov</span></h4>
-      <p><strong>Mañana:</strong> ferry desde Krabi (~1 h 30). <strong>Ojo con esto:</strong> el ferry
-      <strong>no atraca</strong>: se para en mitad del mar y sale una barca de cola larga de vuestro
-      alojamiento a recogeros. Se pasa el equipaje a mano de un barco a otro.
+      <p><strong>Mañana:</strong> ferry desde el muelle de Klong Jilad, en Krabi. Sale a las
+      <strong>11:30</strong> y pasa por Koh Jum sobre las <strong>12:30</strong> (hay otro a las 14:30).
+      <strong>Ojo con esto:</strong> la isla tiene dos muelles pequeños, pero <strong>ninguno tiene calado
+      para el ferry</strong>, así que el barco se detiene en mitad del mar y sale una barca de cola larga
+      de vuestro alojamiento a recogeros. Se pasa el equipaje a mano de un barco a otro.
       <strong>Tarde:</strong> bungalow, primer baño y no hacer nada. <strong>Noche:</strong> cena de pescado
       y, si el cielo está limpio, estrellas de verdad: aquí no hay contaminación lumínica.</p>
       <div class="tip">Confirmad al reservar que el hotel hace la recogida en el ferry: cada alojamiento manda
-      su propia barca y no es un servicio general de la isla.</div></div>
+      su propia barca y no es un servicio general de la isla.<br>
+      <b>Plan B si el ferry no opera</b> (a principios de temporada a veces arranca tarde): coche hasta el
+      muelle de <b>Laem Kruat</b>, a unos 40 km al sur de Krabi, y cola larga hasta el muelle de Mutu.
+      Media hora y unos 140 THB. Ahí sí se atraca.</div></div>
 
     <div class="dia" data-dia="kohjum-2" data-fecha="2026-11-12"><h4>Día 14 · La isla en moto <span class="fecha">jueves 12 nov</span></h4>
       <p><strong>Todo el día:</strong> alquilad una moto (200–250 THB al día) o una bici y recorredla entera,
@@ -1324,12 +1331,13 @@
       <span class="plato">Pescado del día a la brasa</span><span class="plato">Curry massaman</span>
       <span class="plato">Roti</span><span class="plato">Gaeng som del sur</span>
     </div>
+    <div class="leyenda-sellos"><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:#b31b34"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></i>Bib Gourmand</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
     <ul class="sitios">
-      <li><span class="nombre">Ban Ban Restaurant</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">carretera principal, cerca de Ting Rai</span> · El sitio de referencia de la isla: cocina tailandesa y algo occidental, llevado por una familia.
+      <li><span class="nombre">Ban Ban Restaurant</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">carretera principal, cerca de Ting Rai</span> · El sitio de referencia de la isla: cocina tailandesa y algo occidental, llevado por una familia.
         <span class="pedir"><b>Pide</b> curry massaman y, de desayuno, sus rollos de canela caseros, que son famosos en la isla</span>
         <span class="datos">🕐 8:00–21:00 aprox. · 💵 150–300 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Ban%20Ban%20Restaurant%20Koh%20Jum" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Restaurantes halal del pueblo</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Ban Ko Jum, en el sur</span> · Comedores musulmanes sencillos donde come la gente de la isla. Baratísimos y auténticos.
+      <li><span class="nombre">Restaurantes halal del pueblo</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Ban Ko Jum, en el sur</span> · Comedores musulmanes sencillos donde come la gente de la isla. Baratísimos y auténticos.
         <span class="pedir"><b>Pide</b> roti recién hecho, curry del sur y pescado del día</span>
         <span class="datos">🕐 todo el día · 💵 40–100 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Koh%20Jum%20village%20restaurant" target="_blank" rel="noopener">📍 Maps</a></li>
@@ -1402,7 +1410,7 @@
       <span class="plato">Pad see ew</span><span class="plato">Cocina del sur picante (pedid "medium spicy")</span>
       <span class="plato">Desayunos de fruta, café y pancakes</span>
     </div>
-    <div class="leyenda-sellos"><span><i style="background:var(--teca)">★</i>lleva décadas abierto</span><span><i style="background:#b31b34">B</i>Bib Gourmand</span><span><i style="background:var(--verde)">●</i>donde come la gente de aquí</span></div>
+    <div class="leyenda-sellos"><span><i style="background:var(--teca)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></i>lleva décadas abierto</span><span><i style="background:#b31b34"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></i>Bib Gourmand</span><span><i style="background:var(--verde)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></i>donde come la gente de aquí</span></div>
     <ul class="sitios">
       <li><span class="nombre">Caoutchouc</span> — <span class="dir">Lanta Old Town</span> · En una casa de madera sobre el agua, en el pueblo viejo. El sitio con más encanto de la isla.
         <span class="pedir"><b>Pide</b> curry de cangrejo y pescado al vapor con lima, con el mar bajo los pies</span>
@@ -1412,11 +1420,11 @@
         <span class="pedir"><b>Pide</b> marisco a la plancha al atardecer, viendo volver las barcas</span>
         <span class="datos">🕐 11:00–22:00 · 💵 300–600 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Lanta%20Old%20Town%20seafood%20restaurant" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Fresh Restaurant</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">Klong Nin</span> · Cocina tailandesa honesta a pie de playa, sin florituras y a precio razonable.
+      <li><span class="nombre">Fresh Restaurant</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Klong Nin</span> · Cocina tailandesa honesta a pie de playa, sin florituras y a precio razonable.
         <span class="pedir"><b>Pide</b> massaman de ternera y som tam</span>
         <span class="datos">🕐 11:00–22:00 · 💵 250–450 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Fresh%20Restaurant%20Klong%20Nin%20Koh%20Lanta" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Puestos de roti de la carretera</span><span class="sello local" title="donde come la gente de aquí">●</span> — <span class="dir">carretera oeste</span> · Carritos de roti al borde de la carretera, sobre todo al caer la tarde.
+      <li><span class="nombre">Puestos de roti de la carretera</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">carretera oeste</span> · Carritos de roti al borde de la carretera, sobre todo al caer la tarde.
         <span class="pedir"><b>Pide</b> roti con plátano, huevo y leche condensada</span>
         <span class="datos">🕐 16:00–22:00 · 💵 30–50 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=roti%20Koh%20Lanta" target="_blank" rel="noopener">📍 Maps</a></li>
