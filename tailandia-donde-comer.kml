@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>74 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>78 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
 <Style id="s_local"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/grn-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_barato"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/blu-circle.png</href></Icon></IconStyle></Style>
+<Style id="s_cena"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/purple-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_normal"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/wht-blank.png</href></Icon></IconStyle></Style>
 <Folder><name>Bangkok</name>
 <Placemark>
@@ -188,6 +190,12 @@
   <address>@13.713011,100.503128, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
+<Placemark>
+  <name>Le Du</name>
+  <description><![CDATA[Estrella Michelin de cocina tailandesa moderna. La clave: el menú de mediodía entre semana es MUCHO más barato que la cena, y es la forma más asequible de entrar en un estrellado de Bangkok.<br><br>PIDE: el menú de almuerzo de días laborables, no la cena<br><br>Horario: almuerzo entre semana · reservad con antelación<br>Precio: 1.500–2.500 THB el almuerzo (la cena, el triple)<br>Zona: Silom, Soi 7 · cerca de vuestro hotel]]></description>
+  <address>Le Du Restaurant Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_cena</styleUrl>
+</Placemark>
 </Folder>
 <Folder><name>Chiang Rai</name>
 <Placemark>
@@ -225,6 +233,12 @@
   <description><![CDATA[Estas montañas producen el mejor café y té de Tailandia, en las laderas donde antes había amapola.<br><br>PIDE: un café de Doi Chang y té oolong de Doi Mae Salong<br><br>Horario: según el sitio<br>Precio: 60–120 THB<br>Zona: Doi Chang / Doi Tung]]></description>
   <address>Doi Chang Coffee Chiang Rai, Chiang Rai, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Locus Native Food Lab</name>
+  <description><![CDATA[Una mesa del chef dedicada a recuperar la cocina del norte con producto de aquí. El menú cambia cada día y el propio chef presenta plato por plato. Está en las listas de lo mejor del país.<br><br>PIDE: el menú degustación: no se elige, se deja uno llevar. Y preguntad por su ron, que lo hacen ellos<br><br>Horario: sólo cenas y con reserva · reservad con semanas de antelación<br>Precio: 999 THB el degustación · 3.000–3.500 el de temporada<br>Zona: Ban Du, a 15 min del centro]]></description>
+  <address>Locus Native Food Lab Chiang Rai, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_cena</styleUrl>
 </Placemark>
 </Folder>
 <Folder><name>Chiang Dao</name>
@@ -355,6 +369,18 @@
   <description><![CDATA[Un carrito de roti musulmán delante de un templo. Bib Gourmand por 30 baht.<br><br>PIDE: roti con huevo y plátano, y un té con leche<br><br>Horario: tarde y noche<br>Precio: 30–50 THB<br>Zona: frente a Wat Mahawan, Thapae Soi 4]]></description>
   <address>Roti Pa Day Chiang Mai, Chiang Mai, Tailandia</address>
   <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Blackitch Artisan Kitchen</name>
+  <description><![CDATA[Mesa del chef de dieciséis plazas. El menú se decide el mismo día con lo que haya, y el chef Black trabaja con fermentados y curados propios. Solo con reserva.<br><br>PIDE: lo que pongan. Sentaos en la barra, que es donde se ve cocinar<br><br>Horario: sólo cenas, con reserva previa<br>Precio: unos 2.000 THB por persona<br>Zona: Nimman, encima de una gelatería]]></description>
+  <address>Blackitch Artisan Kitchen Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_cena</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Cuisine de Garden</name>
+  <description><![CDATA[Cocina nórdica aplicada a producto tailandés, en un jardín. Menús de seis y diez pases, con mucho cuidado del desperdicio. En la guía Michelin.<br><br>PIDE: el menú corto de seis pases si no queréis una noche larga<br><br>Horario: con reserva · el precio lo dan al reservar<br>Precio: gama alta<br>Zona: Hang Dong, a 20 min del centro]]></description>
+  <address>Cuisine de Garden Chiang Mai, Chiang Mai, Tailandia</address>
+  <styleUrl>#s_cena</styleUrl>
 </Placemark>
 </Folder>
 <Folder><name>Krabi</name>
