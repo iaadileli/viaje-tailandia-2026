@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>78 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>85 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -195,6 +195,48 @@
   <description><![CDATA[Estrella Michelin de cocina tailandesa moderna. La clave: el menú de mediodía entre semana es MUCHO más barato que la cena, y es la forma más asequible de entrar en un estrellado de Bangkok.<br><br>PIDE: el menú de almuerzo de días laborables, no la cena<br><br>Horario: almuerzo entre semana · reservad con antelación<br>Precio: 1.500–2.500 THB el almuerzo (la cena, el triple)<br>Zona: Silom, Soi 7 · cerca de vuestro hotel]]></description>
   <address>Le Du Restaurant Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_cena</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Tang Bak Seng</name>
+  <description><![CDATA[Cafetería antigua de las que quedan pocas: café colado a la manera de siempre, en un local que no ha cambiado en décadas.<br><br>PIDE: un ca phe boran (café a la antigua) con leche condensada, y mirar la calle<br><br>Horario: de mañana<br>Precio: muy barato<br>Zona: Chinatown, a 400 m de Yaowarat]]></description>
+  <address>Tang Bak Seng Antique Coffee Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Pa Lek-Pa Yai</name>
+  <description><![CDATA[Puesto de mango con arroz glutinoso. Doobydobap lo repitió al final de sus seis días, que es la mejor reseña posible.<br><br>PIDE: khao niao mamuang. Cae justo después del café de al lado<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Chinatown, en la misma esquina que Tang Bak Seng]]></description>
+  <address>Pa Lek-Pa Yai mango sticky rice Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Jai Rad Na Noodle</name>
+  <description><![CDATA[Fideos anchos salteados y ahogados en una salsa espesa. Comida de wok a fuego bestial.<br><br>PIDE: rad na de cerdo, o pad see ew si prefieres los fideos secos<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Chinatown, a 300 m de Yaowarat]]></description>
+  <address>Jai Rad Na Noodle Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Bok Kia Tha Din Daeng</name>
+  <description><![CDATA[Postres fríos de Chaozhou en caldo dulce y claro: hielo, alubias, castaña de agua. Bib Gourmand y toda una institución.<br><br>PIDE: el cuenco mixto, y si hay, con hielo raspado<br><br>Horario: tarde y noche<br>Precio: muy barato<br>Zona: Tha Din Daeng, a 1 km de Yaowarat]]></description>
+  <address>Bok Kia Thadindaeng Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_bib</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Pork Satay Tee Tha Din Daeng</name>
+  <description><![CDATA[Brochetas de cerdo a la brasa con salsa de cacahuete, de las de carbón y humo en la acera.<br><br>PIDE: una ronda de satay con su pepino encurtido, y el pan tostado que dan aparte<br><br>Horario: tarde y noche<br>Precio: muy barato<br>Zona: Tha Din Daeng, junto al anterior]]></description>
+  <address>Pork Satay Tee Tha Din Daeng, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Amin Mutton &amp; Chicken Biryani</name>
+  <description><![CDATA[Biryani musulmán de cordero y pollo. Es uno de los dos sitios a los que Doobydobap le puso su nota máxima en seis días de comer sin parar.<br><br>PIDE: el biryani de cordero (mutton), que es lo que casi nadie pide y lo que hay que pedir<br><br>Horario: de día<br>Precio: muy barato<br>Zona: a 2,4 km del hotel, hacia el río]]></description>
+  <address>Amin Mutton and Chicken Biryani Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Jack&#x27;s Chicken Rice</name>
+  <description><![CDATA[El otro que se llevó su nota máxima. Khao man gai llevado al extremo: pollo hervido, arroz en su caldo y una salsa que es el secreto de la casa.<br><br>PIDE: khao man gai, y no te dejes nada de la salsa<br><br>Horario: de día, hasta que se acaba<br>Precio: muy barato<br>Zona: casco antiguo, cerca de Banglamphu]]></description>
+  <address>Jack&#x27;s Chicken Rice Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
 </Placemark>
 </Folder>
 <Folder><name>Chiang Rai</name>
