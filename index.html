@@ -618,6 +618,39 @@
   .mad-zona b{color:var(--mar)}
   html[data-tema="oscuro"] .madrugador{background:linear-gradient(135deg,#16212a,#1a1f24);border-color:#25333d}
   html[data-tema="oscuro"] .madrugador,html[data-tema="oscuro"] .mad-zona{color:#c3d2dc}
+
+  /* ---------- LOS PLATOS, UNO A UNO ---------- */
+  .filtro-platos{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 18px}
+  .fp{background:var(--card);border:1px solid var(--linea);border-radius:20px;padding:7px 15px;
+    font-size:.86rem;color:var(--tinta2);cursor:pointer;font-family:inherit}
+  .fp:hover{border-color:var(--oro);color:var(--oro)}
+  .fp.activo{background:var(--oro);border-color:var(--oro);color:#fff;font-weight:600}
+  .platos-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .plato-card{background:var(--card);border:1px solid var(--linea);border-radius:14px;overflow:hidden;
+    box-shadow:var(--sombra);display:flex;flex-direction:column}
+  .plato-card img{width:100%;height:170px;object-fit:cover;display:block;background:#efe7d8}
+  .plato-card img.fallo{display:none}
+  .plato-card.sinfoto{border-style:dashed}
+  .pc-txt{padding:14px 15px 15px;font-family:-apple-system,'Segoe UI',sans-serif;flex:1 1 auto;
+    display:flex;flex-direction:column}
+  .pc-txt h4{font-family:Georgia,serif;font-size:1.12rem;font-weight:normal;color:var(--teca);
+    line-height:1.3;margin-bottom:2px}
+  .pc-th{font-size:.92rem;color:var(--tinta2);margin-left:4px}
+  .pc-fon{font-size:.82rem;color:var(--tinta2);font-style:italic;margin-bottom:8px}
+  .pc-fon b{font-style:normal;color:var(--verde)}
+  .pc-txt p{font-size:.89rem;line-height:1.55;color:var(--tinta);margin-bottom:9px;flex:1 1 auto}
+  .pc-donde{font-size:.84rem;line-height:1.5;background:#fdf6e7;border-radius:8px;padding:8px 11px;
+    color:#5c4a24}
+  .pc-donde b{color:var(--teca);text-transform:uppercase;font-size:.7rem;letter-spacing:.8px;
+    display:block;margin-bottom:2px}
+  .pc-etapa{font-size:.74rem;color:var(--tinta2);text-transform:uppercase;letter-spacing:1px;
+    margin-top:9px;padding-top:8px;border-top:1px dashed var(--linea)}
+  .plato-card.oculto{display:none}
+  html[data-tema="oscuro"] .pc-donde{background:#2a2114;color:#e8d5ac}
+  @media(max-width:560px){
+    .platos-grid{grid-template-columns:1fr;gap:13px}
+    .plato-card img{height:190px}
+  }
 </style>
 </head>
 <body>
@@ -655,6 +688,7 @@
   </button>
   <div class="menu-panel" id="menuInfo">
     <div class="cab">Sobre la marcha</div>
+    <a href="#platos" onclick="cerrarMenuInfo()">🍲 Los platos, uno a uno</a>
     <a href="#hablar" onclick="cerrarMenuInfo()">🗣️ Hablar tailandés</a>
     <a href="#acaso" onclick="cerrarMenuInfo()">🆘 Por si acaso</a>
     <a href="#comer" onclick="cerrarMenuInfo()">🍜 Dónde comer</a>
@@ -2200,6 +2234,308 @@
   </ul>
 </section>
 
+<!-- ============ LOS PLATOS ============ -->
+<section id="platos" class="etapa-sec">
+  <div class="kicker">La parte importante de verdad</div>
+  <h2>Los platos, uno a uno</h2>
+  <p class="intro">Veintiocho cosas que hay que comerse, con su foto para reconocerlas en un puesto, cómo se
+  dicen para poder pedirlas y en qué sitio concreto de esta guía cazarlas. Si sólo lees una sección, que sea
+  ésta.</p>
+  <div class="filtro-platos sans">
+    <button class="fp activo" data-f="">Todos</button>
+    <button class="fp" data-f="Bangkok">Bangkok</button>
+    <button class="fp" data-f="Chiang Rai">Chiang Rai</button>
+    <button class="fp" data-f="Chiang Mai">Chiang Mai</button>
+    <button class="fp" data-f="sur">El sur</button>
+  </div>
+  <div class="platos-grid">
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/pad-thai.jpg" alt="Pad thai" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Pad thai <span class="pc-th" lang="th">ผัดไทย</span></h4>
+        <div class="pc-fon">se dice <b>pat tai</b></div>
+        <p>Fideos de arroz salteados con tamarindo, huevo, cacahuete y lima. El plato bandera, y una invención política de los años cuarenta.</p>
+        <div class="pc-donde"><b>Dónde</b> Thipsamai o Pad Thai Fai Ta Lu, los dos en el casco antiguo de Bangkok.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Mai · Chiang Rai">
+      <img loading="lazy" decoding="async" src="img/khao-soi.jpg" alt="Khao soi" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Khao soi <span class="pc-th" lang="th">ข้าวซอย</span></h4>
+        <div class="pc-fon">se dice <b>kao soi</b></div>
+        <p>Curri de coco con fideos de huevo blandos dentro y fideos fritos crujientes encima. Viene de las caravanas chinas musulmanas de Yunnan. El rey del norte.</p>
+        <div class="pc-donde"><b>Dónde</b> Khao Soi Khun Yai o Mae Sai en Chiang Mai; Phor Jai en Chiang Rai.</div>
+        <div class="pc-etapa">Chiang Mai · Chiang Rai</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-jok.jpg" alt="Jok (congee)" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Jok (congee) <span class="pc-th" lang="th">โจ๊ก</span></h4>
+        <div class="pc-fon">se dice <b>yok</b></div>
+        <p>Gachas de arroz cocidas hasta deshacerse, con cerdo, jengibre y huevo. El desayuno de toda la vida: caliente, suave y reconfortante.</p>
+        <div class="pc-donde"><b>Dónde</b> Jok Pa Mali, en Chinatown. Sólo por la mañana.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-street.jpg" alt="Moo ping" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Moo ping <span class="pc-th" lang="th">หมูปิ้ง</span></h4>
+        <div class="pc-fon">se dice <b>mu ping</b></div>
+        <p>Brochetas de cerdo marinado en leche de coco y salsa de soja, a la brasa. Se comen con una bolsita de arroz glutinoso.</p>
+        <div class="pc-donde"><b>Dónde</b> Lalai Sap Market, en Silom, a un paseo del hotel.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="todo el viaje">
+      <img loading="lazy" decoding="async" src="img/comida-pad-krapao.jpg" alt="Pad krapao" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Pad krapao <span class="pc-th" lang="th">ผัดกะเพรา</span></h4>
+        <div class="pc-fon">se dice <b>pat kra-pao</b></div>
+        <p>Carne picada salteada con albahaca sagrada y mucho chile, sobre arroz y con un huevo frito de bordes crujientes encima. El plato que come todo el mundo cada día.</p>
+        <div class="pc-donde"><b>Dónde</b> En cualquier puesto. Pídelo con huevo: <i>rat kao kai dao</i>.</div>
+        <div class="pc-etapa">todo el viaje</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-tom-yum.jpg" alt="Tom yum goong" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Tom yum goong <span class="pc-th" lang="th">ต้มยำกุ้ง</span></h4>
+        <div class="pc-fon">se dice <b>tom yam kung</b></div>
+        <p>Sopa agripicante con gambas, hierba limón, galanga y hoja de lima. Las hierbas no se comen: se apartan.</p>
+        <div class="pc-donde"><b>Dónde</b> Jeh O Chula hace la versión con fideos instantáneos que es una locura.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="todo el viaje">
+      <img loading="lazy" decoding="async" src="img/comida-som-tam.jpg" alt="Som tam" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Som tam <span class="pc-th" lang="th">ส้มตำ</span></h4>
+        <div class="pc-fon">se dice <b>som tam</b></div>
+        <p>Papaya verde machacada en mortero con lima, cacahuete, judía larga y chile. Viene del noreste y conquistó el país.</p>
+        <div class="pc-donde"><b>Dónde</b> Somtum Der en Silom, o cualquier puesto con mortero.</div>
+        <div class="pc-etapa">todo el viaje</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-khao-man-gai.jpg" alt="Khao man gai" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Khao man gai <span class="pc-th" lang="th">ข้าวมันไก่</span></h4>
+        <div class="pc-fon">se dice <b>kao man gai</b></div>
+        <p>Pollo hervido sobre arroz cocido en su propio caldo. Parece sosísimo y es adictivo. La clave está en la salsa de soja fermentada con jengibre.</p>
+        <div class="pc-donde"><b>Dónde</b> Go-Ang Pratunam, los de las camisetas rosas.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-kuaitiao.jpg" alt="Kuaitiao" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Kuaitiao <span class="pc-th" lang="th">ก๋วยเตี๋ยว</span></h4>
+        <div class="pc-fon">se dice <b>kuai tiao</b></div>
+        <p>La sopa de fideos de cada día. Eliges fideo, carne y si la quieres con caldo o seca. Hay una versión en cuencos minúsculos, los boat noodles, que se piden de cuatro en cuatro.</p>
+        <div class="pc-donde"><b>Dónde</b> El callejón de boat noodles de Victory Monument.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-boat-noodles.jpg" alt="Kuay jab" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Kuay jab <span class="pc-th" lang="th">ก๋วยจั๊บ</span></h4>
+        <div class="pc-fon">se dice <b>kuai yap</b></div>
+        <p>Fideos de arroz enrollados en un caldo de pimienta blanca, con panceta crujiente y huevo. Reconfortante y muy poco turístico.</p>
+        <div class="pc-donde"><b>Dónde</b> Nai Ek Roll Noodle, en Yaowarat.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-hoi-tod.jpg" alt="Hoi tod" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Hoi tod <span class="pc-th" lang="th">หอยทอด</span></h4>
+        <div class="pc-fon">se dice <b>hoi tot</b></div>
+        <p>Tortilla crujiente de ostras o mejillones, hecha en plancha a fuego bestial, con brotes de soja y salsa de chile.</p>
+        <div class="pc-donde"><b>Dónde</b> Heng Hoitod Chawlae, cruzando el río.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Mai">
+      <img loading="lazy" decoding="async" src="img/comida-khao-kha-moo.jpg" alt="Khao kha moo" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Khao kha moo <span class="pc-th" lang="th">ข้าวขาหมู</span></h4>
+        <div class="pc-fon">se dice <b>kao ka mu</b></div>
+        <p>Codillo de cerdo estofado durante horas en salsa de soja y cinco especias, sobre arroz, con huevo cocido y verdura encurtida.</p>
+        <div class="pc-donde"><b>Dónde</b> La señora del sombrero vaquero, en la puerta de Chang Phuak, Chiang Mai. Sólo de noche.</div>
+        <div class="pc-etapa">Chiang Mai</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Mai · Chiang Rai">
+      <img loading="lazy" decoding="async" src="img/comida-sai-ua.jpg" alt="Sai ua" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Sai ua <span class="pc-th" lang="th">ไส้อั่ว</span></h4>
+        <div class="pc-fon">se dice <b>sai ua</b></div>
+        <p>La salchicha del norte: cerdo con hierba limón, hoja de lima, cúrcuma y chile. Se come a la brasa, cortada en rodajas.</p>
+        <div class="pc-donde"><b>Dónde</b> Mercado de Warorot, en Chiang Mai. Compra para el camino.</div>
+        <div class="pc-etapa">Chiang Mai · Chiang Rai</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Mai">
+      <img loading="lazy" decoding="async" src="img/comida-nam-prik-ong.jpg" alt="Nam prik ong" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Nam prik ong <span class="pc-th" lang="th">น้ำพริกอ่อง</span></h4>
+        <div class="pc-fon">se dice <b>nam prik ong</b></div>
+        <p>Salsa espesa de tomate y cerdo picado, para mojar verduras crudas y chicharrones. Es lo más lanna que hay.</p>
+        <div class="pc-donde"><b>Dónde</b> Huen Muan Jai o Huen Phen, en Chiang Mai.</div>
+        <div class="pc-etapa">Chiang Mai</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Mai · Chiang Dao">
+      <img loading="lazy" decoding="async" src="img/comida-hang-lay.jpg" alt="Gaeng hang lay" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Gaeng hang lay <span class="pc-th" lang="th">แกงฮังเล</span></h4>
+        <div class="pc-fon">se dice <b>keng hang le</b></div>
+        <p>Curri de cerdo de herencia birmana, con jengibre, tamarindo y cacahuete. Sin leche de coco y con mucha panceta. Espeso y dulzón.</p>
+        <div class="pc-donde"><b>Dónde</b> Huen Muan Jai, Chiang Mai. O en Chiang Dao, si lo hacen.</div>
+        <div class="pc-etapa">Chiang Mai · Chiang Dao</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Rai">
+      <img loading="lazy" decoding="async" src="img/comida-laab.jpg" alt="Laab" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Laab <span class="pc-th" lang="th">ลาบ</span></h4>
+        <div class="pc-fon">se dice <b>lap</b></div>
+        <p>Carne picada con hierbas, arroz tostado molido y lima. La del norte lleva especias y sangre; la del noreste es más ácida.</p>
+        <div class="pc-donde"><b>Dónde</b> Lung Eed, en Chiang Rai: Bib Gourmand por su laab de pollo con piel crujiente.</div>
+        <div class="pc-etapa">Chiang Rai</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Rai">
+      <img loading="lazy" decoding="async" src="img/comida-nam-ngiao.jpg" alt="Nam ngiao" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Nam ngiao <span class="pc-th" lang="th">น้ำเงี้ยว</span></h4>
+        <div class="pc-fon">se dice <b>nam ngiao</b></div>
+        <p>Fideos con tomate, cerdo y flor de algodón. Es el plato local de Chiang Rai que casi ningún viajero prueba.</p>
+        <div class="pc-donde"><b>Dónde</b> El mercado matinal de Chiang Rai, a primera hora.</div>
+        <div class="pc-etapa">Chiang Rai</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-khanom-krok.jpg" alt="Khanom krok" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Khanom krok <span class="pc-th" lang="th">ขนมครก</span></h4>
+        <div class="pc-fon">se dice <b>kanom krok</b></div>
+        <p>Tortitas de harina de arroz y coco hechas en un molde de hoyos, crujientes por fuera y cremosas por dentro. Dulces y saladas a la vez.</p>
+        <div class="pc-donde"><b>Dónde</b> Puestos callejeros. Hay uno en Soi Wanit 2, en Chinatown.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-patongko.jpg" alt="Patongko" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Patongko <span class="pc-th" lang="th">ปาท่องโก๋</span></h4>
+        <div class="pc-fon">se dice <b>pa tong ko</b></div>
+        <p>Los buñuelos de masa frita que se mojan en leche de soja caliente. Desayuno chino-tailandés de toda la vida.</p>
+        <div class="pc-donde"><b>Dónde</b> Puesto de Charoen Nakhon, muy temprano.</div>
+        <div class="pc-etapa">Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="todo el viaje">
+      <img loading="lazy" decoding="async" src="img/comida-kluay-tod.jpg" alt="Kluay tod" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Kluay tod <span class="pc-th" lang="th">กล้วยทอด</span></h4>
+        <div class="pc-fon">se dice <b>kluai tot</b></div>
+        <p>Plátano en rebozado crujiente de coco y sésamo, frito al momento. El aperitivo callejero.</p>
+        <div class="pc-donde"><b>Dónde</b> Carritos por toda la calle, sobre todo por la tarde.</div>
+        <div class="pc-etapa">todo el viaje</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Rai · Bangkok">
+      <img loading="lazy" decoding="async" src="img/comida-khao-mok-gai.jpg" alt="Khao mok gai" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Khao mok gai <span class="pc-th" lang="th">ข้าวหมกไก่</span></h4>
+        <div class="pc-fon">se dice <b>kao mok gai</b></div>
+        <p>El biryani tailandés: arroz especiado con cúrcuma y pollo, herencia musulmana. Se come con una salsa verde de menta.</p>
+        <div class="pc-donde"><b>Dónde</b> Khao Soi Islam en Chiang Rai (abierto desde 1929) y Noor en Bangkok.</div>
+        <div class="pc-etapa">Chiang Rai · Bangkok</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Chiang Mai · sur">
+      <img loading="lazy" decoding="async" src="img/comida-roti.jpg" alt="Roti" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Roti <span class="pc-th" lang="th">โรตี</span></h4>
+        <div class="pc-fon">se dice <b>roti</b></div>
+        <p>Masa estirada al aire y frita en plancha. Dulce con plátano y leche condensada, o salada con huevo y curri.</p>
+        <div class="pc-donde"><b>Dónde</b> Roti Pa Day, frente a un templo en Chiang Mai: Bib Gourmand por 30 baht.</div>
+        <div class="pc-etapa">Chiang Mai · sur</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Krabi · sur">
+      <img loading="lazy" decoding="async" src="img/comida-kanom-jeen.jpg" alt="Kanom jeen" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Kanom jeen <span class="pc-th" lang="th">ขนมจีน</span></h4>
+        <div class="pc-fon">se dice <b>kanom yin</b></div>
+        <p>Fideos de arroz fermentados, ahogados en curri, con verduras y hierbas a discreción. Desayuno del sur.</p>
+        <div class="pc-donde"><b>Dónde</b> El mercado de la mañana de Krabi.</div>
+        <div class="pc-etapa">Krabi · sur</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Krabi · sur">
+      <img loading="lazy" decoding="async" src="img/comida-gaeng-som.jpg" alt="Gaeng som" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Gaeng som <span class="pc-th" lang="th">แกงส้ม</span></h4>
+        <div class="pc-fon">se dice <b>keng som</b></div>
+        <p>Curri del sur, ácido y muy picante, sin leche de coco, con pescado y verduras. No se parece a nada que hayas probado.</p>
+        <div class="pc-donde"><b>Dónde</b> Ruen Mai, en Krabi: el mejor de la zona.</div>
+        <div class="pc-etapa">Krabi · sur</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="Bangkok · sur">
+      <img loading="lazy" decoding="async" src="img/comida-curry-crab.jpg" alt="Pu phat pong curry" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Pu phat pong curry <span class="pc-th" lang="th">ปูผัดผงกะหรี่</span></h4>
+        <div class="pc-fon">se dice <b>pu pat pong ka-ri</b></div>
+        <p>Cangrejo salteado con curri en polvo, huevo y leche evaporada. Cremoso y con la mano hasta el codo.</p>
+        <div class="pc-donde"><b>Dónde</b> Krua Apsorn en Bangkok, o cualquier marisquería del sur.</div>
+        <div class="pc-etapa">Bangkok · sur</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="sur">
+      <img loading="lazy" decoding="async" src="img/comida-seafood-bbq.jpg" alt="Pescado a la brasa" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Pescado a la brasa <span class="pc-th" lang="th">ปลาเผา</span></h4>
+        <div class="pc-fon">se dice <b>pla pao</b></div>
+        <p>Pescado entero cubierto de sal gorda y hierba limón, hecho a la brasa. Se abre la costra y se moja en salsa de marisco picante.</p>
+        <div class="pc-donde"><b>Dónde</b> Mercado nocturno de Krabi, o en la arena en Koh Lanta.</div>
+        <div class="pc-etapa">sur</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="sur">
+      <img loading="lazy" decoding="async" src="img/massaman.jpg" alt="Massaman" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Massaman <span class="pc-th" lang="th">มัสมั่น</span></h4>
+        <div class="pc-fon">se dice <b>mat sa man</b></div>
+        <p>El curri más suave y más raro: canela, cardamomo, clavo y cacahuete. Viene de la influencia persa en la corte de Ayutthaya. Su nombre significa, literalmente, musulmán.</p>
+        <div class="pc-donde"><b>Dónde</b> En el sur, en cualquier sitio. Y en Koh Jum.</div>
+        <div class="pc-etapa">sur</div>
+      </div>
+    </article>
+    <article class="plato-card" data-etapas="todo el viaje">
+      <img loading="lazy" decoding="async" src="img/mango-sticky-rice.jpg" alt="Khao niao mamuang" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')">
+      <div class="pc-txt">
+        <h4>Khao niao mamuang <span class="pc-th" lang="th">ข้าวเหนียวมะม่วง</span></h4>
+        <div class="pc-fon">se dice <b>kao niao ma-muang</b></div>
+        <p>Mango con arroz glutinoso y leche de coco. La religión local del postre. Mejor de marzo a junio, pero se encuentra casi siempre.</p>
+        <div class="pc-donde"><b>Dónde</b> K. Panich, en Bangkok, haciéndolo desde 1932.</div>
+        <div class="pc-etapa">todo el viaje</div>
+      </div>
+    </article>
+  </div>
+  <div class="ojo" style="background:#fdf6e7;color:#5c4a24;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;margin-top:20px">
+    📸 Las fotos son de Wikimedia Commons, con licencia libre. No son de los restaurantes concretos: son
+    del plato, para poder reconocerlo y señalarlo con el dedo, que en Tailandia funciona mejor que hablar.
+  </div>
+</section>
+
 <!-- ============ POR SI ACASO ============ -->
 <section id="acaso" class="etapa-sec">
   <div class="kicker">Ojalá no haga falta</div>
@@ -3035,6 +3371,24 @@
     }
     previo = y;
   }, {passive:true});
+})();
+
+/* ---------- FILTRO DE PLATOS ---------- */
+(function(){
+  var botones = document.querySelectorAll('.fp');
+  if (!botones.length) return;
+  var tarjetas = document.querySelectorAll('.plato-card');
+  botones.forEach(function(b){
+    b.onclick = function(){
+      botones.forEach(function(x){ x.classList.remove('activo'); });
+      b.classList.add('activo');
+      var f = b.dataset.f.toLowerCase();
+      tarjetas.forEach(function(t){
+        var etapas = (t.dataset.etapas || '').toLowerCase();
+        t.classList.toggle('oculto', !!f && etapas.indexOf(f) === -1 && etapas.indexOf('todo el viaje') === -1);
+      });
+    };
+  });
 })();
 </script>
 
