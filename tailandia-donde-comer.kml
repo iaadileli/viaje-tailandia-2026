@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>64 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>74 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -128,6 +128,66 @@
   <address>Rung Rueang Pork Noodle Sukhumvit 26, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_bib</styleUrl>
 </Placemark>
+<Placemark>
+  <name>Jok Pa Mali</name>
+  <description><![CDATA[Gachas de arroz con cerdo, el desayuno de toda la vida. Pol Comaposada, de Mundo Nómada, dice que es el mejor congee de Bangkok.<br><br>PIDE: jok con huevo pasado y jengibre. Se desayuna, así que id temprano<br><br>Horario: de madrugada a media mañana<br>Precio: muy barato<br>Zona: Soi Chao Sua Son, Chinatown]]></description>
+  <address>ร้านโจ๊กป้ามะลิ Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Kway Teow Roo</name>
+  <description><![CDATA[Sopa de fideos de las de toda la vida, en un local de barrio de Chinatown.<br><br>PIDE: kuaitiew: eliges fideo, carne y si lo quieres con caldo o seco<br><br>Horario: todo el día<br>Precio: muy barato<br>Zona: Chinatown, junto a Soi Wanit]]></description>
+  <address>Kway Teow Roo Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Puesto de coco y khanom krok</name>
+  <description><![CDATA[Un carrito sin nombre pero con tres cosas buenas: coco fresco, fruta cortada y khanom krok.<br><br>PIDE: khanom krok: tortitas de coco hechas en molde, dulces y saladas a la vez<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Soi Wanit 2, Chinatown]]></description>
+  <address>@13.732135,100.513549, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Lalai Sap Market</name>
+  <description><![CDATA[Mercado de mediodía para oficinistas, en plena calle Silom. Aquí caen tres platos de una sentada.<br><br>PIDE: moo ping (brochetas de cerdo con arroz glutinoso), pad krapao y un zumo natural<br><br>Horario: sólo de día, en horario de oficina · cierra el fin de semana<br>Precio: muy barato<br>Zona: Th. Silom · a un paseo de vuestro hotel]]></description>
+  <address>Lalai Sap Market Silom, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>DK Bakery</name>
+  <description><![CDATA[Obrador de barrio en Silom, a un paseo del hotel.<br><br>PIDE: khanom sangkaya: el flan de coco al vapor, para llevar<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Th. Silom, Bang Rak]]></description>
+  <address>DK Bakery Silom Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Heng Hoitod Chawlae</name>
+  <description><![CDATA[Al otro lado del río. Pad thai y, sobre todo, tortilla de ostras hecha en plancha a fuego vivo.<br><br>PIDE: hoi tod (la tortilla crujiente de ostras) más que el pad thai<br><br>Horario: tarde y noche<br>Precio: muy barato<br>Zona: Th. Charoen Nakhon, Khlong San]]></description>
+  <address>Heng Hoitod Chawlae Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Noor</name>
+  <description><![CDATA[Cocina musulmana tailandesa al otro lado del río, en un barrio donde no hay turistas.<br><br>PIDE: khao mok gai: arroz especiado con pollo, la versión tailandesa del biryani<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Soi Charoen Nakhon 30/1, Khlong San]]></description>
+  <address>Noor ข้าวหมกไก่ เจริญนคร, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>ROTINI</name>
+  <description><![CDATA[Roti recién hecho en la plancha, en la orilla de Thonburi.<br><br>PIDE: roti con plátano y leche condensada. Y si hay, la versión salada con huevo<br><br>Horario: tarde y noche<br>Precio: muy barato<br>Zona: Soi Charoen Nakhon 9, Khlong San]]></description>
+  <address>ROTINI Charoen Nakhon Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Patongo con leche de soja</name>
+  <description><![CDATA[Puesto callejero del desayuno tailandés-chino: los buñuelos que se mojan en leche de soja caliente.<br><br>PIDE: patongo recién frito y un vaso de nam tao hu (leche de soja)<br><br>Horario: muy temprano<br>Precio: muy barato<br>Zona: Th. Charoen Nakhon, Khlong San]]></description>
+  <address>@13.717792,100.507797, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Kluay tod</name>
+  <description><![CDATA[Carrito de plátano frito en rebozado crujiente. El aperitivo callejero por excelencia.<br><br>PIDE: una bolsa de kluay tod recién sacado de la sartén<br><br>Horario: tarde<br>Precio: muy barato<br>Zona: Th. Charoen Nakhon, Khlong San]]></description>
+  <address>@13.713011,100.503128, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
 </Folder>
 <Folder><name>Chiang Rai</name>
 <Placemark>
@@ -176,7 +236,7 @@
 </Placemark>
 <Placemark>
   <name>Mercado de Chiang Dao</name>
-  <description><![CDATA[El mercado grande es los martes por la mañana y bajan las comunidades de la montaña a vender. Si caéis en martes, no lo perdáis.<br><br>PIDE: sai ua a la brasa, arroz glutinoso y fruta de la zona<br><br>Horario: martes 6:00–12:00 · el resto de días, más pequeño<br>Precio: 20–60 THB<br>Zona: centro del pueblo]]></description>
+  <description><![CDATA[El mercado grande, al que bajan las comunidades de la montaña, es sólo el PRIMER Y TERCER MARTES de cada mes. Vosotros estáis miércoles, jueves y viernes: no os toca.<br><br>PIDE: el mercado diario, más pequeño: sai ua a la brasa, arroz glutinoso y fruta de la zona<br><br>Horario: a diario por la mañana · el grande, 1.º y 3.er martes de mes<br>Precio: 20–60 THB<br>Zona: centro del pueblo]]></description>
   <address>Chiang Dao Market, Chiang Dao, Chiang Mai, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
