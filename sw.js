@@ -4,6 +4,7 @@ const RECURSOS = [
   'index.html',
   'manifest.webmanifest',
   'audio/catalogo.js',
+  'sitios.js',
   'img/comida-gaeng-som.jpg',
   'img/comida-hoi-tod.jpg',
   'img/comida-jok.jpg',

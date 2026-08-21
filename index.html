@@ -651,6 +651,39 @@
     .platos-grid{grid-template-columns:1fr;gap:13px}
     .plato-card img{height:190px}
   }
+
+  /* ---------- ¿QUÉ TENGO CERCA? ---------- */
+  #cerca{position:fixed;inset:0;z-index:130;background:rgba(20,15,8,.55);display:none;
+    align-items:flex-end;justify-content:center;backdrop-filter:blur(3px)}
+  #cerca.abierto{display:flex}
+  .cerca-caja{background:var(--crema);width:100%;max-width:560px;max-height:82vh;overflow-y:auto;
+    border-radius:18px 18px 0 0;padding:22px 20px 26px;position:relative;
+    font-family:-apple-system,'Segoe UI',sans-serif;box-shadow:0 -6px 30px rgba(0,0,0,.3)}
+  .cerca-caja h3{font-family:Georgia,serif;font-size:1.45rem;font-weight:normal;color:var(--teca);margin-bottom:4px}
+  .cerca-x{position:absolute;top:14px;right:14px;background:var(--card);border:1px solid var(--linea);
+    border-radius:50%;width:36px;height:36px;font-size:1rem;cursor:pointer;color:var(--tinta2)}
+  .cerca-estado{font-size:.92rem;color:var(--tinta2);margin-bottom:14px;line-height:1.5}
+  .cerca-estado b{color:var(--teca)}
+  .cerca-item{display:flex;align-items:flex-start;gap:12px;padding:11px 12px;background:var(--card);
+    border:1px solid var(--linea);border-radius:11px;margin-bottom:7px;text-decoration:none;color:var(--tinta)}
+  .cerca-item:hover{border-color:var(--oro)}
+  .cerca-d.aprox{color:var(--tinta2);font-weight:600;font-size:.8rem}
+  .cerca-d{flex:0 0 auto;min-width:62px;font-weight:700;color:var(--verde);font-size:.9rem;
+    padding-top:1px;text-align:right}
+  .cerca-n{flex:1 1 auto;font-size:.95rem;line-height:1.35}
+  .cerca-n small{display:block;color:var(--tinta2);font-size:.8rem;margin-top:2px;font-weight:400}
+  .cerca-sello{display:inline-block;font-size:.68rem;text-transform:uppercase;letter-spacing:.5px;
+    padding:2px 7px;border-radius:20px;margin-left:6px;vertical-align:1px;color:#fff}
+  .cerca-sello.k-leyenda{background:var(--teca)} .cerca-sello.k-bib{background:#b31b34}
+  .cerca-sello.k-local{background:var(--verde)} .cerca-sello.k-barato{background:var(--mar)}
+  .cerca-sello.k-cena{background:#6b4a8a}
+  .btn-cerca{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin:16px 0 4px;
+    background:var(--verde);color:#fff;border:none;border-radius:12px;padding:14px;font-size:1rem;
+    font-weight:700;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif;
+    box-shadow:0 3px 12px rgba(45,80,60,.25)}
+  .btn-cerca:hover{background:#2f5540}
+  .btn-cerca svg{width:20px;height:20px}
+  @media(min-width:640px){#cerca{align-items:center} .cerca-caja{border-radius:18px}}
 </style>
 </head>
 <body>
@@ -1688,6 +1721,8 @@
   cambia mucho según dónde estéis: en Bangkok manda la comida china-tailandesa y los fideos; en el norte,
   la cocina <strong>Lanna</strong>, con hierbas, ahumados y poco coco; en el sur, curries potentes con
   cúrcuma, marisco y herencia musulmana. Estos son los platos que hay que cazar en cada etapa.</p>
+  <button class="btn-cerca" onclick="abrirCerca()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="8"/><path d="M12 1.5v2.5M12 20v2.5M22.5 12H20M4 12H1.5"/></svg> ¿Qué tengo cerca ahora mismo?</button>
+  <p style="font-size:.86rem;color:var(--tinta2);text-align:center;margin-bottom:18px;font-family:-apple-system,'Segoe UI',sans-serif">Usa el GPS del móvil y te ordena los 77 sitios por distancia. <b>Funciona sin datos</b>, así que sirve en modo avión.</p>
   <div class="destacado" style="background:linear-gradient(135deg,#8a4a2b,#a85a33)">
     <h3>🗺️ El mapa de dónde comer</h3>
     <p>Los <strong>85 sitios</strong> de esta guía, en un mapa tuyo que funciona <strong>sin datos</strong>.
@@ -2750,6 +2785,7 @@
   </div>
 </div>
 <audio id="plAudio" preload="none"></audio>
+<script src="sitios.js"></script>
 <script src="audio/catalogo.js"></script>
 <script>
 /* ---------- AUDIOGUÍA ---------- */
@@ -3351,6 +3387,7 @@
   });
 
   var ACCESOS = [
+    {ic:'📍', t:'Cerca',     a:'cerca'},
     {ic:'🗣️', t:'Frases',    a:'#hablar'},
     {ic:'🆘', t:'Urgencias', a:'#acaso'},
     {ic:'↑',  t:'Arriba',    a:'top'}
@@ -3383,6 +3420,7 @@
     b.onclick = function(e){
       e.stopPropagation();
       abre(false);
+      if (b.dataset.a === 'cerca') return window.abrirCerca && window.abrirCerca();
       if (b.dataset.a === 'top') return window.scrollTo({top:0, behavior:'smooth'});
       var destino = document.querySelector(b.dataset.a);
       if (destino) destino.scrollIntoView({behavior:'smooth', block:'start'});
@@ -3419,6 +3457,100 @@
   });
 })();
 </script>
+<script>
+/* ---------- ¿QUÉ TENGO CERCA? ---------- */
+(function(){
+  if (typeof SITIOS === 'undefined') return;
+
+  var SELLO = {leyenda:'lleva décadas abierto', bib:'Bib Gourmand', local:'donde come la gente de aquí',
+               barato:'muy barato', cena:'mesa especial', '':''};
+
+  var panel = document.createElement('div');
+  panel.id = 'cerca';
+  panel.innerHTML =
+    '<div class="cerca-caja">' +
+      '<button class="cerca-x" aria-label="Cerrar">✕</button>' +
+      '<h3>¿Qué tengo cerca?</h3>' +
+      '<div class="cerca-estado">Buscando dónde estás…</div>' +
+      '<div class="cerca-lista"></div>' +
+    '</div>';
+  document.body.appendChild(panel);
+
+  var estado = panel.querySelector('.cerca-estado');
+  var lista = panel.querySelector('.cerca-lista');
+  panel.querySelector('.cerca-x').onclick = cerrar;
+  panel.onclick = function(e){ if (e.target === panel) cerrar(); };
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape') cerrar(); });
+  function cerrar(){ panel.classList.remove('abierto'); }
+
+  function km(la1, lo1, la2, lo2){
+    var R = 6371, r = Math.PI/180;
+    var dla = (la2-la1)*r, dlo = (lo2-lo1)*r;
+    var a = Math.sin(dla/2)*Math.sin(dla/2) +
+            Math.cos(la1*r)*Math.cos(la2*r)*Math.sin(dlo/2)*Math.sin(dlo/2);
+    return 2*R*Math.asin(Math.sqrt(a));
+  }
+  function distancia(d){
+    return d < 1 ? Math.round(d*1000) + ' m' : d.toFixed(1).replace('.',',') + ' km';
+  }
+  function andando(d){
+    var min = Math.round(d*1000/75);
+    return min <= 25 ? ' · ' + min + ' min andando' : '';
+  }
+
+  function pinta(lat, lon){
+    var cerca = SITIOS.map(function(s){
+      var d = km(lat, lon, s.la, s.lo);
+      // los de posición aproximada llevan la coordenada del barrio, no la del local:
+      // se penalizan al ordenar para que no adelanten a los que sí están situados
+      return {s: s, d: d, orden: s.ap ? d + 0.6 : d};
+    }).sort(function(a,b){ return a.orden - b.orden; });
+
+    var enEtapa = cerca[0].d < 60 ? cerca[0].s.e : null;
+    var top = cerca.filter(function(x){ return x.d < 80; }).slice(0, 12);
+
+    if (!top.length) {
+      estado.innerHTML = 'Estás lejos de todo lo que hay en la guía. ' +
+        '¿Seguro que ya estáis en Tailandia?';
+      lista.innerHTML = '';
+      return;
+    }
+    estado.innerHTML = 'Estás en <b>' + enEtapa + '</b>. Lo más cercano de la guía:';
+    lista.innerHTML = top.map(function(x){
+      var s = x.s;
+      var url = 'https://www.google.com/maps/search/?api=1&query=' + s.q;
+      return '<a class="cerca-item" href="' + url + '" target="_blank" rel="noopener">' +
+        '<span class="cerca-d' + (s.ap ? ' aprox' : '') + '">' +
+          (s.ap ? 'por aquí' : distancia(x.d)) + '</span>' +
+        '<span class="cerca-n">' + s.n +
+          (s.s ? '<span class="cerca-sello k-' + s.s + '">' + SELLO[s.s] + '</span>' : '') +
+        '<small>' + s.z + (s.ap ? ' · no tengo su punto exacto' : andando(x.d)) + '</small></span></a>';
+    }).join('');
+  }
+
+  function abrir(){
+    panel.classList.add('abierto');
+    lista.innerHTML = '';
+    if (!navigator.geolocation) {
+      estado.innerHTML = 'Este navegador no puede darme tu posición.'; return;
+    }
+    estado.innerHTML = 'Buscando dónde estás…';
+    navigator.geolocation.getCurrentPosition(
+      function(p){ pinta(p.coords.latitude, p.coords.longitude); },
+      function(err){
+        estado.innerHTML = err.code === 1
+          ? 'Has denegado el permiso de ubicación. Actívalo en los ajustes del navegador y vuelve a intentarlo.'
+          : 'No he podido saber dónde estás. Prueba a salir a la calle: dentro de un edificio el GPS falla.';
+      },
+      {enableHighAccuracy: true, timeout: 12000, maximumAge: 60000}
+    );
+  }
+
+  // se abre desde el acceso rápido y desde la sección de comida
+  window.abrirCerca = abrir;
+})();
+</script>
+
 
 
 
