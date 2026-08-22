@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>85 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>84 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -276,12 +276,6 @@
   <address>Doi Chang Coffee Chiang Rai, Chiang Rai, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
-<Placemark>
-  <name>Locus Native Food Lab</name>
-  <description><![CDATA[Una mesa del chef dedicada a recuperar la cocina del norte con producto de aquí. El menú cambia cada día y el propio chef presenta plato por plato. Está en las listas de lo mejor del país.<br><br>PIDE: el menú degustación: no se elige, se deja uno llevar. Y preguntad por su ron, que lo hacen ellos<br><br>Horario: sólo cenas y con reserva · reservad con semanas de antelación<br>Precio: 999 THB el degustación · 3.000–3.500 el de temporada<br>Zona: Ban Du, a 15 min del centro]]></description>
-  <address>Locus Native Food Lab Chiang Rai, Chiang Rai, Tailandia</address>
-  <styleUrl>#s_cena</styleUrl>
-</Placemark>
 </Folder>
 <Folder><name>Chiang Dao</name>
 <Placemark>
@@ -414,7 +408,7 @@
 </Placemark>
 <Placemark>
   <name>Blackitch Artisan Kitchen</name>
-  <description><![CDATA[Mesa del chef de dieciséis plazas. El menú se decide el mismo día con lo que haya, y el chef Black trabaja con fermentados y curados propios. Solo con reserva.<br><br>PIDE: lo que pongan. Sentaos en la barra, que es donde se ve cocinar<br><br>Horario: sólo cenas, con reserva previa<br>Precio: unos 2.000 THB por persona<br>Zona: Nimman, encima de una gelatería]]></description>
+  <description><![CDATA[Mesa del chef de dieciséis plazas. El menú se decide el mismo día con lo que haya, y el chef Black trabaja con fermentados y curados propios. Solo con reserva.<br><br>PIDE: lo que pongan. Sentaos en la barra, que es donde se ve cocinar<br><br>Horario: sólo cenas, con reserva previa<br>Precio: unos 4.000 THB por persona · se va de presupuesto<br>Zona: Nimman, encima de una gelatería]]></description>
   <address>Blackitch Artisan Kitchen Chiang Mai, Chiang Mai, Tailandia</address>
   <styleUrl>#s_cena</styleUrl>
 </Placemark>
