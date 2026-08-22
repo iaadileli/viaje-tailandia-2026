@@ -1,54 +1,113 @@
 #!/usr/bin/env node
 // Revisión de la web CON LA PÁGINA EN MARCHA, no leyendo el HTML.
 // Lo que se lee en el fichero no dice nada de lo que pasa cuando el JS pinta.
-// Ejecutar SIEMPRE antes de dar por buena una revisión:  node generador/revisar.mjs
+// Uso:  node generador/revisar.mjs            (levanta un servidor local y revisa)
+//       node generador/revisar.mjs <url>      (revisa una url ya servida)
 import { existsSync } from 'node:fs';
+import { spawn } from 'node:child_process';
 import path from 'node:path';
 
-const RUTA = process.argv[2] || path.join(import.meta.dirname, '..', 'index.html');
+const RAIZ = path.join(import.meta.dirname, '..');
 const CANDIDATOS = [
-  '/home/adil/Escritorio/viaje-tailandia/node_modules/playwright/index.mjs',
+  path.join(RAIZ, 'node_modules/playwright/index.mjs'),
   '/home/adil/proyectos-adil/maquetador-libros/node_modules/playwright/index.mjs',
 ];
 const donde = CANDIDATOS.find(existsSync);
 if (!donde) {
-  console.error('Falta Playwright. Instalar con:\n  npm i -D playwright && npx playwright install chromium');
+  console.error('Falta Playwright:  npm i -D playwright && npx playwright install chromium');
   process.exit(2);
 }
 const { chromium } = await import(donde);
 
-const fallos = [];
-const mal = (m) => { fallos.push(m); console.log('  ⚠ ' + m); };
-const bien = (m) => console.log('  ✓ ' + m);
+// --- servidor local, para que el service worker y los fetch se comporten como en producción
+let servidor = null, URL_BASE = process.argv[2];
+if (!URL_BASE) {
+  const puerto = 8731;
+  servidor = spawn('python3', ['-m', 'http.server', String(puerto), '-d', RAIZ, '-b', '127.0.0.1'],
+                   { stdio: 'ignore' });
+  await new Promise(r => setTimeout(r, 700));
+  URL_BASE = `http://127.0.0.1:${puerto}/index.html`;
+}
+const fin = (c) => { if (servidor) servidor.kill(); process.exit(c); };
+
+const fallos = [], avisos = [];
+const mal   = (m) => { fallos.push(m); console.log('  ⚠ ' + m); };
+const ojo   = (m) => { avisos.push(m); console.log('  · ' + m); };
+const bien  = (m) => console.log('  ✓ ' + m);
+const grupo = (t) => console.log('\n' + t);
 
 const nav = await chromium.launch();
-const p = await nav.newPage();
-const errores = [];
-p.on('pageerror', e => errores.push(e.message));
-await p.goto('file://' + path.resolve(RUTA));
-await p.waitForTimeout(900);
+const ctx = await nav.newContext({ serviceWorkers: 'allow' });
+const p = await ctx.newPage();
+const errores = [], fallidos = [];
+p.on('pageerror', e => errores.push(e.message.slice(0, 120)));
+p.on('console', m => { if (m.type() === 'error') errores.push('consola: ' + m.text().slice(0, 120)); });
+p.on('requestfailed', r => fallidos.push(r.url().split('/').pop()));
+p.on('response', r => { if (r.status() >= 400) fallidos.push(r.status() + ' ' + r.url().split('/').pop()); });
 
-console.log('\nESTRUCTURA');
-const est = await p.evaluate(() => ({
-  anidados: [...document.querySelectorAll('.tip .madrugador, .madrugador .tip')].length,
-  sinAlt: [...document.querySelectorAll('img')].filter(i => !i.alt).length,
-  sinLazy: [...document.querySelectorAll('img')].filter(i => !i.loading || i.loading === 'eager').length,
-  rotos: [...document.querySelectorAll('a[href^="#"]')]
-    .map(a => a.getAttribute('href')).filter(h => h.length > 1)
-    .filter(h => { try { return !document.querySelector(h); } catch { return true; } }),
-  sitios: document.querySelectorAll('.sitios li').length,
-  repes: (() => {
-    const n = [...document.querySelectorAll('.sitios li .nombre')].map(e => e.textContent.trim());
-    return n.filter((x, i) => n.indexOf(x) !== i);
-  })(),
+await p.goto(URL_BASE, { waitUntil: 'networkidle' });
+
+grupo('RECURSOS');
+fallidos.length ? mal(`${fallidos.length} recursos no cargan: ` + [...new Set(fallidos)].slice(0,6).join(', '))
+                : bien('todos los recursos cargan');
+const imgs = await p.evaluate(() => ({
+  total: document.images.length,
+  rotas: [...document.images].filter(i => i.complete && i.naturalWidth === 0).map(i => i.src.split('/').pop()),
+  sinAlt: [...document.images].filter(i => !i.alt).length,
+  sinLazy: [...document.images].filter(i => i.loading !== 'lazy').length,
 }));
-est.anidados ? mal(`${est.anidados} bloques anidados donde no deben (madrugador dentro de aviso)`)
-             : bien('ningún bloque anidado donde no debe');
+imgs.rotas.length ? mal('imágenes rotas: ' + imgs.rotas.join(', ')) : bien(`${imgs.total} imágenes, todas cargan`);
+imgs.sinAlt ? mal(`${imgs.sinAlt} imágenes sin alt`) : bien('todas con alt');
+if (imgs.sinLazy > 2) ojo(`${imgs.sinLazy} imágenes sin carga diferida`);
+
+grupo('ESTRUCTURA Y ENLACES');
+const est = await p.evaluate(() => {
+  const enlaces = [...document.querySelectorAll('a[href]')];
+  const internos = enlaces.map(a => a.getAttribute('href')).filter(h => h.startsWith('#') && h.length > 1);
+  return {
+    anidados: document.querySelectorAll('.tip .madrugador, .madrugador .tip').length,
+    rotos: [...new Set(internos)].filter(h => { try { return !document.querySelector(h); } catch { return true; } }),
+    vacios: enlaces.filter(a => { const h = a.getAttribute('href'); return !h || h === '#' || h === 'javascript:void(0)'; }).length,
+    sinNoopener: enlaces.filter(a => a.target === '_blank' && !/noopener/.test(a.rel)).length,
+    externos: enlaces.filter(a => /^https?:/.test(a.getAttribute('href') || '')).length,
+    sitios: document.querySelectorAll('.sitios li').length,
+    repes: (() => { const n = [...document.querySelectorAll('.sitios li .nombre')].map(e => e.textContent.trim());
+                    return [...new Set(n.filter((x, i) => n.indexOf(x) !== i))]; })(),
+    secciones: document.querySelectorAll('section[id]').length,
+    navRoto: [...document.querySelectorAll('nav a[href^="#"]')]
+               .map(a => a.getAttribute('href')).filter(h => { try { return !document.querySelector(h); } catch { return true; } }),
+  };
+});
+est.anidados ? mal(`${est.anidados} bloques anidados donde no deben`) : bien('ningún bloque mal anidado');
 est.rotos.length ? mal('enlaces internos rotos: ' + est.rotos.join(', ')) : bien('enlaces internos, todos existen');
-est.sinAlt ? mal(`${est.sinAlt} imágenes sin alt`) : bien('todas las imágenes con alt');
+est.navRoto.length ? mal('el menú apunta a secciones que no existen: ' + est.navRoto.join(', ')) : bien('el menú lleva a todas sus secciones');
+est.vacios ? mal(`${est.vacios} enlaces sin destino`) : bien(`${est.externos} enlaces externos con destino`);
+est.sinNoopener ? ojo(`${est.sinNoopener} enlaces a otra pestaña sin rel="noopener"`) : bien('los enlaces externos, con noopener');
 est.repes.length ? mal('sitios repetidos: ' + est.repes.join(', ')) : bien(`${est.sitios} sitios de comer, ninguno repetido`);
 
-console.log('\nMODO «HOY», DÍA A DÍA');
+grupo('FECHAS DE BOOKING Y MAPS');
+const reservas = await p.evaluate(() => {
+  const filas = [...document.querySelectorAll('table.hoteles tbody tr')];
+  let etapa = null; const problemas = [];
+  const mes = { ene:0,feb:1,mar:2,abr:3,may:4,jun:5,jul:6,ago:7,sep:8,oct:9,nov:10,dic:11 };
+  for (const tr of filas) {
+    if (tr.classList.contains('grupo')) { etapa = tr.innerText; continue; }
+    const a = tr.querySelector('a.booking'); if (!a) continue;
+    const u = new URL(a.href);
+    const inm = etapa.match(/(\d+)\s+(\w{3})\w*\s*→\s*(\d+)\s+(\w{3})/);
+    if (!inm) continue;
+    const iso = (d, m) => `2026-${String(mes[m.slice(0,3).toLowerCase()] + 1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const esperado = [iso(inm[1], inm[2]), iso(inm[3], inm[4])];
+    const real = [u.searchParams.get('checkin'), u.searchParams.get('checkout')];
+    if (real[0] !== esperado[0] || real[1] !== esperado[1])
+      problemas.push(`${tr.querySelector('.hotel')?.textContent}: ${real.join('→')} debería ser ${esperado.join('→')}`);
+  }
+  return { total: filas.filter(f => f.querySelector('a.booking')).length, problemas };
+});
+reservas.problemas.length ? reservas.problemas.forEach(x => mal('fechas de Booking mal — ' + x))
+                          : bien(`${reservas.total} enlaces de Booking con las fechas de su etapa`);
+
+grupo('MODO «HOY», DÍA A DÍA');
 const primero = await p.$('#hoyVerPrimero');
 if (primero) await primero.click();
 const dias = await p.evaluate(() => {
@@ -67,8 +126,8 @@ const dias = await p.evaluate(() => {
     out.push({ fecha, titulo: norm(caja.querySelector('h2')?.innerText || ''),
                mad: cuenta('.hoy-mad'), tip: cuenta('.hoy-tip:not(.hoy-mad)'),
                // ojo: el CSS pone los títulos en mayúsculas y innerText los devuelve así
-               comer: [...caja.querySelectorAll('.hoy-tarjeta h4')]
-                        .some(h => /comer/i.test(h.innerText)) });
+               comer: [...caja.querySelectorAll('.hoy-tarjeta h4')].some(h => /comer/i.test(h.innerText)),
+               audios: caja.querySelectorAll('.hoy-audio').length });
     const sig = document.querySelector('#hoySig'); if (!sig) break;
     const antes = fecha; sig.click();               // pinta() es síncrona
     if (norm(document.querySelector('#hoy .hoy-fecha')?.innerText || '').split('·')[0] === antes) break;
@@ -77,17 +136,83 @@ const dias = await p.evaluate(() => {
 });
 const totalDias = await p.evaluate(() => new Set([...document.querySelectorAll('[data-fecha]')].map(d => d.dataset.fecha)).size);
 dias.length === totalDias ? bien(`se recorren los ${totalDias} días con las flechas`)
-  : mal(`las flechas solo llegan a ${dias.length} de ${totalDias} días (se atascan en ${dias.at(-1)?.fecha})`);
+  : mal(`las flechas solo llegan a ${dias.length} de ${totalDias} días (atascadas en ${dias.at(-1)?.fecha})`);
 const dobles = dias.filter(d => (d.mad ?? 1) !== 1 || (d.tip ?? 1) !== 1);
 dobles.length ? mal('texto repetido en: ' + dobles.map(d => d.titulo.split('·')[0]).join(', '))
               : bien(`ningún texto repetido (${dias.filter(d => d.mad).length} días con madrugador)`);
 const sinComer = dias.filter(d => !d.comer);
-sinComer.length ? mal('días sin dónde comer: ' + sinComer.map(d => d.fecha).join(', '))
-                : bien('todos los días tienen dónde comer');
+sinComer.length ? mal('días sin dónde comer: ' + sinComer.map(d => d.fecha).join(', ')) : bien('todos los días tienen dónde comer');
+const sinAudio = dias.filter(d => !d.audios).length;
+sinAudio ? ojo(`${sinAudio} de ${dias.length} días sin audios que escuchar`) : bien('todos los días con audios');
 
-console.log('\nCONSOLA');
-errores.length ? mal('errores de JavaScript: ' + errores.join(' | ')) : bien('sin errores de JavaScript');
+grupo('AUDIOGUÍA');
+const audio = await p.evaluate(async () => {
+  if (typeof AUDIOS === 'undefined') return { sin: 'no hay catálogo' };
+  const malos = [];
+  for (const a of AUDIOS) {
+    const r = await fetch(a.f || ('audio/' + a.id + '.mp3'), { method: 'HEAD' }).catch(() => null);
+    if (!r || !r.ok) malos.push(a.id);
+  }
+  return { total: AUDIOS.length, malos, pistas: document.querySelectorAll('.pista').length };
+});
+if (audio.sin) ojo('sin catálogo de audios');
+else {
+  audio.malos.length ? mal(`${audio.malos.length} audios sin fichero: ` + audio.malos.slice(0,5).join(', '))
+                     : bien(`${audio.total} audios, todos con su fichero`);
+  audio.pistas !== audio.total ? ojo(`${audio.pistas} pistas en la página para ${audio.total} del catálogo`)
+                               : bien('catálogo y pistas cuadran');
+}
+
+grupo('BUSCADOR, TEMA Y «QUÉ TENGO CERCA»');
+const buscador = await p.$('input[type="search"], #buscar, .buscador input');
+if (!buscador) ojo('no encuentro el buscador');
+else {
+  await buscador.fill('khao soi');
+  await p.waitForTimeout(500);
+  const r = await p.evaluate(() => {
+    const caja = document.querySelector('.res-buscar, #resultados, .buscador-res');
+    return { visible: !!caja && caja.offsetHeight > 0, n: caja ? caja.querySelectorAll('li, a').length : 0 };
+  });
+  r.visible && r.n ? bien(`el buscador responde (${r.n} resultados para «khao soi»)`) : mal('el buscador no devuelve resultados');
+  await buscador.fill('');
+}
+const tema = await p.evaluate(() => {
+  const b = document.querySelector('[id*="tema"], .tema, button[title*="scuro"], button[title*="tema"]');
+  if (!b) return null;
+  const antes = document.documentElement.dataset.tema || '';
+  b.click();
+  const despues = document.documentElement.dataset.tema || '';
+  const fondo = getComputedStyle(document.body).backgroundColor;
+  b.click();
+  return { antes, despues, fondo };
+});
+tema ? (tema.antes !== tema.despues ? bien(`el tema cambia (${tema.antes || 'claro'} → ${tema.despues})`)
+                                    : mal('el botón de tema no cambia nada'))
+     : ojo('no encuentro el botón de tema');
+const cerca = await p.evaluate(() => typeof SITIOS !== 'undefined'
+  ? { n: SITIOS.length, aprox: SITIOS.filter(s => s.ap).length, sinCoord: SITIOS.filter(s => !s.la || !s.lo).length }
+  : null);
+cerca ? (cerca.sinCoord ? mal(`${cerca.sinCoord} sitios sin coordenadas`)
+                        : bien(`${cerca.n} sitios geolocalizados (${cerca.aprox} con el centro de su zona)`))
+      : ojo('no hay datos de «qué tengo cerca»');
+
+grupo('MÓVIL (390 px)');
+await p.setViewportSize({ width: 390, height: 844 });
+await p.waitForTimeout(400);
+const movil = await p.evaluate(() => {
+  const anchos = [...document.querySelectorAll('body *')]
+    .filter(e => e.getBoundingClientRect().width > window.innerWidth + 2 && getComputedStyle(e).overflowX !== 'auto')
+    .map(e => (e.className || e.tagName).toString().split(' ')[0]);
+  return { desborda: document.documentElement.scrollWidth > window.innerWidth + 2, culpables: [...new Set(anchos)].slice(0, 5) };
+});
+movil.desborda ? mal('la página se desborda a lo ancho en móvil: ' + (movil.culpables.join(', ') || '?'))
+               : bien('no se desborda a lo ancho');
+
+grupo('CONSOLA');
+errores.length ? mal('errores de JavaScript: ' + [...new Set(errores)].slice(0,4).join(' | '))
+               : bien('sin errores de JavaScript');
 
 await nav.close();
-console.log(fallos.length ? `\n⚠ ${fallos.length} FALLO(S)` : '\n✓ todo correcto');
-process.exit(fallos.length ? 1 : 0);
+console.log(`\n${fallos.length ? '⚠ ' + fallos.length + ' FALLO(S)' : '✓ todo correcto'}` +
+            (avisos.length ? ` · ${avisos.length} aviso(s)` : ''));
+fin(fallos.length ? 1 : 0);
