@@ -728,6 +728,22 @@
     font-weight:700;font-size:.86rem;cursor:pointer;white-space:nowrap;font-family:inherit}
   #nvNo{background:none;border:none;color:#fff;opacity:.7;font-size:1rem;cursor:pointer;padding:2px 4px}
   #nvNo:hover{opacity:1}
+
+  /* ---------- LOS TIMOS ---------- */
+  .pcard-ancho{grid-column:1/-1}
+  .p-intro{font-size:.93rem;color:var(--tinta2);margin-bottom:12px;line-height:1.55}
+  .timos{margin:0 0 4px 0;padding-left:0;list-style:none;counter-reset:t}
+  .timos li{position:relative;padding:11px 0 11px 40px;border-top:1px dashed var(--linea);
+    font-size:.92rem;line-height:1.6;counter-increment:t}
+  .timos li:first-child{border-top:none}
+  .timos li::before{content:counter(t);position:absolute;left:0;top:12px;width:26px;height:26px;
+    border-radius:50%;background:#b31b34;color:#fff;display:grid;place-items:center;font-size:.82rem;
+    font-weight:700}
+  .timos b{color:var(--teca)}
+  .timos em{color:var(--verde);font-style:normal;font-weight:600}
+  .timos-fin{margin-top:14px;background:#fdf6e7;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;
+    padding:12px 15px;font-size:.9rem;line-height:1.6;color:#5c4a24}
+  html[data-tema="oscuro"] .timos-fin{background:#2a2114;color:#e8d5ac}
 </style>
 </head>
 <body>
@@ -1801,520 +1817,6 @@
   </div>
 </section>
 
-<!-- ============ BARRIOS ============ -->
-<section id="barrios" class="etapa-sec">
-  <div class="kicker">Dónde dormir</div>
-  <h2>Barrios recomendados en cada sitio</h2>
-  <p class="intro">La regla para vosotros: <strong>céntrico pero tranquilo</strong>, para moverse a pie y
-  volver a dormir sin ruido. Aquí va el mejor barrio de cada etapa; en el Excel del escritorio
-  (<em>Hoteles-Tailandia-2026.xlsx</em>) tenéis además hoteles concretos por precio.</p>
-
-  <div class="barrios-grid">
-    <div class="bcard"><h4>🏙️ Bangkok · llegada (Silom)</h4>
-      <p><b>Silom / Bang Rak</b> — donde tenéis el hotel.</p>
-      <p>Barrio de oficinas de día y de mercados y comida de noche. A cinco minutos andando del BTS Sala Daeng y del MRT Silom, así que llegáis a todo. Y tiene una ventaja para vosotros: el BTS baja hasta Saphan Taksin, donde se coge el barco del río, que es como se va a los grandes templos sin pisar un atasco. Al lado está el mercado de Soi Convent para desayunar como un local.</div>
-    <div class="bcard"><h4>🛕 Chiang Rai</h4>
-      <p class="barrio">Centro, junto a la torre del reloj y el night bazaar</p>
-      <p>Ciudad pequeña: desde el centro se hace todo a pie y el mercado nocturno es agradable, nada agobiante.</p></div>
-    <div class="bcard"><h4>⛰️ Chiang Dao</h4>
-      <p class="barrio">El valle, a los pies del Doi Luang</p>
-      <p>No hay "centro": se elige por el entorno. Aquí el alojamiento <em>es</em> el plan — naturaleza y silencio.</p></div>
-    <div class="bcard"><h4>🏯 Chiang Mai</h4>
-      <p class="barrio">Old City (dentro de las murallas)</p>
-      <p>Templos, mercados y cafés caminando. Alternativas: <strong>Nimman</strong> (moderno, cafés) o
-      <strong>Riverside</strong> (elegante y verde).</p></div>
-    <div class="bcard"><h4>🚤 Krabi town</h4>
-      <p class="barrio">Centro / riverside (mercado nocturno Chao Fah)</p>
-      <p>Junto al mercado y al embarcadero, perfecto para una noche. No tiene playa: es etapa de paso.</p></div>
-    <div class="bcard"><h4>🏝️ Koh Jum</h4>
-      <p><b>Ao Si o Golden Pearl</b> — las dos mejores playas y donde están casi todos los alojamientos.</p>
-      <p>Isla mayoritariamente musulmana y con comunidad chao ley en el sur. Sin cajeros, sin gasolinera y con cuatro restaurantes: llevad efectivo desde Krabi.</p></div>
-    <div class="bcard"><h4>🏖️ Koh Lanta</h4>
-      <p class="barrio">Klong Nin (equilibrio) o Long Beach / Phra Ae</p>
-      <p>Playa larga y ambiente relajado con servicios. Alternativas: <strong>Kantiang</strong> (más aislado)
-      u <strong>Old Town</strong> (encanto histórico sobre el mar).</p></div>
-    <div class="bcard"><h4>🌆 Bangkok · final (tranquilo)</h4>
-      <p class="barrio">Riverside / Rattanakosin (casco antiguo)</p>
-      <p>Junto al río y a los grandes templos, con ambiente sereno para los dos últimos días de calma:
-      atardeceres sobre el Chao Phraya. Evitad Khao San si buscáis silencio.</p></div>
-  </div>
-
-  <div class="excel-nota">
-    📊 <strong>¿Y los hoteles concretos?</strong> Los tenéis todos en la pestaña
-    <a href="#hoteles" style="color:var(--teca);font-weight:700">Hoteles ★</a> — tabla completa con enlaces,
-    mi recomendación en estrellas y por qué. (También está el mismo listado en el Excel del escritorio,
-    <em>Hoteles-Tailandia-2026.xlsx</em>.)
-  </div>
-</section>
-
-<!-- ============ HOTELES (TABLA) ============ -->
-<section id="hoteles" class="etapa-sec">
-  <div class="kicker">La tabla completa</div>
-  <h2>Todos los hoteles, con mi recomendación</h2>
-  <p class="intro">La misma tabla del Excel, aquí en la web. Cada hotel enlaza a su ubicación en
-  <strong>Google Maps</strong> (fotos y reseñas) y a <strong>Booking con las fechas de esa etapa ya puestas</strong>
-  (2 adultos, 1 habitación). Las <strong>estrellas ★ son mi recomendación personal</strong> para este viaje —
-  limpieza, tranquilidad, encanto y, en Bangkok con el calor, que tenga piscina — <em>no</em> la categoría oficial.</p>
-
-  <div class="leyenda-hoteles">
-    ★★★★★ = lo que yo reservaría · los iconos resumen por qué lo recomiendo:
-    <div style="margin-top:10px"><span class="lc morado">Fondo morado</span> = añadidos después, buscando <strong>piscina para nadar de verdad</strong> (no de las de remojarse).</div>
-    <div class="leg-chars"><span class="lc">🏊 piscina</span><span class="lc">🤫 tranquilo</span><span class="lc">🚇 céntrico / BTS</span><span class="lc">🏖 en la playa</span><span class="lc">🏞 junto al río</span><span class="lc">💸 buena relación</span><span class="lc">🧼 muy limpio</span><span class="lc">🌿 con encanto / naturaleza</span><span class="lc">🧖 spa</span><span class="lc">🚫👶 solo adultos</span><span class="lc">🌅 vistas</span><span class="lc">🍽 buena mesa</span><span class="lc">📍 en el centro</span></div>
-  </div>
-
-  <div class="tabla-wrap">
-    <table class="hoteles">
-      <thead><tr>
-        <th>Hotel</th><th>Zona</th><th>Gama</th><th>€/noche</th><th>Recom.</th><th>Por qué / detalles</th>
-      </tr></thead>
-      <tbody>
-      <tr class="grupo"><td colspan="6">①  Bangkok · llegada (activo · céntrico)   ·   30 oct → 2 nov</td></tr>
-      <tr class="reservado"><td><span class="sello-reserva">✓ Reservado</span><br><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Silom%20Serene%20A%20Boutique%20Hotel%20Bangkok" target="_blank" rel="noopener">Silom Serene A Boutique Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Silom%20Serene%20A%20Boutique%20Hotel%20Bangkok&checkin=2026-10-30&checkout=2026-11-02&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Ver en Booking</a></td><td class="zona-cell">Silom (Soi Pipat)</td><td class="gama-cell">Boutique ★★★★</td><td class="precio-cell">reservado</td><td><span class="estrellas" title="4.3 de 5">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Hotel-jardín con piscina en un callejón tranquilo de Silom. A 5 min andando del BTS Sala Daeng y el MRT Silom, y desde ahí el río queda a un salto. Tel. +66 2 636 6599 · habitación doble deluxe, 3 noches.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">🚇</span><span class="char">🧖</span></div></td></tr>
-      <tr class="grupo"><td colspan="6">②  Chiang Rai   ·   2 nov → 4 nov</td></tr>
-      <tr class="reservado"><td><span class="sello-reserva">✓ Reservado</span><br><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Nak%20Nakara%20Hotel%20Chiang%20Rai" target="_blank" rel="noopener">Nak Nakara Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Nak%20Nakara%20Hotel%20Chiang%20Rai&checkin=2026-11-02&checkout=2026-11-04&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Ver en Booking</a></td><td class="zona-cell">Centro</td><td class="gama-cell">Medio €€</td><td class="precio-cell">reservado</td><td><span class="estrellas" title="4.0 de 5">★★★★<span class="vacia"></span></span></td><td class="porque-cell">Céntrico, tranquilo y con muy buena relación calidad-precio. A un paseo del reloj dorado y del night bazaar.<div class="chars"><span class="char">🚶</span><span class="char">🧼</span><span class="char">💸</span></div></td></tr>
-      <tr class="grupo"><td colspan="6">③  Chiang Dao   ·   4 nov → 6 nov</td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Nest%2C%20Chiang%20Dao" target="_blank" rel="noopener">Chiang Dao Nest</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Chiang%20Dao%20Nest%20Chiang%20Dao&checkin=2026-11-04&checkout=2026-11-06&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 4 nov–6 nov</a></td><td class="zona-cell">El valle</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">45–70 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Célebre por su restaurante, a los pies del Doi Luang. Naturaleza pura.<div class="chars"><span class="char">🍽</span><span class="char">🌅</span><span class="char">🌿</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Reserve%2C%20Chiang%20Dao" target="_blank" rel="noopener">Chiang Dao Reserve</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Chiang%20Dao%20Reserve%20Chiang%20Dao&checkin=2026-11-04&checkout=2026-11-06&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 4 nov–6 nov</a></td><td class="zona-cell">El valle</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">80–130 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Villas entre naturaleza con cafetal propio. Mucha calma.<div class="chars"><span class="char">🤫</span><span class="char">🌿</span><span class="char">🍽</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Malee%27s%20Nature%20Lovers%20Bungalows%2C%20Chiang%20Dao" target="_blank" rel="noopener">Malee&#x27;s Nature Lovers Bungalows</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Malee%27s%20Nature%20Lovers%20Bungalows%20Chiang%20Dao&checkin=2026-11-04&checkout=2026-11-06&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 4 nov–6 nov</a></td><td class="zona-cell">El valle</td><td class="gama-cell">Económico €</td><td class="precio-cell">25–45 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia">☆</span></span></td><td class="porque-cell">Bungalows sencillos con vistas directas a la montaña.<div class="chars"><span class="char">💸</span><span class="char">🌅</span><span class="char">🌿</span></div></td></tr>
-      <tr class="grupo"><td colspan="6">④  Chiang Mai   ·   6 nov → 10 nov</td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Tamarind%20Village%2C%20Chiang%20Mai" target="_blank" rel="noopener">Tamarind Village</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Tamarind%20Village%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">120–180 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Oasis de bambú en pleno casco antiguo. Sereno y precioso.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">📍</span><span class="char">🧼</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Rachamankha%2C%20Chiang%20Mai" target="_blank" rel="noopener">Rachamankha</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Rachamankha%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Boutique-lujo €€€</td><td class="precio-cell">150–220 €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">De los hoteles más bellos del norte, silencioso y elegante.<div class="chars"><span class="char">🏊</span><span class="char">🤫</span><span class="char">🌿</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=De%20Lanna%20Hotel%2C%20Chiang%20Mai" target="_blank" rel="noopener">De Lanna Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=De%20Lanna%20Hotel%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Medio €€</td><td class="precio-cell">60–90 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Estilo Lanna, céntrico, con piscina y muy buena relación.<div class="chars"><span class="char">🏊</span><span class="char">📍</span><span class="char">💸</span><span class="char">🧼</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Bodhi%20Serene%2C%20Chiang%20Mai" target="_blank" rel="noopener">Bodhi Serene</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Bodhi%20Serene%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Medio €€</td><td class="precio-cell">70–100 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Junto a Wat Phra Singh, en el corazón del casco antiguo.<div class="chars"><span class="char">🏊</span><span class="char">📍</span><span class="char">🤫</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Akyra%20Manor%2C%20Chiang%20Mai" target="_blank" rel="noopener">Akyra Manor</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Akyra%20Manor%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Nimman</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">120–170 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Diseño moderno en la zona de cafés de Nimman. Piscina en azotea.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">🌅</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=137%20Pillars%20House%2C%20Chiang%20Mai" target="_blank" rel="noopener">137 Pillars House</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=137%20Pillars%20House%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Lujo €€€€</td><td class="precio-cell">300+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Histórico, con jardines junto al río Ping. Un lujo con alma.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">🧖</span><span class="char">🏞</span></div></td></tr>
-      <tr class="grupo"><td colspan="6">⑤  Krabi town   ·   10 nov → 11 nov</td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=The%20Brown%20Hotel%2C%20Krabi%20Thailand" target="_blank" rel="noopener">The Brown Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=The%20Brown%20Hotel%20Krabi%20Thailand&checkin=2026-11-10&checkout=2026-11-11&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 10 nov–11 nov</a></td><td class="zona-cell">Centro</td><td class="gama-cell">Medio €€</td><td class="precio-cell">40–60 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Moderno y céntrico, a pasos del mercado nocturno.<div class="chars"><span class="char">📍</span><span class="char">🧼</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Krabi%20River%20Hotel%2C%20Krabi%20Thailand" target="_blank" rel="noopener">Krabi River Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Krabi%20River%20Hotel%20Krabi%20Thailand&checkin=2026-11-10&checkout=2026-11-11&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 10 nov–11 nov</a></td><td class="zona-cell">Río</td><td class="gama-cell">Medio €€</td><td class="precio-cell">45–65 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia">☆</span></span></td><td class="porque-cell">Junto al río y al embarcadero, cómodo para la noche de paso.<div class="chars"><span class="char">🏞</span><span class="char">📍</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=De%20Loft%20Hotel%2C%20Krabi%20Thailand" target="_blank" rel="noopener">De Loft Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=De%20Loft%20Hotel%20Krabi%20Thailand&checkin=2026-11-10&checkout=2026-11-11&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 10 nov–11 nov</a></td><td class="zona-cell">Centro</td><td class="gama-cell">Económico €</td><td class="precio-cell">25–40 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Sencillo, limpio y bien situado para una noche.<div class="chars"><span class="char">💸</span><span class="char">🧼</span><span class="char">📍</span></div></td></tr>
-      <tr class="grupo"><td colspan="6">⑥  Koh Jum   ·   11 nov → 14 nov</td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Koh%20Jum%20Beach%20Villas%2C%20Koh%20Jum" target="_blank" rel="noopener">Koh Jum Beach Villas</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Koh%20Jum%20Beach%20Villas%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Golden Pearl</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">150–250 €</td><td><span class="estrellas" title="5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Lo más cuidado de la isla, con villas de madera frente a la playa larga y buen restaurante. Aviso honesto: algún viajero ha reportado cortes de agua, así que confirmad al reservar.<div class="chars"><span class="char">🏖</span><span class="char">🌿</span><span class="char">🍽</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Koh%20Jum%20Resort%2C%20Koh%20Jum" target="_blank" rel="noopener">Koh Jum Resort</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Koh%20Jum%20Resort%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Ao Si</td><td class="gama-cell">Medio €€</td><td class="precio-cell">50–90 €</td><td><span class="estrellas" title="4 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">El mejor valorado de la isla, con más de 1.200 opiniones. Bungalows con aire acondicionado en una de las playas más bonitas.<div class="chars"><span class="char">🏖</span><span class="char">🧼</span><span class="char">💸</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Woodland%20Lodge%2C%20Koh%20Jum" target="_blank" rel="noopener">Woodland Lodge</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Woodland%20Lodge%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Andaman Beach</td><td class="gama-cell">Económico €</td><td class="precio-cell">30–50 €</td><td><span class="estrellas" title="4 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Cabañas de madera espaciosas entre árboles, a pie de playa. Sencillo y muy querido.<div class="chars"><span class="char">🏖</span><span class="char">🌿</span><span class="char">💸</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Bodaeng%20Bungalow%2C%20Koh%20Jum" target="_blank" rel="noopener">Bodaeng Bungalow</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Bodaeng%20Bungalow%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Ting Rai</td><td class="gama-cell">Mochilero €</td><td class="precio-cell">15–30 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia"></span></span></td><td class="porque-cell">Cabañas de bambú de toda la vida, sin lujo ninguno. La isla de hace veinte años, con su familia de siempre.<div class="chars"><span class="char">💸</span><span class="char">🤫</span><span class="char">🌿</span></div></td></tr>
-      <tr class="grupo"><td colspan="6">⑦  Koh Lanta   ·   14 nov → 18 nov</td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Sri%20Lanta%20Resort%2C%20Koh%20Lanta" target="_blank" rel="noopener">Sri Lanta Resort</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Sri%20Lanta%20Resort%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Klong Nin</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">110–170 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Villas entre selva y playa, muy tranquilo.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🤫</span><span class="char">🌿</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Lanta%20Sand%20Resort%20%26%20Spa%2C%20Koh%20Lanta" target="_blank" rel="noopener">Lanta Sand Resort &amp; Spa</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Lanta%20Sand%20Resort%20%26%20Spa%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Long Beach</td><td class="gama-cell">Medio €€</td><td class="precio-cell">70–110 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Piscina y playa larga, con buenos servicios.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🧖</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Layana%20Resort%20%26%20Spa%2C%20Koh%20Lanta" target="_blank" rel="noopener">Layana Resort &amp; Spa</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Layana%20Resort%20%26%20Spa%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Long Beach</td><td class="gama-cell">Boutique €€€€</td><td class="precio-cell">250+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Solo adultos: ideal para una pareja que busca calma total.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🚫👶</span><span class="char">🤫</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Mango%20House%2C%20Koh%20Lanta" target="_blank" rel="noopener">Mango House</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Mango%20House%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Old Town</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">80–120 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Casas centenarias de madera sobre el mar. Muy con encanto.<div class="chars"><span class="char">🏞</span><span class="char">🌿</span><span class="char">🌅</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Pimalai%20Resort%20%26%20Spa%2C%20Koh%20Lanta" target="_blank" rel="noopener">Pimalai Resort &amp; Spa</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Pimalai%20Resort%20%26%20Spa%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Kantiang</td><td class="gama-cell">Lujo €€€€€</td><td class="precio-cell">350+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">El gran resort de la isla, con playa privada.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🧖</span><span class="char">🌿</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Sanctuary%20Lanta%2C%20Koh%20Lanta" target="_blank" rel="noopener">Sanctuary Lanta</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Sanctuary%20Lanta%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Klong Dao</td><td class="gama-cell">Económico €</td><td class="precio-cell">30–50 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia">☆</span></span></td><td class="porque-cell">Bungalows rústicos con alma, para desconectar.<div class="chars"><span class="char">💸</span><span class="char">🌿</span><span class="char">🤫</span></div></td></tr>
-      <tr class="grupo"><td colspan="6">⑧  Bangkok · final (tranquilo · junto al río)   ·   18 nov → 20 nov</td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Villa%20Phra%20Sumen%2C%20Bangkok" target="_blank" rel="noopener">Villa Phra Sumen</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Villa%20Phra%20Sumen%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Económico €</td><td class="precio-cell">45–70 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Boutique tranquilo y limpio en el casco antiguo, lejos del ruido. Piscina pequeña.<div class="chars"><span class="char">🤫</span><span class="char">💸</span><span class="char">🏊</span><span class="char">🧼</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Riva%20Surya%20Bangkok%2C%20Bangkok" target="_blank" rel="noopener">Riva Surya Bangkok</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Riva%20Surya%20Bangkok%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Medio €€</td><td class="precio-cell">80–120 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Riverside con piscina y terraza para el último respiro del viaje.<div class="chars"><span class="char">🏊</span><span class="char">🏞</span><span class="char">🤫</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Sala%20Rattanakosin%2C%20Bangkok" target="_blank" rel="noopener">Sala Rattanakosin</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Sala%20Rattanakosin%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">90–130 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Azotea con vistas frontales a Wat Arun, justo sobre el río.<div class="chars"><span class="char">🏞</span><span class="char">🌅</span><span class="char">🌿</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Praya%20Palazzo%2C%20Bangkok" target="_blank" rel="noopener">Praya Palazzo</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Praya%20Palazzo%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Thonburi</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">120–170 €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Mansión histórica a la que se llega en barquita: puro oasis junto al río.<div class="chars"><span class="char">🏊</span><span class="char">🤫</span><span class="char">🏞</span><span class="char">🌿</span></div></td></tr>
-      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=The%20Siam%2C%20Bangkok" target="_blank" rel="noopener">The Siam</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=The%20Siam%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Lujo €€€€</td><td class="precio-cell">450+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Capricho: art déco íntimo a la orilla del río. La despedida soñada.<div class="chars"><span class="char">🏊</span><span class="char">🏞</span><span class="char">🤫</span><span class="char">🧖</span></div></td></tr>
-      </tbody>
-    </table>
-  </div>
-  <p class="presu-nota">🏨 <strong>Booking</strong> abre la búsqueda del hotel <strong>con las fechas de esa
-  etapa ya cargadas</strong> para dos personas: si está (casi todos lo están), aparece el primero; si no,
-  veréis alternativas cercanas para esas mismas noches. El nombre abre Google Maps. Precios orientativos 2026.</p>
-</section>
-
-<!-- ============ PRESUPUESTO ============ -->
-<section id="presupuesto" class="etapa-sec">
-  <div class="kicker">Cuánto cuesta</div>
-  <h2>Presupuesto orientativo</h2>
-  <p class="intro">Estimación <strong>para los dos</strong>, el viaje completo (21 noches), en un nivel
-  cómodo pero sensato: hoteles boutique-medios, comer sobre todo de mercado y restaurante local, y los
-  caprichos que ya tenéis fichados (elefantes, algún barco, masajes). Los importes son de referencia
-  para 2026 — la gran variable son los vuelos internacionales.</p>
-
-  <div class="presu-grid">
-    <div class="pline"><div class="cat"><span class="ic">✈️</span>Vuelos Madrid–Bangkok</div>
-      <div class="imp">1.400–1.800 €</div><div class="nota">Ida y vuelta, los dos. Reservando pronto, más cerca de 1.400.</div></div>
-    <div class="pline"><div class="cat"><span class="ic">🛫</span>3 vuelos internos</div>
-      <div class="imp">300–420 €</div><div class="nota">Los dos, con equipaje facturado incluido.</div></div>
-    <div class="pline"><div class="cat"><span class="ic">🏨</span>Alojamiento · 21 noches</div>
-      <div class="imp">1.700–2.400 €</div><div class="nota">Media ~90–115 €/noche en pareja. Ver Excel.</div></div>
-    <div class="pline"><div class="cat"><span class="ic">🍜</span>Comida y bebida</div>
-      <div class="imp">700–1.000 €</div><div class="nota">Los dos, 22 días. Street food + restaurantes locales.</div></div>
-    <div class="pline"><div class="cat"><span class="ic">🐘</span>Actividades y excursiones</div>
-      <div class="imp">450–650 €</div><div class="nota">Elefantes, barcos (Koh Rok, las 4 islas), clase de cocina, masajes.</div></div>
-    <div class="pline"><div class="cat"><span class="ic">🚕</span>Transporte terrestre y barcos</div>
-      <div class="imp">280–380 €</div><div class="nota">Coches con conductor en el norte, traslados de islas, Grabs.</div></div>
-    <div class="pline"><div class="cat"><span class="ic">🛡️</span>Seguro de viaje</div>
-      <div class="imp">140–200 €</div><div class="nota">Los dos, con buena cobertura médica. Imprescindible.</div></div>
-    <div class="pline"><div class="cat"><span class="ic">🛍️</span>eSIM, compras y varios</div>
-      <div class="imp">250–400 €</div><div class="nota">Datos, propinas, regalos y algún imprevisto.</div></div>
-  </div>
-
-  <div class="totales">
-    <div class="total t1"><div class="lbl">Ajustado</div><div class="val">≈ 5.200 €</div><div class="pp">≈ 2.600 € por persona</div></div>
-    <div class="total t2"><div class="lbl">Cómodo (esta ruta)</div><div class="val">≈ 6.200 €</div><div class="pp">≈ 3.100 € por persona</div></div>
-    <div class="total t3"><div class="lbl">Con caprichos</div><div class="val">≈ 7.800 €</div><div class="pp">≈ 3.900 € por persona</div></div>
-  </div>
-  <p class="presu-nota">No incluye gastos previos en casa (vacunas/farmacia, equipo). Tailandia es
-  barata sobre el terreno: lo que dispara el total es el vuelo internacional y el nivel de hotel.
-  Reservando vuelos y los hoteles del norte/islas con antelación se ahorra bastante.</p>
-</section>
-
-<!-- ============ PRÁCTICO ============ -->
-<section id="practico" class="etapa-sec">
-  <div class="kicker">Logística</div>
-  <h2>Guía práctica</h2>
-  <div class="practico sans">
-    <div class="pcard"><h4>🎒 La mochila de 10 kg</h4><ul>
-      <li>4–5 mudas de ropa ligera: hay <strong>lavanderías por todas partes</strong> (40–80 THB/kg, listo en un día).</li>
-      <li>Una capa fina de manga larga: en Chiang Dao y Chiang Mai refresca de noche (15–18 °C).</li>
-      <li>Chubasquero plegable fino (algún chubasco suelto en el sur a principios de noviembre).</li>
-      <li>Sandalias cómodas + una zapatilla ligera. Pañuelo/pareo para templos (hombros y rodillas).</li>
-      <li>Repelente de mosquitos y protector solar: comprad allí, pesa menos en el vuelo de ida.</li>
-      <li><strong>Ojo:</strong> las low-cost tailandesas (AirAsia, Nok, Vietjet) permiten oficialmente solo <strong>7 kg en cabina</strong>. Con 10 kg, añadid maleta facturada al reservar (~10–15 € por trayecto) o volad Bangkok Airways/Thai con más margen.</li>
-    </ul></div>
-    <div class="pcard"><h4>🌦️ El clima en esas fechas</h4><ul>
-      <li><strong>Bangkok:</strong> fin de las lluvias, 32 °C, alguna tormenta corta posible al principio.</li>
-      <li><strong>Norte:</strong> temporada seca y "fresca": días de 28–30 °C, noches de 15–18 °C. La mejor época del año.</li>
-      <li><strong>Andamán (Krabi/Lanta):</strong> arranca la temporada seca; posible chubasco aislado los primeros días, mar en calma y todo verde.</li>
-      <li><strong>Por qué no Samui/Phangan/Tao:</strong> el golfo tiene su época MÁS lluviosa justo en noviembre. Descartado con criterio.</li>
-    </ul></div>
-    <div class="pcard"><h4>✈️ Reservas con antelación</h4><ul>
-      <li><strong>Ya mismo (jul–ago):</strong> vuelos internacionales.</li>
-      <li><strong>Ago–sep:</strong> vuelos internos (BKK→Chiang Rai · Chiang Mai→Krabi · Krabi→BKK), <strong>Elephant Nature Park</strong> y los hoteles de Koh Jum y Chiang Dao (cuarenta alojamientos en toda la isla: se llenan).</li>
-      <li><strong>Sep–oct:</strong> resto de hoteles y clase de cocina.</li>
-      <li><strong>Allí mismo:</strong> excursiones de barco, masajes, traslados por carretera.</li>
-    </ul></div>
-    <div class="pcard"><h4>💱 ¿Cuánto es esto en euros?</h4>
-      <div id="conversor"></div></div>
-    <div class="pcard"><h4>💸 Dinero y papeles</h4><ul>
-      <li class="aviso"><strong>TDAC: obligatorio y gratis.</strong> Desde mayo de 2025 hay que rellenar online la
-      <em>Thailand Digital Arrival Card</em> antes de entrar en el país; la piden al pasar inmigración.
-      Se presenta como muy pronto <strong>72 horas antes</strong> de llegar, así que toca hacerla el 27 o 28 de octubre.
-      Una por persona y por cada entrada. Es gratuita: desconfiad de webs que cobren por ella.
-      → <a href="https://tdac.immigration.go.th" target="_blank" rel="noopener">tdac.immigration.go.th</a></li>
-      <li>Pasaporte español: <strong>exención de visado 60 días</strong>. Pasaporte con 6+ meses de validez.</li>
-      <li>Efectivo manda en mercados e islas. Los cajeros cobran ~220 THB por reintegro: sacad cantidades grandes pocas veces (tarjeta Revolut/Wise para buen cambio).</li>
-      <li>eSIM de AIS o dtac (se compra online antes de salir): datos baratos y Grab desde el minuto uno.</li>
-      <li>Seguro de viaje con cobertura médica: imprescindible, la sanidad privada es excelente pero cara.</li>
-    </ul></div>
-    <div class="pcard"><h4>🚕 Moverse</h4><ul>
-      <li><strong>Grab</strong> (el Uber asiático) en todas las ciudades: precio cerrado, sin regateos.</li>
-      <li>En Bangkok: barco público por el río + metro/BTS. Evitad taxis sin taxímetro.</li>
-      <li>Norte: coche privado con conductor entre ciudades (~1.800–2.500 THB por trayecto); se reserva en el hotel el día antes.</li>
-      <li>Islas: los traslados combinados (lancha+furgoneta) se compran como un solo billete en cualquier agencia u hotel.</li>
-      <li>Scooter en las islas solo si tenéis carné y soltura; si no, tuk-tuks y taxis de isla.</li>
-    </ul></div>
-    <div class="pcard"><h4>🎟️ Lo que cuesta entrar</h4><ul>
-      <li>Casi todas las islas bonitas son <strong>parque nacional</strong> y cobran entrada aparte del barco. Llevad efectivo suelto.</li>
-      <li>Koh Rok y las 4 islas: <strong>400 THB</strong> por persona. Si hacéis la bahía de Phang Nga desde Krabi, Koh Hong son <strong>300 THB</strong> más.</li>
-      <li>Gran Palacio: 500 THB. Wat Pho: 300 (incluye botellín de agua). Wat Arun: 200. Doi Suthep: 30.</li>
-      <li>El Gran Palacio acepta tarjeta; <strong>Wat Pho y Wat Arun sólo efectivo</strong>. Id con billetes encima.</li>
-      <li>Templo Blanco: 100 THB. Casa Negra: 80. Templo Azul: gratis.</li>
-      <li>Masaje tailandés de una hora: 250–400 THB en sitio normal; en la escuela de Wat Pho, unos 480.</li>
-    </ul></div>
-    <div class="pcard"><h4>🛺 Precios del sur, para no pagar de más</h4><ul>
-      <li><strong>Songthaew</strong> (camioneta blanca) Ao Nang ↔ Krabi: 60 THB el trayecto entero, 20 los tramos cortos. Se para con la mano.</li>
-      <li>Barca a <strong>Railay</strong>: ~100 THB por persona y trayecto. Salen cuando se llenan (8 personas).</li>
-      <li>Alquiler: moto ~200 THB/día, coche ~1.200. <strong>Fotografiad los golpes antes de salir</strong>, que es la reclamación clásica.</li>
-      <li>Ferry Ao Nang → Phi Phi: ~500 THB, 2 horas.</li>
-      <li>Los traslados entre islas (lancha + furgoneta) se compran como billete único en cualquier agencia.</li>
-    </ul></div>
-    <div class="pcard"><h4>🗣️ Cuatro palabras que abren puertas</h4><ul>
-      <li>Los hombres terminan las frases en <strong>kap</strong> y las mujeres en <strong>ka</strong>. Es lo que las hace educadas: sin eso suenan secas.</li>
-      <li><strong>Sawadi kap / ka</strong> — hola y adiós. <strong>Kop kun kap / ka</strong> — gracias.</li>
-      <li><strong>Aroy</strong> — está buenísimo. Dicho después de comer, hace feliz a cualquier cocinero.</li>
-      <li><strong>Mai pet</strong> — no picante. <strong>Pet nit noi</strong> — poquito picante (que sigue picando).</li>
-      <li>No preguntan "¿qué tal?", preguntan <strong>"kin kao ruyang"</strong>: ¿has comido ya? Ahí se ve el país entero.</li>
-    </ul></div>
-    <div class="pcard"><h4>🙏 Pequeño código local</h4><ul>
-      <li>Descalzarse en templos y en muchas casas y tiendas. Hombros/rodillas cubiertos en templos.</li>
-      <li>El "wai" (manos juntas e inclinación) como saludo se agradece muchísimo.</li>
-      <li>No tocar la cabeza a nadie ni señalar con los pies; la figura del rey es intocable.</li>
-      <li>Regatear con sonrisa en mercados, nunca en comida.</li>
-      <li>Sonreír: es el idioma oficial del país y funciona siempre.</li>
-    </ul></div>
-  </div>
-</section>
-
-<!-- ============ HABLAR ============ -->
-<section id="hablar" class="etapa-sec">
-  <div class="kicker">Cuatro palabras</div>
-  <h2>Hablar tailandés (un poquito)</h2>
-  <p class="intro">No hace falta aprender el idioma: con diez frases dichas regular, el trato cambia por
-  completo. Dale al ▶ para oír cómo suena de verdad, y al 👁 para <strong>enseñar la pantalla</strong>
-  a quien tengas delante, con la frase en tailandés en grande.</p>
-  <div class="ojo-genero">Las frases están en masculino y acaban en <b>krap</b>. Si las dice ella,
-  cambia esa terminación por <b>ka</b>: <i>sawatdi <b>ka</b></i>, <i>kopkun <b>ka</b></i>. Es lo que hace
-  educada una frase; sin ella suenan secas.</div>
-  <h3 class="grupo-frases">Lo básico</h3>
-  <ul class="frases">
-    <li data-frase="hola" data-th="สวัสดีครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Hola / adiós</span>
-        <span class="fr-th" lang="th">สวัสดีครับ</span>
-        <span class="fr-fon">sa-wat-dí krap</span>
-        <span class="fr-nota">Vale para llegar y para irse, a cualquier hora</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="gracias" data-th="ขอบคุณครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Gracias</span>
-        <span class="fr-th" lang="th">ขอบคุณครับ</span>
-        <span class="fr-fon">kop-kun krap</span>
-        <span class="fr-nota">Con una pequeña inclinación de cabeza, mejor</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="perdon" data-th="ขอโทษครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Perdone / disculpe</span>
-        <span class="fr-th" lang="th">ขอโทษครับ</span>
-        <span class="fr-fon">ko-tôt krap</span>
-        <span class="fr-nota">También sirve para pedir paso</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="si" data-th="ใช่ครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Sí</span>
-        <span class="fr-th" lang="th">ใช่ครับ</span>
-        <span class="fr-fon">chai krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="no" data-th="ไม่ครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">No</span>
-        <span class="fr-th" lang="th">ไม่ครับ</span>
-        <span class="fr-fon">mai krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="noentiendo" data-th="ไม่เข้าใจครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">No entiendo</span>
-        <span class="fr-th" lang="th">ไม่เข้าใจครับ</span>
-        <span class="fr-fon">mai kao-chai krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="ingles" data-th="พูดภาษาอังกฤษได้ไหมครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">¿Habla inglés?</span>
-        <span class="fr-th" lang="th">พูดภาษาอังกฤษได้ไหมครับ</span>
-        <span class="fr-fon">pût pa-sá ang-krit dâi mai krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="maipenrai" data-th="ไม่เป็นไรครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">No pasa nada / tranquilo</span>
-        <span class="fr-th" lang="th">ไม่เป็นไรครับ</span>
-        <span class="fr-fon">mai pen rai krap</span>
-        <span class="fr-nota">La frase nacional. Resume la filosofía del país entero</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-  </ul>
-  <h3 class="grupo-frases">En la mesa</h3>
-  <ul class="frases">
-    <li data-frase="carta" data-th="ขอเมนูหน่อยครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">La carta, por favor</span>
-        <span class="fr-th" lang="th">ขอเมนูหน่อยครับ</span>
-        <span class="fr-fon">kó me-nu nòi krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="nopicante" data-th="ไม่เผ็ดครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Sin picante</span>
-        <span class="fr-th" lang="th">ไม่เผ็ดครับ</span>
-        <span class="fr-fon">mai pèt krap</span>
-        <span class="fr-nota">Empezad por aquí los primeros días</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="pococpicante" data-th="เผ็ดนิดหน่อยครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Poco picante</span>
-        <span class="fr-th" lang="th">เผ็ดนิดหน่อยครับ</span>
-        <span class="fr-fon">pèt nit nòi krap</span>
-        <span class="fr-nota">Ojo: el poco picante de aquí sigue picando</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="rico" data-th="อร่อยมากครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">¡Está buenísimo!</span>
-        <span class="fr-th" lang="th">อร่อยมากครับ</span>
-        <span class="fr-fon">a-ròi mâk krap</span>
-        <span class="fr-nota">Dicho al cocinero, abre puertas</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="vegetariano" data-th="ผมกินเจครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Soy vegetariano</span>
-        <span class="fr-th" lang="th">ผมกินเจครับ</span>
-        <span class="fr-fon">pom kin je krap</span>
-        <span class="fr-nota">«Je» es la comida vegana budista, sin salsa de pescado</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="sincilantro" data-th="ไม่ใส่ผักชีครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Sin cilantro</span>
-        <span class="fr-th" lang="th">ไม่ใส่ผักชีครับ</span>
-        <span class="fr-fon">mai sài pak-chi krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="agua" data-th="ขอน้ำเปล่าครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Agua, por favor</span>
-        <span class="fr-th" lang="th">ขอน้ำเปล่าครับ</span>
-        <span class="fr-fon">kó nam-plào krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="cuenta" data-th="เช็คบิลครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">La cuenta, por favor</span>
-        <span class="fr-th" lang="th">เช็คบิลครับ</span>
-        <span class="fr-fon">chek-bin krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="llevar" data-th="เอากลับบ้านครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Para llevar</span>
-        <span class="fr-th" lang="th">เอากลับบ้านครับ</span>
-        <span class="fr-fon">ao klap bân krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-  </ul>
-  <h3 class="grupo-frases">Comprando y regateando</h3>
-  <ul class="frases">
-    <li data-frase="cuanto" data-th="เท่าไหร่ครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">¿Cuánto cuesta?</span>
-        <span class="fr-th" lang="th">เท่าไหร่ครับ</span>
-        <span class="fr-fon">tâo-rài krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="caro" data-th="แพงไปครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Es muy caro</span>
-        <span class="fr-th" lang="th">แพงไปครับ</span>
-        <span class="fr-fon">peng pai krap</span>
-        <span class="fr-nota">Siempre sonriendo: aquí regatear enfadado no funciona</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="rebaja" data-th="ลดหน่อยได้ไหมครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">¿Me lo deja algo mejor?</span>
-        <span class="fr-th" lang="th">ลดหน่อยได้ไหมครับ</span>
-        <span class="fr-fon">lot nòi dâi mai krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="noquiero" data-th="ไม่เอาครับ ขอบคุณครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">No, gracias</span>
-        <span class="fr-th" lang="th">ไม่เอาครับ ขอบคุณครับ</span>
-        <span class="fr-fon">mai ao krap, kop-kun krap</span>
-        <span class="fr-nota">Para los vendedores insistentes</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-  </ul>
-  <h3 class="grupo-frases">Moviéndose</h3>
-  <ul class="frases">
-    <li data-frase="bano" data-th="ห้องน้ำอยู่ที่ไหนครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">¿Dónde está el baño?</span>
-        <span class="fr-th" lang="th">ห้องน้ำอยู่ที่ไหนครับ</span>
-        <span class="fr-fon">hong-nam yù ti-nái krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="taximetro" data-th="เปิดมิเตอร์ด้วยครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Ponga el taxímetro, por favor</span>
-        <span class="fr-th" lang="th">เปิดมิเตอร์ด้วยครับ</span>
-        <span class="fr-fon">pòet mi-toe dûai krap</span>
-        <span class="fr-nota">Clave en Bangkok: si se niega, bajaos y coged otro</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="parar" data-th="จอดตรงนี้ครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Pare aquí, por favor</span>
-        <span class="fr-th" lang="th">จอดตรงนี้ครับ</span>
-        <span class="fr-fon">chòt trong-ní krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="cuantotarda" data-th="ใช้เวลานานไหมครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">¿Se tarda mucho?</span>
-        <span class="fr-th" lang="th">ใช้เวลานานไหมครับ</span>
-        <span class="fr-fon">chai we-la nan mai krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="recto" data-th="ตรงไปครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Siga recto</span>
-        <span class="fr-th" lang="th">ตรงไปครับ</span>
-        <span class="fr-fon">trong pai krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-  </ul>
-  <h3 class="grupo-frases">Si hay un apuro</h3>
-  <ul class="frases">
-    <li data-frase="ayuda" data-th="ช่วยด้วย">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">¡Ayuda!</span>
-        <span class="fr-th" lang="th">ช่วยด้วย</span>
-        <span class="fr-fon">chûai dûai</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="medico" data-th="ผมต้องการหมอครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Necesito un médico</span>
-        <span class="fr-th" lang="th">ผมต้องการหมอครับ</span>
-        <span class="fr-fon">pom tong-kan mó krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="alergia" data-th="ผมแพ้ถั่วครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Soy alérgico a los cacahuetes</span>
-        <span class="fr-th" lang="th">ผมแพ้ถั่วครับ</span>
-        <span class="fr-fon">pom pae tùa krap</span>
-        <span class="fr-nota">Cambiad «tùa» por lo que sea. Enseñad la pantalla en la cocina</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="hospital" data-th="โรงพยาบาล">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Hospital</span>
-        <span class="fr-th" lang="th">โรงพยาบาล</span>
-        <span class="fr-fon">rong-pa-ya-ban</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-    <li data-frase="policia" data-th="เรียกตำรวจครับ">
-      <button class="fr-play" aria-label="Escuchar">▶</button>
-      <div class="fr-txt"><span class="fr-es">Llame a la policía</span>
-        <span class="fr-th" lang="th">เรียกตำรวจครับ</span>
-        <span class="fr-fon">rîak tam-rùat krap</span>
-      </div>
-      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
-    </li>
-  </ul>
-</section>
-
 <!-- ============ LOS PLATOS ============ -->
 <section id="platos" class="etapa-sec">
   <div class="kicker">La parte importante de verdad</div>
@@ -2615,6 +2117,578 @@
     📸 Las fotos son de Wikimedia Commons, con licencia libre. No son de los restaurantes concretos: son
     del plato, para poder reconocerlo y señalarlo con el dedo, que en Tailandia funciona mejor que hablar.
   </div>
+</section>
+
+
+
+<!-- ============ BARRIOS ============ -->
+<section id="barrios" class="etapa-sec">
+  <div class="kicker">Dónde dormir</div>
+  <h2>Barrios recomendados en cada sitio</h2>
+  <p class="intro">La regla para vosotros: <strong>céntrico pero tranquilo</strong>, para moverse a pie y
+  volver a dormir sin ruido. Aquí va el mejor barrio de cada etapa; en el Excel del escritorio
+  (<em>Hoteles-Tailandia-2026.xlsx</em>) tenéis además hoteles concretos por precio.</p>
+
+  <div class="barrios-grid">
+    <div class="bcard"><h4>🏙️ Bangkok · llegada (Silom)</h4>
+      <p><b>Silom / Bang Rak</b> — donde tenéis el hotel.</p>
+      <p>Barrio de oficinas de día y de mercados y comida de noche. A cinco minutos andando del BTS Sala Daeng y del MRT Silom, así que llegáis a todo. Y tiene una ventaja para vosotros: el BTS baja hasta Saphan Taksin, donde se coge el barco del río, que es como se va a los grandes templos sin pisar un atasco. Al lado está el mercado de Soi Convent para desayunar como un local.</div>
+    <div class="bcard"><h4>🛕 Chiang Rai</h4>
+      <p class="barrio">Centro, junto a la torre del reloj y el night bazaar</p>
+      <p>Ciudad pequeña: desde el centro se hace todo a pie y el mercado nocturno es agradable, nada agobiante.</p></div>
+    <div class="bcard"><h4>⛰️ Chiang Dao</h4>
+      <p class="barrio">El valle, a los pies del Doi Luang</p>
+      <p>No hay "centro": se elige por el entorno. Aquí el alojamiento <em>es</em> el plan — naturaleza y silencio.</p></div>
+    <div class="bcard"><h4>🏯 Chiang Mai</h4>
+      <p class="barrio">Old City (dentro de las murallas)</p>
+      <p>Templos, mercados y cafés caminando. Alternativas: <strong>Nimman</strong> (moderno, cafés) o
+      <strong>Riverside</strong> (elegante y verde).</p></div>
+    <div class="bcard"><h4>🚤 Krabi town</h4>
+      <p class="barrio">Centro / riverside (mercado nocturno Chao Fah)</p>
+      <p>Junto al mercado y al embarcadero, perfecto para una noche. No tiene playa: es etapa de paso.</p></div>
+    <div class="bcard"><h4>🏝️ Koh Jum</h4>
+      <p><b>Ao Si o Golden Pearl</b> — las dos mejores playas y donde están casi todos los alojamientos.</p>
+      <p>Isla mayoritariamente musulmana y con comunidad chao ley en el sur. Sin cajeros, sin gasolinera y con cuatro restaurantes: llevad efectivo desde Krabi.</p></div>
+    <div class="bcard"><h4>🏖️ Koh Lanta</h4>
+      <p class="barrio">Klong Nin (equilibrio) o Long Beach / Phra Ae</p>
+      <p>Playa larga y ambiente relajado con servicios. Alternativas: <strong>Kantiang</strong> (más aislado)
+      u <strong>Old Town</strong> (encanto histórico sobre el mar).</p></div>
+    <div class="bcard"><h4>🌆 Bangkok · final (tranquilo)</h4>
+      <p class="barrio">Riverside / Rattanakosin (casco antiguo)</p>
+      <p>Junto al río y a los grandes templos, con ambiente sereno para los dos últimos días de calma:
+      atardeceres sobre el Chao Phraya. Evitad Khao San si buscáis silencio.</p></div>
+  </div>
+
+  <div class="excel-nota">
+    📊 <strong>¿Y los hoteles concretos?</strong> Los tenéis todos en la pestaña
+    <a href="#hoteles" style="color:var(--teca);font-weight:700">Hoteles ★</a> — tabla completa con enlaces,
+    mi recomendación en estrellas y por qué. (También está el mismo listado en el Excel del escritorio,
+    <em>Hoteles-Tailandia-2026.xlsx</em>.)
+  </div>
+</section>
+
+<!-- ============ HOTELES (TABLA) ============ -->
+<section id="hoteles" class="etapa-sec">
+  <div class="kicker">La tabla completa</div>
+  <h2>Todos los hoteles, con mi recomendación</h2>
+  <p class="intro">La misma tabla del Excel, aquí en la web. Cada hotel enlaza a su ubicación en
+  <strong>Google Maps</strong> (fotos y reseñas) y a <strong>Booking con las fechas de esa etapa ya puestas</strong>
+  (2 adultos, 1 habitación). Las <strong>estrellas ★ son mi recomendación personal</strong> para este viaje —
+  limpieza, tranquilidad, encanto y, en Bangkok con el calor, que tenga piscina — <em>no</em> la categoría oficial.</p>
+
+  <div class="leyenda-hoteles">
+    ★★★★★ = lo que yo reservaría · los iconos resumen por qué lo recomiendo:
+    <div style="margin-top:10px"><span class="lc morado">Fondo morado</span> = añadidos después, buscando <strong>piscina para nadar de verdad</strong> (no de las de remojarse).</div>
+    <div class="leg-chars"><span class="lc">🏊 piscina</span><span class="lc">🤫 tranquilo</span><span class="lc">🚇 céntrico / BTS</span><span class="lc">🏖 en la playa</span><span class="lc">🏞 junto al río</span><span class="lc">💸 buena relación</span><span class="lc">🧼 muy limpio</span><span class="lc">🌿 con encanto / naturaleza</span><span class="lc">🧖 spa</span><span class="lc">🚫👶 solo adultos</span><span class="lc">🌅 vistas</span><span class="lc">🍽 buena mesa</span><span class="lc">📍 en el centro</span></div>
+  </div>
+
+  <div class="tabla-wrap">
+    <table class="hoteles">
+      <thead><tr>
+        <th>Hotel</th><th>Zona</th><th>Gama</th><th>€/noche</th><th>Recom.</th><th>Por qué / detalles</th>
+      </tr></thead>
+      <tbody>
+      <tr class="grupo"><td colspan="6">①  Bangkok · llegada (activo · céntrico)   ·   30 oct → 2 nov</td></tr>
+      <tr class="reservado"><td><span class="sello-reserva">✓ Reservado</span><br><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Silom%20Serene%20A%20Boutique%20Hotel%20Bangkok" target="_blank" rel="noopener">Silom Serene A Boutique Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Silom%20Serene%20A%20Boutique%20Hotel%20Bangkok&checkin=2026-10-30&checkout=2026-11-02&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Ver en Booking</a></td><td class="zona-cell">Silom (Soi Pipat)</td><td class="gama-cell">Boutique ★★★★</td><td class="precio-cell">reservado</td><td><span class="estrellas" title="4.3 de 5">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Hotel-jardín con piscina en un callejón tranquilo de Silom. A 5 min andando del BTS Sala Daeng y el MRT Silom, y desde ahí el río queda a un salto. Tel. +66 2 636 6599 · habitación doble deluxe, 3 noches.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">🚇</span><span class="char">🧖</span></div></td></tr>
+      <tr class="grupo"><td colspan="6">②  Chiang Rai   ·   2 nov → 4 nov</td></tr>
+      <tr class="reservado"><td><span class="sello-reserva">✓ Reservado</span><br><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Nak%20Nakara%20Hotel%20Chiang%20Rai" target="_blank" rel="noopener">Nak Nakara Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Nak%20Nakara%20Hotel%20Chiang%20Rai&checkin=2026-11-02&checkout=2026-11-04&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Ver en Booking</a></td><td class="zona-cell">Centro</td><td class="gama-cell">Medio €€</td><td class="precio-cell">reservado</td><td><span class="estrellas" title="4.0 de 5">★★★★<span class="vacia"></span></span></td><td class="porque-cell">Céntrico, tranquilo y con muy buena relación calidad-precio. A un paseo del reloj dorado y del night bazaar.<div class="chars"><span class="char">🚶</span><span class="char">🧼</span><span class="char">💸</span></div></td></tr>
+      <tr class="grupo"><td colspan="6">③  Chiang Dao   ·   4 nov → 6 nov</td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Nest%2C%20Chiang%20Dao" target="_blank" rel="noopener">Chiang Dao Nest</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Chiang%20Dao%20Nest%20Chiang%20Dao&checkin=2026-11-04&checkout=2026-11-06&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 4 nov–6 nov</a></td><td class="zona-cell">El valle</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">45–70 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Célebre por su restaurante, a los pies del Doi Luang. Naturaleza pura.<div class="chars"><span class="char">🍽</span><span class="char">🌅</span><span class="char">🌿</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Reserve%2C%20Chiang%20Dao" target="_blank" rel="noopener">Chiang Dao Reserve</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Chiang%20Dao%20Reserve%20Chiang%20Dao&checkin=2026-11-04&checkout=2026-11-06&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 4 nov–6 nov</a></td><td class="zona-cell">El valle</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">80–130 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Villas entre naturaleza con cafetal propio. Mucha calma.<div class="chars"><span class="char">🤫</span><span class="char">🌿</span><span class="char">🍽</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Malee%27s%20Nature%20Lovers%20Bungalows%2C%20Chiang%20Dao" target="_blank" rel="noopener">Malee&#x27;s Nature Lovers Bungalows</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Malee%27s%20Nature%20Lovers%20Bungalows%20Chiang%20Dao&checkin=2026-11-04&checkout=2026-11-06&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 4 nov–6 nov</a></td><td class="zona-cell">El valle</td><td class="gama-cell">Económico €</td><td class="precio-cell">25–45 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia">☆</span></span></td><td class="porque-cell">Bungalows sencillos con vistas directas a la montaña.<div class="chars"><span class="char">💸</span><span class="char">🌅</span><span class="char">🌿</span></div></td></tr>
+      <tr class="grupo"><td colspan="6">④  Chiang Mai   ·   6 nov → 10 nov</td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Tamarind%20Village%2C%20Chiang%20Mai" target="_blank" rel="noopener">Tamarind Village</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Tamarind%20Village%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">120–180 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Oasis de bambú en pleno casco antiguo. Sereno y precioso.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">📍</span><span class="char">🧼</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Rachamankha%2C%20Chiang%20Mai" target="_blank" rel="noopener">Rachamankha</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Rachamankha%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Boutique-lujo €€€</td><td class="precio-cell">150–220 €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">De los hoteles más bellos del norte, silencioso y elegante.<div class="chars"><span class="char">🏊</span><span class="char">🤫</span><span class="char">🌿</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=De%20Lanna%20Hotel%2C%20Chiang%20Mai" target="_blank" rel="noopener">De Lanna Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=De%20Lanna%20Hotel%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Medio €€</td><td class="precio-cell">60–90 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Estilo Lanna, céntrico, con piscina y muy buena relación.<div class="chars"><span class="char">🏊</span><span class="char">📍</span><span class="char">💸</span><span class="char">🧼</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Bodhi%20Serene%2C%20Chiang%20Mai" target="_blank" rel="noopener">Bodhi Serene</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Bodhi%20Serene%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Medio €€</td><td class="precio-cell">70–100 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Junto a Wat Phra Singh, en el corazón del casco antiguo.<div class="chars"><span class="char">🏊</span><span class="char">📍</span><span class="char">🤫</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Akyra%20Manor%2C%20Chiang%20Mai" target="_blank" rel="noopener">Akyra Manor</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Akyra%20Manor%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Nimman</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">120–170 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Diseño moderno en la zona de cafés de Nimman. Piscina en azotea.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">🌅</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=137%20Pillars%20House%2C%20Chiang%20Mai" target="_blank" rel="noopener">137 Pillars House</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=137%20Pillars%20House%20Chiang%20Mai&checkin=2026-11-06&checkout=2026-11-10&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 6 nov–10 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Lujo €€€€</td><td class="precio-cell">300+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Histórico, con jardines junto al río Ping. Un lujo con alma.<div class="chars"><span class="char">🏊</span><span class="char">🌿</span><span class="char">🧖</span><span class="char">🏞</span></div></td></tr>
+      <tr class="grupo"><td colspan="6">⑤  Krabi town   ·   10 nov → 11 nov</td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=The%20Brown%20Hotel%2C%20Krabi%20Thailand" target="_blank" rel="noopener">The Brown Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=The%20Brown%20Hotel%20Krabi%20Thailand&checkin=2026-11-10&checkout=2026-11-11&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 10 nov–11 nov</a></td><td class="zona-cell">Centro</td><td class="gama-cell">Medio €€</td><td class="precio-cell">40–60 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Moderno y céntrico, a pasos del mercado nocturno.<div class="chars"><span class="char">📍</span><span class="char">🧼</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Krabi%20River%20Hotel%2C%20Krabi%20Thailand" target="_blank" rel="noopener">Krabi River Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Krabi%20River%20Hotel%20Krabi%20Thailand&checkin=2026-11-10&checkout=2026-11-11&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 10 nov–11 nov</a></td><td class="zona-cell">Río</td><td class="gama-cell">Medio €€</td><td class="precio-cell">45–65 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia">☆</span></span></td><td class="porque-cell">Junto al río y al embarcadero, cómodo para la noche de paso.<div class="chars"><span class="char">🏞</span><span class="char">📍</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=De%20Loft%20Hotel%2C%20Krabi%20Thailand" target="_blank" rel="noopener">De Loft Hotel</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=De%20Loft%20Hotel%20Krabi%20Thailand&checkin=2026-11-10&checkout=2026-11-11&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 10 nov–11 nov</a></td><td class="zona-cell">Centro</td><td class="gama-cell">Económico €</td><td class="precio-cell">25–40 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Sencillo, limpio y bien situado para una noche.<div class="chars"><span class="char">💸</span><span class="char">🧼</span><span class="char">📍</span></div></td></tr>
+      <tr class="grupo"><td colspan="6">⑥  Koh Jum   ·   11 nov → 14 nov</td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Koh%20Jum%20Beach%20Villas%2C%20Koh%20Jum" target="_blank" rel="noopener">Koh Jum Beach Villas</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Koh%20Jum%20Beach%20Villas%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Golden Pearl</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">150–250 €</td><td><span class="estrellas" title="5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Lo más cuidado de la isla, con villas de madera frente a la playa larga y buen restaurante. Aviso honesto: algún viajero ha reportado cortes de agua, así que confirmad al reservar.<div class="chars"><span class="char">🏖</span><span class="char">🌿</span><span class="char">🍽</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Koh%20Jum%20Resort%2C%20Koh%20Jum" target="_blank" rel="noopener">Koh Jum Resort</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Koh%20Jum%20Resort%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Ao Si</td><td class="gama-cell">Medio €€</td><td class="precio-cell">50–90 €</td><td><span class="estrellas" title="4 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">El mejor valorado de la isla, con más de 1.200 opiniones. Bungalows con aire acondicionado en una de las playas más bonitas.<div class="chars"><span class="char">🏖</span><span class="char">🧼</span><span class="char">💸</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Woodland%20Lodge%2C%20Koh%20Jum" target="_blank" rel="noopener">Woodland Lodge</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Woodland%20Lodge%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Andaman Beach</td><td class="gama-cell">Económico €</td><td class="precio-cell">30–50 €</td><td><span class="estrellas" title="4 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Cabañas de madera espaciosas entre árboles, a pie de playa. Sencillo y muy querido.<div class="chars"><span class="char">🏖</span><span class="char">🌿</span><span class="char">💸</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Bodaeng%20Bungalow%2C%20Koh%20Jum" target="_blank" rel="noopener">Bodaeng Bungalow</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Bodaeng%20Bungalow%20Koh%20Jum&checkin=2026-11-11&checkout=2026-11-14&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 11 nov–14 nov</a></td><td class="zona-cell">Ting Rai</td><td class="gama-cell">Mochilero €</td><td class="precio-cell">15–30 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia"></span></span></td><td class="porque-cell">Cabañas de bambú de toda la vida, sin lujo ninguno. La isla de hace veinte años, con su familia de siempre.<div class="chars"><span class="char">💸</span><span class="char">🤫</span><span class="char">🌿</span></div></td></tr>
+      <tr class="grupo"><td colspan="6">⑦  Koh Lanta   ·   14 nov → 18 nov</td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Sri%20Lanta%20Resort%2C%20Koh%20Lanta" target="_blank" rel="noopener">Sri Lanta Resort</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Sri%20Lanta%20Resort%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Klong Nin</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">110–170 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Villas entre selva y playa, muy tranquilo.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🤫</span><span class="char">🌿</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Lanta%20Sand%20Resort%20%26%20Spa%2C%20Koh%20Lanta" target="_blank" rel="noopener">Lanta Sand Resort &amp; Spa</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Lanta%20Sand%20Resort%20%26%20Spa%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Long Beach</td><td class="gama-cell">Medio €€</td><td class="precio-cell">70–110 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Piscina y playa larga, con buenos servicios.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🧖</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Layana%20Resort%20%26%20Spa%2C%20Koh%20Lanta" target="_blank" rel="noopener">Layana Resort &amp; Spa</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Layana%20Resort%20%26%20Spa%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Long Beach</td><td class="gama-cell">Boutique €€€€</td><td class="precio-cell">250+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Solo adultos: ideal para una pareja que busca calma total.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🚫👶</span><span class="char">🤫</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Mango%20House%2C%20Koh%20Lanta" target="_blank" rel="noopener">Mango House</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Mango%20House%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Old Town</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">80–120 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Casas centenarias de madera sobre el mar. Muy con encanto.<div class="chars"><span class="char">🏞</span><span class="char">🌿</span><span class="char">🌅</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Pimalai%20Resort%20%26%20Spa%2C%20Koh%20Lanta" target="_blank" rel="noopener">Pimalai Resort &amp; Spa</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Pimalai%20Resort%20%26%20Spa%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Kantiang</td><td class="gama-cell">Lujo €€€€€</td><td class="precio-cell">350+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">El gran resort de la isla, con playa privada.<div class="chars"><span class="char">🏊</span><span class="char">🏖</span><span class="char">🧖</span><span class="char">🌿</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Sanctuary%20Lanta%2C%20Koh%20Lanta" target="_blank" rel="noopener">Sanctuary Lanta</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Sanctuary%20Lanta%20Koh%20Lanta&checkin=2026-11-14&checkout=2026-11-18&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 14 nov–18 nov</a></td><td class="zona-cell">Klong Dao</td><td class="gama-cell">Económico €</td><td class="precio-cell">30–50 €</td><td><span class="estrellas" title="3.5 de 5 (mi recomendación)">★★★½<span class="vacia">☆</span></span></td><td class="porque-cell">Bungalows rústicos con alma, para desconectar.<div class="chars"><span class="char">💸</span><span class="char">🌿</span><span class="char">🤫</span></div></td></tr>
+      <tr class="grupo"><td colspan="6">⑧  Bangkok · final (tranquilo · junto al río)   ·   18 nov → 20 nov</td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Villa%20Phra%20Sumen%2C%20Bangkok" target="_blank" rel="noopener">Villa Phra Sumen</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Villa%20Phra%20Sumen%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Casco antiguo</td><td class="gama-cell">Económico €</td><td class="precio-cell">45–70 €</td><td><span class="estrellas" title="4.0 de 5 (mi recomendación)">★★★★<span class="vacia">☆</span></span></td><td class="porque-cell">Boutique tranquilo y limpio en el casco antiguo, lejos del ruido. Piscina pequeña.<div class="chars"><span class="char">🤫</span><span class="char">💸</span><span class="char">🏊</span><span class="char">🧼</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Riva%20Surya%20Bangkok%2C%20Bangkok" target="_blank" rel="noopener">Riva Surya Bangkok</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Riva%20Surya%20Bangkok%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Medio €€</td><td class="precio-cell">80–120 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Riverside con piscina y terraza para el último respiro del viaje.<div class="chars"><span class="char">🏊</span><span class="char">🏞</span><span class="char">🤫</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Sala%20Rattanakosin%2C%20Bangkok" target="_blank" rel="noopener">Sala Rattanakosin</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Sala%20Rattanakosin%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Boutique €€</td><td class="precio-cell">90–130 €</td><td><span class="estrellas" title="4.5 de 5 (mi recomendación)">★★★★½<span class="vacia"></span></span></td><td class="porque-cell">Azotea con vistas frontales a Wat Arun, justo sobre el río.<div class="chars"><span class="char">🏞</span><span class="char">🌅</span><span class="char">🌿</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=Praya%20Palazzo%2C%20Bangkok" target="_blank" rel="noopener">Praya Palazzo</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=Praya%20Palazzo%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Thonburi</td><td class="gama-cell">Boutique €€€</td><td class="precio-cell">120–170 €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Mansión histórica a la que se llega en barquita: puro oasis junto al río.<div class="chars"><span class="char">🏊</span><span class="char">🤫</span><span class="char">🏞</span><span class="char">🌿</span></div></td></tr>
+      <tr><td><a class="hotel" href="https://www.google.com/maps/search/?api=1&query=The%20Siam%2C%20Bangkok" target="_blank" rel="noopener">The Siam</a><br><a class="booking" href="https://www.booking.com/searchresults.html?ss=The%20Siam%20Bangkok&checkin=2026-11-18&checkout=2026-11-20&group_adults=2&no_rooms=1&group_children=0" target="_blank" rel="noopener">🏨 Booking · 18 nov–20 nov</a></td><td class="zona-cell">Riverside</td><td class="gama-cell">Lujo €€€€</td><td class="precio-cell">450+ €</td><td><span class="estrellas" title="5.0 de 5 (mi recomendación)">★★★★★<span class="vacia"></span></span></td><td class="porque-cell">Capricho: art déco íntimo a la orilla del río. La despedida soñada.<div class="chars"><span class="char">🏊</span><span class="char">🏞</span><span class="char">🤫</span><span class="char">🧖</span></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="presu-nota">🏨 <strong>Booking</strong> abre la búsqueda del hotel <strong>con las fechas de esa
+  etapa ya cargadas</strong> para dos personas: si está (casi todos lo están), aparece el primero; si no,
+  veréis alternativas cercanas para esas mismas noches. El nombre abre Google Maps. Precios orientativos 2026.</p>
+</section>
+
+<!-- ============ PRESUPUESTO ============ -->
+<section id="presupuesto" class="etapa-sec">
+  <div class="kicker">Cuánto cuesta</div>
+  <h2>Presupuesto orientativo</h2>
+  <p class="intro">Estimación <strong>para los dos</strong>, el viaje completo (21 noches), en un nivel
+  cómodo pero sensato: hoteles boutique-medios, comer sobre todo de mercado y restaurante local, y los
+  caprichos que ya tenéis fichados (elefantes, algún barco, masajes). Los importes son de referencia
+  para 2026 — la gran variable son los vuelos internacionales.</p>
+
+  <div class="presu-grid">
+    <div class="pline"><div class="cat"><span class="ic">✈️</span>Vuelos Madrid–Bangkok</div>
+      <div class="imp">1.400–1.800 €</div><div class="nota">Ida y vuelta, los dos. Reservando pronto, más cerca de 1.400.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🛫</span>3 vuelos internos</div>
+      <div class="imp">300–420 €</div><div class="nota">Los dos, con equipaje facturado incluido.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🏨</span>Alojamiento · 21 noches</div>
+      <div class="imp">1.700–2.400 €</div><div class="nota">Media ~90–115 €/noche en pareja. Ver Excel.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🍜</span>Comida y bebida</div>
+      <div class="imp">700–1.000 €</div><div class="nota">Los dos, 22 días. Street food + restaurantes locales.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🐘</span>Actividades y excursiones</div>
+      <div class="imp">450–650 €</div><div class="nota">Elefantes, barcos (Koh Rok, las 4 islas), clase de cocina, masajes.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🚕</span>Transporte terrestre y barcos</div>
+      <div class="imp">280–380 €</div><div class="nota">Coches con conductor en el norte, traslados de islas, Grabs.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🛡️</span>Seguro de viaje</div>
+      <div class="imp">140–200 €</div><div class="nota">Los dos, con buena cobertura médica. Imprescindible.</div></div>
+    <div class="pline"><div class="cat"><span class="ic">🛍️</span>eSIM, compras y varios</div>
+      <div class="imp">250–400 €</div><div class="nota">Datos, propinas, regalos y algún imprevisto.</div></div>
+  </div>
+
+  <div class="totales">
+    <div class="total t1"><div class="lbl">Ajustado</div><div class="val">≈ 5.200 €</div><div class="pp">≈ 2.600 € por persona</div></div>
+    <div class="total t2"><div class="lbl">Cómodo (esta ruta)</div><div class="val">≈ 6.200 €</div><div class="pp">≈ 3.100 € por persona</div></div>
+    <div class="total t3"><div class="lbl">Con caprichos</div><div class="val">≈ 7.800 €</div><div class="pp">≈ 3.900 € por persona</div></div>
+  </div>
+  <p class="presu-nota">No incluye gastos previos en casa (vacunas/farmacia, equipo). Tailandia es
+  barata sobre el terreno: lo que dispara el total es el vuelo internacional y el nivel de hotel.
+  Reservando vuelos y los hoteles del norte/islas con antelación se ahorra bastante.</p>
+</section>
+
+<!-- ============ PRÁCTICO ============ -->
+<section id="practico" class="etapa-sec">
+  <div class="kicker">Logística</div>
+  <h2>Guía práctica</h2>
+  <div class="practico sans">
+    <div class="pcard"><h4>🎒 La mochila de 10 kg</h4><ul>
+      <li>4–5 mudas de ropa ligera: hay <strong>lavanderías por todas partes</strong> (40–80 THB/kg, listo en un día).</li>
+      <li>Una capa fina de manga larga: en Chiang Dao y Chiang Mai refresca de noche (15–18 °C).</li>
+      <li>Chubasquero plegable fino (algún chubasco suelto en el sur a principios de noviembre).</li>
+      <li>Sandalias cómodas + una zapatilla ligera. Pañuelo/pareo para templos (hombros y rodillas).</li>
+      <li>Repelente de mosquitos y protector solar: comprad allí, pesa menos en el vuelo de ida.</li>
+      <li><strong>Ojo:</strong> las low-cost tailandesas (AirAsia, Nok, Vietjet) permiten oficialmente solo <strong>7 kg en cabina</strong>. Con 10 kg, añadid maleta facturada al reservar (~10–15 € por trayecto) o volad Bangkok Airways/Thai con más margen.</li>
+    </ul></div>
+    <div class="pcard"><h4>🌦️ El clima en esas fechas</h4><ul>
+      <li><strong>Bangkok:</strong> fin de las lluvias, 32 °C, alguna tormenta corta posible al principio.</li>
+      <li><strong>Norte:</strong> temporada seca y "fresca": días de 28–30 °C, noches de 15–18 °C. La mejor época del año.</li>
+      <li><strong>Andamán (Krabi/Lanta):</strong> arranca la temporada seca; posible chubasco aislado los primeros días, mar en calma y todo verde.</li>
+      <li><strong>Por qué no Samui/Phangan/Tao:</strong> el golfo tiene su época MÁS lluviosa justo en noviembre. Descartado con criterio.</li>
+    </ul></div>
+    <div class="pcard"><h4>✈️ Reservas con antelación</h4><ul>
+      <li><strong>Ya mismo (jul–ago):</strong> vuelos internacionales.</li>
+      <li><strong>Ago–sep:</strong> vuelos internos (BKK→Chiang Rai · Chiang Mai→Krabi · Krabi→BKK), <strong>Elephant Nature Park</strong> y los hoteles de Koh Jum y Chiang Dao (cuarenta alojamientos en toda la isla: se llenan).</li>
+      <li><strong>Sep–oct:</strong> resto de hoteles y clase de cocina.</li>
+      <li><strong>Allí mismo:</strong> excursiones de barco, masajes, traslados por carretera.</li>
+    </ul></div>
+    <div class="pcard"><h4>💱 ¿Cuánto es esto en euros?</h4>
+      <div id="conversor"></div></div>
+    <div class="pcard"><h4>💸 Dinero y papeles</h4><ul>
+      <li class="aviso"><strong>TDAC: obligatorio y gratis.</strong> Desde mayo de 2025 hay que rellenar online la
+      <em>Thailand Digital Arrival Card</em> antes de entrar en el país; la piden al pasar inmigración.
+      Se presenta como muy pronto <strong>72 horas antes</strong> de llegar, así que toca hacerla el 27 o 28 de octubre.
+      Una por persona y por cada entrada. Es gratuita: desconfiad de webs que cobren por ella.
+      → <a href="https://tdac.immigration.go.th" target="_blank" rel="noopener">tdac.immigration.go.th</a></li>
+      <li>Pasaporte español: <strong>exención de visado 60 días</strong>. Pasaporte con 6+ meses de validez.</li>
+      <li>Efectivo manda en mercados e islas. Los cajeros cobran ~220 THB por reintegro: sacad cantidades grandes pocas veces (tarjeta Revolut/Wise para buen cambio).</li>
+      <li>eSIM de AIS o dtac (se compra online antes de salir): datos baratos y Grab desde el minuto uno.</li>
+      <li>Seguro de viaje con cobertura médica: imprescindible, la sanidad privada es excelente pero cara.</li>
+    </ul></div>
+    <div class="pcard"><h4>🚕 Moverse</h4><ul>
+      <li><strong>Grab</strong> (el Uber asiático) en todas las ciudades: precio cerrado, sin regateos.</li>
+      <li>En Bangkok: barco público por el río + metro/BTS. Evitad taxis sin taxímetro.</li>
+      <li>Norte: coche privado con conductor entre ciudades (~1.800–2.500 THB por trayecto); se reserva en el hotel el día antes.</li>
+      <li>Islas: los traslados combinados (lancha+furgoneta) se compran como un solo billete en cualquier agencia u hotel.</li>
+      <li>Scooter en las islas solo si tenéis carné y soltura; si no, tuk-tuks y taxis de isla.</li>
+    </ul></div>
+    <div class="pcard"><h4>🎟️ Lo que cuesta entrar</h4><ul>
+      <li>Casi todas las islas bonitas son <strong>parque nacional</strong> y cobran entrada aparte del barco. Llevad efectivo suelto.</li>
+      <li>Koh Rok y las 4 islas: <strong>400 THB</strong> por persona. Si hacéis la bahía de Phang Nga desde Krabi, Koh Hong son <strong>300 THB</strong> más.</li>
+      <li>Gran Palacio: 500 THB. Wat Pho: 300 (incluye botellín de agua). Wat Arun: 200. Doi Suthep: 30.</li>
+      <li>El Gran Palacio acepta tarjeta; <strong>Wat Pho y Wat Arun sólo efectivo</strong>. Id con billetes encima.</li>
+      <li>Templo Blanco: 100 THB. Casa Negra: 80. Templo Azul: gratis.</li>
+      <li>Masaje tailandés de una hora: 250–400 THB en sitio normal; en la escuela de Wat Pho, unos 480.</li>
+    </ul></div>
+    <div class="pcard"><h4>🛺 Precios del sur, para no pagar de más</h4><ul>
+      <li><strong>Songthaew</strong> (camioneta blanca) Ao Nang ↔ Krabi: 60 THB el trayecto entero, 20 los tramos cortos. Se para con la mano.</li>
+      <li>Barca a <strong>Railay</strong>: ~100 THB por persona y trayecto. Salen cuando se llenan (8 personas).</li>
+      <li>Alquiler: moto ~200 THB/día, coche ~1.200. <strong>Fotografiad los golpes antes de salir</strong>, que es la reclamación clásica.</li>
+      <li>Ferry Ao Nang → Phi Phi: ~500 THB, 2 horas.</li>
+      <li>Los traslados entre islas (lancha + furgoneta) se compran como billete único en cualquier agencia.</li>
+    </ul></div>
+    <div class="pcard"><h4>🗣️ Cuatro palabras que abren puertas</h4><ul>
+      <li>Los hombres terminan las frases en <strong>kap</strong> y las mujeres en <strong>ka</strong>. Es lo que las hace educadas: sin eso suenan secas.</li>
+      <li><strong>Sawadi kap / ka</strong> — hola y adiós. <strong>Kop kun kap / ka</strong> — gracias.</li>
+      <li><strong>Aroy</strong> — está buenísimo. Dicho después de comer, hace feliz a cualquier cocinero.</li>
+      <li><strong>Mai pet</strong> — no picante. <strong>Pet nit noi</strong> — poquito picante (que sigue picando).</li>
+      <li>No preguntan "¿qué tal?", preguntan <strong>"kin kao ruyang"</strong>: ¿has comido ya? Ahí se ve el país entero.</li>
+    </ul></div>
+    <div class="pcard"><h4>🚽 Baños, horarios y detalles</h4><ul>
+      <li>Fuera de las ciudades siguen existiendo los <b>baños de cuclillas</b>, muchos sin papel y con un
+      cubo para echar agua. Llevad pañuelos en la mochila y no dependáis de que haya.</li>
+      <li>Horarios generales: bancos 8:30–16:30, tiendas 10:00–19:00, restaurantes 8:00–22:00. Los mercados
+      matinales cierran a las 11:00 y los nocturnos abren a las 17:00.</li>
+      <li>Hay <b>días festivos budistas en los que está prohibido vender alcohol</b> en todo el país, y
+      también los días de elecciones. Si una noche no os sirven cerveza, es eso y no es con vosotros.</li>
+      <li>Para fotografiar a alguien, pedid permiso con un gesto. En zonas de comunidades de montaña puede
+      que os pidan dinero a cambio: es legítimo, decidid vosotros.</li>
+    </ul></div>
+    <div class="pcard"><h4>🛂 Aduanas: qué entra y qué NO sale</h4><ul>
+      <li>Se puede entrar con <b>1 litro de alcohol y 200 cigarrillos</b> por persona.</li>
+      <li class="aviso"><b>Ojo con los Budas.</b> Para <b>sacar</b> de Tailandia una imagen de Buda o la
+      reproducción de una antigüedad hace falta <b>licencia de exportación</b>: dos fotos, copia del
+      pasaporte, el recibo y cuatro días de trámite en el Museo Nacional. Lo pueden requisar en el
+      aeropuerto. Si queréis un recuerdo religioso, que sea pequeño y de bisutería, no una figura.</li>
+      <li>Nada de carne ni lácteos al entrar, y las falsificaciones pueden daros un disgusto en la aduana
+      europea de vuelta.</li>
+    </ul></div>
+    <div class="pcard pcard-ancho"><h4>🚨 Los ocho timos, y cómo se esquivan</h4>
+    <p class="p-intro">No es que Tailandia sea peligrosa: es que hay un puñado de engaños muy rodados que se
+    repiten desde hace décadas. Sabiéndolos, se ven venir a un kilómetro.</p>
+    <ol class="timos">
+      <li><b>«Hoy el Gran Palacio está cerrado».</b> El clásico de los clásicos. Un señor bien vestido y
+      amable os aborda cerca de la entrada, os dice que hay ceremonia y se ofrece a llevaros a otros templos.
+      Acabáis en una tienda de gemas. <em>El Gran Palacio abre todos los días.</em> Seguid andando.</li>
+
+      <li><b>Los taxis de Bangkok.</b> «El taxímetro está roto» o «hay mucho tráfico, precio cerrado».
+      Solución: <em>usad Grab</em>, que da el precio de antemano. Y si cogéis uno en la calle, que pongan el
+      taxímetro antes de arrancar o bajaos.</li>
+
+      <li><b>La fábrica de piedras preciosas «del gobierno».</b> Os llevan a una joyería que parece oficial y
+      os venden gemas «para revender en Europa con beneficio». Son de bisutería. <em>No existe ninguna
+      fábrica estatal de gemas.</em></li>
+
+      <li><b>El alquiler de motos.</b> Os cobran daños que ya estaban, o retienen el pasaporte para
+      obligaros a pagar. <em>Fotografiad la moto entera antes de arrancar</em>, con vídeo si hace falta, y
+      no dejéis nunca el pasaporte: se deja una copia o una fianza.</li>
+
+      <li><b>Imitaciones y falsificaciones.</b> Relojes, ropa de marca, electrónica. Nadie os va a vender un
+      reloj bueno en la calle. Y sacar falsificaciones del país puede daros un disgusto en la aduana de vuelta.</li>
+
+      <li><b>El ping pong show.</b> Entrada barata o gratis, y luego una cuenta imposible con matones en la
+      puerta. <em>No entréis</em>, por muy insistente que sea quien os lo ofrece.</li>
+
+      <li><b>El tuk-tuk «gratis» o por 20 baht.</b> Nadie os pasea la ciudad por ese dinero: se llevan
+      comisión de cada tienda a la que os metan, y son varias. Un tuk-tuk normal cuesta lo que cuesta.</li>
+
+      <li><b>La barca del mercado flotante.</b> Se acuerda un precio y al llegar resulta que era por persona,
+      por hora, o que la vuelta se paga aparte. <em>Cerrad precio total, por la barca y ida y vuelta</em>,
+      y a ser posible delante de alguien más.</li>
+    </ol>
+    <div class="timos-fin">La regla que resume las ocho: <b>nadie regala nada por la calle</b>. Si alguien se
+    acerca por iniciativa propia a ayudaros, hay comisión de por medio. Y la fórmula para salir de todas ellas
+    es la misma: sonreír, decir <i>mai ao krap</i> (no quiero, gracias) y seguir andando.</div>
+    </div>
+    <div class="pcard"><h4>🙏 Pequeño código local</h4><ul>
+      <li>Descalzarse en templos y en muchas casas y tiendas. Hombros/rodillas cubiertos en templos.</li>
+      <li>El "wai" (manos juntas e inclinación) como saludo se agradece muchísimo.</li>
+      <li>No tocar la cabeza a nadie ni señalar con los pies; la figura del rey es intocable.</li>
+      <li>Regatear con sonrisa en mercados, nunca en comida.</li>
+      <li>Sonreír: es el idioma oficial del país y funciona siempre.</li>
+    </ul></div>
+  </div>
+</section>
+
+<!-- ============ HABLAR ============ -->
+<section id="hablar" class="etapa-sec">
+  <div class="kicker">Cuatro palabras</div>
+  <h2>Hablar tailandés (un poquito)</h2>
+  <p class="intro">No hace falta aprender el idioma: con diez frases dichas regular, el trato cambia por
+  completo. Dale al ▶ para oír cómo suena de verdad, y al 👁 para <strong>enseñar la pantalla</strong>
+  a quien tengas delante, con la frase en tailandés en grande.</p>
+  <div class="ojo-genero">Las frases están en masculino y acaban en <b>krap</b>. Si las dice ella,
+  cambia esa terminación por <b>ka</b>: <i>sawatdi <b>ka</b></i>, <i>kopkun <b>ka</b></i>. Es lo que hace
+  educada una frase; sin ella suenan secas.</div>
+  <h3 class="grupo-frases">Lo básico</h3>
+  <ul class="frases">
+    <li data-frase="hola" data-th="สวัสดีครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Hola / adiós</span>
+        <span class="fr-th" lang="th">สวัสดีครับ</span>
+        <span class="fr-fon">sa-wat-dí krap</span>
+        <span class="fr-nota">Vale para llegar y para irse, a cualquier hora</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="gracias" data-th="ขอบคุณครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Gracias</span>
+        <span class="fr-th" lang="th">ขอบคุณครับ</span>
+        <span class="fr-fon">kop-kun krap</span>
+        <span class="fr-nota">Con una pequeña inclinación de cabeza, mejor</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="perdon" data-th="ขอโทษครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Perdone / disculpe</span>
+        <span class="fr-th" lang="th">ขอโทษครับ</span>
+        <span class="fr-fon">ko-tôt krap</span>
+        <span class="fr-nota">También sirve para pedir paso</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="si" data-th="ใช่ครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Sí</span>
+        <span class="fr-th" lang="th">ใช่ครับ</span>
+        <span class="fr-fon">chai krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="no" data-th="ไม่ครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">No</span>
+        <span class="fr-th" lang="th">ไม่ครับ</span>
+        <span class="fr-fon">mai krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="noentiendo" data-th="ไม่เข้าใจครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">No entiendo</span>
+        <span class="fr-th" lang="th">ไม่เข้าใจครับ</span>
+        <span class="fr-fon">mai kao-chai krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="ingles" data-th="พูดภาษาอังกฤษได้ไหมครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">¿Habla inglés?</span>
+        <span class="fr-th" lang="th">พูดภาษาอังกฤษได้ไหมครับ</span>
+        <span class="fr-fon">pût pa-sá ang-krit dâi mai krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="maipenrai" data-th="ไม่เป็นไรครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">No pasa nada / tranquilo</span>
+        <span class="fr-th" lang="th">ไม่เป็นไรครับ</span>
+        <span class="fr-fon">mai pen rai krap</span>
+        <span class="fr-nota">La frase nacional. Resume la filosofía del país entero</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+  </ul>
+  <h3 class="grupo-frases">En la mesa</h3>
+  <ul class="frases">
+    <li data-frase="carta" data-th="ขอเมนูหน่อยครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">La carta, por favor</span>
+        <span class="fr-th" lang="th">ขอเมนูหน่อยครับ</span>
+        <span class="fr-fon">kó me-nu nòi krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="nopicante" data-th="ไม่เผ็ดครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Sin picante</span>
+        <span class="fr-th" lang="th">ไม่เผ็ดครับ</span>
+        <span class="fr-fon">mai pèt krap</span>
+        <span class="fr-nota">Empezad por aquí los primeros días</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="pococpicante" data-th="เผ็ดนิดหน่อยครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Poco picante</span>
+        <span class="fr-th" lang="th">เผ็ดนิดหน่อยครับ</span>
+        <span class="fr-fon">pèt nit nòi krap</span>
+        <span class="fr-nota">Ojo: el poco picante de aquí sigue picando</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="rico" data-th="อร่อยมากครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">¡Está buenísimo!</span>
+        <span class="fr-th" lang="th">อร่อยมากครับ</span>
+        <span class="fr-fon">a-ròi mâk krap</span>
+        <span class="fr-nota">Dicho al cocinero, abre puertas</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="vegetariano" data-th="ผมกินเจครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Soy vegetariano</span>
+        <span class="fr-th" lang="th">ผมกินเจครับ</span>
+        <span class="fr-fon">pom kin je krap</span>
+        <span class="fr-nota">«Je» es la comida vegana budista, sin salsa de pescado</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="sincilantro" data-th="ไม่ใส่ผักชีครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Sin cilantro</span>
+        <span class="fr-th" lang="th">ไม่ใส่ผักชีครับ</span>
+        <span class="fr-fon">mai sài pak-chi krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="agua" data-th="ขอน้ำเปล่าครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Agua, por favor</span>
+        <span class="fr-th" lang="th">ขอน้ำเปล่าครับ</span>
+        <span class="fr-fon">kó nam-plào krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="cuenta" data-th="เช็คบิลครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">La cuenta, por favor</span>
+        <span class="fr-th" lang="th">เช็คบิลครับ</span>
+        <span class="fr-fon">chek-bin krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="llevar" data-th="เอากลับบ้านครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Para llevar</span>
+        <span class="fr-th" lang="th">เอากลับบ้านครับ</span>
+        <span class="fr-fon">ao klap bân krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+  </ul>
+  <h3 class="grupo-frases">Comprando y regateando</h3>
+  <ul class="frases">
+    <li data-frase="cuanto" data-th="เท่าไหร่ครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">¿Cuánto cuesta?</span>
+        <span class="fr-th" lang="th">เท่าไหร่ครับ</span>
+        <span class="fr-fon">tâo-rài krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="caro" data-th="แพงไปครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Es muy caro</span>
+        <span class="fr-th" lang="th">แพงไปครับ</span>
+        <span class="fr-fon">peng pai krap</span>
+        <span class="fr-nota">Siempre sonriendo: aquí regatear enfadado no funciona</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="rebaja" data-th="ลดหน่อยได้ไหมครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">¿Me lo deja algo mejor?</span>
+        <span class="fr-th" lang="th">ลดหน่อยได้ไหมครับ</span>
+        <span class="fr-fon">lot nòi dâi mai krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="noquiero" data-th="ไม่เอาครับ ขอบคุณครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">No, gracias</span>
+        <span class="fr-th" lang="th">ไม่เอาครับ ขอบคุณครับ</span>
+        <span class="fr-fon">mai ao krap, kop-kun krap</span>
+        <span class="fr-nota">Para los vendedores insistentes</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+  </ul>
+  <h3 class="grupo-frases">Moviéndose</h3>
+  <ul class="frases">
+    <li data-frase="bano" data-th="ห้องน้ำอยู่ที่ไหนครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">¿Dónde está el baño?</span>
+        <span class="fr-th" lang="th">ห้องน้ำอยู่ที่ไหนครับ</span>
+        <span class="fr-fon">hong-nam yù ti-nái krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="taximetro" data-th="เปิดมิเตอร์ด้วยครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Ponga el taxímetro, por favor</span>
+        <span class="fr-th" lang="th">เปิดมิเตอร์ด้วยครับ</span>
+        <span class="fr-fon">pòet mi-toe dûai krap</span>
+        <span class="fr-nota">Clave en Bangkok: si se niega, bajaos y coged otro</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="parar" data-th="จอดตรงนี้ครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Pare aquí, por favor</span>
+        <span class="fr-th" lang="th">จอดตรงนี้ครับ</span>
+        <span class="fr-fon">chòt trong-ní krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="cuantotarda" data-th="ใช้เวลานานไหมครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">¿Se tarda mucho?</span>
+        <span class="fr-th" lang="th">ใช้เวลานานไหมครับ</span>
+        <span class="fr-fon">chai we-la nan mai krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="recto" data-th="ตรงไปครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Siga recto</span>
+        <span class="fr-th" lang="th">ตรงไปครับ</span>
+        <span class="fr-fon">trong pai krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+  </ul>
+  <h3 class="grupo-frases">Si hay un apuro</h3>
+  <ul class="frases">
+    <li data-frase="ayuda" data-th="ช่วยด้วย">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">¡Ayuda!</span>
+        <span class="fr-th" lang="th">ช่วยด้วย</span>
+        <span class="fr-fon">chûai dûai</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="medico" data-th="ผมต้องการหมอครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Necesito un médico</span>
+        <span class="fr-th" lang="th">ผมต้องการหมอครับ</span>
+        <span class="fr-fon">pom tong-kan mó krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="alergia" data-th="ผมแพ้ถั่วครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Soy alérgico a los cacahuetes</span>
+        <span class="fr-th" lang="th">ผมแพ้ถั่วครับ</span>
+        <span class="fr-fon">pom pae tùa krap</span>
+        <span class="fr-nota">Cambiad «tùa» por lo que sea. Enseñad la pantalla en la cocina</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="hospital" data-th="โรงพยาบาล">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Hospital</span>
+        <span class="fr-th" lang="th">โรงพยาบาล</span>
+        <span class="fr-fon">rong-pa-ya-ban</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+    <li data-frase="policia" data-th="เรียกตำรวจครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Llame a la policía</span>
+        <span class="fr-th" lang="th">เรียกตำรวจครับ</span>
+        <span class="fr-fon">rîak tam-rùat krap</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
+  </ul>
 </section>
 
 <!-- ============ POR SI ACASO ============ -->
