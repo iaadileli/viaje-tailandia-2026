@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>82 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>81 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -189,12 +189,6 @@
   <description><![CDATA[Carrito de plátano frito en rebozado crujiente. El aperitivo callejero por excelencia.<br><br>PIDE: una bolsa de kluay tod recién sacado de la sartén<br><br>Horario: tarde<br>Precio: muy barato<br>Zona: Th. Charoen Nakhon, Khlong San]]></description>
   <address>@13.713011,100.503128, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
-</Placemark>
-<Placemark>
-  <name>Le Du</name>
-  <description><![CDATA[Estrella Michelin de cocina tailandesa moderna. La clave: el menú de mediodía entre semana es MUCHO más barato que la cena, y es la forma más asequible de entrar en un estrellado de Bangkok.<br><br>PIDE: el menú de almuerzo de días laborables, no la cena<br><br>Horario: almuerzo entre semana · reservad con antelación<br>Precio: 1.500–2.500 THB el almuerzo (la cena, el triple)<br>Zona: Silom, Soi 7 · cerca de vuestro hotel]]></description>
-  <address>Le Du Restaurant Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
-  <styleUrl>#s_cena</styleUrl>
 </Placemark>
 <Placemark>
   <name>Tang Bak Seng</name>
