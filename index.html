@@ -2823,8 +2823,6 @@
 
   if (!esWeb()) {
     if (elBoton) elBoton.style.display = 'none';
-    var elZip = document.getElementById('btnZip');
-    if (elZip) elZip.style.display = 'none';
     if (elEstado) elEstado.textContent = 'Esta es la copia descargada: ya funciona sin conexión.';
   } else if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js', {updateViaCache: 'none'}).then(function(reg){
@@ -3157,6 +3155,15 @@ function avisaNueva(reg){
 
     // comida y hotel de la etapa
     var comer = sec ? document.querySelector('#' + sec.id + ' .comer') : null;
+    // La vuelta a Bangkok no tiene su propia lista: se tiran de la de la primera
+    // estancia, que es la misma ciudad y donde están los 38 sitios.
+    if (sec && (!comer || !comer.querySelector('.sitios li'))) {
+      var raiz = sec.id.replace(/\d+$/, '');
+      var hermana = [].slice.call(document.querySelectorAll('section.etapa-sec')).filter(function(x){
+        return x.id !== sec.id && x.id.replace(/\d+$/, '') === raiz && x.querySelector('.comer .sitios li');
+      })[0];
+      if (hermana) comer = hermana.querySelector('.comer');
+    }
     var sitios = comer ? [].slice.call(comer.querySelectorAll('.sitios li')).slice(0,3) : [];
 
     var h = '<div class="hoy-caja' + (esHoy ? '' : ' hoy-caja') + '">';
@@ -3180,8 +3187,9 @@ function avisaNueva(reg){
         var n = li.querySelector('.nombre'), a = li.querySelector('a');
         if (n && a) h += '<li><a href="' + a.href + '" target="_blank" rel="noopener">' + n.textContent + '</a></li>';
       });
-      h += '</ul><a href="#' + (sec ? sec.id : '') + '" style="font-size:.84rem">ver los ' +
-           (comer ? comer.querySelectorAll('.sitios li').length : 0) + ' sitios de esta etapa →</a></div>';
+      var secComer = comer ? comer.closest('section') : sec;
+      h += '</ul><a href="#' + (secComer ? secComer.id : '') + '" style="font-size:.84rem">ver los ' +
+           (comer ? comer.querySelectorAll('.sitios li').length : 0) + ' sitios →</a></div>';
     }
     h += '</div>';
 
