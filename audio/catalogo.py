@@ -49,6 +49,16 @@ META = {
  '05-railay-capsula':      ('Railay', 'krabi-1', 'capsula'),
  '05-phang-nga-capsula':   ('La bahía de Phang Nga', 'krabi-1', 'capsula'),
  '07-playas-koh-lanta':    ('Las playas, una por una', 'kohlanta-2', 'fondo'),
+ # relatos de trayecto: los días que no tenían nada que escuchar
+ '03-carretera-107':       ('La carretera 107: de la montaña al valle', 'chiangdao-3', 'fondo'),
+ '05-de-lanna-al-andaman': ('De Lanna al Andamán: por qué el sur es otro mundo', 'chiangmai-5', 'fondo'),
+ '06-mar-de-andaman-ferry':('El mar de Andamán y las barcas de cola larga', 'krabi-2', 'fondo'),
+ '06-caucho-y-pesca':      ('De qué vive esta isla: el caucho y la pesca', 'kohjum-2', 'fondo'),
+ '06-monte-pu-y-la-selva': ('El monte Pu y la selva que se salvó', 'kohjum-3', 'fondo'),
+ '07-de-isla-en-isla':     ('De isla en isla: cómo se mueve la gente aquí', 'kohjum-4', 'fondo'),
+ '07-el-sur-que-dejais':   ('El sur que dejáis atrás', 'kohlanta-5', 'fondo'),
+ '08-bangkok-otra-vez':    ('Bangkok otra vez: la misma ciudad con otros ojos', 'bangkok2-1', 'fondo'),
+ '08-el-dia-de-volver':    ('El día de volver: lo práctico y el resumen', 'bangkok2-3', 'fondo'),
 }
 
 pistas = []
