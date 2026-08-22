@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>81 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>82 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -231,6 +231,12 @@
   <description><![CDATA[El otro que se llevó su nota máxima. Khao man gai llevado al extremo: pollo hervido, arroz en su caldo y una salsa que es el secreto de la casa.<br><br>PIDE: khao man gai, y no te dejes nada de la salsa<br><br>Horario: de día, hasta que se acaba<br>Precio: muy barato<br>Zona: casco antiguo, cerca de Banglamphu]]></description>
   <address>Jack&#x27;s Chicken Rice Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>ViVi The Coffee Place</name>
+  <description><![CDATA[Cafetería a pie de río con el Wat Arun justo enfrente, al otro lado del agua. Dentro hay aire acondicionado, pero las mesas que interesan son las de fuera, sobre el muelle. A cinco minutos andando del embarcadero de Tha Tien y a 400 m del MRT Sanam Chai.<br><br>PIDE: un café con hielo o el té tailandés, y una mesa de la terraza: la hora buena es la última de la tarde, cuando le da la luz al templo<br><br>Horario: 10:00–20:00 · todos los días<br>Precio: 75–125 THB la consumición<br>Zona: Soi Pansuk, Tha Tien · detrás del Wat Pho]]></description>
+  <address>Vivi The Coffee Place Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
 </Placemark>
 </Folder>
 <Folder><name>Chiang Rai</name>

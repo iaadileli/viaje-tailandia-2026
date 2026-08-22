@@ -3,7 +3,7 @@
 reutilizando las coordenadas ya conocidas. Ejecutar tras cambiar sitios de comer."""
 import json, sys, os, re, html
 from urllib.parse import quote
-sys.path.insert(0, '/tmp/claude-1000/-home-adil/992a0535-c666-4111-8385-a3e52d3c7842/scratchpad/comida')
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'generador'))
 from datos1 import BANGKOK, CHIANGRAI
 from datos2 import CHIANGDAO, CHIANGMAI
 from datos3 import KRABI, KOHJUM, KOHLANTA
