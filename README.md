@@ -28,4 +28,10 @@ El ZIP del Escritorio se actualiza aparte, sustituyendo dentro el HTML sin conex
 zip -u ~/Escritorio/tailandia-2026-sin-conexion.zip tailandia-2026/index.html
 ```
 
+En `generador/` está además lo que da contenido a la web y no se puede rehacer de memoria:
+`frases.py` (las frases en tailandés con su fonética, de donde salen los MP3 con `genfrases.sh`),
+`madrugador.py` (el plan de madrugador de cada día), `geocodifica.py` (coordenadas verificadas),
+`buscafotos.py` (búsqueda de fotos en Wikimedia) y `datos-fuente/` con los volcados de Michelin,
+las fichas de fotos y los sitios geocodificados.
+
 _Fotos: Wikimedia Commons (dominio público / CC)._

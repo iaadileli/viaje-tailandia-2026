@@ -1,0 +1,92 @@
+{
+ "eat-pad-thai": {
+  "titulo": "Pad Thai Fai Ta Lu (Phra Nakhon)",
+  "datos": [
+   "Noodles",
+   "฿",
+   "",
+   "Noodles"
+  ]
+ },
+ "here-hai": {
+  "titulo": "Here Hai (Vadhana)",
+  "datos": [
+   "Seafood, Thai",
+   "฿฿",
+   "",
+   "Seafood, Thai"
+  ]
+ },
+ "k-panich": {
+  "titulo": "K. Panich",
+  "datos": [
+   "Street Food",
+   "฿",
+   "",
+   "Street Food"
+  ]
+ },
+ "krua-apsorn-sam-sen": {
+  "titulo": "Krua Apsorn (Dusit)",
+  "datos": [
+   "Thai",
+   "฿฿",
+   "",
+   "Thai"
+  ]
+ },
+ "somsak-pu-ob-charoen-rat": {
+  "titulo": "Somsak Pu Ob (Charoen Rat)",
+  "datos": [
+   "Street Food, Seafood",
+   "฿฿",
+   "",
+   "Street Food, Seafood"
+  ]
+ },
+ "ten-suns": {
+  "titulo": "Ten Suns",
+  "datos": [
+   "Noodles, Small eats",
+   "฿",
+   "",
+   "Noodles, Small eats"
+  ]
+ },
+ "huen-muan-jai": {
+  "titulo": "Huen Muan Jai",
+  "datos": [
+   "Northern Thai",
+   "฿฿",
+   "",
+   "Northern Thai"
+  ]
+ },
+ "meena-rice-based-cuisine": {
+  "titulo": "Meena",
+  "datos": [
+   "Thai",
+   "฿฿",
+   "",
+   "Thai"
+  ]
+ },
+ "guay-jub-chang-moi-tat-mai": {
+  "titulo": "Guay Jub Chang Moi Tat Mai",
+  "datos": [
+   "Noodles",
+   "฿",
+   "",
+   "Noodles"
+  ]
+ },
+ "rotee-pa-day": {
+  "titulo": "Roti Pa Day",
+  "datos": [
+   "Street Food",
+   "฿",
+   "",
+   "Street Food"
+  ]
+ }
+}
