@@ -195,6 +195,26 @@ BANGKOK = [
   "Cafetería a pie de río con el Wat Arun justo enfrente, al otro lado del agua. Dentro hay aire acondicionado, pero las mesas que interesan son las de fuera, sobre el muelle. A cinco minutos andando del embarcadero de Tha Tien y a 400 m del MRT Sanam Chai.",
   "un café con hielo o el té tailandés, y una mesa de la terraza: la hora buena es la última de la tarde, cuando le da la luz al templo",
   "10:00–20:00 · todos los días", "75–125 THB la consumición", "Vivi The Coffee Place Bangkok"),
+
+ ("Th. Plaeng Nam", "barato", "bocacalle de Yaowarat, Chinatown",
+  "La calle corta que sale de Yaowarat y donde come la gente de Chinatown cuando no quiere el bullicio de la principal. Cien metros de puestos, uno detrás de otro. Jek Pui, el del curry sin mesas, está aquí mismo. MRT Wat Mangkon, salida 1.",
+  "khao moo daeng (arroz con cerdo rojo) en Xie Lao Yee Hor, que abrió en el 49 y está en el número 59; los kanom jeeb, las empanadillas al vapor del carrito de delante del Wat Yuan; y el dim sum de Pae Sia, con una receta de más de cien años",
+  "de día y de noche", "muy barato", "@13.7412,100.510004"),
+
+ ("Song Wat", "", "Th. Song Wat, junto al río",
+  "Calle de almacenes portuarios que Chulalongkorn mandó trazar en 1892, después del incendio de Sampheng, para que los barcos pudieran descargar. Los almacenes siguen ahí, pero ahora dentro hay cafés, galerías y tiendas. El más bonito es Soul Songwat, tres naves de la familia Sou con las vigas de madera originales.",
+  "un café de tueste propio en Local Boys o en Terroir punto BKK, bollos al vapor en Gu Long Bao y, si es la hora, ganso estofado en Urai",
+  "mejor por la mañana y entre semana: los fines de semana se llena de gente haciendo fotos", "60–200 THB", "@13.736866,100.509975"),
+
+ ("Talat Noi al amanecer", "local", "entre Chinatown y el río",
+  "El barrio de los talleres de repuestos, las casas chinas y los callejones con arte urbano. A primera hora no hay ni un turista: solo mecánicos abriendo persianas y gente desayunando de pie. Aquí está Jok Pa Mali, que ya tenéis en la lista.",
+  "un cuenco de jok, el arroz caldoso con huevo, y patongo para mojar; y leche de soja caliente en bolsa, que es como se toma",
+  "antes de las 8:00, que es cuando se desayuna aquí", "muy barato", "@13.733452,100.512967"),
+
+ ("Comer en Chatuchak", "", "Chatuchak, alrededor de la sección 1",
+  "El mercado de fin de semana más grande del mundo: más de quince mil puestos. Se va a comprar, pero se come muy bien si se sabe dónde: la comida está concentrada en la sección 1 y en los bordes de las avenidas principales. Es el plan del domingo 1 de noviembre.",
+  "khao man gai, un pad thai recién hecho y, para el calor, helado de coco servido en la propia cáscara con cacahuete y arroz hinchado",
+  "sábados y domingos, 9:00–18:00", "40–120 THB el plato", "@13.800389,100.550377"),
 ]
 
 CHIANGRAI = [

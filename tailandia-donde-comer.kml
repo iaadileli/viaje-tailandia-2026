@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>82 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>86 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -236,6 +236,30 @@
   <name>ViVi The Coffee Place</name>
   <description><![CDATA[Cafetería a pie de río con el Wat Arun justo enfrente, al otro lado del agua. Dentro hay aire acondicionado, pero las mesas que interesan son las de fuera, sobre el muelle. A cinco minutos andando del embarcadero de Tha Tien y a 400 m del MRT Sanam Chai.<br><br>PIDE: un café con hielo o el té tailandés, y una mesa de la terraza: la hora buena es la última de la tarde, cuando le da la luz al templo<br><br>Horario: 10:00–20:00 · todos los días<br>Precio: 75–125 THB la consumición<br>Zona: Soi Pansuk, Tha Tien · detrás del Wat Pho]]></description>
   <address>Vivi The Coffee Place Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Th. Plaeng Nam</name>
+  <description><![CDATA[La calle corta que sale de Yaowarat y donde come la gente de Chinatown cuando no quiere el bullicio de la principal. Cien metros de puestos, uno detrás de otro. Jek Pui, el del curry sin mesas, está aquí mismo. MRT Wat Mangkon, salida 1.<br><br>PIDE: khao moo daeng (arroz con cerdo rojo) en Xie Lao Yee Hor, que abrió en el 49 y está en el número 59; los kanom jeeb, las empanadillas al vapor del carrito de delante del Wat Yuan; y el dim sum de Pae Sia, con una receta de más de cien años<br><br>Horario: de día y de noche<br>Precio: muy barato<br>Zona: bocacalle de Yaowarat, Chinatown]]></description>
+  <address>@13.7412,100.510004, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_barato</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Song Wat</name>
+  <description><![CDATA[Calle de almacenes portuarios que Chulalongkorn mandó trazar en 1892, después del incendio de Sampheng, para que los barcos pudieran descargar. Los almacenes siguen ahí, pero ahora dentro hay cafés, galerías y tiendas. El más bonito es Soul Songwat, tres naves de la familia Sou con las vigas de madera originales.<br><br>PIDE: un café de tueste propio en Local Boys o en Terroir punto BKK, bollos al vapor en Gu Long Bao y, si es la hora, ganso estofado en Urai<br><br>Horario: mejor por la mañana y entre semana: los fines de semana se llena de gente haciendo fotos<br>Precio: 60–200 THB<br>Zona: Th. Song Wat, junto al río]]></description>
+  <address>@13.736866,100.509975, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Talat Noi al amanecer</name>
+  <description><![CDATA[El barrio de los talleres de repuestos, las casas chinas y los callejones con arte urbano. A primera hora no hay ni un turista: solo mecánicos abriendo persianas y gente desayunando de pie. Aquí está Jok Pa Mali, que ya tenéis en la lista.<br><br>PIDE: un cuenco de jok, el arroz caldoso con huevo, y patongo para mojar; y leche de soja caliente en bolsa, que es como se toma<br><br>Horario: antes de las 8:00, que es cuando se desayuna aquí<br>Precio: muy barato<br>Zona: entre Chinatown y el río]]></description>
+  <address>@13.733452,100.512967, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Comer en Chatuchak</name>
+  <description><![CDATA[El mercado de fin de semana más grande del mundo: más de quince mil puestos. Se va a comprar, pero se come muy bien si se sabe dónde: la comida está concentrada en la sección 1 y en los bordes de las avenidas principales. Es el plan del domingo 1 de noviembre.<br><br>PIDE: khao man gai, un pad thai recién hecho y, para el calor, helado de coco servido en la propia cáscara con cacahuete y arroz hinchado<br><br>Horario: sábados y domingos, 9:00–18:00<br>Precio: 40–120 THB el plato<br>Zona: Chatuchak, alrededor de la sección 1]]></description>
+  <address>@13.800389,100.550377, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
 </Folder>
