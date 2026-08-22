@@ -1424,7 +1424,7 @@
       <li><span class="nombre">Huen Muan Jai</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">24 Ratchaphruek Rd, Chang Phueak</span> · La mejor cocina Lanna de la ciudad según Michelin, y con razón. Aquí es donde hay que entender el norte.
         <span class="pedir"><b>Pide</b> la bandeja de entrantes del norte, gaeng hang lay (curry birmano de cerdo), nam prik num con chicharrones y sai ua. Y el curry de pollo con brote de coco, que es su plato raro</span>
         <span class="datos">🕐 11:00–22:00 (la cocina cierra a las 21:00) · CIERRA LOS MIÉRCOLES · conviene reservar, se llena de gente de aquí · 💵 300–600 THB para dos</span>
-        <a href="https://www.google.com/maps/search/?api=1&query=Huen%20Muan%20Jai%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a></li>
+        <a href="https://www.google.com/maps/search/?api=1&query=Huen%20Muan%20Jai%20Chiang%20Mai" target="_blank" rel="noopener">📍 Maps</a> <a class="reservar" href="tel:+66982618029">📞 Llamar para reservar</a></li>
       <li><span class="nombre">Meena Rice Based Cuisine</span><span class="sello bib" title="Bib Gourmand Michelin 2026: se come bien y barato"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M7 3v8m0 0v10m0-10a3 3 0 0 0 0-6"/><path d="M17 3c-1.8 1.4-2.6 3.4-2.6 5.5 0 1.6.9 2.5 2.6 2.5v10"/></svg></span> — <span class="dir">13/5 Mu 2, San Klang, San Kamphaeng</span> · En medio de los arrozales, a 20 min del centro. Sirven arroces teñidos con flores y plantas, en vajilla de cerámica preciosa.
         <span class="pedir"><b>Pide</b> el arroz azul de flor de guisante mariposa con curry, y sentaos fuera</span>
         <span class="datos">🕐 9:00–17:00 · 💵 300–500 THB para dos</span>
@@ -1777,23 +1777,23 @@
     <a class="cp" href="#bangkok1">
       <span class="cp-ic">📍</span>
       <b>Dónde comer, etapa a etapa</b>
-      <span>81 sitios con qué pedir en cada uno, horario y precio. Están dentro de cada etapa.</span>
+      <span><span data-total-sitios>81</span> sitios con qué pedir en cada uno, horario y precio. Están dentro de cada etapa.</span>
     </a>
   </div>
 
   <h3 class="ir-titulo">Ir directo a los sitios de cada etapa</h3>
   <div class="ir-etapas">
-      <a class="ir-etapa" href="#bangkok1"><b>Bangkok</b><span>38 sitios</span></a>
-      <a class="ir-etapa" href="#chiangrai"><b>Chiang Rai</b><span>7 sitios</span></a>
+      <a class="ir-etapa" href="#bangkok1"><b>Bangkok</b><span>37 sitios</span></a>
+      <a class="ir-etapa" href="#chiangrai"><b>Chiang Rai</b><span>6 sitios</span></a>
       <a class="ir-etapa" href="#chiangdao"><b>Chiang Dao</b><span>4 sitios</span></a>
-      <a class="ir-etapa" href="#chiangmai"><b>Chiang Mai</b><span>19 sitios</span></a>
+      <a class="ir-etapa" href="#chiangmai"><b>Chiang Mai</b><span>17 sitios</span></a>
       <a class="ir-etapa" href="#krabi"><b>Krabi town</b><span>6 sitios</span></a>
       <a class="ir-etapa" href="#kohjum"><b>Koh Jum</b><span>5 sitios</span></a>
       <a class="ir-etapa" href="#kohlanta"><b>Koh Lanta</b><span>6 sitios</span></a>
   </div>
 
   <div class="ojo" style="background:#fdf6e7;color:#5c4a24;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;margin-top:22px">
-    🗺️ <b>¿Y el mapa?</b> Hay un archivo con los 81 puntos para
+    🗺️ <b>¿Y el mapa?</b> Hay un archivo con los <span data-total-sitios>81</span> puntos para
     <a href="tailandia-donde-comer.kml" download>descargar</a> e importar en
     <a href="https://www.google.com/mymaps" target="_blank" rel="noopener">Google My Maps</a>.
     Aviso: <b>My Maps no se ve en la app de Maps de iPhone</b> (limitación de Google), sólo desde el
@@ -3140,7 +3140,7 @@ function avisaNueva(reg){
     // comida y hotel de la etapa
     var comer = sec ? document.querySelector('#' + sec.id + ' .comer') : null;
     // La vuelta a Bangkok no tiene su propia lista: se tiran de la de la primera
-    // estancia, que es la misma ciudad y donde están los 38 sitios.
+    // estancia, que es la misma ciudad y donde están casi todos.
     if (sec && (!comer || !comer.querySelector('.sitios li'))) {
       var raiz = sec.id.replace(/\d+$/, '');
       var hermana = [].slice.call(document.querySelectorAll('section.etapa-sec')).filter(function(x){
@@ -3678,6 +3678,19 @@ function avisaNueva(reg){
 
   // se abre desde el acceso rápido y desde la sección de comida
   window.abrirCerca = abrir;
+})();
+
+/* ---------- LOS CONTADORES DE SITIOS, AL DÍA ---------- */
+(function(){
+  document.querySelectorAll('.ir-etapa').forEach(function(a){
+    var sec = document.querySelector(a.getAttribute('href'));
+    if (!sec) return;
+    var n = sec.querySelectorAll('.sitios li').length;
+    var etq = a.querySelector('span');
+    if (etq) etq.textContent = n + (n === 1 ? ' sitio' : ' sitios');
+  });
+  var total = document.querySelectorAll('.sitios li').length;
+  document.querySelectorAll('[data-total-sitios]').forEach(function(e){ e.textContent = total; });
 })();
 </script>
 
