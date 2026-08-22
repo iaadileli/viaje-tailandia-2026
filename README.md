@@ -28,6 +28,21 @@ El ZIP del Escritorio se actualiza aparte, sustituyendo dentro el HTML sin conex
 zip -u ~/Escritorio/tailandia-2026-sin-conexion.zip tailandia-2026/index.html
 ```
 
+## Revisar antes de dar nada por bueno
+
+```bash
+node generador/revisar.mjs        # abre la página de verdad y la recorre
+```
+
+Comprueba con la página **en marcha** lo que no se ve leyendo el HTML: que ningún texto se
+pinte dos veces, que las flechas ‹ › recorran los 22 días, que todos los días tengan dónde
+comer, que no haya enlaces internos rotos ni errores de JavaScript. Sale con código 1 si algo
+falla. Necesita Playwright (`npm i -D playwright && npx playwright install chromium`).
+
+Leer el HTML con grep **no basta**: los tres fallos del 22 ago 2026 (el madrugador repetido y
+las flechas atascadas en los días de traslado) pasaron por delante de varias revisiones hechas
+así y solo aparecieron al ejecutar la página.
+
 En `generador/` está además lo que da contenido a la web y no se puede rehacer de memoria:
 `frases.py` (las frases en tailandés con su fonética, de donde salen los MP3 con `genfrases.sh`),
 `madrugador.py` (el plan de madrugador de cada día), `geocodifica.py` (coordenadas verificadas),
