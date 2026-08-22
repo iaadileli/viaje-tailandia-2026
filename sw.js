@@ -93,6 +93,11 @@ const RECURSOS = [
 
 
 self.addEventListener('install', e => self.skipWaiting());
+
+// La página pide activar la versión nueva sin esperar a cerrar todas las pestañas
+self.addEventListener('message', e => {
+  if (e.data && e.data.tipo === 'ACTIVAR_YA') self.skipWaiting();
+});
 self.addEventListener('activate', e => e.waitUntil(
   caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k))))
     .then(() => self.clients.claim())
@@ -132,7 +137,8 @@ function esContenidoVivo(peticion, url) {
   return peticion.mode === 'navigate' ||
          url.pathname.endsWith('/') ||
          url.pathname.endsWith('.html') ||
-         url.pathname.endsWith('catalogo.js');
+         url.pathname.endsWith('catalogo.js') ||
+         url.pathname.endsWith('sitios.js');
 }
 
 function guarda(peticion, resp) {

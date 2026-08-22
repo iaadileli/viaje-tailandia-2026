@@ -63,6 +63,10 @@
     border-radius:12px;box-shadow:0 10px 28px rgba(60,45,20,.22);padding:8px;min-width:210px;
     display:none;flex-direction:column}
   .menu-panel.abierto{display:flex}
+  .tema-en-menu{display:none;width:100%;background:none;border:1px solid var(--linea);
+    border-radius:9px;padding:9px;font-size:.9rem;color:var(--tinta2);cursor:pointer;margin-bottom:8px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  @media(max-width:430px){.tema-en-menu{display:block}}
   .menu-panel .cab2{margin-top:10px;padding-top:10px;border-top:1px solid var(--linea)}
   .menu-panel .cab{font-size:.8rem;letter-spacing:2px;text-transform:uppercase;color:var(--oro);padding:6px 14px 6px}
   .menu-panel a{padding:11px 14px;border-radius:8px;color:var(--tinta);text-decoration:none;font-size:.95rem;
@@ -410,10 +414,10 @@
   }
 
   /* ---------- BUSCADOR ---------- */
-  .buscador{position:relative;flex:0 0 auto;margin-left:8px}
-  .buscador input{width:150px;border:1px solid var(--linea);background:var(--card);border-radius:9px;
-    padding:8px 11px 8px 30px;font-size:.86rem;font-family:-apple-system,'Segoe UI',sans-serif;
-    color:var(--tinta);transition:width .2s}
+  .buscador{position:relative;flex:0 0 auto;margin-left:8px;min-width:0}
+  .buscador input{width:150px;min-width:0;border:1px solid var(--linea);background:var(--card);
+    border-radius:9px;padding:8px 11px 8px 30px;font-size:16px;
+    font-family:-apple-system,'Segoe UI',sans-serif;color:var(--tinta);transition:width .2s}
   .buscador input:focus{outline:none;border-color:var(--oro);width:210px}
   .buscador .lupa{position:absolute;left:9px;top:50%;transform:translateY(-50%);opacity:.5;font-size:.85rem;
     pointer-events:none}
@@ -588,11 +592,19 @@
   .btn-hoy:hover{background:#2f5540;color:#fff}
   .btn-hoy svg{width:17px;height:17px;flex:0 0 auto}
   @media(max-width:560px){
-    .btn-hoy{padding:8px 11px;font-size:.88rem;margin-right:8px}
+    .btn-hoy{padding:8px 10px;font-size:.86rem;margin-right:6px}
     .btn-hoy svg{width:15px;height:15px}
-    .nav-inner{padding:0 10px}
-    .menu-btn{margin-left:8px;padding:8px 10px}
+    .nav-inner{padding:0 8px;gap:0}
+    .menu-btn{margin-left:6px;padding:8px 10px;font-size:.86rem}
     .menu-btn .bars{display:none}
+    .buscador{flex:1 1 60px;margin-left:6px}
+    .buscador input{width:100%}
+    .tema-btn{width:34px;height:34px;margin-left:6px}
+  }
+  /* en pantallas de móvil estrechas el tema se va al menú: es lo que menos se usa */
+  @media(max-width:430px){
+    .tema-btn{display:none}
+    .btn-hoy span{font-size:.85rem}
   }
 
   /* ---------- HOTEL YA RESERVADO ---------- */
@@ -684,6 +696,38 @@
   .btn-cerca:hover{background:#2f5540}
   .btn-cerca svg{width:20px;height:20px}
   @media(min-width:640px){#cerca{align-items:center} .cerca-caja{border-radius:18px}}
+
+  /* ---------- ÍNDICE DE COMIDA ---------- */
+  .bajo-boton{font-size:.86rem;color:var(--tinta2);text-align:center;margin:-2px 0 22px;
+    font-family:-apple-system,'Segoe UI',sans-serif}
+  .comida-puertas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:13px;margin-bottom:26px}
+  .cp{display:block;background:var(--card);border:1px solid var(--linea);border-left:4px solid var(--oro);
+    border-radius:0 14px 14px 0;padding:18px 20px;text-decoration:none;box-shadow:var(--sombra);
+    font-family:-apple-system,'Segoe UI',sans-serif;transition:transform .12s}
+  .cp:hover{transform:translateX(3px);border-left-color:var(--teca)}
+  .cp-ic{font-size:1.7rem;display:block;margin-bottom:6px}
+  .cp b{display:block;font-family:Georgia,serif;font-size:1.16rem;font-weight:normal;color:var(--teca);
+    margin-bottom:5px}
+  .cp span:last-child{display:block;font-size:.88rem;color:var(--tinta2);line-height:1.5}
+  .ir-titulo{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.76rem;letter-spacing:1.8px;
+    text-transform:uppercase;color:var(--oro);font-weight:700;margin-bottom:10px}
+  .ir-etapas{display:flex;flex-wrap:wrap;gap:8px}
+  .ir-etapa{display:inline-flex;align-items:baseline;gap:7px;background:var(--card);
+    border:1px solid var(--linea);border-radius:22px;padding:8px 15px;text-decoration:none;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;color:var(--tinta)}
+  .ir-etapa:hover{border-color:var(--oro);color:var(--teca)}
+  .ir-etapa span{font-size:.8rem;color:var(--tinta2)}
+
+  /* ---------- AVISO DE VERSIÓN NUEVA ---------- */
+  #nuevaVersion{position:fixed;left:50%;bottom:20px;transform:translate(-50%,140%);z-index:200;
+    background:var(--teca);color:#fff;border-radius:30px;padding:10px 12px 10px 20px;display:flex;
+    align-items:center;gap:12px;box-shadow:0 6px 24px rgba(0,0,0,.3);transition:transform .3s ease;
+    font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;max-width:92vw}
+  #nuevaVersion.visible{transform:translate(-50%,0)}
+  #nvOk{background:#fff;color:var(--teca);border:none;border-radius:20px;padding:7px 15px;
+    font-weight:700;font-size:.86rem;cursor:pointer;white-space:nowrap;font-family:inherit}
+  #nvNo{background:none;border:none;color:#fff;opacity:.7;font-size:1rem;cursor:pointer;padding:2px 4px}
+  #nvNo:hover{opacity:1}
 </style>
 </head>
 <body>
@@ -720,11 +764,11 @@
     <span class="bars">☰</span><span>Info</span>
   </button>
   <div class="menu-panel" id="menuInfo">
+    <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
     <div class="cab">Sobre la marcha</div>
-    <a href="#platos" onclick="cerrarMenuInfo()">🍲 Los platos, uno a uno</a>
     <a href="#hablar" onclick="cerrarMenuInfo()">🗣️ Hablar tailandés</a>
     <a href="#acaso" onclick="cerrarMenuInfo()">🆘 Por si acaso</a>
-    <a href="#comer" onclick="cerrarMenuInfo()">🍜 Dónde comer</a>
+    <a href="#comer" onclick="cerrarMenuInfo()">🍜 Comer (todo)</a>
     <a href="#hoteles" onclick="cerrarMenuInfo()">★ Vuestros hoteles</a>
     <div class="cab cab2">Preparativos</div>
     <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica</a>
@@ -1716,71 +1760,45 @@
 <!-- ============ GUÍA DE COMIDA ============ -->
 <section id="comer" class="etapa-sec">
   <div class="kicker">La parte importante</div>
-  <h2>Guía de comida tailandesa</h2>
-  <p class="intro">Tailandia se come en la calle, en mesas de plástico y señalando con el dedo. La cocina
-  cambia mucho según dónde estéis: en Bangkok manda la comida china-tailandesa y los fideos; en el norte,
-  la cocina <strong>Lanna</strong>, con hierbas, ahumados y poco coco; en el sur, curries potentes con
-  cúrcuma, marisco y herencia musulmana. Estos son los platos que hay que cazar en cada etapa.</p>
+  <h2>Comer</h2>
+  <p class="intro">La comida es la razón principal de este viaje, así que aquí está todo junto.
+  Empieza por el botón verde si ya estás en la calle; si estás planeando, baja a los platos.</p>
+
   <button class="btn-cerca" onclick="abrirCerca()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3.2"/><circle cx="12" cy="12" r="8"/><path d="M12 1.5v2.5M12 20v2.5M22.5 12H20M4 12H1.5"/></svg> ¿Qué tengo cerca ahora mismo?</button>
-  <p style="font-size:.86rem;color:var(--tinta2);text-align:center;margin-bottom:18px;font-family:-apple-system,'Segoe UI',sans-serif">Usa el GPS del móvil y te ordena los 77 sitios por distancia. <b>Funciona sin datos</b>, así que sirve en modo avión.</p>
-  <div class="destacado" style="background:linear-gradient(135deg,#8a4a2b,#a85a33)">
-    <h3>🗺️ El mapa de dónde comer</h3>
-    <p>Los <strong>85 sitios</strong> de esta guía, en un mapa tuyo que funciona <strong>sin datos</strong>.
-    Cada etapa es una capa que se puede encender y apagar, y cada punto lleva qué pedir, horario y precio.</p>
-    <ol style="margin:12px 0 12px 22px;font-size:.97rem">
-      <li>Descarga <a href="tailandia-donde-comer.kml" download style="color:#ffe9c9;font-weight:600">tailandia-donde-comer.kml</a></li>
-      <li>Entra en <a href="https://www.google.com/mymaps" target="_blank" rel="noopener" style="color:#ffe9c9;font-weight:600">google.com/mymaps</a> → Crear un mapa nuevo → Importar, y suelta el archivo.</li>
-      <li>En el móvil: app de Google Maps → Guardados → Mapas → ahí aparece.
-      Descarga además la zona sin conexión desde Maps y lo tendrás todo aunque no haya cobertura.</li>
-    </ol>
-    <div class="ojo">⚠️ Los puntos se sitúan buscando el nombre, así que alguno puede caer unos metros desviado.
-    Los mercados y puestos callejeros son los menos precisos: fiaos del nombre y del barrio más que del pin exacto.</div>
+  <p class="bajo-boton">Usa el GPS y te ordena los sitios por distancia, con los minutos andando.
+  <b>Funciona sin datos</b>, así que sirve en modo avión.</p>
+
+  <div class="comida-puertas">
+    <a class="cp" href="#platos">
+      <span class="cp-ic">🍲</span>
+      <b>Los platos, uno a uno</b>
+      <span>28 con foto, cómo se dicen y dónde cazarlos. Para saber qué pedir.</span>
+    </a>
+    <a class="cp" href="#bangkok1">
+      <span class="cp-ic">📍</span>
+      <b>Dónde comer, etapa a etapa</b>
+      <span>85 sitios con qué pedir en cada uno, horario y precio. Están dentro de cada etapa.</span>
+    </a>
   </div>
 
-
-  <div class="trio">
-    <figure><img loading="lazy" decoding="async" src="img/pad-thai.jpg" alt="Pad thai" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Pad thai: el plato-bandera, mejor en puesto que en restaurante</figcaption></figure>
-    <figure><img loading="lazy" decoding="async" src="img/khao-soi.jpg" alt="Khao soi" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Khao soi: el curry de coco con fideos del norte, el rey del viaje</figcaption></figure>
-    <figure><img loading="lazy" decoding="async" src="img/mango-sticky-rice.jpg" alt="Mango sticky rice" onerror="this.classList.add('fallo');this.parentElement.classList.add('sinfoto')"><figcaption>Mango sticky rice: la religión local del postre</figcaption></figure>
+  <h3 class="ir-titulo">Ir directo a los sitios de cada etapa</h3>
+  <div class="ir-etapas">
+      <a class="ir-etapa" href="#bangkok1"><b>Bangkok</b><span>38 sitios</span></a>
+      <a class="ir-etapa" href="#chiangrai"><b>Chiang Rai</b><span>7 sitios</span></a>
+      <a class="ir-etapa" href="#chiangdao"><b>Chiang Dao</b><span>4 sitios</span></a>
+      <a class="ir-etapa" href="#chiangmai"><b>Chiang Mai</b><span>19 sitios</span></a>
+      <a class="ir-etapa" href="#krabi"><b>Krabi town</b><span>6 sitios</span></a>
+      <a class="ir-etapa" href="#kohjum"><b>Koh Jum</b><span>5 sitios</span></a>
+      <a class="ir-etapa" href="#kohlanta"><b>Koh Lanta</b><span>6 sitios</span></a>
   </div>
 
-  <div class="tabla-wrap">
-    <table class="tab">
-      <thead><tr><th>Dónde</th><th>Lo que no os podéis ir sin probar</th><th>Truco</th></tr></thead>
-      <tbody>
-        <tr><td><b>Bangkok</b></td><td>Pad thai · boat noodles · som tam · tom yum goong · kuay jab · pato asado · mango sticky rice</td>
-          <td>Cenad en Yaowarat (Chinatown) al menos una noche. Los boat noodles se piden de tres en tres: los cuencos son minúsculos.</td></tr>
-        <tr><td><b>Chiang Rai</b></td><td>Khao soi · nam ngiao · sai ua · larb gai · té oolong de montaña</td>
-          <td>El nam ngiao (fideos con tomate y cerdo) es lo local que casi nadie prueba: buscadlo en el mercado matinal.</td></tr>
-        <tr><td><b>Chiang Dao</b></td><td>Cocina casera del valle · verduras y setas de montaña · gaeng hang lay · café de la zona</td>
-          <td>Hay pocos sitios: reservad la cena en el alojamiento. Ojo, el mercado grande de las tribus es sólo el 1.º y 3.er martes de mes, así que a vosotros no os toca.</td></tr>
-        <tr><td><b>Chiang Mai</b></td><td>Khao soi · khao kha moo · sai ua · nam prik ong · gaeng hang lay · laab del norte</td>
-          <td>Es la capital gastronómica del norte: probad el khao soi en tres sitios distintos y elegid el vuestro.</td></tr>
-        <tr><td><b>Krabi</b></td><td>Curry de cangrejo con kanom jeen · gaeng som · pescado a la brasa · roti</td>
-          <td>Empieza la cocina del sur: más picante y con cúrcuma. El mercado nocturno del muelle es la cena perfecta.</td></tr>
-        <tr><td><b>Islas (Koh Jum y Lanta)</b></td><td>Pescado del día a la brasa · massaman · gambas al ajillo · roti recién hecho · batidos de fruta</td>
-          <td>En Koh Jum hay cuatro sitios contados y se cena pronto. Y no hay cajeros en la isla: llevad efectivo de Krabi.</td></tr>
-      </tbody>
-    </table>
+  <div class="ojo" style="background:#fdf6e7;color:#5c4a24;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;margin-top:22px">
+    🗺️ <b>¿Y el mapa?</b> Hay un archivo con los 85 puntos para
+    <a href="tailandia-donde-comer.kml" download>descargar</a> e importar en
+    <a href="https://www.google.com/mymaps" target="_blank" rel="noopener">Google My Maps</a>.
+    Aviso: <b>My Maps no se ve en la app de Maps de iPhone</b> (limitación de Google), sólo desde el
+    navegador. En iPhone es mejor usar el botón verde de arriba.
   </div>
-
-  <div class="comer" style="margin-top:26px">
-    <h3>Cómo pedir sin meter la pata</h3>
-    <div class="platos">
-      <span class="plato">Mai phet = sin picante</span><span class="plato">Phet nit noi = poco picante</span>
-      <span class="plato">Jay = vegetariano</span><span class="plato">Mai sai nam pla = sin salsa de pescado</span>
-      <span class="plato">Chek bin = la cuenta</span><span class="plato">Aroi mak = ¡buenísimo!</span>
-      <span class="plato">Khop khun khrap / khá = gracias</span>
-    </div>
-    <p><strong>Reglas que funcionan siempre:</strong> comer donde haya cola de tailandeses; los puestos que
-    hacen un solo plato lo bordan; "poco picante" para un tailandés sigue siendo picante para nosotros;
-    el hielo con agujero en el centro es industrial y seguro; y llevad billetes pequeños, porque en la
-    calle nadie tiene cambio de 1.000 baht. La comida no se regatea nunca.</p>
-  </div>
-
-  <p class="presu-nota">Los restaurantes que aparecen en cada etapa son referencias contrastadas, pero en
-  Tailandia los horarios cambian y algunos puestos cierran un día a la semana: comprobadlo en Google Maps
-  antes de cruzar la ciudad.</p>
 </section>
 
 <!-- ============ BARRIOS ============ -->
@@ -2735,7 +2753,27 @@
     if (elZip) elZip.style.display = 'none';
     if (elEstado) elEstado.textContent = 'Esta es la copia descargada: ya funciona sin conexión.';
   } else if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('sw.js').catch(function(){});
+    navigator.serviceWorker.register('sw.js', {updateViaCache: 'none'}).then(function(reg){
+      // Avisar cuando haya una versión nueva, en vez de obligar a borrar la caché a mano.
+      function vigila(sw){
+        if (!sw) return;
+        sw.addEventListener('statechange', function(){
+          if (sw.state === 'installed' && navigator.serviceWorker.controller) avisaNueva(reg);
+        });
+      }
+      if (reg.waiting && navigator.serviceWorker.controller) avisaNueva(reg);
+      vigila(reg.installing);
+      reg.addEventListener('updatefound', function(){ vigila(reg.installing); });
+
+      // Comprobar si hay novedades al volver a la pestaña, no sólo al cargar
+      var ultima = Date.now();
+      document.addEventListener('visibilitychange', function(){
+        if (document.visibilityState === 'visible' && Date.now() - ultima > 60000) {
+          ultima = Date.now();
+          reg.update().catch(function(){});
+        }
+      });
+    }).catch(function(){});
     if (window.caches) {
       caches.match('img/portada.jpg', {ignoreSearch:true}).then(function(hit){
         if (hit && elEstado) {
@@ -2787,6 +2825,25 @@
 <audio id="plAudio" preload="none"></audio>
 <script src="sitios.js"></script>
 <script src="audio/catalogo.js"></script>
+<script>
+/* ---------- AVISO DE VERSIÓN NUEVA ---------- */
+function avisaNueva(reg){
+  if (document.getElementById('nuevaVersion')) return;
+  var b = document.createElement('div');
+  b.id = 'nuevaVersion';
+  b.innerHTML = '<span>Hay una versión nueva de la guía</span>' +
+                '<button id="nvOk">Actualizar</button>' +
+                '<button id="nvNo" aria-label="Ahora no">✕</button>';
+  document.body.appendChild(b);
+  requestAnimationFrame(function(){ b.classList.add('visible'); });
+  document.getElementById('nvNo').onclick = function(){ b.remove(); };
+  document.getElementById('nvOk').onclick = function(){
+    document.getElementById('nvOk').textContent = 'Actualizando…';
+    if (reg.waiting) reg.waiting.postMessage({tipo: 'ACTIVAR_YA'});
+    setTimeout(function(){ location.reload(); }, 400);
+  };
+}
+</script>
 <script>
 /* ---------- AUDIOGUÍA ---------- */
 (function(){
@@ -3197,6 +3254,13 @@
   var guardado = null;
   try { guardado = localStorage.getItem('tema'); } catch(e){}
   aplica(guardado || (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro'));
+  var btnMenu = document.getElementById('temaMenu');
+  if (btnMenu) btnMenu.onclick = function(){
+    var nuevo = document.documentElement.getAttribute('data-tema') === 'oscuro' ? 'claro' : 'oscuro';
+    aplica(nuevo);
+    btnMenu.textContent = nuevo === 'oscuro' ? '☀ Modo claro' : '☾ Modo oscuro';
+    try { localStorage.setItem('tema', nuevo); } catch(e){}
+  };
   if (btn) btn.onclick = function(){
     var nuevo = document.documentElement.getAttribute('data-tema') === 'oscuro' ? 'claro' : 'oscuro';
     aplica(nuevo);
