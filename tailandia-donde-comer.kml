@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>84 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>82 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -384,7 +384,7 @@
 </Placemark>
 <Placemark>
   <name>Huen Muan Jai</name>
-  <description><![CDATA[La mejor cocina Lanna de la ciudad según Michelin, y con razón. Aquí es donde hay que entender el norte.<br><br>PIDE: gaeng hang lay (curry birmano de cerdo), nam prik ong y sai ua<br><br>Horario: 11:00–21:00 · cierra los miércoles<br>Precio: 300–600 THB para dos<br>Zona: 24 Ratchaphruek Rd, Chang Phueak]]></description>
+  <description><![CDATA[La mejor cocina Lanna de la ciudad según Michelin, y con razón. Aquí es donde hay que entender el norte.<br><br>PIDE: la bandeja de entrantes del norte, gaeng hang lay (curry birmano de cerdo), nam prik num con chicharrones y sai ua. Y el curry de pollo con brote de coco, que es su plato raro<br><br>Horario: 11:00–22:00 (la cocina cierra a las 21:00) · CIERRA LOS MIÉRCOLES · conviene reservar, se llena de gente de aquí<br>Precio: 300–600 THB para dos<br>Zona: 24 Ratchaphruek Rd, Chang Phueak]]></description>
   <address>Huen Muan Jai Chiang Mai, Chiang Mai, Tailandia</address>
   <styleUrl>#s_bib</styleUrl>
 </Placemark>
@@ -405,18 +405,6 @@
   <description><![CDATA[Un carrito de roti musulmán delante de un templo. Bib Gourmand por 30 baht.<br><br>PIDE: roti con huevo y plátano, y un té con leche<br><br>Horario: tarde y noche<br>Precio: 30–50 THB<br>Zona: frente a Wat Mahawan, Thapae Soi 4]]></description>
   <address>Roti Pa Day Chiang Mai, Chiang Mai, Tailandia</address>
   <styleUrl>#s_bib</styleUrl>
-</Placemark>
-<Placemark>
-  <name>Blackitch Artisan Kitchen</name>
-  <description><![CDATA[Mesa del chef de dieciséis plazas. El menú se decide el mismo día con lo que haya, y el chef Black trabaja con fermentados y curados propios. Solo con reserva.<br><br>PIDE: lo que pongan. Sentaos en la barra, que es donde se ve cocinar<br><br>Horario: sólo cenas, con reserva previa<br>Precio: unos 4.000 THB por persona · se va de presupuesto<br>Zona: Nimman, encima de una gelatería]]></description>
-  <address>Blackitch Artisan Kitchen Chiang Mai, Chiang Mai, Tailandia</address>
-  <styleUrl>#s_cena</styleUrl>
-</Placemark>
-<Placemark>
-  <name>Cuisine de Garden</name>
-  <description><![CDATA[Cocina nórdica aplicada a producto tailandés, en un jardín. Menús de seis y diez pases, con mucho cuidado del desperdicio. En la guía Michelin.<br><br>PIDE: el menú corto de seis pases si no queréis una noche larga<br><br>Horario: con reserva · el precio lo dan al reservar<br>Precio: gama alta<br>Zona: Hang Dong, a 20 min del centro]]></description>
-  <address>Cuisine de Garden Chiang Mai, Chiang Mai, Tailandia</address>
-  <styleUrl>#s_cena</styleUrl>
 </Placemark>
 </Folder>
 <Folder><name>Krabi</name>
