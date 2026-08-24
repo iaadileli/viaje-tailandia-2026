@@ -180,6 +180,14 @@
     color:#0a53c4;text-decoration:none;background:#eaf1fc;border:1px solid #cfe0f7;border-radius:7px;
     padding:3px 9px;font-weight:600;white-space:nowrap}
   table.hoteles a.booking:hover{background:#d9e6fb;border-color:#a9c8f0}
+  table.clima{min-width:640px}
+  table.clima .clima-fecha{font-size:.79rem;opacity:.75}
+  table.clima .clima-t{white-space:nowrap;font-weight:700}
+  table.clima .t-max{color:#b4531f}
+  table.clima .t-min{color:#2f6f9e}
+  table.clima .clima-ll,table.clima .clima-rec{font-size:.86rem;white-space:nowrap}
+  ul.lista-practica{margin:12px 0 0;padding-left:20px;line-height:1.65}
+  ul.lista-practica li{margin-bottom:9px}
   .zona-cell{color:var(--tinta2);font-size:.85rem;white-space:normal;max-width:150px}
   .gama-cell{white-space:nowrap;color:var(--tinta2);font-size:.85rem}
   .precio-cell{white-space:nowrap;font-weight:700;color:var(--tinta)}
@@ -787,7 +795,8 @@
     <a href="#comer" onclick="cerrarMenuInfo()">🍜 Comer (todo)</a>
     <a href="#hoteles" onclick="cerrarMenuInfo()">★ Vuestros hoteles</a>
     <div class="cab cab2">Preparativos</div>
-    <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica</a>
+    <a href="#tiempo" onclick="cerrarMenuInfo()">🌡️ El tiempo y la maleta</a>
+      <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica</a>
     <a href="#presupuesto" onclick="cerrarMenuInfo()">💰 Presupuesto</a>
     <a href="#barrios" onclick="cerrarMenuInfo()">🛏️ Barrios</a>
     <a href="#offline" onclick="cerrarMenuInfo()">📥 Guardarla en el móvil</a>
@@ -2285,6 +2294,63 @@
 </section>
 
 <!-- ============ PRÁCTICO ============ -->
+<!-- ============ EL TIEMPO Y LA MALETA ============ -->
+<section id="tiempo" class="etapa-sec">
+  <div class="kicker">Qué tiempo va a hacer</div>
+  <h2>El tiempo, etapa por etapa, y qué meter en la maleta</h2>
+  <p class="intro">Esto no son las medias del mes que salen en las webs, que mezclan un noviembre entero.
+  Son <strong>las temperaturas de vuestros días exactos</strong> —del 30 de octubre al 20 de noviembre— promediadas
+  en los <strong>ocho últimos años</strong> con los datos de las estaciones de cada zona. La columna de récords dice
+  lo más frío y lo más caluroso que se ha registrado en esas fechas: es lo que hay que tener en cuenta al hacer
+  la maleta, no la media.</p>
+
+  <div class="tabla-wrap">
+    <table class="hoteles clima">
+      <thead><tr>
+        <th>Etapa</th><th>Día / noche</th><th>Lluvia</th><th>Se ha llegado a</th><th>Qué llevar</th>
+      </tr></thead>
+      <tbody>
+      <tr><td><b>Bangkok · llegada</b><br><span class="clima-fecha">30 oct → 2 nov</span></td><td class="clima-t"><span class="t-max">31°</span> / <span class="t-min">24°</span></td><td class="clima-ll">26 mm<br><span class="clima-fecha">2 días con lluvia</span></td><td class="clima-rec">20° a 34°</td><td class="porque-cell">Calor húmedo y pegajoso. Algodón o lino y sandalias. <b>Para los templos, hombros y rodillas tapados</b>: un pantalón ligero o un pareo en la mochila resuelve el Gran Palacio, que es estricto de verdad. Y una manga larga fina para el metro y los centros comerciales, que van helados.</td></tr>
+      <tr><td><b>Chiang Rai</b><br><span class="clima-fecha">2 → 4 nov</span></td><td class="clima-t"><span class="t-max">28°</span> / <span class="t-min">20°</span></td><td class="clima-ll">15 mm<br><span class="clima-fecha">1 día con lluvia</span></td><td class="clima-rec">14° a 31°</td><td class="porque-cell">Aquí cambia el viaje: de día 28°, pero de madrugada ha llegado a <b>14°</b>. Forro fino o sudadera para el amanecer y para la cena al aire libre. Pantalón largo si vais en scooter.</td></tr>
+      <tr><td><b>Chiang Dao</b><br><span class="clima-fecha">4 → 6 nov</span></td><td class="clima-t"><span class="t-max">29°</span> / <span class="t-min">21°</span></td><td class="clima-ll">12 mm<br><span class="clima-fecha">2 días con lluvia</span></td><td class="clima-rec">18° a 32°</td><td class="porque-cell">Lo mismo pero con niebla en el valle al amanecer. Zapatilla cerrada para la cueva y el monte, que la caliza resbala. Linterna o frontal.</td></tr>
+      <tr><td><b>Chiang Mai</b><br><span class="clima-fecha">6 → 10 nov</span></td><td class="clima-t"><span class="t-max">29°</span> / <span class="t-min">21°</span></td><td class="clima-ll">17 mm<br><span class="clima-fecha">2 días con lluvia</span></td><td class="clima-rec">17° a 31°</td><td class="porque-cell">Días agradables y noches frescas: la manga larga se usa casi todas las noches. Para el mercado del domingo, calzado cómodo, que son horas de pie.</td></tr>
+      <tr><td><b>Krabi</b><br><span class="clima-fecha">10 → 11 nov</span></td><td class="clima-t"><span class="t-max">30°</span> / <span class="t-min">23°</span></td><td class="clima-ll">18 mm<br><span class="clima-fecha">2 días con lluvia</span></td><td class="clima-rec">22° a 31°</td><td class="porque-cell">Vuelve el calor húmedo del sur, y ya no se va hasta el final. Ropa de secado rápido.</td></tr>
+      <tr><td><b>Koh Jum</b><br><span class="clima-fecha">11 → 14 nov</span></td><td class="clima-t"><span class="t-max">30°</span> / <span class="t-min">24°</span></td><td class="clima-ll">37 mm<br><span class="clima-fecha">4 días con lluvia</span></td><td class="clima-rec">23° a 31°</td><td class="porque-cell">Isla musulmana: bañador en la playa, camiseta y pantalón corto normal para el pueblo. Chubasquero fino: llueve casi todos los días, pero en chubascos de veinte minutos.</td></tr>
+      <tr><td><b>Koh Lanta</b><br><span class="clima-fecha">14 → 18 nov</span></td><td class="clima-t"><span class="t-max">29°</span> / <span class="t-min">25°</span></td><td class="clima-ll">29 mm<br><span class="clima-fecha">4 días con lluvia</span></td><td class="clima-rec">23° a 32°</td><td class="porque-cell">Lo más húmedo del viaje, y donde menos baja de noche. Dos bañadores para no ponerse uno mojado. <b>Camiseta de licra para el esnórquel</b>: cinco horas boca abajo en el agua es la quemadura clásica del viaje.</td></tr>
+      <tr><td><b>Bangkok · final</b><br><span class="clima-fecha">18 → 20 nov</span></td><td class="clima-t"><span class="t-max">31°</span> / <span class="t-min">24°</span></td><td class="clima-ll">6 mm<br><span class="clima-fecha">1 día con lluvia de los 3</span></td><td class="clima-rec">19° a 34°</td><td class="porque-cell">Lo más seco y lo más caluroso de todo: apenas un día de lluvia en tres. Aquí ya sabéis lo que hay que ponerse.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="leyenda-hoteles">
+    <b>Dos cosas que sorprenden a todo el mundo:</b>
+    <div style="margin-top:10px">🥶 <b>En el norte hace frío de verdad de madrugada.</b> La gente va a Tailandia
+    con ropa de playa y en Chiang Rai se despierta a 14°. Una capa fina de manga larga es imprescindible, y es
+    justo la que se usa en el avión.</div>
+    <div style="margin-top:8px">🌦️ <b>En las islas llueve casi todos los días, y no pasa nada.</b> No es lluvia
+    europea: son chubascos de veinte minutos que caen fuertes y escampan. Treinta milímetros repartidos en cuatro
+    días es agua de dos ratos. Con un chubasquero fino de mochila vais servidos; el paraguas no vale, porque
+    llueve de lado.</div>
+  </div>
+
+  <h3 style="margin-top:26px">La maleta, en corto</h3>
+  <ul class="lista-practica">
+    <li><b>Ropa ligera de algodón o lino</b> para tres semanas con lavandería: en cualquier pueblo lavan por
+    40–60 THB el kilo y lo devuelven al día siguiente, así que no hace falta llevar veinte camisetas.</li>
+    <li><b>Una capa de manga larga fina</b> (forro, sudadera o camisa). Para el norte de madrugada, para el aire
+    acondicionado y para los aviones.</li>
+    <li><b>Un pantalón largo ligero cada uno</b>, para los templos y para las noches de montaña.</li>
+    <li><b>Dos bañadores</b> y una <b>camiseta de licra</b> para el esnórquel de Koh Rok y Koh Haa.</li>
+    <li><b>Sandalias que se puedan mojar</b> y <b>una zapatilla cerrada</b> para la cueva de Chiang Dao y el monte Pu.</li>
+    <li><b>Crema solar respetuosa con el coral</b> (sin oxibenzona): en los parques nacionales pueden pedirla, y
+    en Tailandia la venden cara y con menos protección de la que pone.</li>
+    <li><b>Repelente de mosquitos con DEET</b>. El dengue existe y el mosquito que lo lleva pica de día.</li>
+    <li><b>Chubasquero fino</b> que quepa en la mochila del día.</li>
+    <li><b>Enchufe:</b> no hace falta adaptador. Tailandia va a 220 V y casi todas las tomas admiten la clavija
+    europea de dos patillas redondas. Lo que no entra es el enchufe grande con toma de tierra.</li>
+  </ul>
+</section>
+
 <section id="practico" class="etapa-sec">
   <div class="kicker">Logística</div>
   <h2>Guía práctica</h2>
