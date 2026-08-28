@@ -752,6 +752,17 @@
   .timos-fin{margin-top:14px;background:#fdf6e7;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;
     padding:12px 15px;font-size:.9rem;line-height:1.6;color:#5c4a24}
   html[data-tema="oscuro"] .timos-fin{background:#2a2114;color:#e8d5ac}
+
+  /* --- Arreglos portados de la guía de Londres (28 ago 2026) --- */
+  /* 1) El sello «lleva décadas abierto» heredaba la caja .leyenda del mapa
+        (padding, borde y sombra) y salía a 46x42 px en vez de 18x18. */
+  .sitios .sello.leyenda{padding:0;border:none;box-shadow:none;background:var(--teca)}
+  .leyenda-sellos i{padding:0;border:none;box-shadow:none}
+  /* 2) En modo oscuro estas cajas se quedaban con el fondo claro fijo y el texto
+        pasaba a claro: las descripciones de los sitios eran ilegibles. */
+  html[data-tema="oscuro"] .comer,
+  html[data-tema="oscuro"] .excel-nota,
+  html[data-tema="oscuro"] .leyenda-hoteles{background:#1c1710;border-color:#3a2f1d}
 </style>
 </head>
 <body>

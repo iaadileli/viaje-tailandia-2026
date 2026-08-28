@@ -22,11 +22,28 @@ const { chromium } = await import(donde);
 // --- servidor local, para que el service worker y los fetch se comporten como en producción
 let servidor = null, URL_BASE = process.argv[2];
 if (!URL_BASE) {
-  const puerto = 8731;
+  // Un puerto fijo es una trampa: si queda un servidor huérfano de otra guía,
+  // spawn falla en silencio y se acaba revisando la web equivocada. Se busca
+  // un puerto libre y además se comprueba que lo servido es ESTA carpeta.
+  const { createServer } = await import('node:net');
+  const libre = () => new Promise((res, rej) => {
+    const s = createServer();
+    s.on('error', rej);
+    s.listen(0, '127.0.0.1', () => { const p = s.address().port; s.close(() => res(p)); });
+  });
+  const puerto = await libre();
   servidor = spawn('python3', ['-m', 'http.server', String(puerto), '-d', RAIZ, '-b', '127.0.0.1'],
                    { stdio: 'ignore' });
   await new Promise(r => setTimeout(r, 700));
   URL_BASE = `http://127.0.0.1:${puerto}/index.html`;
+  const { readFileSync } = await import('node:fs');
+  const mio = readFileSync(path.join(RAIZ, 'index.html'), 'utf8');
+  const servido = await fetch(URL_BASE).then(r => r.text()).catch(() => '');
+  if (servido.length !== mio.length) {
+    console.error(`El servidor local no está sirviendo ${RAIZ}. Revisión abortada.`);
+    if (servidor) servidor.kill();
+    process.exit(2);
+  }
 }
 const fin = (c) => { if (servidor) servidor.kill(); process.exit(c); };
 
