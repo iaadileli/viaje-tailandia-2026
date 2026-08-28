@@ -778,6 +778,36 @@
   html[data-tema="oscuro"] .comer,
   html[data-tema="oscuro"] .excel-nota,
   html[data-tema="oscuro"] .leyenda-hoteles{background:#1c1710;border-color:#3a2f1d}
+
+  /* --- Legibilidad en modo oscuro (auditoría del 28 ago 2026) ---
+     Estos textos llevaban el color fijo #3a4247, pensado para fondo claro: sobre
+     el fondo oscuro daban 1,64:1 de contraste y no se leían. */
+  html[data-tema="oscuro"] .dia p,
+  html[data-tema="oscuro"] .bcard p,
+  html[data-tema="oscuro"] .lista-ver li,
+  html[data-tema="oscuro"] .leyenda .lg,
+  html[data-tema="oscuro"] .pcard ul,
+  html[data-tema="oscuro"] table.hoteles td,
+  html[data-tema="oscuro"] table.tab td{color:var(--tinta)}
+  /* el botón Info: en oscuro el azul se aclara, así que el texto va oscuro */
+  html[data-tema="oscuro"] .menu-btn{color:#12161a}
+  html[data-tema="oscuro"] .menu-btn:hover{color:#fff}
+
+  /* la flecha «Arriba» del acceso rápido es texto, no un emoji: en modo oscuro
+     se quedaba en negro sobre fondo oscuro y no se veía */
+  html[data-tema="oscuro"] .rap-ic{color:var(--tinta)}
+
+  /* --- Contraste en modo oscuro (auditoría del 28 ago 2026) --- */
+  /* el botón «Hoy» y el sello de hotel reservado: en oscuro el verde se aclara
+     y el texto blanco encima se quedaba en 2,8:1 */
+  html[data-tema="oscuro"] .btn-hoy{color:#12161a}
+  html[data-tema="oscuro"] .sello-reserva{color:#12161a}
+  /* los enlaces de las tarjetas de platos no tenían color propio: salían con el
+     azul por defecto del navegador, ilegible sobre el fondo oscuro */
+  a.cp{color:var(--mar);text-decoration:none}
+  a.cp:hover{color:var(--teca)}
+  /* el número de emergencias, en un rojo que no se leía sobre el fondo oscuro */
+  html[data-tema="oscuro"] .urg .num{color:#ff9aa8}
 </style>
 </head>
 <body>
@@ -2971,6 +3001,12 @@
   } else {
     if (elBoton) elBoton.style.display = 'none';
     if (elEstado) elEstado.textContent = 'Este navegador no permite guardar la web; usad la descarga en ZIP.';
+  }
+
+  // por si al botón se le olvida el onclick en el HTML: sin esto, el guardado
+  // sin conexión no hace absolutamente nada y nadie se entera hasta el avión
+  if (elBoton && !elBoton.getAttribute('onclick')) {
+    elBoton.addEventListener('click', function(){ guardarOffline(); });
   }
 
   function guardarOffline(){
