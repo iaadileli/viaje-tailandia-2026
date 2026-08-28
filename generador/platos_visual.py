@@ -13,7 +13,7 @@ PLATOS = [
   "Gachas de arroz cocidas hasta deshacerse, con cerdo, jengibre y huevo. El desayuno de toda la vida: caliente, suave y reconfortante.",
   "Jok Pa Mali, en Chinatown. Sólo por la mañana.", "Bangkok"),
 
- ("mooping","comida-street.jpg","Moo ping","หมูปิ้ง","mu ping",
+ ("mooping","comida-moo-ping.jpg","Moo ping","หมูปิ้ง","mu ping",
   "Brochetas de cerdo marinado en leche de coco y salsa de soja, a la brasa. Se comen con una bolsita de arroz glutinoso.",
   "Lalai Sap Market, en Silom, a un paseo del hotel.", "Bangkok"),
 
@@ -37,7 +37,7 @@ PLATOS = [
   "La sopa de fideos de cada día. Eliges fideo, carne y si la quieres con caldo o seca. Hay una versión en cuencos minúsculos, los boat noodles, que se piden de cuatro en cuatro.",
   "El callejón de boat noodles de Victory Monument.", "Bangkok"),
 
- ("kuayjab","comida-boat-noodles.jpg","Kuay jab","ก๋วยจั๊บ","kuai yap",
+ ("kuayjab","comida-kuay-jab.jpg","Kuay jab","ก๋วยจั๊บ","kuai yap",
   "Fideos de arroz enrollados en un caldo de pimienta blanca, con panceta crujiente y huevo. Reconfortante y muy poco turístico.",
   "Nai Ek Roll Noodle, en Yaowarat.", "Bangkok"),
 

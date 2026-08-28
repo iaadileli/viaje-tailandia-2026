@@ -1,7 +1,7 @@
 {
  "comida-jok": {
-  "archivo": "File:Chok tomyam (tomyam congee), chicken ver, Bangkok, 2018-01-21.jpg",
-  "licencia": "CC0"
+  "archivo": "File:Cantonese rice porridge.JPG",
+  "licencia": "CC BY-SA 4.0"
  },
  "comida-khao-kha-moo": {
   "archivo": "File:Khao kha moo thailand.jpg",
@@ -20,7 +20,7 @@
   "licencia": "Public domain"
  },
  "comida-kuaitiao": {
-  "archivo": "File:Kuaitiao Pak Mo.jpg",
+  "archivo": "File:Thai noodle soup, Khao Yai, Thailand.jpg",
   "licencia": "CC BY 4.0"
  },
  "comida-khao-man-gai": {
@@ -53,6 +53,18 @@
  },
  "comida-kluay-tod": {
   "archivo": "File:Kluai thot.jpg",
+  "licencia": "CC BY-SA 3.0"
+ },
+ "comida-moo-ping": {
+  "archivo": "File:Mu ping.jpg",
+  "licencia": "CC BY-SA 4.0"
+ },
+ "comida-kuay-jab": {
+  "archivo": "File:Kuaichap.JPG",
+  "licencia": "CC BY-SA 3.0"
+ },
+ "bangkok-jim-thompson": {
+  "archivo": "File:Main House of Jim Thompson photo Don Ramey Logan.jpg",
   "licencia": "CC BY-SA 3.0"
  }
 }
