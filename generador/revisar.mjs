@@ -53,7 +53,7 @@ const ojo   = (m) => { avisos.push(m); console.log('  · ' + m); };
 const bien  = (m) => console.log('  ✓ ' + m);
 const grupo = (t) => console.log('\n' + t);
 
-const nav = await chromium.launch();
+const nav = await chromium.launch().catch(() => chromium.launch({ channel: 'chromium' }));
 const ctx = await nav.newContext({ serviceWorkers: 'allow' });
 const p = await ctx.newPage();
 const errores = [], fallidos = [];
