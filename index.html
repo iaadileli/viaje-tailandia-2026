@@ -2993,16 +2993,14 @@
 
   <div class="destacado">
     <h3>📥 Guardarla en el móvil</h3>
-    <p>Pulsa el botón y espera unos segundos: se descargan la página y todas las fotos (unos 25 MB).
-    A partir de ahí, este enlace se abre sin conexión. En el menú del navegador podéis además usar
+    <p>Un solo botón y se baja <strong>la guía entera</strong>: la página, todas las fotos y los 52 audios
+    de la audioguía (unos 95 MB, mejor con wifi; tarda un par de minutos). A partir de ahí, este enlace se
+    abre sin conexión y los audios suenan en modo avión. En el menú del navegador podéis además usar
     <strong>"Añadir a la pantalla de inicio"</strong> y quedará como una app.</p>
     <div class="botonera">
-      <button id="btnGuardar" class="btn-guardar" onclick="guardarOffline()">📥 Guardar para usar sin conexión</button>
+      <button id="btnGuardar" class="btn-guardar" onclick="guardarOffline()">📥 Bajar la guía entera, con los audios</button>
     </div>
     <div class="estado-offline" id="estadoOffline"></div>
-    <div class="ojo">🎧 <strong>Los audios van aparte, y a propósito:</strong> pesan bastante, así que
-    cada etapa tiene su propio botón para guardarlos. Con wifi en el hotel, baja los de la etapa
-    siguiente y llévalos encima sin gastar datos.</div>
     <div class="ojo">🗺️ El mapa de la ruta es un dibujo propio, así que también funciona sin datos. Para los
     mapas de calles, descargad la zona en la app de Google Maps con "Descargar mapa sin conexión".</div>
   </div>
@@ -3066,9 +3064,11 @@
       });
     }).catch(function(){});
     if (window.caches) {
-      caches.match('img/portada.jpg', {ignoreSearch:true}).then(function(hit){
+      var ultimoAudio = (typeof AUDIOS !== 'undefined' && AUDIOS.length) ? 'audio/' + AUDIOS[AUDIOS.length-1].id + '.mp3' : 'img/portada.jpg';
+      Promise.all([caches.match('img/portada.jpg', {ignoreSearch:true}), caches.match(ultimoAudio, {ignoreSearch:true})])
+      .then(function(r){ return r[0] && r[1]; }).then(function(hit){
         if (hit && elEstado) {
-          elEstado.textContent = '✓ Ya está guardada en este dispositivo.';
+          elEstado.textContent = '✓ La guía entera ya está guardada en este dispositivo.';
           if (elBoton) elBoton.textContent = '🔄 Volver a guardar (actualizar)';
         }
       }).catch(function(){});
@@ -3078,7 +3078,9 @@
       if (e.data.tipo === 'PROGRESO') {
         elEstado.textContent = 'Guardando… ' + e.data.hechos + ' de ' + e.data.total;
       } else if (e.data.tipo === 'LISTO') {
-        elEstado.textContent = '✓ Guardada. Ya podéis abrirla en modo avión.';
+        elEstado.textContent = e.data.fallos
+          ? '⚠️ Faltan ' + e.data.fallos + ' de ' + e.data.total + ' ficheros. Dale otra vez con wifi.'
+          : '✓ Guía entera guardada, audios incluidos. Ya podéis abrirla en modo avión.';
         if (elBoton) { elBoton.disabled = false; elBoton.textContent = '🔄 Volver a guardar (actualizar)'; }
       }
     });
@@ -3320,7 +3322,7 @@ function avisaNueva(reg){
     boton.disabled = true;
     if (!('caches' in window)) { texto.textContent = 'Tu navegador no permite guardarlos'; return; }
     var hechos = 0;
-    caches.open('tailandia2026-v4').then(function(c){
+    caches.open('tailandia2026-v5').then(function(c){
       return rutas.reduce(function(cadena, r){
         return cadena.then(function(){
           return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){
@@ -3490,7 +3492,8 @@ function avisaNueva(reg){
                   dias_faltan === 2 ? 'Mañana salís' : 'Faltan ' + (dias_faltan - 1) + ' días para salir') + '</h2>' +
         '<div class="hoy-plan">Cuando empiece el viaje, aquí aparecerá automáticamente el plan del día, ' +
         'los audios que tocan y dónde comer cerca.</div>' +
-        '<div class="hoy-pie"><button class="hoy-btn" id="hoyVerPrimero">Ver el primer día</button></div>' +
+        '<div class="hoy-pie"><button class="hoy-btn" id="hoyVerPrimero">Ver el primer día</button> ' +
+        '<a class="hoy-btn" href="#offline">📥 Bajar la guía entera</a></div>' +
       '</div>';
     host.querySelector('#hoyVerPrimero').onclick = function(){ elegido = PRIMERA; pinta(PRIMERA); };
   }

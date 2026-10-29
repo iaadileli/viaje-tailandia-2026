@@ -1,4 +1,4 @@
-const CACHE = 'tailandia2026-v4';
+const CACHE = 'tailandia2026-v5';
 const RECURSOS = [
   './',
   'index.html',
@@ -19,6 +19,8 @@ const RECURSOS = [
   'img/comida-nam-prik-ong.jpg',
   'img/comida-pad-krapao.jpg',
   'img/comida-patongko.jpg',
+  'img/comida-kuay-jab.jpg',
+  'img/comida-moo-ping.jpg',
 
   'tailandia-donde-comer.kml',
   'audio/frases/agua.mp3',
@@ -175,16 +177,25 @@ self.addEventListener('fetch', e => {
   );
 });
 
-// Descarga completa bajo demanda, informando del progreso.
+// Descarga completa bajo demanda: la página, las fotos y TODOS los audios de la
+// audioguía (sacados del catálogo, para que un audio nuevo entre solo).
+async function audiosDelCatalogo() {
+  try {
+    const txt = await (await fetch('audio/catalogo.js', {cache: 'reload'})).text();
+    return [...txt.matchAll(/"id":"([^"]+)"/g)].map(m => 'audio/' + m[1] + '.mp3');
+  } catch (err) { return []; }
+}
+
 self.addEventListener('message', async e => {
   if (!e.data || e.data.tipo !== 'GUARDAR') return;
   const cliente = e.source;
   const cache = await caches.open(CACHE);
-  let hechos = 0;
-  for (const r of RECURSOS) {
-    try { await cache.add(new Request(r, {cache: 'reload'})); } catch (err) {}
+  const lista = [...new Set([...RECURSOS, ...(await audiosDelCatalogo())])];
+  let hechos = 0, fallos = 0;
+  for (const r of lista) {
+    try { await cache.add(new Request(r, {cache: 'reload'})); } catch (err) { fallos++; }
     hechos++;
-    cliente && cliente.postMessage({tipo: 'PROGRESO', hechos, total: RECURSOS.length});
+    cliente && cliente.postMessage({tipo: 'PROGRESO', hechos, total: lista.length});
   }
-  cliente && cliente.postMessage({tipo: 'LISTO', total: RECURSOS.length});
+  cliente && cliente.postMessage({tipo: 'LISTO', total: lista.length, fallos});
 });
