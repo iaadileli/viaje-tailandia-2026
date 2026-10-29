@@ -186,6 +186,12 @@
   table.clima .t-max{color:#b4531f}
   table.clima .t-min{color:#2f6f9e}
   table.clima .clima-ll,table.clima .clima-rec{font-size:.86rem;white-space:nowrap}
+  table.clima.prediccion{min-width:520px}
+  table.prediccion .pr-cielo{white-space:nowrap;font-size:.9rem}
+  table.prediccion .pr-sin{color:var(--tinta2);font-style:italic;font-size:.85rem}
+  .pr-tit{font-size:1.15rem;margin:26px 0 6px;color:var(--teca)}
+  .pr-nota{font-size:.95rem;color:var(--tinta2);max-width:760px}
+  .pr-sello{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.8rem;color:var(--tinta2);margin-bottom:10px}
   ul.lista-practica{margin:12px 0 0;padding-left:20px;line-height:1.65}
   ul.lista-practica li{margin-bottom:9px}
   .zona-cell{color:var(--tinta2);font-size:.85rem;white-space:normal;max-width:150px}
@@ -2346,11 +2352,97 @@
 <section id="tiempo" class="etapa-sec">
   <div class="kicker">Qué tiempo va a hacer</div>
   <h2>El tiempo, etapa por etapa, y qué meter en la maleta</h2>
-  <p class="intro">Esto no son las medias del mes que salen en las webs, que mezclan un noviembre entero.
+  <p class="intro">Primero, <strong>la predicción real</strong> de cada día. Debajo, lo normal en esas fechas,
+  que no son las medias del mes que salen en las webs, que mezclan un noviembre entero.
   Son <strong>las temperaturas de vuestros días exactos</strong> —del 30 de octubre al 20 de noviembre— promediadas
   en los <strong>ocho últimos años</strong> con los datos de las estaciones de cada zona. La columna de récords dice
   lo más frío y lo más caluroso que se ha registrado en esas fechas: es lo que hay que tener en cuenta al hacer
   la maleta, no la media.</p>
+
+  <!-- PREDICCION -->
+  <h3 class="pr-tit">La predicción real, día a día</h3>
+  <p class="pr-nota">Cada día, el tiempo del sitio donde estaréis. Los modelos llegan a dos semanas: los días
+  que todavía no tienen predicción se irán rellenando solos. <b>En el trópico casi todos los días salen
+  «tormentas»</b>: es el chaparrón de la tarde. Fijaos más en los milímetros que en el dibujo: con menos de
+  5 mm es un rato de agua y nada más.</p>
+  <div class="tabla-wrap">
+    <table class="hoteles clima prediccion" id="prediccion">
+      <thead><tr><th>Día</th><th>Dónde</th><th>Cielo</th><th>Día / noche</th><th>Lluvia</th></tr></thead>
+      <tbody>
+      <tr data-t="2026-10-30" data-l="bkk"><td><b>vie 30 oct</b></td><td>Bangkok</td><td class="pr-cielo">🌦️ chubascos</td><td class="clima-t"><span class="t-max">31°</span> / <span class="t-min">25°</span></td><td class="clima-ll">99 %<br><span class="clima-fecha">4,7 mm</span></td></tr>
+      <tr data-t="2026-10-31" data-l="bkk"><td><b>sáb 31 oct</b></td><td>Bangkok</td><td class="pr-cielo">⛈️ tormentas</td><td class="clima-t"><span class="t-max">30°</span> / <span class="t-min">25°</span></td><td class="clima-ll">78 %<br><span class="clima-fecha">6,8 mm</span></td></tr>
+      <tr data-t="2026-11-01" data-l="bkk"><td><b>dom 1 nov</b></td><td>Bangkok</td><td class="pr-cielo">🌦️ chubascos</td><td class="clima-t"><span class="t-max">32°</span> / <span class="t-min">24°</span></td><td class="clima-ll">68 %<br><span class="clima-fecha">3,5 mm</span></td></tr>
+      <tr data-t="2026-11-02" data-l="crai"><td><b>lun 2 nov</b></td><td>Chiang Rai</td><td class="pr-cielo">⛈️ tormentas</td><td class="clima-t"><span class="t-max">28°</span> / <span class="t-min">22°</span></td><td class="clima-ll">57 %<br><span class="clima-fecha">4,8 mm</span></td></tr>
+      <tr data-t="2026-11-03" data-l="crai"><td><b>mar 3 nov</b></td><td>Chiang Rai</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">29°</span> / <span class="t-min">22°</span></td><td class="clima-ll">57 %<br><span class="clima-fecha">2,0 mm</span></td></tr>
+      <tr data-t="2026-11-04" data-l="cdao"><td><b>mié 4 nov</b></td><td>Chiang Dao</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">32°</span> / <span class="t-min">22°</span></td><td class="clima-ll">32 %<br><span class="clima-fecha">3,0 mm</span></td></tr>
+      <tr data-t="2026-11-05" data-l="cdao"><td><b>jue 5 nov</b></td><td>Chiang Dao</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">32°</span> / <span class="t-min">23°</span></td><td class="clima-ll">45 %<br><span class="clima-fecha">1,0 mm</span></td></tr>
+      <tr data-t="2026-11-06" data-l="cmai"><td><b>vie 6 nov</b></td><td>Chiang Mai</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">29°</span> / <span class="t-min">22°</span></td><td class="clima-ll">57 %<br><span class="clima-fecha">7,2 mm</span></td></tr>
+      <tr data-t="2026-11-07" data-l="cmai"><td><b>sáb 7 nov</b></td><td>Chiang Mai</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">28°</span> / <span class="t-min">22°</span></td><td class="clima-ll">67 %<br><span class="clima-fecha">3,0 mm</span></td></tr>
+      <tr data-t="2026-11-08" data-l="cmai"><td><b>dom 8 nov</b></td><td>Chiang Mai</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">29°</span> / <span class="t-min">22°</span></td><td class="clima-ll">61 %<br><span class="clima-fecha">1,4 mm</span></td></tr>
+      <tr data-t="2026-11-09" data-l="cmai"><td><b>lun 9 nov</b></td><td>Chiang Mai</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">29°</span> / <span class="t-min">21°</span></td><td class="clima-ll">65 %<br><span class="clima-fecha">5,6 mm</span></td></tr>
+      <tr data-t="2026-11-10" data-l="krabi"><td><b>mar 10 nov</b></td><td>Krabi</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">30°</span> / <span class="t-min">23°</span></td><td class="clima-ll">94 %<br><span class="clima-fecha">3,0 mm</span></td></tr>
+      <tr data-t="2026-11-11" data-l="jum"><td><b>mié 11 nov</b></td><td>Koh Jum</td><td class="pr-cielo">🌦️ chubascos</td><td class="clima-t"><span class="t-max">31°</span> / <span class="t-min">24°</span></td><td class="clima-ll">96 %<br><span class="clima-fecha">8,4 mm</span></td></tr>
+      <tr data-t="2026-11-12" data-l="jum"><td><b>jue 12 nov</b></td><td>Koh Jum</td><td class="pr-cielo">🌦️ llovizna</td><td class="clima-t"><span class="t-max">30°</span> / <span class="t-min">24°</span></td><td class="clima-ll">86 %<br><span class="clima-fecha">2,6 mm</span></td></tr>
+      <tr data-t="2026-11-13" data-l="jum"><td><b>vie 13 nov</b></td><td>Koh Jum</td><td class="pr-cielo">🌧️ chubascos</td><td class="clima-t"><span class="t-max">28°</span> / <span class="t-min">22°</span></td><td class="clima-ll">87 %<br><span class="clima-fecha">25,8 mm</span></td></tr>
+      <tr data-t="2026-11-14" data-l="lanta"><td><b>sáb 14 nov</b></td><td>Koh Lanta</td><td class="pr-cielo pr-sin" colspan="3">todavía sin predicción · mira la media de la etapa abajo</td></tr>
+      <tr data-t="2026-11-15" data-l="lanta"><td><b>dom 15 nov</b></td><td>Koh Lanta</td><td class="pr-cielo pr-sin" colspan="3">todavía sin predicción · mira la media de la etapa abajo</td></tr>
+      <tr data-t="2026-11-16" data-l="lanta"><td><b>lun 16 nov</b></td><td>Koh Lanta</td><td class="pr-cielo pr-sin" colspan="3">todavía sin predicción · mira la media de la etapa abajo</td></tr>
+      <tr data-t="2026-11-17" data-l="lanta"><td><b>mar 17 nov</b></td><td>Koh Lanta</td><td class="pr-cielo pr-sin" colspan="3">todavía sin predicción · mira la media de la etapa abajo</td></tr>
+      <tr data-t="2026-11-18" data-l="bkk"><td><b>mié 18 nov</b></td><td>Bangkok</td><td class="pr-cielo pr-sin" colspan="3">todavía sin predicción · mira la media de la etapa abajo</td></tr>
+      <tr data-t="2026-11-19" data-l="bkk"><td><b>jue 19 nov</b></td><td>Bangkok</td><td class="pr-cielo pr-sin" colspan="3">todavía sin predicción · mira la media de la etapa abajo</td></tr>
+      <tr data-t="2026-11-20" data-l="bkk"><td><b>vie 20 nov</b></td><td>Bangkok</td><td class="pr-cielo pr-sin" colspan="3">todavía sin predicción · mira la media de la etapa abajo</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="pr-sello" id="prSello">Predicción del 29 de octubre · se actualiza sola al abrir la web con cobertura</p>
+<script>
+/* Repinta la predicción con lo último de Open-Meteo. Si no hay red, se queda la escrita. */
+(function(){
+  var tabla = document.getElementById('prediccion');
+  if (!tabla) return;
+  var L = [["bkk", 13.7563, 100.5018], ["crai", 19.9105, 99.8406], ["cdao", 19.3696, 98.9657], ["cmai", 18.7883, 98.9853], ["krabi", 8.0863, 98.9063], ["jum", 7.7926, 98.9913], ["lanta", 7.5598, 99.0573]];
+  var CIELO = {0:['☀️','despejado'],1:['🌤️','casi despejado'],2:['⛅','nubes y claros'],3:['☁️','nublado'],
+    45:['🌫️','niebla'],48:['🌫️','niebla'],51:['🌦️','llovizna'],53:['🌦️','llovizna'],55:['🌧️','llovizna fuerte'],
+    61:['🌦️','lluvia floja'],63:['🌧️','lluvia'],65:['🌧️','lluvia fuerte'],
+    80:['🌦️','chubascos'],81:['🌧️','chubascos'],82:['🌧️','chubascos fuertes'],
+    95:['⛈️','tormentas'],96:['⛈️','tormentas'],99:['⛈️','tormentas']};
+  var MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  var url = 'https://api.open-meteo.com/v1/forecast?latitude=' + L.map(function(x){return x[1];}).join(',') +
+    '&longitude=' + L.map(function(x){return x[2];}).join(',') +
+    '&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,precipitation_sum' +
+    '&timezone=Asia%2FBangkok&forecast_days=16';
+  fetch(url).then(function(r){ return r.json(); }).then(function(res){
+    if (!Array.isArray(res)) return;
+    var cambiados = 0;
+    res.forEach(function(r, n){
+      var d = r && r.daily; if (!d || !d.time) return;
+      d.time.forEach(function(f, i){
+        var fila = tabla.querySelector('tr[data-t="' + f + '"][data-l="' + L[n][0] + '"]');
+        if (!fila || d.temperature_2m_max[i] == null) return;
+        var c = CIELO[d.weather_code[i]] || ['🌡️','variable'];
+        var mm = (d.precipitation_sum[i] || 0).toFixed(1).replace('.', ',');
+        var celdas = fila.querySelectorAll('td');
+        for (var j = celdas.length - 1; j >= 2; j--) celdas[j].remove();
+        fila.insertAdjacentHTML('beforeend',
+          '<td class="pr-cielo">' + c[0] + ' ' + c[1] + '</td>' +
+          '<td class="clima-t"><span class="t-max">' + Math.round(d.temperature_2m_max[i]) + '°</span> / ' +
+          '<span class="t-min">' + Math.round(d.temperature_2m_min[i]) + '°</span></td>' +
+          '<td class="clima-ll">' + (d.precipitation_probability_max[i] || 0) + ' %<br>' +
+          '<span class="clima-fecha">' + mm + ' mm</span></td>');
+        cambiados++;
+      });
+    });
+    var s = document.getElementById('prSello');
+    if (s && cambiados) {
+      var h = new Date();
+      s.textContent = 'Predicción de hoy, ' + h.getDate() + ' de ' + MESES[h.getMonth()] + ', a las ' +
+        String(h.getHours()).padStart(2,'0') + ':' + String(h.getMinutes()).padStart(2,'0');
+    }
+  }).catch(function(){});
+})();
+</script>
+  <h3 class="pr-tit">Lo normal en esas fechas, etapa por etapa</h3>
+<!-- /PREDICCION -->
 
   <div class="tabla-wrap">
     <table class="hoteles clima">
@@ -3228,7 +3320,7 @@ function avisaNueva(reg){
     boton.disabled = true;
     if (!('caches' in window)) { texto.textContent = 'Tu navegador no permite guardarlos'; return; }
     var hechos = 0;
-    caches.open('tailandia2026-v2').then(function(c){
+    caches.open('tailandia2026-v4').then(function(c){
       return rutas.reduce(function(cadena, r){
         return cadena.then(function(){
           return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){
@@ -3393,7 +3485,9 @@ function avisaNueva(reg){
     host.innerHTML =
       '<div class="hoy-caja hoy-cuenta">' +
         '<div class="hoy-cab"><span class="hoy-eti">Cuenta atrás</span></div>' +
-        '<h2>' + (dias_faltan === 1 ? 'Mañana salís' : 'Faltan ' + dias_faltan + ' días') + '</h2>' +
+        // Se sale de Madrid el día antes de llegar (PRIMERA es el día de llegada)
+        '<h2>' + (dias_faltan === 1 ? 'Hoy salís · mañana llegáis' :
+                  dias_faltan === 2 ? 'Mañana salís' : 'Faltan ' + (dias_faltan - 1) + ' días para salir') + '</h2>' +
         '<div class="hoy-plan">Cuando empiece el viaje, aquí aparecerá automáticamente el plan del día, ' +
         'los audios que tocan y dónde comer cerca.</div>' +
         '<div class="hoy-pie"><button class="hoy-btn" id="hoyVerPrimero">Ver el primer día</button></div>' +
