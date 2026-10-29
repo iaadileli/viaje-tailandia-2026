@@ -63,7 +63,7 @@ def ficha(s):
 def bloque(sitios):
     return '<ul class="sitios">\n' + '\n'.join(ficha(s) for s in sitios) + '\n    </ul>'
 
-p = '/home/adil/Escritorio/viaje-tailandia/index.html'
+p = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'index.html')
 h = open(p).read()
 cambios = 0
 for titulo, sitios in MAPA.items():

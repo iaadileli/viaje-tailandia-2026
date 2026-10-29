@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 KRABI = [
- ("Ruen Mai", "local", "Th. Maharaj, norte de Krabi town",
+ ("Ruen Mai", "local", "117 Sai Thai, al oeste del centro (en taxi)",
   "El mejor restaurante de la zona: cocina del sur de verdad, en un jardín tropical. Aquí come la gente de Krabi.",
   "gaeng som (curry ácido de pescado) y sato (brotes de judía amarga) si os atrevéis",
-  "10:00–21:00", "300–600 THB para dos", "Ruen Mai Restaurant Krabi"),
+  "10:30–15:00 y 17:00–21:00 aprox.", "300–600 THB para dos", "Ruen Mai Restaurant Krabi"),
 
  ("Mercado nocturno de Chao Fah", "local", "junto al muelle, Krabi town",
   "Mesas comunes junto al río, marisco a la plancha y curries del sur a precio local.",
@@ -26,8 +26,13 @@ KRABI = [
   "gambas gigantes o pescado del día a la sal, y confirmad el precio por kilo ANTES",
   "17:00–23:00", "600–1.200 THB para dos", "Ao Nang seafood restaurants"),
 
- ("Café Andaman / cafés del muelle", "", "Krabi town",
-  "Para el café de después, mirando los peñones de Khao Khanab Nam.",
+ ("May & Mark's", "", "Maharaj Soi 10, Krabi town",
+  "El desayuno de los viajeros en Krabi: pan hecho por ellos, café decente y huevos como es debido. Perfecto antes del ferry del 11.",
+  "desayuno completo y pan para llevar a la isla",
+  "8:00–21:00 aprox.", "150–300 THB", "May and Mark Restaurant Krabi"),
+
+ ("Cafés del paseo del río", "", "Khong Kha Rd, junto al río",
+  "Para el café de después, mirando el río y los manglares.",
   "café tailandés con hielo y leche condensada",
   "8:00–18:00", "60–100 THB", "coffee Krabi town riverside"),
 ]
@@ -35,7 +40,7 @@ KRABI = [
 KOHJUM = [
  ("Ban Ban Restaurant", "local", "carretera principal, cerca de Ting Rai",
   "El sitio de referencia de la isla: cocina tailandesa y algo occidental, llevado por una familia.",
-  "curry massaman y, de desayuno, sus rollos de canela caseros, que son famosos en la isla",
+  "curry massaman y pescado del día",
   "8:00–21:00 aprox.", "150–300 THB", "Ban Ban Restaurant Koh Jum"),
 
  ("Restaurantes halal del pueblo", "local", "Ban Ko Jum, en el sur",
@@ -43,9 +48,9 @@ KOHJUM = [
   "roti recién hecho, curry del sur y pescado del día",
   "todo el día", "40–100 THB", "Koh Jum village restaurant"),
 
- ("Luboa Café", "", "Luboa, pueblo principal",
-  "La cafetería de la isla, para el café decente y el wifi que en los bungalows a veces falla.",
-  "café con hielo y algo dulce mientras cargáis el móvil",
+ ("Luboa Café", "", "jardín en el interior, cerca de Ban Ko Jum",
+  "La cafetería de la isla, famosa por sus panecillos caseros, que se acaban pronto: id temprano.",
+  "café con hielo y los panecillos recién hechos",
   "8:00–17:00", "60–120 THB", "Luboa Cafe Koh Jum"),
 
  ("Cenar en el alojamiento", "", "vuestro bungalow",
@@ -65,28 +70,23 @@ KOHLANTA = [
   "curry de cangrejo y pescado al vapor con lima, con el mar bajo los pies",
   "11:00–22:00", "400–700 THB para dos", "Caoutchouc Restaurant Lanta Old Town"),
 
- ("Mangrove / terrazas del pueblo viejo", "", "Lanta Old Town",
+ ("Terrazas del pueblo viejo", "", "Lanta Old Town, costa este",
   "La hilera de terrazas de madera sobre el mar en la calle principal del pueblo viejo.",
   "marisco a la plancha al atardecer, viendo volver las barcas",
   "11:00–22:00", "300–600 THB", "Lanta Old Town seafood restaurant"),
 
- ("Fresh Restaurant", "local", "Klong Nin",
-  "Cocina tailandesa honesta a pie de playa, sin florituras y a precio razonable.",
+ ("Fresh Restaurant", "local", "Lanta Old Town, sobre el agua",
+  "Cocina tailandesa honesta en una plataforma de madera sobre el mar, sin florituras y a precio razonable.",
   "massaman de ternera y som tam",
-  "11:00–22:00", "250–450 THB", "Fresh Restaurant Klong Nin Koh Lanta"),
+  "11:00–22:00", "250–450 THB", "Fresh Restaurant Sri Raya Lanta Old Town"),
 
  ("Puestos de roti de la carretera", "local", "carretera oeste",
   "Carritos de roti al borde de la carretera, sobre todo al caer la tarde.",
   "roti con plátano, huevo y leche condensada",
   "16:00–22:00", "30–50 THB", "roti Koh Lanta"),
 
- ("May & Mark's", "", "Saladan",
-  "El desayuno de la isla: pan hecho por ellos, café decente y huevos como es debido.",
-  "desayuno completo y pan para llevar",
-  "7:00–21:00", "150–300 THB", "May and Mark's Koh Lanta"),
-
  ("Time For Lime", "", "Klong Dao",
   "Escuela de cocina en la playa que financia un refugio de animales de la isla.",
   "la clase de tarde, que acaba cenando lo que habéis cocinado",
-  "clases por la tarde", "1.800 THB por persona", "Time For Lime Koh Lanta"),
+  "clases por la tarde, no todos los días: confirmad", "consultad precio", "Time For Lime Koh Lanta"),
 ]

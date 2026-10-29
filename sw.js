@@ -1,4 +1,4 @@
-const CACHE = 'tailandia2026-v6';
+const CACHE = 'tailandia2026-v7';
 const RECURSOS = [
   './',
   'index.html',

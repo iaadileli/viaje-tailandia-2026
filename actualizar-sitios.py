@@ -12,10 +12,10 @@ ETAPAS = [('bangkok1','Bangkok',BANGKOK), ('chiangrai','Chiang Rai',CHIANGRAI),
           ('chiangdao','Chiang Dao',CHIANGDAO), ('chiangmai','Chiang Mai',CHIANGMAI),
           ('krabi','Krabi',KRABI), ('kohjum','Koh Jum',KOHJUM), ('kohlanta','Koh Lanta',KOHLANTA)]
 ZONAS = {'bangkok1':(13.75,100.52),'chiangrai':(19.91,99.84),'chiangdao':(19.37,98.97),
-         'chiangmai':(18.79,98.99),'krabi':(8.09,98.91),'kohjum':(7.78,99.05),'kohlanta':(7.62,99.03)}
+         'chiangmai':(18.79,98.99),'krabi':(8.09,98.91),'kohjum':(7.7926,98.9913),'kohlanta':(7.62,99.03)}
 # fichas que no son un local: no salen en «qué tengo cerca»
 NO_SITIO = ['Ojo: no hay cajeros','Cenar en el alojamiento','Cena en el alojamiento','Clase de cocina',
-            'Cafés de té y café de montaña','Puestos de la carretera 1096','Roti de la calle',
+            'Cafés de té y café de montaña','Cocinas de carretera del valle','Roti de la calle',
             'Puestos de roti de la carretera','Ojo: isla musulmana']
 
 previas = {}

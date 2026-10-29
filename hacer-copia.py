@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera la copia sin conexión: un solo fichero, sin depender de red ni de service worker."""
 import re, os
-os.chdir('/home/adil/Escritorio/viaje-tailandia')
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 h = open('index.html').read()
 
 # los scripts externos, dentro

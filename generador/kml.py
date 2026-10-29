@@ -45,7 +45,7 @@ for ciudad, sitios, sufijo in CAPAS:
     out.append('</Folder>')
 
 out.append('</Document></kml>')
-destino = '/home/adil/Escritorio/viaje-tailandia/tailandia-donde-comer.kml'
+destino = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'tailandia-donde-comer.kml')
 open(destino, 'w').write('\n'.join(out))
 total = sum(len(s) for _, s, _ in CAPAS)
 print(f'KML con {total} sitios en {len(CAPAS)} capas → {destino}')
