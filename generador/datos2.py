@@ -2,14 +2,14 @@
 
 CHIANGDAO = [
  ("Cena en el alojamiento", "", "vuestro hotel",
-  "Preguntad al llegar si el alojamiento da cenas (no lo he podido confirmar). Si no, en Chotana Rd hay restaurantes a cinco minutos andando, o Chiang Dao Nest. En el valle se cena temprano.",
+  "Preguntad al llegar si el alojamiento da cenas (no lo he podido confirmar). Si no, Chiang Dao Nest (reservando) o las cocinas del pueblo, a cinco minutos en coche. En el valle se cena temprano.",
   "lo que tengan del día: verduras y setas de montaña, y gaeng hang lay si lo hacen",
   "avisar antes de las 17:00", "150–300 THB", "Chiang Dao"),
 
  ("Mercado de Chiang Dao", "local", "centro del pueblo",
-  "El mercado grande, al que bajan las comunidades de la montaña, es los martes por la mañana: ese no os toca. Pero el JUEVES 5 por la tarde hay mercado en el pueblo, con comida callejera y productos de la zona (preguntad la hora en el alojamiento).",
+  "El mercado grande, al que bajan las comunidades de la montaña, es los martes por la mañana: ese no os toca. Pero el JUEVES 5 por la tarde hay mercado en el pueblo, con comida callejera y productos de la zona (calle junto a Wat Intharam, en el centro).",
   "sai ua a la brasa, arroz glutinoso y fruta de la zona",
-  "jueves por la tarde · el grande, martes por la mañana", "20–60 THB", "Chiang Dao Market"),
+  "jueves ~15:00–20:00 (el 5 es primer jueves de mes: toca seguro) · el grande, martes por la mañana", "20–60 THB", "Chiang Dao Market"),
 
  ("Chiang Dao Nest", "", "camino de la cueva",
   "El sitio con nombre del valle: cocina occidental de nivel sorprendentemente alto en medio de la nada.",
@@ -76,7 +76,7 @@ CHIANGMAI = [
  ("Akha Ama Coffee", "", "casco antiguo y La Fattoria",
   "Café de una familia akha de la montaña, tostado aquí. Historia y taza excelentes.",
   "un filtrado del origen del día, mejor que el café con leche condensada",
-  "8:00–18:00", "70–120 THB", "Akha Ama Coffee Chiang Mai"),
+  "8:00–17:00 · cierra los miércoles", "70–120 THB", "Akha Ama Coffee Chiang Mai"),
 
  ("Clase de cocina", "", "varias escuelas",
   "Media jornada, con visita al mercado incluida. Se aprende a hacer khao soi y curry desde la pasta.",

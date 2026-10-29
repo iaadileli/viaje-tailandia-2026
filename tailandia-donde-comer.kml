@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>86 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>85 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -36,7 +36,7 @@
 </Placemark>
 <Placemark>
   <name>Wattana Panich</name>
-  <description><![CDATA[Su olla de caldo de ternera lleva más de 50 años sin apagarse: cada día añaden encima. Es una reliquia viva.<br><br>PIDE: neua tune: estofado de ternera con hierbas chinas. Y ver la olla<br><br>Horario: 9:00–19:30 · cierra los lunes<br>Precio: 100–250 THB<br>Zona: Ekkamai]]></description>
+  <description><![CDATA[Su olla de caldo de ternera lleva más de 50 años sin apagarse: cada día añaden encima. Es una reliquia viva.<br><br>PIDE: neua tune: estofado de ternera con hierbas chinas. Y ver la olla<br><br>Horario: 9:00–19:30 · todos los días<br>Precio: 100–250 THB<br>Zona: Ekkamai]]></description>
   <address>Wattana Panich Ekkamai, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_leyenda</styleUrl>
 </Placemark>
@@ -48,7 +48,7 @@
 </Placemark>
 <Placemark>
   <name>Khao Gaeng Jek Pui</name>
-  <description><![CDATA[Curries sobre arroz servidos desde una olla. No tiene mesas: se come de pie o sentado en un taburete en la acera.<br><br>PIDE: dos curries sobre arroz, señalando lo que te apetezca<br><br>Horario: 15:00–20:00 · cierra los lunes<br>Precio: 50–80 THB<br>Zona: Chinatown, Th. Mangkon]]></description>
+  <description><![CDATA[Curries sobre arroz servidos desde una olla. No tiene mesas: se come de pie o sentado en un taburete en la acera.<br><br>PIDE: dos curries sobre arroz, señalando lo que te apetezca<br><br>Horario: desde las 14:00 hasta que se acaba (≈19:30) · id antes de las 17:00<br>Precio: 50–80 THB<br>Zona: Chinatown, Th. Mangkon]]></description>
   <address>Khao Gaeng Jek Pui Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_leyenda</styleUrl>
 </Placemark>
@@ -78,7 +78,7 @@
 </Placemark>
 <Placemark>
   <name>Krua Apsorn</name>
-  <description><![CDATA[Cocina tailandesa casera de las que quedan pocas. Fue la favorita de la casa real y sigue llena de familias.<br><br>PIDE: el huevo revuelto con carne de cangrejo y el curry amarillo de cangrejo. Son sus dos platos legendarios<br><br>Horario: 10:30–19:30 aprox. · cierra los domingos<br>Precio: 300–600 THB para dos<br>Zona: 503-505 Sam Sen Rd, Dusit]]></description>
+  <description><![CDATA[Cocina tailandesa casera de las que quedan pocas. Fue la favorita de la casa real y sigue llena de familias.<br><br>PIDE: el huevo revuelto con carne de cangrejo y el curry amarillo de cangrejo. Son sus dos platos legendarios<br><br>Horario: 10:00–20:00 · todos los días (antes cerraba los domingos: si vais en domingo, confirmad)<br>Precio: 300–600 THB para dos<br>Zona: 503-505 Sam Sen Rd, Dusit]]></description>
   <address>Krua Apsorn Samsen, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_bib</styleUrl>
 </Placemark>
@@ -132,19 +132,19 @@
 </Placemark>
 <Placemark>
   <name>Jok Pa Mali</name>
-  <description><![CDATA[Gachas de arroz con cerdo, el desayuno de toda la vida. Pol Comaposada, de Mundo Nómada, dice que es el mejor congee de Bangkok.<br><br>PIDE: jok con huevo pasado y jengibre. Se desayuna, así que id temprano<br><br>Horario: de madrugada a media mañana<br>Precio: muy barato<br>Zona: Soi Chao Sua Son, Chinatown]]></description>
+  <description><![CDATA[Gachas de arroz finísimas con cerdo, huevo y patongo, el desayuno de toda la vida del barrio.<br><br>PIDE: jok con huevo pasado y jengibre. Se desayuna, así que id temprano<br><br>Horario: 5:00 a mediodía, o hasta que se acaba<br>Precio: 35–40 THB<br>Zona: Soi Chao Sua Son con Soi Wanit 2, Talat Noi]]></description>
   <address>ร้านโจ๊กป้ามะลิ Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>Kway Teow Roo</name>
-  <description><![CDATA[Sopa de fideos de las de toda la vida, en un local de barrio de Chinatown.<br><br>PIDE: kuaitiew: eliges fideo, carne y si lo quieres con caldo o seco<br><br>Horario: todo el día<br>Precio: muy barato<br>Zona: Chinatown, junto a Soi Wanit]]></description>
-  <address>Kway Teow Roo Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <description><![CDATA[Sopa de fideos con albóndigas de pescado caseras, en un local diminuto de barrio.<br><br>PIDE: kuaitiew: eliges fideo, carne y si lo quieres con caldo o seco<br><br>Horario: 7:30–16:00 (lunes desde las 10:30, viernes desde las 9:30)<br>Precio: muy barato<br>Zona: 970/1 Charoen Krung (entre los soi 22 y 24), Talat Noi]]></description>
+  <address>ก๋วยเตี๋ยวรู ตลาดน้อย, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>Puesto de coco y khanom krok</name>
-  <description><![CDATA[Un carrito sin nombre pero con tres cosas buenas: coco fresco, fruta cortada y khanom krok.<br><br>PIDE: khanom krok: tortitas de coco hechas en molde, dulces y saladas a la vez<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Soi Wanit 2, Chinatown]]></description>
+  <description><![CDATA[Por las mañanas suele haber carritos en los cruces de Soi Wanit 2 (coco, fruta y a veces khanom krok). No tienen sitio fijo: puede que no esté.<br><br>PIDE: khanom krok: tortitas de coco hechas en molde, dulces y saladas a la vez<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Soi Wanit 2, Chinatown]]></description>
   <address>@13.732135,100.513549, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
@@ -156,38 +156,32 @@
 </Placemark>
 <Placemark>
   <name>DK Bakery</name>
-  <description><![CDATA[Obrador de barrio en Silom, a un paseo del hotel.<br><br>PIDE: khanom sangkaya: el flan de coco al vapor, para llevar<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Th. Silom, Bang Rak]]></description>
+  <description><![CDATA[Obrador de barrio en Silom, a un paseo del hotel.<br><br>PIDE: los panecillos de sangkaya (crema verde de pandán y huevo), para llevar<br><br>Horario: lun–vie 9:00–17:00 (fin de semana, horario reducido o cerrado)<br>Precio: muy barato<br>Zona: Th. Silom, Bang Rak]]></description>
   <address>DK Bakery Silom Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>Heng Hoitod Chawlae</name>
-  <description><![CDATA[Al otro lado del río. Pad thai y, sobre todo, tortilla de ostras hecha en plancha a fuego vivo.<br><br>PIDE: hoi tod (la tortilla crujiente de ostras) más que el pad thai<br><br>Horario: tarde y noche<br>Precio: muy barato<br>Zona: Th. Charoen Nakhon, Khlong San]]></description>
-  <address>Heng Hoitod Chawlae Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <description><![CDATA[Al otro lado del río. Pad thai y, sobre todo, tortilla de ostras hecha en plancha a fuego vivo.<br><br>PIDE: hoi tod (la tortilla crujiente de ostras) más que el pad thai<br><br>Horario: 9:30–22:30 aprox.<br>Precio: muy barato<br>Zona: Charoen Nakhon 17-19, Khlong San (también en Ekkamai Soi 14)]]></description>
+  <address>Heng Hoitod Chawlae Charoen Nakhon, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>Noor</name>
-  <description><![CDATA[Cocina musulmana tailandesa al otro lado del río, en un barrio donde no hay turistas.<br><br>PIDE: khao mok gai: arroz especiado con pollo, la versión tailandesa del biryani<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Soi Charoen Nakhon 30/1, Khlong San]]></description>
+  <description><![CDATA[Cocina musulmana tailandesa al otro lado del río, en un barrio donde no hay turistas. No hemos podido confirmar que siga abierto: miradlo en Maps antes de ir.<br><br>PIDE: khao mok gai: arroz especiado con pollo, la versión tailandesa del biryani<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Soi Charoen Nakhon 30/1, Khlong San]]></description>
   <address>Noor ข้าวหมกไก่ เจริญนคร, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>ROTINI</name>
-  <description><![CDATA[Roti recién hecho en la plancha, en la orilla de Thonburi.<br><br>PIDE: roti con plátano y leche condensada. Y si hay, la versión salada con huevo<br><br>Horario: tarde y noche<br>Precio: muy barato<br>Zona: Soi Charoen Nakhon 9, Khlong San]]></description>
-  <address>ROTINI Charoen Nakhon Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <description><![CDATA[Roti recién hecho en la plancha, en el callejón de la mezquita Haroon, frente a la Embajada de Francia. Pocas reseñas recientes: comprobad antes.<br><br>PIDE: roti con plátano y leche condensada. Y si hay, la versión salada con huevo<br><br>Horario: lun–sáb 9:30–17:00 · cierra los domingos<br>Precio: muy barato<br>Zona: Soi Charoen Krung 36, Bang Rak (junto a la mezquita Haroon)]]></description>
+  <address>โรตีนี่ Rotini Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>Patongo con leche de soja</name>
-  <description><![CDATA[Puesto callejero del desayuno tailandés-chino: los buñuelos que se mojan en leche de soja caliente.<br><br>PIDE: patongo recién frito y un vaso de nam tao hu (leche de soja)<br><br>Horario: muy temprano<br>Precio: muy barato<br>Zona: Th. Charoen Nakhon, Khlong San]]></description>
-  <address>@13.717792,100.507797, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
-  <styleUrl>#s_barato</styleUrl>
-</Placemark>
-<Placemark>
-  <name>Kluay tod</name>
-  <description><![CDATA[Carrito de plátano frito en rebozado crujiente. El aperitivo callejero por excelencia.<br><br>PIDE: una bolsa de kluay tod recién sacado de la sartén<br><br>Horario: tarde<br>Precio: muy barato<br>Zona: Th. Charoen Nakhon, Khlong San]]></description>
-  <address>@13.713011,100.503128, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
+  <description><![CDATA[Puesto callejero del desayuno tailandés-chino: los buñuelos que se mojan en leche de soja caliente.<br><br>PIDE: patongo recién frito y un vaso de nam tao hu (leche de soja)<br><br>Horario: 7:30–22:00 · cierra miércoles y jueves<br>Precio: muy barato<br>Zona: Tee Auan Po.Pla, 1297 Charoen Nakhon, Khlong San]]></description>
+  <address>@13.717739,100.507844, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
@@ -204,7 +198,7 @@
 </Placemark>
 <Placemark>
   <name>Jai Rad Na Noodle</name>
-  <description><![CDATA[Fideos anchos salteados y ahogados en una salsa espesa. Comida de wok a fuego bestial.<br><br>PIDE: rad na de cerdo, o pad see ew si prefieres los fideos secos<br><br>Horario: de día<br>Precio: muy barato<br>Zona: Chinatown, a 300 m de Yaowarat]]></description>
+  <description><![CDATA[Fideos anchos salteados y ahogados en una salsa espesa, al carbón. Solo cenas.<br><br>PIDE: rad na de cerdo, o pad see ew si prefieres los fideos secos<br><br>Horario: mar–sáb 16:00–22:00 · cierra domingo y lunes<br>Precio: muy barato<br>Zona: 74 Soi Nana, Chinatown]]></description>
   <address>Jai Rad Na Noodle Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
@@ -222,13 +216,13 @@
 </Placemark>
 <Placemark>
   <name>Amin Mutton &amp; Chicken Biryani</name>
-  <description><![CDATA[Biryani musulmán de cordero y pollo. Es uno de los dos sitios a los que Doobydobap le puso su nota máxima en seis días de comer sin parar.<br><br>PIDE: el biryani de cordero (mutton), que es lo que casi nadie pide y lo que hay que pedir<br><br>Horario: 5:00–13:00 · cierra los domingos<br>Precio: muy barato<br>Zona: Soi Charoen Krung 46, Bang Rak]]></description>
+  <description><![CDATA[Biryani musulmán de cordero y pollo. Uno de los dos únicos sitios a los que Doobydobap puso tres estrellas en su vídeo de cinco días comiendo en Bangkok. Id antes de las 9:00.<br><br>PIDE: el biryani de cordero (mutton), que es lo que casi nadie pide y lo que hay que pedir<br><br>Horario: 5:00–13:00 · cierra los domingos<br>Precio: muy barato<br>Zona: Soi Charoen Krung 46, Bang Rak]]></description>
   <address>Amin Mutton and Chicken Biryani Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>Jack&#x27;s Chicken Rice</name>
-  <description><![CDATA[El otro que se llevó su nota máxima. Khao man gai llevado al extremo: pollo hervido, arroz en su caldo y una salsa que es el secreto de la casa.<br><br>PIDE: khao man gai, y no te dejes nada de la salsa<br><br>Horario: de día, hasta que se acaba<br>Precio: muy barato<br>Zona: casco antiguo, cerca de Banglamphu]]></description>
+  <description><![CDATA[El otro con sus tres estrellas. Khao man gai llevado al extremo: pollo hervido, arroz en su caldo y una salsa que es el secreto de la casa.<br><br>PIDE: khao man gai, y no te dejes nada de la salsa<br><br>Horario: ≈10:00–15:00, hasta que se acaba · mejor entre semana y temprano<br>Precio: muy barato<br>Zona: 12 Th. Long Tha, junto al canal Khlong Lot y Wat Ratchabophit]]></description>
   <address>Jack&#x27;s Chicken Rice Bangkok, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
@@ -240,13 +234,13 @@
 </Placemark>
 <Placemark>
   <name>Th. Plaeng Nam</name>
-  <description><![CDATA[La calle corta que sale de Yaowarat y donde come la gente de Chinatown cuando no quiere el bullicio de la principal. Cien metros de puestos, uno detrás de otro. Jek Pui, el del curry sin mesas, está aquí mismo. MRT Wat Mangkon, salida 1.<br><br>PIDE: khao moo daeng (arroz con cerdo rojo) en Xie Lao Yee Hor, que abrió en el 49 y está en el número 59; los kanom jeeb, las empanadillas al vapor del carrito de delante del Wat Yuan; y el dim sum de Pae Sia, con una receta de más de cien años<br><br>Horario: de día y de noche<br>Precio: muy barato<br>Zona: bocacalle de Yaowarat, Chinatown]]></description>
+  <description><![CDATA[La calle corta que sale de Yaowarat y donde come la gente de Chinatown cuando no quiere el bullicio de la principal. Cien metros de puestos, uno detrás de otro. Jek Pui, el del curry sin mesas, está aquí mismo. MRT Wat Mangkon, salida 1.<br><br>PIDE: khao moo daeng (arroz con cerdo rojo) en Xie Lao Yee Hor (nº 59, desde 1949; 8:30–16:00); y, delante del templo vietnamita (Wat Yuan), el carrito de Pae Sia: solo kanom jeeb, empanadillas al vapor con receta de más de cien años. Id hacia las 11, que se acaban<br><br>Horario: de día y de noche<br>Precio: muy barato<br>Zona: bocacalle de Yaowarat, Chinatown]]></description>
   <address>@13.7412,100.510004, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_barato</styleUrl>
 </Placemark>
 <Placemark>
   <name>Song Wat</name>
-  <description><![CDATA[Calle de almacenes portuarios que Chulalongkorn mandó trazar en 1892, después del incendio de Sampheng, para que los barcos pudieran descargar. Los almacenes siguen ahí, pero ahora dentro hay cafés, galerías y tiendas. El más bonito es Soul Songwat, tres naves de la familia Sou con las vigas de madera originales.<br><br>PIDE: un café de tueste propio en Local Boys o en Terroir punto BKK, bollos al vapor en Gu Long Bao y, si es la hora, ganso estofado en Urai<br><br>Horario: mejor por la mañana y entre semana: los fines de semana se llena de gente haciendo fotos<br>Precio: 60–200 THB<br>Zona: Th. Song Wat, junto al río]]></description>
+  <description><![CDATA[Calle de almacenes portuarios que Chulalongkorn mandó trazar en 1892, después del incendio de Sampheng, para que los barcos pudieran descargar. Los almacenes siguen ahí, pero ahora dentro hay cafés, galerías y tiendas. El más bonito es Soul Songwat (nº 1300): almacenes de hace un siglo junto al río, con las vigas de madera a la vista (10:00–22:00).<br><br>PIDE: un café de tueste propio en Local Boys o en Terroir punto BKK, bollos al vapor en Gu Long Bao (cierra los domingos) y, si es la hora, ganso estofado en Urai (solo efectivo y se acaba antes de las 12)<br><br>Horario: mejor por la mañana y entre semana: los fines de semana se llena de gente haciendo fotos<br>Precio: 60–200 THB<br>Zona: Th. Song Wat, junto al río]]></description>
   <address>@13.736866,100.509975, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
@@ -258,7 +252,7 @@
 </Placemark>
 <Placemark>
   <name>Comer en Chatuchak</name>
-  <description><![CDATA[El mercado de fin de semana más grande del mundo: más de quince mil puestos. Se va a comprar, pero se come muy bien si se sabe dónde: la comida está concentrada en la sección 1 y en los bordes de las avenidas principales. Es el plan del domingo 1 de noviembre.<br><br>PIDE: khao man gai, un pad thai recién hecho y, para el calor, helado de coco servido en la propia cáscara con cacahuete y arroz hinchado<br><br>Horario: sábados y domingos, 9:00–18:00<br>Precio: 40–120 THB el plato<br>Zona: Chatuchak, alrededor de la sección 1]]></description>
+  <description><![CDATA[El mercado de fin de semana más grande del mundo: más de quince mil puestos. Se va a comprar, pero se come muy bien si se sabe dónde: el helado de coco de Coco JJ está en la sección 1 (pasillo 36), y la zona de comida grande, alrededor de las secciones 26–27 y en los pasillos principales. Es el plan del domingo 1 de noviembre.<br><br>PIDE: khao man gai, un pad thai recién hecho y, para el calor, helado de coco servido en la propia cáscara con cacahuete y arroz hinchado<br><br>Horario: sábados y domingos, 9:00–18:00<br>Precio: 40–120 THB el plato<br>Zona: Chatuchak, secciones 1 y 26–27]]></description>
   <address>@13.800389,100.550377, Krung Thep Maha Nakhon, Bangkok, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
@@ -272,7 +266,7 @@
 </Placemark>
 <Placemark>
   <name>Lung Eed</name>
-  <description><![CDATA[Un local de cuatro mesas que la gente de Chiang Rai tiene por uno de los mejores laab del norte; la Lonely Planet lo destaca. Menú en inglés en la pared. Está a unos 150 m al este de la carretera 1.<br><br>PIDE: laab gai: pollo picado con hierbas y piel crujiente por encima<br><br>Horario: lun–sáb 11:30–21:00 aprox. · domingo solo por la tarde<br>Precio: 60–100 THB<br>Zona: Th. Watpranorn]]></description>
+  <description><![CDATA[Un local de cuatro mesas que la gente de Chiang Rai tiene por uno de los mejores laab del norte; la Lonely Planet lo destaca. Menú en inglés en la pared. Está a unos 150 m al este de la carretera 1.<br><br>PIDE: laab gai: pollo picado con hierbas y piel crujiente por encima<br><br>Horario: lun–sáb 11:30–21:00 aprox. (lo asado, mejor por la tarde)<br>Precio: 60–100 THB<br>Zona: Th. Watpranorn]]></description>
   <address>Lung Eed Chiang Rai, Chiang Rai, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
@@ -284,13 +278,13 @@
 </Placemark>
 <Placemark>
   <name>Night Bazaar</name>
-  <description><![CDATA[Patio de comidas con mesas comunes y música en directo suave. Pequeño y nada agobiante.<br><br>PIDE: una ronda de platos del norte para compartir y cerveza Chang<br><br>Horario: 18:00–23:00<br>Precio: 100–200 THB por cabeza<br>Zona: junto a la estación de autobuses]]></description>
+  <description><![CDATA[Patio de comidas con mesas comunes y música en directo suave. Pequeño y nada agobiante.<br><br>PIDE: una ronda de platos del norte para compartir y cerveza Chang<br><br>Horario: 18:00–23:00 (el patio de comidas se anima desde las 19:00; música casi todas las noches)<br>Precio: 100–200 THB por cabeza<br>Zona: junto a la estación de autobuses]]></description>
   <address>Chiang Rai Night Bazaar, Chiang Rai, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
 <Placemark>
   <name>Paa Suk</name>
-  <description><![CDATA[La casa del nam ngiao en Chiang Rai: más de 40 años y dos generaciones haciéndolo. Sale en la Lonely Planet. No tiene cartel en letras latinas.<br><br>PIDE: khanom jeen nam ngiao: fideos de arroz frescos en caldo de tomate y cerdo, con flor de algodón. Pedidlo con todo<br><br>Horario: por la mañana hasta las 15:00 (cierra en punto)<br>Precio: 30–60 THB<br>Zona: 197 Th. Sankhongnoi (cartel amarillo)]]></description>
+  <description><![CDATA[La casa del nam ngiao en Chiang Rai: más de 40 años y dos generaciones haciéndolo. Sale en la Lonely Planet. No tiene cartel en letras latinas.<br><br>PIDE: khanom jeen nam ngiao: fideos de arroz frescos en caldo de tomate y cerdo, con flor de algodón. Pedidlo con todo<br><br>Horario: mar–dom 9:00–14:00 aprox. · CIERRA LOS LUNES · solo efectivo: id el martes 3 o el miércoles 4 por la mañana<br>Precio: 30–60 THB<br>Zona: 197 Th. Sankhongnoi (cartel amarillo)]]></description>
   <address>Nam Ngiao Pa Suk Chiang Rai, Chiang Rai, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
@@ -310,13 +304,13 @@
 <Folder><name>Chiang Dao</name>
 <Placemark>
   <name>Cena en el alojamiento</name>
-  <description><![CDATA[Preguntad al llegar si el alojamiento da cenas (no lo he podido confirmar). Si no, en Chotana Rd hay restaurantes a cinco minutos andando, o Chiang Dao Nest. En el valle se cena temprano.<br><br>PIDE: lo que tengan del día: verduras y setas de montaña, y gaeng hang lay si lo hacen<br><br>Horario: avisar antes de las 17:00<br>Precio: 150–300 THB<br>Zona: vuestro hotel]]></description>
+  <description><![CDATA[Preguntad al llegar si el alojamiento da cenas (no lo he podido confirmar). Si no, Chiang Dao Nest (reservando) o las cocinas del pueblo, a cinco minutos en coche. En el valle se cena temprano.<br><br>PIDE: lo que tengan del día: verduras y setas de montaña, y gaeng hang lay si lo hacen<br><br>Horario: avisar antes de las 17:00<br>Precio: 150–300 THB<br>Zona: vuestro hotel]]></description>
   <address>Chiang Dao, Chiang Dao, Chiang Mai, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
 <Placemark>
   <name>Mercado de Chiang Dao</name>
-  <description><![CDATA[El mercado grande, al que bajan las comunidades de la montaña, es los martes por la mañana: ese no os toca. Pero el JUEVES 5 por la tarde hay mercado en el pueblo, con comida callejera y productos de la zona (preguntad la hora en el alojamiento).<br><br>PIDE: sai ua a la brasa, arroz glutinoso y fruta de la zona<br><br>Horario: jueves por la tarde · el grande, martes por la mañana<br>Precio: 20–60 THB<br>Zona: centro del pueblo]]></description>
+  <description><![CDATA[El mercado grande, al que bajan las comunidades de la montaña, es los martes por la mañana: ese no os toca. Pero el JUEVES 5 por la tarde hay mercado en el pueblo, con comida callejera y productos de la zona (calle junto a Wat Intharam, en el centro).<br><br>PIDE: sai ua a la brasa, arroz glutinoso y fruta de la zona<br><br>Horario: jueves ~15:00–20:00 (el 5 es primer jueves de mes: toca seguro) · el grande, martes por la mañana<br>Precio: 20–60 THB<br>Zona: centro del pueblo]]></description>
   <address>Chiang Dao Market, Chiang Dao, Chiang Mai, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
@@ -396,7 +390,7 @@
 </Placemark>
 <Placemark>
   <name>Akha Ama Coffee</name>
-  <description><![CDATA[Café de una familia akha de la montaña, tostado aquí. Historia y taza excelentes.<br><br>PIDE: un filtrado del origen del día, mejor que el café con leche condensada<br><br>Horario: 8:00–18:00<br>Precio: 70–120 THB<br>Zona: casco antiguo y La Fattoria]]></description>
+  <description><![CDATA[Café de una familia akha de la montaña, tostado aquí. Historia y taza excelentes.<br><br>PIDE: un filtrado del origen del día, mejor que el café con leche condensada<br><br>Horario: 8:00–17:00 · cierra los miércoles<br>Precio: 70–120 THB<br>Zona: casco antiguo y La Fattoria]]></description>
   <address>Akha Ama Coffee Chiang Mai, Chiang Mai, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
@@ -510,7 +504,7 @@
 <Folder><name>Koh Lanta</name>
 <Placemark>
   <name>Caoutchouc</name>
-  <description><![CDATA[En una casa de madera sobre el agua, en el pueblo viejo. El sitio con más encanto de la isla.<br><br>PIDE: curry de cangrejo y pescado al vapor con lima, con el mar bajo los pies<br><br>Horario: 11:00–22:00<br>Precio: 400–700 THB para dos<br>Zona: Lanta Old Town]]></description>
+  <description><![CDATA[En una casa de madera sobre el agua, junto al pueblo viejo. El sitio con más encanto de la isla. No hay reseñas recientes: confirmad antes que abre.<br><br>PIDE: curry de cangrejo y pescado al vapor con lima, con el mar bajo los pies<br><br>Horario: horario irregular, sobre todo cenas: llamad antes (+66 94 848 3506), que si no hay reservas a veces no abre<br>Precio: 400–700 THB para dos<br>Zona: a unos 800 m al sur del pueblo viejo]]></description>
   <address>Caoutchouc Restaurant Lanta Old Town, Ko Lanta, Krabi, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>
@@ -534,7 +528,7 @@
 </Placemark>
 <Placemark>
   <name>Time For Lime</name>
-  <description><![CDATA[Escuela de cocina en la playa que financia un refugio de animales de la isla.<br><br>PIDE: la clase de tarde, que acaba cenando lo que habéis cocinado<br><br>Horario: clases por la tarde, no todos los días: confirmad<br>Precio: consultad precio<br>Zona: Klong Dao]]></description>
+  <description><![CDATA[La escuela de cocina más antigua de la isla, al aire libre y con piscina; todo lo que gana va al refugio de animales.<br><br>PIDE: la clase de tarde, que acaba cenando lo que habéis cocinado<br><br>Horario: de martes a sábado; la de tarde empieza a las 17:00 (unas 5 h, con cócteles). Os encaja el sábado 14 o el martes 17. Reserva y pago online por adelantado<br>Precio: 3.600 THB los dos (cocinando en pareja)<br>Zona: Phra Ae (Long Beach), detrás de Lanta Animal Welfare]]></description>
   <address>Time For Lime Koh Lanta, Ko Lanta, Krabi, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>

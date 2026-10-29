@@ -65,10 +65,10 @@ KOHJUM = [
 ]
 
 KOHLANTA = [
- ("Caoutchouc", "", "Lanta Old Town",
-  "En una casa de madera sobre el agua, en el pueblo viejo. El sitio con más encanto de la isla.",
+ ("Caoutchouc", "", "a unos 800 m al sur del pueblo viejo",
+  "En una casa de madera sobre el agua, junto al pueblo viejo. El sitio con más encanto de la isla. No hay reseñas recientes: confirmad antes que abre.",
   "curry de cangrejo y pescado al vapor con lima, con el mar bajo los pies",
-  "11:00–22:00", "400–700 THB para dos", "Caoutchouc Restaurant Lanta Old Town"),
+  "horario irregular, sobre todo cenas: llamad antes (+66 94 848 3506), que si no hay reservas a veces no abre", "400–700 THB para dos", "Caoutchouc Restaurant Lanta Old Town"),
 
  ("Terrazas del pueblo viejo", "", "Lanta Old Town, costa este",
   "La hilera de terrazas de madera sobre el mar en la calle principal del pueblo viejo.",
@@ -85,8 +85,8 @@ KOHLANTA = [
   "roti con plátano, huevo y leche condensada",
   "16:00–22:00", "30–50 THB", "roti Koh Lanta"),
 
- ("Time For Lime", "", "Klong Dao",
-  "Escuela de cocina en la playa que financia un refugio de animales de la isla.",
+ ("Time For Lime", "", "Phra Ae (Long Beach), detrás de Lanta Animal Welfare",
+  "La escuela de cocina más antigua de la isla, al aire libre y con piscina; todo lo que gana va al refugio de animales.",
   "la clase de tarde, que acaba cenando lo que habéis cocinado",
-  "clases por la tarde, no todos los días: confirmad", "consultad precio", "Time For Lime Koh Lanta"),
+  "de martes a sábado; la de tarde empieza a las 17:00 (unas 5 h, con cócteles). Os encaja el sábado 14 o el martes 17. Reserva y pago online por adelantado", "3.600 THB los dos (cocinando en pareja)", "Time For Lime Koh Lanta"),
 ]

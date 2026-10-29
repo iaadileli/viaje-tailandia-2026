@@ -26,7 +26,7 @@ BANGKOK = [
  ("Wattana Panich", "leyenda", "Ekkamai",
   "Su olla de caldo de ternera lleva más de 50 años sin apagarse: cada día añaden encima. Es una reliquia viva.",
   "neua tune: estofado de ternera con hierbas chinas. Y ver la olla",
-  "9:00–19:30 · cierra los lunes", "100–250 THB", "Wattana Panich Ekkamai"),
+  "9:00–19:30 · todos los días", "100–250 THB", "Wattana Panich Ekkamai"),
 
  ("Or Tor Kor Market", "", "frente a Chatuchak (MRT Kamphaeng Phet)",
   "El mejor mercado de producto del país y uno de los mejores del mundo. Fruta perfecta, curries y comida preparada.",
@@ -36,7 +36,7 @@ BANGKOK = [
  ("Khao Gaeng Jek Pui", "leyenda", "Chinatown, Th. Mangkon",
   "Curries sobre arroz servidos desde una olla. No tiene mesas: se come de pie o sentado en un taburete en la acera.",
   "dos curries sobre arroz, señalando lo que te apetezca",
-  "15:00–20:00 · cierra los lunes", "50–80 THB", "Khao Gaeng Jek Pui Bangkok"),
+  "desde las 14:00 hasta que se acaba (≈19:30) · id antes de las 17:00", "50–80 THB", "Khao Gaeng Jek Pui Bangkok"),
 
  ("Sanguan Sri", "local", "Th. Witthayu (Ploenchit)",
   "Comedor de oficinistas de los años 60, sin concesiones al turista. Cocina tailandesa casera de verdad.",
@@ -60,7 +60,7 @@ BANGKOK = [
  ("Krua Apsorn", "bib", "503-505 Sam Sen Rd, Dusit",
   "Cocina tailandesa casera de las que quedan pocas. Fue la favorita de la casa real y sigue llena de familias.",
   "el huevo revuelto con carne de cangrejo y el curry amarillo de cangrejo. Son sus dos platos legendarios",
-  "10:30–19:30 aprox. · cierra los domingos", "300–600 THB para dos", "Krua Apsorn Samsen"),
+  "10:00–20:00 · todos los días (antes cerraba los domingos: si vais en domingo, confirmad)", "300–600 THB para dos", "Krua Apsorn Samsen"),
 
  ("Pad Thai Fai Ta Lu", "bib", "115 Dinso Rd, Phra Nakhon",
   "El pad thai de los que saben, sin las colas de los famosos. El nombre significa fuego que atraviesa: lo saltean a llama viva.",
@@ -104,18 +104,18 @@ BANGKOK = [
   "8:00–17:00", "60–100 THB", "Rung Rueang Pork Noodle Sukhumvit 26"),
 
  # ── Los diez del vídeo de Mundo Nómada: comer por muy poco ──
- ("Jok Pa Mali", "barato", "Soi Chao Sua Son, Chinatown",
-  "Gachas de arroz con cerdo, el desayuno de toda la vida. Pol Comaposada, de Mundo Nómada, dice que es el mejor congee de Bangkok.",
+ ("Jok Pa Mali", "barato", "Soi Chao Sua Son con Soi Wanit 2, Talat Noi",
+  "Gachas de arroz finísimas con cerdo, huevo y patongo, el desayuno de toda la vida del barrio.",
   "jok con huevo pasado y jengibre. Se desayuna, así que id temprano",
-  "de madrugada a media mañana", "muy barato", "ร้านโจ๊กป้ามะลิ Bangkok"),
+  "5:00 a mediodía, o hasta que se acaba", "35–40 THB", "ร้านโจ๊กป้ามะลิ Bangkok"),
 
- ("Kway Teow Roo", "barato", "Chinatown, junto a Soi Wanit",
-  "Sopa de fideos de las de toda la vida, en un local de barrio de Chinatown.",
+ ("Kway Teow Roo", "barato", "970/1 Charoen Krung (entre los soi 22 y 24), Talat Noi",
+  "Sopa de fideos con albóndigas de pescado caseras, en un local diminuto de barrio.",
   "kuaitiew: eliges fideo, carne y si lo quieres con caldo o seco",
-  "todo el día", "muy barato", "Kway Teow Roo Bangkok"),
+  "7:30–16:00 (lunes desde las 10:30, viernes desde las 9:30)", "muy barato", "ก๋วยเตี๋ยวรู ตลาดน้อย"),
 
  ("Puesto de coco y khanom krok", "barato", "Soi Wanit 2, Chinatown",
-  "Un carrito sin nombre pero con tres cosas buenas: coco fresco, fruta cortada y khanom krok.",
+  "Por las mañanas suele haber carritos en los cruces de Soi Wanit 2 (coco, fruta y a veces khanom krok). No tienen sitio fijo: puede que no esté.",
   "khanom krok: tortitas de coco hechas en molde, dulces y saladas a la vez",
   "de día", "muy barato", "@13.732135,100.513549"),
 
@@ -126,33 +126,28 @@ BANGKOK = [
 
  ("DK Bakery", "barato", "Th. Silom, Bang Rak",
   "Obrador de barrio en Silom, a un paseo del hotel.",
-  "khanom sangkaya: el flan de coco al vapor, para llevar",
-  "de día", "muy barato", "DK Bakery Silom Bangkok"),
+  "los panecillos de sangkaya (crema verde de pandán y huevo), para llevar",
+  "lun–vie 9:00–17:00 (fin de semana, horario reducido o cerrado)", "muy barato", "DK Bakery Silom Bangkok"),
 
- ("Heng Hoitod Chawlae", "barato", "Th. Charoen Nakhon, Khlong San",
+ ("Heng Hoitod Chawlae", "barato", "Charoen Nakhon 17-19, Khlong San (también en Ekkamai Soi 14)",
   "Al otro lado del río. Pad thai y, sobre todo, tortilla de ostras hecha en plancha a fuego vivo.",
   "hoi tod (la tortilla crujiente de ostras) más que el pad thai",
-  "tarde y noche", "muy barato", "Heng Hoitod Chawlae Bangkok"),
+  "9:30–22:30 aprox.", "muy barato", "Heng Hoitod Chawlae Charoen Nakhon"),
 
  ("Noor", "barato", "Soi Charoen Nakhon 30/1, Khlong San",
-  "Cocina musulmana tailandesa al otro lado del río, en un barrio donde no hay turistas.",
+  "Cocina musulmana tailandesa al otro lado del río, en un barrio donde no hay turistas. No hemos podido confirmar que siga abierto: miradlo en Maps antes de ir.",
   "khao mok gai: arroz especiado con pollo, la versión tailandesa del biryani",
   "de día", "muy barato", "Noor ข้าวหมกไก่ เจริญนคร"),
 
- ("ROTINI", "barato", "Soi Charoen Nakhon 9, Khlong San",
-  "Roti recién hecho en la plancha, en la orilla de Thonburi.",
+ ("ROTINI", "barato", "Soi Charoen Krung 36, Bang Rak (junto a la mezquita Haroon)",
+  "Roti recién hecho en la plancha, en el callejón de la mezquita Haroon, frente a la Embajada de Francia. Pocas reseñas recientes: comprobad antes.",
   "roti con plátano y leche condensada. Y si hay, la versión salada con huevo",
-  "tarde y noche", "muy barato", "ROTINI Charoen Nakhon Bangkok"),
+  "lun–sáb 9:30–17:00 · cierra los domingos", "muy barato", "โรตีนี่ Rotini Bangkok"),
 
- ("Patongo con leche de soja", "barato", "Th. Charoen Nakhon, Khlong San",
+ ("Patongo con leche de soja", "barato", "Tee Auan Po.Pla, 1297 Charoen Nakhon, Khlong San",
   "Puesto callejero del desayuno tailandés-chino: los buñuelos que se mojan en leche de soja caliente.",
   "patongo recién frito y un vaso de nam tao hu (leche de soja)",
-  "muy temprano", "muy barato", "@13.717792,100.507797"),
-
- ("Kluay tod", "barato", "Th. Charoen Nakhon, Khlong San",
-  "Carrito de plátano frito en rebozado crujiente. El aperitivo callejero por excelencia.",
-  "una bolsa de kluay tod recién sacado de la sartén",
-  "tarde", "muy barato", "@13.713011,100.503128"),
+  "7:30–22:00 · cierra miércoles y jueves", "muy barato", "@13.717739,100.507844"),
 
 
  # ── Los que marca como imprescindibles Doobydobap en su recorrido de 6 días ──
@@ -166,10 +161,10 @@ BANGKOK = [
   "khao niao mamuang. Cae justo después del café de al lado",
   "de día, solo en temporada", "muy barato", "Pa Lek-Pa Yai mango sticky rice Bangkok"),
 
- ("Jai Rad Na Noodle", "barato", "Chinatown, a 300 m de Yaowarat",
-  "Fideos anchos salteados y ahogados en una salsa espesa. Comida de wok a fuego bestial.",
+ ("Jai Rad Na Noodle", "barato", "74 Soi Nana, Chinatown",
+  "Fideos anchos salteados y ahogados en una salsa espesa, al carbón. Solo cenas.",
   "rad na de cerdo, o pad see ew si prefieres los fideos secos",
-  "de día", "muy barato", "Jai Rad Na Noodle Bangkok"),
+  "mar–sáb 16:00–22:00 · cierra domingo y lunes", "muy barato", "Jai Rad Na Noodle Bangkok"),
 
  ("Bok Kia Tha Din Daeng", "bib", "Tha Din Daeng, a 1 km de Yaowarat",
   "Postres fríos de Chaozhou en caldo dulce y claro: hielo, alubias, castaña de agua. Bib Gourmand y toda una institución.",
@@ -182,14 +177,14 @@ BANGKOK = [
   "tarde y noche", "muy barato", "Pork Satay Tee Tha Din Daeng"),
 
  ("Amin Mutton & Chicken Biryani", "barato", "Soi Charoen Krung 46, Bang Rak",
-  "Biryani musulmán de cordero y pollo. Es uno de los dos sitios a los que Doobydobap le puso su nota máxima en seis días de comer sin parar.",
+  "Biryani musulmán de cordero y pollo. Uno de los dos únicos sitios a los que Doobydobap puso tres estrellas en su vídeo de cinco días comiendo en Bangkok. Id antes de las 9:00.",
   "el biryani de cordero (mutton), que es lo que casi nadie pide y lo que hay que pedir",
   "5:00–13:00 · cierra los domingos", "muy barato", "Amin Mutton and Chicken Biryani Bangkok"),
 
- ("Jack's Chicken Rice", "barato", "casco antiguo, cerca de Banglamphu",
-  "El otro que se llevó su nota máxima. Khao man gai llevado al extremo: pollo hervido, arroz en su caldo y una salsa que es el secreto de la casa.",
+ ("Jack's Chicken Rice", "barato", "12 Th. Long Tha, junto al canal Khlong Lot y Wat Ratchabophit",
+  "El otro con sus tres estrellas. Khao man gai llevado al extremo: pollo hervido, arroz en su caldo y una salsa que es el secreto de la casa.",
   "khao man gai, y no te dejes nada de la salsa",
-  "de día, hasta que se acaba", "muy barato", "Jack's Chicken Rice Bangkok"),
+  "≈10:00–15:00, hasta que se acaba · mejor entre semana y temprano", "muy barato", "Jack's Chicken Rice Bangkok"),
 
  ("ViVi The Coffee Place", "", "Soi Pansuk, Tha Tien · detrás del Wat Pho",
   "Cafetería a pie de río con el Wat Arun justo enfrente, al otro lado del agua. Dentro hay aire acondicionado, pero las mesas que interesan son las de fuera, sobre el muelle. A cinco minutos andando del embarcadero de Tha Tien y a 400 m del MRT Sanam Chai.",
@@ -198,12 +193,12 @@ BANGKOK = [
 
  ("Th. Plaeng Nam", "barato", "bocacalle de Yaowarat, Chinatown",
   "La calle corta que sale de Yaowarat y donde come la gente de Chinatown cuando no quiere el bullicio de la principal. Cien metros de puestos, uno detrás de otro. Jek Pui, el del curry sin mesas, está aquí mismo. MRT Wat Mangkon, salida 1.",
-  "khao moo daeng (arroz con cerdo rojo) en Xie Lao Yee Hor, que abrió en el 49 y está en el número 59; los kanom jeeb, las empanadillas al vapor del carrito de delante del Wat Yuan; y el dim sum de Pae Sia, con una receta de más de cien años",
+  "khao moo daeng (arroz con cerdo rojo) en Xie Lao Yee Hor (nº 59, desde 1949; 8:30–16:00); y, delante del templo vietnamita (Wat Yuan), el carrito de Pae Sia: solo kanom jeeb, empanadillas al vapor con receta de más de cien años. Id hacia las 11, que se acaban",
   "de día y de noche", "muy barato", "@13.7412,100.510004"),
 
  ("Song Wat", "", "Th. Song Wat, junto al río",
-  "Calle de almacenes portuarios que Chulalongkorn mandó trazar en 1892, después del incendio de Sampheng, para que los barcos pudieran descargar. Los almacenes siguen ahí, pero ahora dentro hay cafés, galerías y tiendas. El más bonito es Soul Songwat, tres naves de la familia Sou con las vigas de madera originales.",
-  "un café de tueste propio en Local Boys o en Terroir punto BKK, bollos al vapor en Gu Long Bao y, si es la hora, ganso estofado en Urai",
+  "Calle de almacenes portuarios que Chulalongkorn mandó trazar en 1892, después del incendio de Sampheng, para que los barcos pudieran descargar. Los almacenes siguen ahí, pero ahora dentro hay cafés, galerías y tiendas. El más bonito es Soul Songwat (nº 1300): almacenes de hace un siglo junto al río, con las vigas de madera a la vista (10:00–22:00).",
+  "un café de tueste propio en Local Boys o en Terroir punto BKK, bollos al vapor en Gu Long Bao (cierra los domingos) y, si es la hora, ganso estofado en Urai (solo efectivo y se acaba antes de las 12)",
   "mejor por la mañana y entre semana: los fines de semana se llena de gente haciendo fotos", "60–200 THB", "@13.736866,100.509975"),
 
  ("Talat Noi al amanecer", "local", "entre Chinatown y el río",
@@ -211,8 +206,8 @@ BANGKOK = [
   "un cuenco de jok, el arroz caldoso con huevo, y patongo para mojar; y leche de soja caliente en bolsa, que es como se toma",
   "antes de las 8:00, que es cuando se desayuna aquí", "muy barato", "@13.733452,100.512967"),
 
- ("Comer en Chatuchak", "", "Chatuchak, alrededor de la sección 1",
-  "El mercado de fin de semana más grande del mundo: más de quince mil puestos. Se va a comprar, pero se come muy bien si se sabe dónde: la comida está concentrada en la sección 1 y en los bordes de las avenidas principales. Es el plan del domingo 1 de noviembre.",
+ ("Comer en Chatuchak", "", "Chatuchak, secciones 1 y 26–27",
+  "El mercado de fin de semana más grande del mundo: más de quince mil puestos. Se va a comprar, pero se come muy bien si se sabe dónde: el helado de coco de Coco JJ está en la sección 1 (pasillo 36), y la zona de comida grande, alrededor de las secciones 26–27 y en los pasillos principales. Es el plan del domingo 1 de noviembre.",
   "khao man gai, un pad thai recién hecho y, para el calor, helado de coco servido en la propia cáscara con cacahuete y arroz hinchado",
   "sábados y domingos, 9:00–18:00", "40–120 THB el plato", "@13.800389,100.550377"),
 ]
@@ -226,7 +221,7 @@ CHIANGRAI = [
  ("Lung Eed", "local", "Th. Watpranorn",
   "Un local de cuatro mesas que la gente de Chiang Rai tiene por uno de los mejores laab del norte; la Lonely Planet lo destaca. Menú en inglés en la pared. Está a unos 150 m al este de la carretera 1.",
   "laab gai: pollo picado con hierbas y piel crujiente por encima",
-  "lun–sáb 11:30–21:00 aprox. · domingo solo por la tarde", "60–100 THB", "Lung Eed Chiang Rai"),
+  "lun–sáb 11:30–21:00 aprox. (lo asado, mejor por la tarde)", "60–100 THB", "Lung Eed Chiang Rai"),
 
  ("Mercado matinal (Kad Luang)", "local", "centro, junto a Th. Uttarakit",
   "Donde compra y desayuna la ciudad. Aquí está el nam ngiao, el plato local que casi ningún turista prueba.",
@@ -236,12 +231,12 @@ CHIANGRAI = [
  ("Night Bazaar", "", "junto a la estación de autobuses",
   "Patio de comidas con mesas comunes y música en directo suave. Pequeño y nada agobiante.",
   "una ronda de platos del norte para compartir y cerveza Chang",
-  "18:00–23:00", "100–200 THB por cabeza", "Chiang Rai Night Bazaar"),
+  "18:00–23:00 (el patio de comidas se anima desde las 19:00; música casi todas las noches)", "100–200 THB por cabeza", "Chiang Rai Night Bazaar"),
 
  ("Paa Suk", "local", "197 Th. Sankhongnoi (cartel amarillo)",
   "La casa del nam ngiao en Chiang Rai: más de 40 años y dos generaciones haciéndolo. Sale en la Lonely Planet. No tiene cartel en letras latinas.",
   "khanom jeen nam ngiao: fideos de arroz frescos en caldo de tomate y cerdo, con flor de algodón. Pedidlo con todo",
-  "por la mañana hasta las 15:00 (cierra en punto)", "30–60 THB", "Nam Ngiao Pa Suk Chiang Rai"),
+  "mar–dom 9:00–14:00 aprox. · CIERRA LOS LUNES · solo efectivo: id el martes 3 o el miércoles 4 por la mañana", "30–60 THB", "Nam Ngiao Pa Suk Chiang Rai"),
 
  ("Chivit Thamma Da", "", "orilla del río Kok",
   "Casa colonial junto al río, con jardín. El sitio bonito para merendar o cenar junto al río.",
