@@ -454,6 +454,9 @@
   #player.visible ~ #arriba{bottom:92px}
 
   /* ---------- MODO OSCURO ---------- */
+  .rebajando{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;max-width:92vw;
+    background:#2b2620;color:#faf6ef;border-radius:12px;padding:11px 16px;font-size:.9rem;
+    font-family:-apple-system,'Segoe UI',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.25)}
   .tema-btn{flex:0 0 auto;background:none;border:1px solid var(--linea);border-radius:9px;
     width:36px;height:36px;font-size:.95rem;cursor:pointer;margin-left:8px;color:var(--tinta2)}
   .tema-btn:hover{border-color:var(--oro);color:var(--oro)}
@@ -784,6 +787,15 @@
   html[data-tema="oscuro"] .comer,
   html[data-tema="oscuro"] .excel-nota,
   html[data-tema="oscuro"] .leyenda-hoteles{background:#1c1710;border-color:#3a2f1d}
+  /* 29-oct-2026: el texto seguía en #5c4a22 sobre ese fondo (2,1:1), igual que los
+     enlaces sin clase (azul del navegador), el morado de «llamar» y los botones verde/oro */
+  html[data-tema="oscuro"] .excel-nota,
+  html[data-tema="oscuro"] .leyenda-hoteles{color:#e6d3a8}
+  html[data-tema="oscuro"] a:not([class]){color:var(--mar)}
+  html[data-tema="oscuro"] .sitios a.reservar{color:#c9a8e8;border-bottom-color:#c9a8e8}
+  html[data-tema="oscuro"] .comer-fotos figcaption{background:var(--card);color:var(--tinta2)}
+  html[data-tema="oscuro"] .fp.activo,
+  html[data-tema="oscuro"] .btn-cerca{color:#17140f}
 
   /* --- Legibilidad en modo oscuro (auditoría del 28 ago 2026) ---
      Estos textos llevaban el color fijo #3a4247, pensado para fondo claro: sobre
@@ -892,7 +904,7 @@
     <li><span class="etapa">Krabi town</span><br><span class="det">mar 10 → mié 11 nov · 1 noche — parada técnica con encanto</span></li>
     <li class="tr-li barco"><span class="tr">Ferry a Koh Jum (~1 h 30, con transbordo en alta mar)</span></li>
     <li><span class="etapa">Koh Jum</span><br><span class="det">mié 11 → sáb 14 nov · 3 noches — la isla que casi nadie pisa, camino de Lanta</span></li>
-    <li class="tr-li barco"><span class="tr">Lancha + coche a Koh Lanta (medio día, vía Krabi)</span></li>
+    <li class="tr-li barco"><span class="tr">Ferry a Koh Lanta (~1 h, el mismo que baja de Krabi)</span></li>
     <li><span class="etapa">Koh Lanta</span><br><span class="det">sáb 14 → mié 18 nov · 4 noches — playas largas, Old Town y excursión a Koh Rok</span></li>
     <li class="tr-li"><span class="tr">Vuelo Krabi → Bangkok (1 h 20)</span></li>
     <li><span class="etapa">Bangkok</span><br><span class="det">mié 18 → vie 20 nov · 2 noches — despedida, compras y último masaje</span></li>
@@ -1019,8 +1031,8 @@
     <div class="dia" data-dia="bangkok1-1" data-fecha="2026-10-30"><h4>Día 1 · Llegada y primer asalto <span class="fecha">viernes 30 oct</span></h4>
       <p>Llegáis de Madrid (salisteis el 29). Check-in en Silom y, como está todo a mano, a moverse:
       paseo por el centro para ubicaros, subida a un <strong>mirador</strong> o vuelta por los grandes
-      centros de Siam, y cena en el mercado nocturno de <strong>Jodd Fairs</strong> (Rama IX, a un metro
-      de distancia) o en Chinatown.</p>
+      centros de Siam, y cena en el mercado nocturno de <strong>Jodd Fairs</strong> (desde 2025 está en
+      Ratchada, no en Rama IX: buscad «Jodd Fairs Ratchada» en Maps) o en Chinatown.</p>
       <div class="tip">Del aeropuerto, el <strong>Airport Rail Link</strong> hasta Phaya Thai y BTS: rápido, barato y sin atascos.</div></div>
     <div class="dia" data-dia="bangkok1-2" data-fecha="2026-10-31"><h4>Día 2 · Los grandes templos y el río <span class="fecha">sábado 31 oct</span></h4>
       <p>Día potente. <strong>Mañana:</strong> <strong>Gran Palacio</strong> y Wat Phra Kaew a primera hora
@@ -1107,9 +1119,9 @@
         <span class="pedir"><b>Pide</b> som tam (ensalada de papaya), gai yang (pollo a la brasa) y arroz glutinoso</span>
         <span class="datos">🕐 11:00–22:30 · 💵 150–350 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Somtum%20Der%20Saladaeng" target="_blank" rel="noopener">📍 Maps</a></li>
-      <li><span class="nombre">Mae Varee</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Thong Lo (BTS Thong Lo)</span> · El mango con arroz glutinoso de referencia en Bangkok. Abre 24 horas.
+      <li><span class="nombre">Mae Varee</span><span class="sello leyenda" title="lleva décadas abierto"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.5-5.8-3-5.8 3 1.1-6.5L2.6 9.4l6.5-.9z"/></svg></span> — <span class="dir">Thong Lo (BTS Thong Lo)</span> · El mango con arroz glutinoso de referencia en Bangkok.
         <span class="pedir"><b>Pide</b> khao niao mamuang para llevar; te lo dan con la leche de coco aparte</span>
-        <span class="datos">🕐 24 horas · 💵 120–180 THB</span>
+        <span class="datos">🕐 6:00–22:00 · 💵 120–180 THB</span>
         <a href="https://www.google.com/maps/search/?api=1&query=Mae%20Varee%20Thonglor" target="_blank" rel="noopener">📍 Maps</a></li>
       <li><span class="nombre">Boat noodles de Victory Monument</span><span class="sello local" title="donde come la gente de aquí"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="12" r="6"/></svg></span> — <span class="dir">Soi Ratchawithi 18</span> · Callejón entero de fideos de barca junto al canal. Los cuencos son diminutos a propósito.
         <span class="pedir"><b>Pide</b> cuatro o cinco cuencos por cabeza: se apilan y te cobran por torre</span>
@@ -1349,7 +1361,7 @@
       <strong>Tarde:</strong> baño en las <strong>aguas termales</strong> del valle o simplemente hamaca,
       libro y sonido de cigarras. Si hay mercado matinal ese día, es pequeño y auténtico: desayunad allí.</p>
       <div class="tip">Por la noche refresca (15–18 °C): la capa fina de manga larga que llevéis para los aviones aquí se usa de verdad.
-      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · El amanecer sobre la montaña.</b> Sal del alojamiento y mira al este: con suerte verás el mar de niebla llenando el valle con Doi Chiang Dao encima. Y si te animas, sube tú solo los 500 escalones hasta Wat Tham Pha Plong, que a esa hora está vacío y es un monasterio de meditación en activo.</p><p class="mad-zona"><b>Zona para juntaros:</b> el propio valle. Aquí no hay dónde perderse: desayunáis juntos y vais a la cueva a media mañana.</p></div></div>
+      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · El amanecer sobre la montaña.</b> Sal del alojamiento y mira al este: con suerte verás el mar de niebla llenando el valle con Doi Chiang Dao encima. Y si te animas, sube tú solo los 500 escalones hasta Wat Tham Pha Plong, que a esa hora está vacío y es un monasterio de meditación en activo.</p><p class="mad-zona"><b>Zona para juntaros:</b> el propio valle. Aquí no hay dónde perderse: desayunáis juntos y subís a Wat Tham Pha Plong a media mañana.</p></div></div>
     <div class="dia" data-dia="chiangdao-3" data-fecha="2026-11-06"><h4>Día 8 · Bajada a Chiang Mai <span class="fecha">viernes 6 nov</span></h4>
       <p>Mañana lenta y coche a <strong>Chiang Mai</strong> (1 h 30). Llegaréis para comer.</p></div>
   </div>
@@ -1563,7 +1575,7 @@
       <li><strong>Alternativa más íntima:</strong> <em>ChangChill</em>, también cerca de Chiang Mai, grupos muy pequeños y aprobado por World Animal Protection.</li>
       <li><strong>Plan B en Chiang Rai:</strong> <em>Elephant Valley Chiang Rai</em>, pequeño y solo de observación, por si preferís hacerlo en la etapa anterior.</li>
     </ul>
-    <div class="ojo">⚠️ Reservad en la web oficial <strong>en cuanto tengáis los vuelos</strong> (agosto–septiembre):
+    <div class="ojo">⚠️ Si aún no está reservado, hacedlo <strong>ya</strong> en la web oficial:
     las plazas de Elephant Nature Park para noviembre vuelan. Y desconfiad de cualquier sitio que ofrezca
     montar o bañarse con los elefantes, aunque se llame "sanctuary".</div>
   </div>
@@ -1651,7 +1663,7 @@
   <div class="dias">
     <div class="dia" data-dia="kohjum-1" data-fecha="2026-11-11"><h4>Día 13 · Llegada a la isla <span class="fecha">miércoles 11 nov</span></h4>
       <p><strong>Mañana:</strong> ferry desde el muelle de Klong Jilad, en Krabi. Sale a las
-      <strong>11:30</strong> y pasa por Koh Jum sobre las <strong>12:30</strong> (hay otro a las 14:30).
+      <strong>11:30</strong> y llega a Koh Jum hora y media después (hay otro a las 14:30). Confirmad la hora en el muelle o en el hotel: al principio de temporada cambia.
       <strong>Ojo con esto:</strong> la isla tiene dos muelles pequeños, pero <strong>ninguno tiene calado
       para el ferry</strong>, así que el barco se detiene en mitad del mar y sale una barca de cola larga
       de vuestro alojamiento a recogeros. Se pasa el equipaje a mano de un barco a otro.
@@ -1842,7 +1854,7 @@
       seda y jardín, un oasis) y sus tiendas para los últimos regalos. <strong>Tarde:</strong> un buen
       <strong>masaje de despedida</strong> de dos horas y paseo sin reloj por el casco antiguo.
       <strong>Noche:</strong> gran cena final — un thai de mantel o volver a Yaowarat, que siempre apetece.</p>
-      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:30 · El río antes de que despierte.</b> Coge el barco público en Sathorn y bájate donde te apetezca. A esa hora los ferris van llenos de gente yendo a trabajar y no hay ni un turista: es la ciudad de verdad. O repite Lumpini, que lo tienes al lado.</p><p class="mad-zona"><b>Zona para juntaros:</b> donde toque ese día. Es el día de compras y masaje, así que sin prisa.</p></div></div>
+      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:30 · El río antes de que despierte.</b> Coge el barco público en el muelle que tengas más cerca (Tha Tien, Tha Chang o Phra Arthit) y bájate donde te apetezca. A esa hora los ferris van llenos de gente yendo a trabajar y no hay ni un turista: es la ciudad de verdad.</p><p class="mad-zona"><b>Zona para juntaros:</b> donde toque ese día. Es el día de compras y masaje, así que sin prisa.</p></div></div>
     <div class="dia" data-dia="bangkok2-3" data-fecha="2026-11-20"><h4>Día 22 · A casa <span class="fecha">viernes 20 nov</span></h4>
       <p>Vuelo de vuelta con la mochila (algo más llena) y muchas ganas de volver.</p></div>
   </div>
@@ -1881,13 +1893,13 @@
     <a class="cp" href="#bangkok1">
       <span class="cp-ic">📍</span>
       <b>Dónde comer, etapa a etapa</b>
-      <span><span data-total-sitios>81</span> sitios con qué pedir en cada uno, horario y precio. Están dentro de cada etapa.</span>
+      <span><span data-total-sitios>86</span> sitios con qué pedir en cada uno, horario y precio. Están dentro de cada etapa.</span>
     </a>
   </div>
 
   <h3 class="ir-titulo">Ir directo a los sitios de cada etapa</h3>
   <div class="ir-etapas">
-      <a class="ir-etapa" href="#bangkok1"><b>Bangkok</b><span>37 sitios</span></a>
+      <a class="ir-etapa" href="#bangkok1"><b>Bangkok</b><span>42 sitios</span></a>
       <a class="ir-etapa" href="#chiangrai"><b>Chiang Rai</b><span>6 sitios</span></a>
       <a class="ir-etapa" href="#chiangdao"><b>Chiang Dao</b><span>4 sitios</span></a>
       <a class="ir-etapa" href="#chiangmai"><b>Chiang Mai</b><span>17 sitios</span></a>
@@ -1897,7 +1909,7 @@
   </div>
 
   <div class="ojo" style="background:#fdf6e7;color:#5c4a24;border-left:3px solid var(--oro);border-radius:0 9px 9px 0;margin-top:22px">
-    🗺️ <b>¿Y el mapa?</b> Hay un archivo con los <span data-total-sitios>81</span> puntos para
+    🗺️ <b>¿Y el mapa?</b> Hay un archivo con los <span data-total-sitios>86</span> puntos para
     <a href="tailandia-donde-comer.kml" download>descargar</a> e importar en
     <a href="https://www.google.com/mymaps" target="_blank" rel="noopener">Google My Maps</a>.
     Aviso: <b>My Maps no se ve en la app de Maps de iPhone</b> (limitación de Google), sólo desde el
@@ -2126,8 +2138,8 @@
         <h4>Khao mok gai <span class="pc-th" lang="th">ข้าวหมกไก่</span></h4>
         <div class="pc-fon">se dice <b>kao mok gai</b></div>
         <p>El biryani tailandés: arroz especiado con cúrcuma y pollo, herencia musulmana. Se come con una salsa verde de menta.</p>
-        <div class="pc-donde"><b>Dónde</b> Khao Soi Islam en Chiang Rai (abierto desde 1929) y Noor en Bangkok.</div>
-        <div class="pc-etapa">Chiang Rai · Bangkok</div>
+        <div class="pc-donde"><b>Dónde</b> Khao Soi Islam en Chiang Mai y Noor en Bangkok.</div>
+        <div class="pc-etapa">Chiang Mai · Bangkok</div>
       </div>
     </article>
     <article class="plato-card" data-etapas="Chiang Mai · sur">
@@ -2324,7 +2336,7 @@
     <div class="pline"><div class="cat"><span class="ic">🛫</span>3 vuelos internos</div>
       <div class="imp">300–420 €</div><div class="nota">Los dos, con equipaje facturado incluido.</div></div>
     <div class="pline"><div class="cat"><span class="ic">🏨</span>Alojamiento · 21 noches</div>
-      <div class="imp">1.700–2.400 €</div><div class="nota">Media ~90–115 €/noche en pareja. Ver Excel.</div></div>
+      <div class="imp">1.700–2.400 €</div><div class="nota">Media ~80–115 €/noche en pareja. Ver Excel.</div></div>
     <div class="pline"><div class="cat"><span class="ic">🍜</span>Comida y bebida</div>
       <div class="imp">700–1.000 €</div><div class="nota">Los dos, 22 días. Street food + restaurantes locales.</div></div>
     <div class="pline"><div class="cat"><span class="ic">🐘</span>Actividades y excursiones</div>
@@ -2498,7 +2510,7 @@
     <div class="pcard"><h4>🎒 La mochila de 10 kg</h4><ul>
       <li>4–5 mudas de ropa ligera: hay <strong>lavanderías por todas partes</strong> (40–80 THB/kg, listo en un día).</li>
       <li>Una capa fina de manga larga: en Chiang Dao y Chiang Mai refresca de noche (15–18 °C).</li>
-      <li>Chubasquero plegable fino (algún chubasco suelto en el sur a principios de noviembre).</li>
+      <li>Chubasquero plegable fino: en el sur caen chubascos cortos casi todos los días.</li>
       <li>Sandalias cómodas + una zapatilla ligera. Pañuelo/pareo para templos (hombros y rodillas).</li>
       <li>Repelente de mosquitos y protector solar: comprad allí, pesa menos en el vuelo de ida.</li>
       <li><strong>Ojo:</strong> las low-cost tailandesas (AirAsia, Nok, Vietjet) permiten oficialmente solo <strong>7 kg en cabina</strong>. Con 10 kg, añadid maleta facturada al reservar (~10–15 € por trayecto) o volad Bangkok Airways/Thai con más margen.</li>
@@ -2506,13 +2518,12 @@
     <div class="pcard"><h4>🌦️ El clima en esas fechas</h4><ul>
       <li><strong>Bangkok:</strong> fin de las lluvias, 32 °C, alguna tormenta corta posible al principio.</li>
       <li><strong>Norte:</strong> temporada seca y "fresca": días de 28–30 °C, noches de 15–18 °C. La mejor época del año.</li>
-      <li><strong>Andamán (Krabi/Lanta):</strong> arranca la temporada seca; posible chubasco aislado los primeros días, mar en calma y todo verde.</li>
+      <li><strong>Andamán (Krabi/Lanta):</strong> arranca la temporada seca; chubascos cortos casi a diario (ver la predicción), mar en calma y todo verde.</li>
       <li><strong>Por qué no Samui/Phangan/Tao:</strong> el golfo tiene su época MÁS lluviosa justo en noviembre. Descartado con criterio.</li>
     </ul></div>
-    <div class="pcard"><h4>✈️ Reservas con antelación</h4><ul>
-      <li><strong>Ya mismo (jul–ago):</strong> vuelos internacionales.</li>
-      <li><strong>Ago–sep:</strong> vuelos internos (BKK→Chiang Rai · Chiang Mai→Krabi · Krabi→BKK), <strong>Elephant Nature Park</strong> y los hoteles de Koh Jum y Chiang Dao (cuarenta alojamientos en toda la isla: se llenan).</li>
-      <li><strong>Sep–oct:</strong> resto de hoteles y clase de cocina.</li>
+    <div class="pcard"><h4>✈️ Lo que queda por reservar</h4><ul>
+      <li><strong>Hoteles de Koh Jum, Koh Lanta y Bangkok final:</strong> Koh Jum primero, que tiene unos cuarenta alojamientos en toda la isla y se llenan.</li>
+      <li><strong>Si falta:</strong> Elephant Nature Park y la clase de cocina en Chiang Mai.</li>
       <li><strong>Allí mismo:</strong> excursiones de barco, masajes, traslados por carretera.</li>
     </ul></div>
     <div class="pcard"><h4>💱 ¿Cuánto es esto en euros?</h4>
@@ -2520,7 +2531,7 @@
     <div class="pcard"><h4>💸 Dinero y papeles</h4><ul>
       <li class="aviso"><strong>TDAC: obligatorio y gratis.</strong> Desde mayo de 2025 hay que rellenar online la
       <em>Thailand Digital Arrival Card</em> antes de entrar en el país; la piden al pasar inmigración.
-      Se presenta como muy pronto <strong>72 horas antes</strong> de llegar, así que toca hacerla el 27 o 28 de octubre.
+      Se presenta como muy pronto <strong>72 horas antes</strong> de llegar, así que se puede hacer desde el 27 de octubre. <strong>Si no está hecha, hacedla antes de embarcar.</strong>
       Una por persona y por cada entrada. Es gratuita: desconfiad de webs que cobren por ella.
       → <a href="https://tdac.immigration.go.th" target="_blank" rel="noopener">tdac.immigration.go.th</a></li>
       <li>Pasaporte español: <strong>exención de visado 60 días</strong>. Pasaporte con 6+ meses de validez.</li>
@@ -2972,7 +2983,7 @@
     </ul></div>
 
     <div class="pcard"><h4>🔌 Enchufes, agua y detalles</h4><ul>
-      <li>Corriente de <strong>220 V</strong>, la misma que en España. Los enchufes admiten clavijas de dos
+      <li>Corriente de <strong>220 V</strong>, prácticamente la de España (230 V): los cargadores valen sin más. Los enchufes admiten clavijas de dos
       patillas planas o redondas: <strong>el enchufe español entra</strong> en casi todos. Solo hace falta
       adaptador si el aparato tiene toma de tierra gruesa.</li>
       <li>Agua del grifo: <strong>no se bebe</strong>. El hielo de los locales de ciudad sí es seguro
@@ -3052,6 +3063,20 @@
       }
       if (reg.waiting && navigator.serviceWorker.controller) avisaNueva(reg);
       vigila(reg.installing);
+
+      // Venimos de «Actualizar ahora» con la guía guardada: se vuelve a bajar sola
+      var rebajar = false;
+      try { rebajar = !!localStorage.getItem('tailandia2026-rebajar'); localStorage.removeItem('tailandia2026-rebajar'); } catch(e){}
+      if (rebajar && elBoton) {
+        navigator.serviceWorker.ready.then(function(){
+          var aviso = document.createElement('div');
+          aviso.id = 'rebajando';
+          aviso.className = 'rebajando';
+          aviso.textContent = 'Volviendo a guardar la guía entera…';
+          document.body.appendChild(aviso);
+          guardarOffline();
+        });
+      }
       reg.addEventListener('updatefound', function(){ vigila(reg.installing); });
 
       // Comprobar si hay novedades al volver a la pestaña, no sólo al cargar
@@ -3075,12 +3100,15 @@
     }
     navigator.serviceWorker.addEventListener('message', function(e){
       if (!e.data || !elEstado) return;
+      var aviso = document.getElementById('rebajando');
       if (e.data.tipo === 'PROGRESO') {
         elEstado.textContent = 'Guardando… ' + e.data.hechos + ' de ' + e.data.total;
+        if (aviso) aviso.textContent = 'Volviendo a guardar la guía… ' + e.data.hechos + ' de ' + e.data.total;
       } else if (e.data.tipo === 'LISTO') {
         elEstado.textContent = e.data.fallos
           ? '⚠️ Faltan ' + e.data.fallos + ' de ' + e.data.total + ' ficheros. Dale otra vez con wifi.'
           : '✓ Guía entera guardada, audios incluidos. Ya podéis abrirla en modo avión.';
+        if (aviso) { aviso.textContent = elEstado.textContent; setTimeout(function(){ aviso.remove(); }, 6000); }
         if (elBoton) { elBoton.disabled = false; elBoton.textContent = '🔄 Volver a guardar (actualizar)'; }
       }
     });
@@ -3138,7 +3166,7 @@ function avisaNueva(reg){
       '<div class="nv-ico" aria-hidden="true">\u2728</div>' +
       '<h3 id="nvTit">Hay una versi\u00f3n nueva de la gu\u00eda</h3>' +
       '<p>Se ha cambiado algo desde la \u00faltima vez que la abriste. Al actualizar se borra ' +
-      'la copia guardada en el m\u00f3vil y se descarga la nueva, con los cambios.</p>' +
+      'la copia guardada en el m\u00f3vil y se vuelve a bajar entera, audios incluidos (unos 95 MB: mejor con wifi).</p>' +
       '<div class="nv-botones">' +
         '<button id="nvOk">Actualizar ahora</button>' +
         '<button id="nvNo">Ahora no</button>' +
@@ -3164,7 +3192,11 @@ function avisaNueva(reg){
     // se borra la copia guardada para que no quede nada de la versi\u00f3n vieja.
     // Sin conexi\u00f3n NO se borra: se quedar\u00edan sin gu\u00eda hasta volver a tener datos.
     if (window.caches && caches.keys && navigator.onLine !== false) {
-      caches.keys()
+      caches.match('img/portada.jpg', {ignoreSearch:true})
+        .then(function(hit){
+          if (hit) { try { localStorage.setItem('tailandia2026-rebajar', '1'); } catch(e){} }
+          return caches.keys();
+        })
         .then(function(ks){ return Promise.all(ks.map(function(k){ return caches.delete(k); })); })
         .then(function(){ setTimeout(recarga, 300); })
         .catch(function(){ setTimeout(recarga, 300); });
@@ -3322,7 +3354,7 @@ function avisaNueva(reg){
     boton.disabled = true;
     if (!('caches' in window)) { texto.textContent = 'Tu navegador no permite guardarlos'; return; }
     var hechos = 0;
-    caches.open('tailandia2026-v5').then(function(c){
+    caches.open('tailandia2026-v6').then(function(c){
       return rutas.reduce(function(cadena, r){
         return cadena.then(function(){
           return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){
@@ -3353,7 +3385,8 @@ function avisaNueva(reg){
                'septiembre','octubre','noviembre','diciembre'];
   var SEMANA = ['domingo','lunes','martes','miércoles','jueves','viernes','sábado'];
 
-  function iso(d){ return d.toISOString().slice(0,10); }
+  // Fecha LOCAL del móvil: con toISOString (UTC), en Tailandia hasta las 7:00 salía el día anterior
+  function iso(d){ return d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0'); }
   function deIso(s){ var p = s.split('-'); return new Date(+p[0], +p[1]-1, +p[2]); }
   function bonita(d){ return SEMANA[d.getDay()] + ' ' + d.getDate() + ' de ' + MESES[d.getMonth()]; }
   function mmss(s){ return Math.floor(s/60) + ':' + String(Math.round(s)%60).padStart(2,'0'); }
@@ -3930,13 +3963,14 @@ function avisaNueva(reg){
       lista.innerHTML = '';
       return;
     }
-    estado.innerHTML = 'Estás en <b>' + enEtapa + '</b>. Lo más cercano de la guía:';
+    estado.innerHTML = enEtapa ? 'Estás en <b>' + enEtapa + '</b>. Lo más cercano de la guía:'
+      : 'Lo más cercano de la guía está en <b>' + cerca[0].s.e + '</b>, a ' + distancia(cerca[0].d) + ':';
     lista.innerHTML = top.map(function(x){
       var s = x.s;
       var url = 'https://www.google.com/maps/search/?api=1&query=' + s.q;
       return '<a class="cerca-item" href="' + url + '" target="_blank" rel="noopener">' +
         '<span class="cerca-d' + (s.ap ? ' aprox' : '') + '">' +
-          (s.ap ? 'por aquí' : distancia(x.d)) + '</span>' +
+          (s.ap ? (x.d < 3 ? 'por aquí' : '~' + distancia(x.d)) : distancia(x.d)) + '</span>' +
         '<span class="cerca-n">' + s.n +
           (s.s ? '<span class="cerca-sello k-' + s.s + '">' + SELLO[s.s] + '</span>' : '') +
         '<small>' + s.z + (s.ap ? ' · no tengo su punto exacto' : andando(x.d)) + '</small></span></a>';
