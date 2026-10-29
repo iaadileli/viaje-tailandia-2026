@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <kml xmlns="http://www.opengis.net/kml/2.2"><Document>
 <name>Tailandia 2026 · dónde comer</name>
-<description>85 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
+<description>86 sitios de comida, una capa por etapa. Estrella: lleva décadas abierto · Cubiertos: Bib Gourmand · Punto: donde come la gente de aquí</description>
 <Style id="s_leyenda"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/ylw-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_estrella"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-stars.png</href></Icon></IconStyle></Style>
 <Style id="s_bib"><IconStyle><Icon><href>http://maps.google.com/mapfiles/kml/paddle/red-circle.png</href></Icon></IconStyle></Style>
@@ -266,13 +266,13 @@
 <Folder><name>Chiang Rai</name>
 <Placemark>
   <name>Khao Soi Phor Jai</name>
-  <description><![CDATA[El khao soi de referencia en Chiang Rai, en un local sencillo lleno de gente del sitio.<br><br>PIDE: khao soi de pollo y, si te va, uno de ternera para comparar<br><br>Horario: 7:00–15:30 aprox.<br>Precio: 50–70 THB<br>Zona: Th. Jetyod, centro]]></description>
+  <description><![CDATA[El khao soi de referencia en Chiang Rai (sale en la Lonely Planet y en la Rough Guide). Lo llevan las hermanas del artista del Templo Blanco. No tiene cartel en letras latinas: buscad el local abierto, blanco y azul por dentro, frente al hotel Wangcome.<br><br>PIDE: khao soi de pollo y, si te va, uno de ternera para comparar. También sai ua y som tam<br><br>Horario: 7:00–15:30 aprox.<br>Precio: 50–70 THB<br>Zona: Th. Jetyod, centro]]></description>
   <address>Khao Soi Phor Jai Chiang Rai, Chiang Rai, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
 <Placemark>
   <name>Lung Eed</name>
-  <description><![CDATA[Un local de cuatro mesas que la gente de Chiang Rai tiene por uno de los mejores laab del norte.<br><br>PIDE: laab gai: pollo picado con hierbas y piel crujiente por encima<br><br>Horario: 11:30–19:00 aprox. · cierra domingos<br>Precio: 60–100 THB<br>Zona: Th. Watpranorn]]></description>
+  <description><![CDATA[Un local de cuatro mesas que la gente de Chiang Rai tiene por uno de los mejores laab del norte; la Lonely Planet lo destaca. Menú en inglés en la pared. Está a unos 150 m al este de la carretera 1.<br><br>PIDE: laab gai: pollo picado con hierbas y piel crujiente por encima<br><br>Horario: lun–sáb 11:30–21:00 aprox. · domingo solo por la tarde<br>Precio: 60–100 THB<br>Zona: Th. Watpranorn]]></description>
   <address>Lung Eed Chiang Rai, Chiang Rai, Tailandia</address>
   <styleUrl>#s_local</styleUrl>
 </Placemark>
@@ -287,6 +287,12 @@
   <description><![CDATA[Patio de comidas con mesas comunes y música en directo suave. Pequeño y nada agobiante.<br><br>PIDE: una ronda de platos del norte para compartir y cerveza Chang<br><br>Horario: 18:00–23:00<br>Precio: 100–200 THB por cabeza<br>Zona: junto a la estación de autobuses]]></description>
   <address>Chiang Rai Night Bazaar, Chiang Rai, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
+</Placemark>
+<Placemark>
+  <name>Paa Suk</name>
+  <description><![CDATA[La casa del nam ngiao en Chiang Rai: más de 40 años y dos generaciones haciéndolo. Sale en la Lonely Planet. No tiene cartel en letras latinas.<br><br>PIDE: khanom jeen nam ngiao: fideos de arroz frescos en caldo de tomate y cerdo, con flor de algodón. Pedidlo con todo<br><br>Horario: por la mañana hasta las 15:00 (cierra en punto)<br>Precio: 30–60 THB<br>Zona: 197 Th. Sankhongnoi (cartel amarillo)]]></description>
+  <address>Nam Ngiao Pa Suk Chiang Rai, Chiang Rai, Tailandia</address>
+  <styleUrl>#s_local</styleUrl>
 </Placemark>
 <Placemark>
   <name>Chivit Thamma Da</name>
@@ -304,7 +310,7 @@
 <Folder><name>Chiang Dao</name>
 <Placemark>
   <name>Cena en el alojamiento</name>
-  <description><![CDATA[En el valle hay poquísimos sitios y cierran temprano. Aquí la cena se reserva por la mañana.<br><br>PIDE: lo que tengan del día: verduras y setas de montaña, y gaeng hang lay si lo hacen<br><br>Horario: avisar antes de las 17:00<br>Precio: 150–300 THB<br>Zona: vuestro hotel]]></description>
+  <description><![CDATA[Preguntad al llegar si el alojamiento da cenas (no lo he podido confirmar). Si no, en Chotana Rd hay restaurantes a cinco minutos andando, o Chiang Dao Nest. En el valle se cena temprano.<br><br>PIDE: lo que tengan del día: verduras y setas de montaña, y gaeng hang lay si lo hacen<br><br>Horario: avisar antes de las 17:00<br>Precio: 150–300 THB<br>Zona: vuestro hotel]]></description>
   <address>Chiang Dao, Chiang Dao, Chiang Mai, Tailandia</address>
   <styleUrl>#s_normal</styleUrl>
 </Placemark>

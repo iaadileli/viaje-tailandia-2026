@@ -219,14 +219,14 @@ BANGKOK = [
 
 CHIANGRAI = [
  ("Khao Soi Phor Jai", "local", "Th. Jetyod, centro",
-  "El khao soi de referencia en Chiang Rai, en un local sencillo lleno de gente del sitio.",
-  "khao soi de pollo y, si te va, uno de ternera para comparar",
+  "El khao soi de referencia en Chiang Rai (sale en la Lonely Planet y en la Rough Guide). Lo llevan las hermanas del artista del Templo Blanco. No tiene cartel en letras latinas: buscad el local abierto, blanco y azul por dentro, frente al hotel Wangcome.",
+  "khao soi de pollo y, si te va, uno de ternera para comparar. También sai ua y som tam",
   "7:00–15:30 aprox.", "50–70 THB", "Khao Soi Phor Jai Chiang Rai"),
 
  ("Lung Eed", "local", "Th. Watpranorn",
-  "Un local de cuatro mesas que la gente de Chiang Rai tiene por uno de los mejores laab del norte.",
+  "Un local de cuatro mesas que la gente de Chiang Rai tiene por uno de los mejores laab del norte; la Lonely Planet lo destaca. Menú en inglés en la pared. Está a unos 150 m al este de la carretera 1.",
   "laab gai: pollo picado con hierbas y piel crujiente por encima",
-  "11:30–19:00 aprox. · cierra domingos", "60–100 THB", "Lung Eed Chiang Rai"),
+  "lun–sáb 11:30–21:00 aprox. · domingo solo por la tarde", "60–100 THB", "Lung Eed Chiang Rai"),
 
  ("Mercado matinal (Kad Luang)", "local", "centro, junto a Th. Uttarakit",
   "Donde compra y desayuna la ciudad. Aquí está el nam ngiao, el plato local que casi ningún turista prueba.",
@@ -237,6 +237,11 @@ CHIANGRAI = [
   "Patio de comidas con mesas comunes y música en directo suave. Pequeño y nada agobiante.",
   "una ronda de platos del norte para compartir y cerveza Chang",
   "18:00–23:00", "100–200 THB por cabeza", "Chiang Rai Night Bazaar"),
+
+ ("Paa Suk", "local", "197 Th. Sankhongnoi (cartel amarillo)",
+  "La casa del nam ngiao en Chiang Rai: más de 40 años y dos generaciones haciéndolo. Sale en la Lonely Planet. No tiene cartel en letras latinas.",
+  "khanom jeen nam ngiao: fideos de arroz frescos en caldo de tomate y cerdo, con flor de algodón. Pedidlo con todo",
+  "por la mañana hasta las 15:00 (cierra en punto)", "30–60 THB", "Nam Ngiao Pa Suk Chiang Rai"),
 
  ("Chivit Thamma Da", "", "orilla del río Kok",
   "Casa colonial junto al río, con jardín. El sitio bonito para merendar o cenar junto al río.",
