@@ -2765,6 +2765,15 @@
       </div>
       <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
     </li>
+    <li data-frase="sinazucar" data-th="ไม่ใส่น้ำตาลครับ">
+      <button class="fr-play" aria-label="Escuchar">▶</button>
+      <div class="fr-txt"><span class="fr-es">Sin azúcar</span>
+        <span class="fr-th" lang="th">ไม่ใส่น้ำตาลครับ</span>
+        <span class="fr-fon">mai sài nam-tan krap</span>
+        <span class="fr-nota">Para cafés, tés, batidos y zumos, que aquí vienen muy dulces. Si lo queréis solo un poco dulce: «wan nòi»</span>
+      </div>
+      <button class="fr-ver" aria-label="Enseñar en grande">👁</button>
+    </li>
     <li data-frase="agua" data-th="ขอน้ำเปล่าครับ">
       <button class="fr-play" aria-label="Escuchar">▶</button>
       <div class="fr-txt"><span class="fr-es">Agua, por favor</span>
@@ -3350,7 +3359,7 @@ function avisaNueva(reg){
     boton.disabled = true;
     if (!('caches' in window)) { texto.textContent = 'Tu navegador no permite guardarlos'; return; }
     var hechos = 0;
-    caches.open('tailandia2026-v7').then(function(c){
+    caches.open('tailandia2026-v8').then(function(c){
       return rutas.reduce(function(cadena, r){
         return cadena.then(function(){
           return c.add(new Request(r, {cache: 'reload'})).catch(function(){}).then(function(){

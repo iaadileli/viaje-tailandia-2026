@@ -19,6 +19,7 @@ FRASES = [
   ("rico",     "¡Está buenísimo!",        "อร่อยมากครับ", "a-ròi mâk krap", "Dicho al cocinero, abre puertas"),
   ("vegetariano","Soy vegetariano",       "ผมกินเจครับ", "pom kin je krap", "«Je» es la comida vegana budista, sin salsa de pescado"),
   ("sincilantro","Sin cilantro",          "ไม่ใส่ผักชีครับ", "mai sài pak-chi krap", ""),
+  ("sinazucar","Sin azúcar",              "ไม่ใส่น้ำตาลครับ", "mai sài nam-tan krap", "Para cafés, tés, batidos y zumos, que aquí vienen muy dulces. Si lo queréis solo un poco dulce: «wan nòi»"),
   ("agua",     "Agua, por favor",         "ขอน้ำเปล่าครับ", "kó nam-plào krap", ""),
   ("cuenta",   "La cuenta, por favor",    "เช็คบิลครับ", "chek-bin krap", ""),
   ("llevar",   "Para llevar",             "เอากลับบ้านครับ", "ao klap bân krap", ""),

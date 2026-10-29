@@ -1,4 +1,4 @@
-const CACHE = 'tailandia2026-v7';
+const CACHE = 'tailandia2026-v8';
 const RECURSOS = [
   './',
   'index.html',
@@ -52,6 +52,7 @@ const RECURSOS = [
   'audio/frases/rico.mp3',
   'audio/frases/si.mp3',
   'audio/frases/sincilantro.mp3',
+  'audio/frases/sinazucar.mp3',
   'audio/frases/taximetro.mp3',
   'audio/frases/vegetariano.mp3',
   'img/portada.jpg',
