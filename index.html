@@ -554,6 +554,9 @@
   #irhoy:hover{opacity:1;transform:translateY(-2px)}
   #player.visible ~ #irhoy{bottom:146px}
   #conversor{font-family:-apple-system,'Segoe UI',sans-serif;margin-top:6px}
+  #cambio{scroll-margin-top:170px}
+  .cambio-hoy{display:inline-block;margin:2px 0 4px;font-family:-apple-system,'Segoe UI',sans-serif;font-size:.9rem;
+    font-weight:600;color:var(--mar);text-decoration:none;border-bottom:1px dotted currentColor}
   .conv-fila{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
   .conv-fila input{width:120px;border:1px solid var(--linea);border-radius:9px;padding:11px 12px;
     font-size:1.15rem;background:var(--card);color:var(--tinta);font-weight:600}
@@ -871,6 +874,7 @@
     <a href="#acaso" onclick="cerrarMenuInfo()">🆘 Por si acaso</a>
     <a href="#comer" onclick="cerrarMenuInfo()">🍜 Comer (todo)</a>
     <a href="#hoteles" onclick="cerrarMenuInfo()">★ Vuestros hoteles</a>
+    <a href="#cambio" onclick="cerrarMenuInfo()">💱 Baht → euros</a>
     <div class="cab cab2">Preparativos</div>
     <a href="#tiempo" onclick="cerrarMenuInfo()">🌡️ El tiempo y la maleta</a>
       <a href="#practico" onclick="cerrarMenuInfo()">🧭 Guía práctica</a>
@@ -1273,18 +1277,18 @@
 
   <div class="dias">
     <div class="dia" data-dia="chiangrai-1" data-fecha="2026-11-02"><h4>Día 4 · Tarde de llegada <span class="fecha">lunes 2 nov</span></h4>
-      <p>Paseo por el centro, la torre del reloj dorada y cena en el <strong>night bazaar</strong>:
+      <p>Paseo por el centro, <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Clock%20Tower" target="_blank" rel="noopener">la torre del reloj dorada</a> y cena en el <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Night%20Bazaar" target="_blank" rel="noopener"><strong>night bazaar</strong></a>:
       pequeño, nada agobiante, con mesas comunes y música en directo suave.</p></div>
     <div class="dia" data-dia="chiangrai-2" data-fecha="2026-11-03"><h4>Día 5 · Los tres templos <span class="fecha">martes 3 nov</span></h4>
-      <p><strong>Mañana:</strong> <strong>Wat Rong Khun</strong> (Templo Blanco) nada más abrir (8:00) para
-      evitar grupos, después el <strong>Templo Azul</strong> (Wat Rong Suea Ten) y la <strong>Casa Negra</strong>
+      <p><strong>Mañana:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Rong%20Khun" target="_blank" rel="noopener"><strong>Wat Rong Khun</strong></a> (Templo Blanco) nada más abrir (8:00) para
+      evitar grupos, después el <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Rong%20Suea%20Ten" target="_blank" rel="noopener"><strong>Templo Azul</strong></a> (Wat Rong Suea Ten) y la <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Baan%20Dam%20Museum%20Chiang%20Rai" target="_blank" rel="noopener"><strong>Casa Negra</strong></a>
       (Baan Dam) del artista Thawan Duchanee. <strong>Tarde:</strong> café con vistas infinitas en la
-      plantación de té de <strong>Choui Fong</strong>, entre colinas verdes.</p>
+      plantación de té de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Choui%20Fong%20Tea%20Plantation" target="_blank" rel="noopener"><strong>Choui Fong</strong></a>, entre colinas verdes.</p>
       <div class="tip">Para los tres templos, un conductor por medio día cuesta unos 1.000–1.500 THB. Si sumáis Choui Fong (a 45 km al norte), coche con conductor todo el día, unos 2.000–3.000 THB, pactado antes: desde allí no hay Grab de vuelta. Entradas aparte: Templo Blanco 200 THB, Casa Negra ~80.
-      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · Mercado matinal (Kad Luang).</b> Abre a las cinco y a las once ha desaparecido. Aquí desayuna la ciudad: pide <b>nam ngiao</b>, los fideos con tomate y cerdo, el plato del norte que casi ningún viajero prueba.</p><p class="mad-zona"><b>Zona para juntaros:</b> el centro de Chiang Rai. Es pequeño: quedad en la torre del reloj dorada y salís hacia los templos.</p></div></div>
+      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Municipality%20Market" target="_blank" rel="noopener">Mercado matinal (Kad Luang)</a>.</b> Abre a las cinco y a las once ha desaparecido. Aquí desayuna la ciudad: pide <b>nam ngiao</b>, los fideos con tomate y cerdo, el plato del norte que casi ningún viajero prueba.</p><p class="mad-zona"><b>Zona para juntaros:</b> el centro de Chiang Rai. Es pequeño: quedad en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Clock%20Tower" target="_blank" rel="noopener">la torre del reloj dorada</a> y salís hacia los templos.</p></div></div>
     <div class="dia" data-dia="chiangrai-3" data-fecha="2026-11-04"><h4>Día 6 · Carretera de montaña <span class="fecha">miércoles 4 nov</span></h4>
       <p>Coche con conductor hacia <strong>Chiang Dao</strong> (~3 h sin paradas; con la parada en Tha Ton o Mae Salong, contad 4–5 h). Es una carretera bonita de montaña;
-      se puede parar en ruta en Mae Salong o Tha Ton (templo con vistas al río Kok) para comer.</p></div>
+      se puede parar en ruta en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Mae%20Salong%20Santikhiri" target="_blank" rel="noopener">Mae Salong</a> o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Tha%20Ton" target="_blank" rel="noopener">Tha Ton</a> (templo con vistas al río Kok) para comer.</p></div>
   </div>
 
   <div class="duo">
@@ -1355,16 +1359,16 @@
 
   <div class="dias">
     <div class="dia" data-dia="chiangdao-1" data-fecha="2026-11-04"><h4>Día 6 · Llegada al valle <span class="fecha">miércoles 4 nov</span></h4>
-      <p>Llegada a primera hora de la tarde (si paráis a comer en ruta, a media tarde: la cueva cierra hacia las 17:00) y las <strong>cuevas de Chiang Dao</strong>
+      <p>Llegada a primera hora de la tarde (si paráis a comer en ruta, a media tarde: la cueva cierra hacia las 17:00) y las <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Cave" target="_blank" rel="noopener"><strong>cuevas de Chiang Dao</strong></a>
       (Wat Tham Chiang Dao): un complejo de grutas con budas dentro de la montaña. Cena en el alojamiento (si da cenas) o cerca
       viendo cómo se enciende la montaña al atardecer.</p></div>
     <div class="dia" data-dia="chiangdao-2" data-fecha="2026-11-05"><h4>Día 7 · Bosque, escaleras y aguas termales <span class="fecha">jueves 5 nov</span></h4>
-      <p><strong>Mañana:</strong> subir los 500 escalones entre bosque hasta <strong>Wat Tham Pha Plong</strong>,
+      <p><strong>Mañana:</strong> subir los 500 escalones entre bosque hasta <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Tham%20Pha%20Plong" target="_blank" rel="noopener"><strong>Wat Tham Pha Plong</strong></a>,
       un monasterio encajado en el acantilado — probablemente el momento más sereno del viaje.
-      <strong>Tarde:</strong> baño en las <strong>termas de Ban Yang Pu To</strong>, a 15 min (pozas gratis junto al arroyo; privadas ~50 THB la hora; si queréis bosque, Pong Arng, a 40 min, 100 THB, de 8:00 a 17:00) o simplemente hamaca,
-      libro y sonido de cigarras. Al caer la tarde, <strong>mercado del jueves</strong> en el pueblo, de 15:00 a 20:00, con comida callejera (calle junto a Wat Intharam); o la barbacoa de los jueves de Chiang Dao Nest, reservando.</p>
+      <strong>Tarde:</strong> baño en las <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ban%20Yang%20Pu%20To%20hot%20spring%20Chiang%20Dao" target="_blank" rel="noopener"><strong>termas de Ban Yang Pu To</strong></a>, a 15 min (pozas gratis junto al arroyo; privadas ~50 THB la hora; si queréis bosque, <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Pong%20Arng%20Hot%20Spring" target="_blank" rel="noopener">Pong Arng</a>, a 40 min, 100 THB, de 8:00 a 17:00) o simplemente hamaca,
+      libro y sonido de cigarras. Al caer la tarde, <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Intharam%20Chiang%20Dao" target="_blank" rel="noopener"><strong>mercado del jueves</strong></a> en el pueblo, de 15:00 a 20:00, con comida callejera (calle junto a Wat Intharam); o la barbacoa de los jueves de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Dao%20Nest" target="_blank" rel="noopener">Chiang Dao Nest</a>, reservando.</p>
       <div class="tip">Por la noche refresca (15–18 °C): la capa fina de manga larga que llevéis para los aviones aquí se usa de verdad.
-      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · El amanecer sobre la montaña.</b> Sal del alojamiento y mira al oeste, hacia la montaña: con suerte verás el mar de niebla llenando el valle con Doi Chiang Dao encima. Y si te animas, coge una bici del alojamiento (está a unos 9,5 km cuesta arriba: sal hacia las 5:30) y sube tú solo los unos 500 escalones hasta Wat Tham Pha Plong, que a esa hora está vacío y es un monasterio de meditación en activo.</p><p class="mad-zona"><b>Zona para juntaros:</b> el propio valle. Aquí no hay dónde perderse: desayunáis juntos y subís a Wat Tham Pha Plong a media mañana.</p></div></div>
+      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · El amanecer sobre la montaña.</b> Sal del alojamiento y mira al oeste, hacia la montaña: con suerte verás el mar de niebla llenando el valle con <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Doi%20Luang%20Chiang%20Dao" target="_blank" rel="noopener">Doi Chiang Dao</a> encima. Y si te animas, coge una bici del alojamiento (está a unos 9,5 km cuesta arriba: sal hacia las 5:30) y sube tú solo los unos 500 escalones hasta <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Tham%20Pha%20Plong" target="_blank" rel="noopener">Wat Tham Pha Plong</a>, que a esa hora está vacío y es un monasterio de meditación en activo.</p><p class="mad-zona"><b>Zona para juntaros:</b> el propio valle. Aquí no hay dónde perderse: desayunáis juntos y subís a Wat Tham Pha Plong a media mañana.</p></div></div>
     <div class="dia" data-dia="chiangdao-3" data-fecha="2026-11-06"><h4>Día 8 · Bajada a Chiang Mai <span class="fecha">viernes 6 nov</span></h4>
       <p>Mañana lenta y coche a <strong>Chiang Mai</strong> (1 h 30). Llegaréis para comer.</p></div>
   </div>
@@ -1426,34 +1430,34 @@
 
   <div class="dias">
     <div class="dia" data-dia="chiangmai-1" data-fecha="2026-11-06"><h4>Día 8 · El casco antiguo <span class="fecha">viernes 6 nov</span></h4>
-      <p>Llegáis de Chiang Dao para comer. Tarde de templos sin prisa: <strong>Wat Phra Singh</strong>,
-      <strong>Wat Chedi Luang</strong> (impresionante iluminado al anochecer: se ilumina hacia las 18:00 y se puede entrar hasta las 22:00; ~50 THB) y callejones con cafés.
-      Primer <strong>khao soi</strong> "oficial" a mediodía, que las casas de khao soi cierran por la tarde; para cenar, cocina del norte en Huen Phen.</p></div>
+      <p>Llegáis de Chiang Dao para comer. Tarde de templos sin prisa: <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Phra%20Singh%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Wat Phra Singh</strong></a>,
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Chedi%20Luang%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Wat Chedi Luang</strong></a> (impresionante iluminado al anochecer: se ilumina hacia las 18:00 y se puede entrar hasta las 22:00; ~50 THB) y callejones con cafés.
+      Primer <strong>khao soi</strong> "oficial" a mediodía, que las casas de khao soi cierran por la tarde; para cenar, cocina del norte en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Huen%20Phen%20Chiang%20Mai" target="_blank" rel="noopener">Huen Phen</a>.</p></div>
     <div class="dia" data-dia="chiangmai-2" data-fecha="2026-11-07"><h4>Día 9 · La montaña del templo dorado <span class="fecha">sábado 7 nov</span></h4>
-      <p><strong>Mañana:</strong> subir temprano a <strong>Doi Suthep</strong>, el templo dorado que vigila
-      la ciudad (id a las 8:00 y lo tendréis casi vacío). A la bajada, parada en <strong>Baan Kang Wat</strong>,
+      <p><strong>Mañana:</strong> subir temprano a <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Phra%20That%20Doi%20Suthep" target="_blank" rel="noopener"><strong>Doi Suthep</strong></a>, el templo dorado que vigila
+      la ciudad (id a las 8:00 y lo tendréis casi vacío). A la bajada, parada en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Baan%20Kang%20Wat%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Baan Kang Wat</strong></a>,
       un pueblito de artistas con talleres de cerámica y cafés entre árboles. <strong>Tarde:</strong> masaje.
-      <strong>Noche:</strong> <strong>Saturday Walking Street</strong> en la calle Wua Lai: artesanía y puestos
+      <strong>Noche:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wua%20Lai%20Walking%20Street%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Saturday Walking Street</strong></a> en la calle Wua Lai: artesanía y puestos
       de comida en ambiente local.</p>
-      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · Tak bat, la limosna de los monjes.</b> Sal a cualquier calle del casco antiguo y verás filas de monjes descalzos con sus cuencos, y gente arrodillada dándoles arroz. Dura veinte minutos y es de lo más bonito del viaje. Mira en silencio y desde la acera, sin flash y sin ponerte en medio.</p><p class="mad-zona"><b>Zona para juntaros:</b> el casco antiguo. Con el foso como referencia no hay pérdida, y salís hacia Doi Suthep cuando ella esté.</p></div></div>
+      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:00 · Tak bat, la limosna de los monjes.</b> Sal a cualquier calle del casco antiguo y verás filas de monjes descalzos con sus cuencos, y gente arrodillada dándoles arroz. Dura veinte minutos y es de lo más bonito del viaje. Mira en silencio y desde la acera, sin flash y sin ponerte en medio.</p><p class="mad-zona"><b>Zona para juntaros:</b> el casco antiguo. Con el foso como referencia no hay pérdida, y salís hacia <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Phra%20That%20Doi%20Suthep" target="_blank" rel="noopener">Doi Suthep</a> cuando ella esté.</p></div></div>
     <div class="dia" data-dia="chiangmai-3" data-fecha="2026-11-08"><h4>Día 10 · Cocinar y mercados <span class="fecha">domingo 8 nov</span></h4>
       <p><strong>Mañana:</strong> <strong>clase de cocina tailandesa</strong> (medio día, muchas incluyen visita
-      al mercado; es divertidísimo y os lleváis las recetas) o mercado de <strong>Warorot</strong>, el de los
-      locales. <strong>Tarde:</strong> café en Nimman. <strong>Noche:</strong> la gran <strong>Sunday Walking
-      Street</strong> de Ratchadamnoen, el mejor mercado nocturno del norte.</p>
-      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:30 · Mercado de Warorot.</b> Tres plantas de mercado de verdad. Compra <b>sai ua</b> (la salchicha de hierbas del norte) y chicharrones para el camino, y desayuna un cuenco de algo.</p><p class="mad-zona"><b>Zona para juntaros:</b> el casco antiguo o Nimman, según lo que hagáis. Warorot está junto al río, a 10 minutos en Grab.</p></div></div>
+      al mercado; es divertidísimo y os lleváis las recetas) o mercado de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Warorot%20Market%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Warorot</strong></a>, el de los
+      locales. <strong>Tarde:</strong> café en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Nimmanhaemin%20Road%20Chiang%20Mai" target="_blank" rel="noopener">Nimman</a>. <strong>Noche:</strong> la gran <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Sunday%20Walking%20Street%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Sunday Walking
+      Street</strong></a> de Ratchadamnoen, el mejor mercado nocturno del norte.</p>
+      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:30 · <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Warorot%20Market%20Chiang%20Mai" target="_blank" rel="noopener">Mercado de Warorot</a>.</b> Tres plantas de mercado de verdad. Compra <b>sai ua</b> (la salchicha de hierbas del norte) y chicharrones para el camino, y desayuna un cuenco de algo.</p><p class="mad-zona"><b>Zona para juntaros:</b> el casco antiguo o Nimman, según lo que hagáis. Warorot está junto al río, a 10 minutos en Grab.</p></div></div>
     <div class="dia" data-dia="chiangmai-4" data-fecha="2026-11-09"><h4>Día 11 · Elefantes… o plan B <span class="fecha">lunes 9 nov</span></h4>
       <p><strong>Si vais al santuario:</strong> os recogen en el hotel por la mañana y os devuelven hacia las 14:00
       (ver el bloque verde más abajo). <strong>El medio día cuesta 1.000 THB menos</strong> por persona que el día
       completo y se ve prácticamente lo mismo.</p>
       <div class="tip"><b>Si preferís ahorrarlo, tres planes para este día:</b>
-      <br>· <b>Wiang Kum Kam</b> — las ruinas de la capital que Mangrai fundó <em>antes</em> que Chiang Mai
+      <br>· <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wiang%20Kum%20Kam%20Chiang%20Mai" target="_blank" rel="noopener"><b>Wiang Kum Kam</b></a> — las ruinas de la capital que Mangrai fundó <em>antes</em> que Chiang Mai
       y tuvo que abandonar por las inundaciones. Están a 5 km al sur, se recorren en carro de caballos
       (300 THB) o en tranvía (unos 500 THB), de 8:00 a 17:00, y no va casi nadie. La pieza principal es
-      Wat Chedi Liam, con una chedi llena de nichos copiada de la de Wat Ku Kut, en Lamphun.
-      <br>· <b>Lago Huay Tung Tao</b> — donde va la gente de Chiang Mai a pasar el día. Se come en cabañas
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Wat%20Chedi%20Liam%20Chiang%20Mai" target="_blank" rel="noopener">Wat Chedi Liam</a>, con una chedi llena de nichos copiada de la de Wat Ku Kut, en Lamphun.
+      <br>· <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Huay%20Tung%20Tao%20Lake%20Chiang%20Mai" target="_blank" rel="noopener"><b>Lago Huay Tung Tao</b></a> — donde va la gente de Chiang Mai a pasar el día. Se come en cabañas
       de bambú con los pies casi en el agua, y está a 20 minutos.
-      <br>· <b>Doi Inthanon</b> — el pico más alto del país, con cascadas y las dos pagodas reales de la
+      <br>· <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Doi%20Inthanon%20National%20Park" target="_blank" rel="noopener"><b>Doi Inthanon</b></a> — el pico más alto del país, con cascadas y las dos pagodas reales de la
       cima. Este sí es día completo y hay que contratarlo.
       <br><b>Y uno que evitar:</b> el Chiang Mai Night Safari. Se construyó invadiendo terreno del parque
       nacional de Doi Suthep, y al abrir llegó a anunciar que serviría en su restaurante la carne de los
@@ -1563,16 +1567,16 @@
     <div class="pie">Elefantes rescatados en el valle de Mae Taeng, a 1 h de Chiang Mai</div>
   </div>
   <div class="destacado">
-    <h3>🐘 Elephant Nature Park (Chiang Mai)</h3>
+    <h3>🐘 <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Elephant%20Nature%20Park%20Chiang%20Mai" target="_blank" rel="noopener">Elephant Nature Park</a> (Chiang Mai)</h3>
     <p>El santuario de referencia en Asia: fundado por Lek Chailert, rescata elefantes del turismo de
     monta y de la tala. Se les observa vivir en semilibertad, se les prepara comida y se pasea con ellos
     por el valle — <strong>sin montarlos, sin bañarlos, sin espectáculos</strong>, que es exactamente lo
     que distingue a un santuario ético de uno de mentira.</p>
     <ul>
       <li><strong>Precios oficiales de su web (agosto 2026):</strong> <b>medio día 2.500 THB</b> por persona (el de mañana recoge a las 7:30–8:00 y vuelve a Chiang Mai hacia las 14:00, con comida; el de tarde recoge a las 12:00–12:30 y vuelve hacia las 18:00, solo con merienda; piden un 30 % de depósito al reservar) y <b>día completo 3.500 THB</b>, con buffet vegano incluido. Para dos, eso son unos <b>130 €</b> el medio día frente a <b>182 €</b> el día entero: con elefantes, medio día da de sobra.</li>
-      <li><b>Si aun así se os va de presupuesto</b>, una alternativa ética y más barata: <em>The Chang</em> (antes Thai Elephant Care Center, Mae Sa; 2.000 THB el medio día con recogida), residencia de <b>elefantes ancianos jubilados</b> de la tala y de los espectáculos, sin paseos ni espectáculos: se les prepara la comida, se les ve bañarse en el río y se visita el cementerio de los que murieron de viejos. <em>Elephant Retirement Park</em> (~1.800 THB el medio día) no monta, pero sí hace que los visitantes bañen y embarren a los elefantes, justo lo que conviene evitar. El que descartaría es <em>Patara Elephant Farm</em>: el más caro y ofrece montar a pelo.</li>
-      <li><strong>Alternativa más íntima:</strong> <em>ChangChill</em>, también cerca de Chiang Mai, grupos muy pequeños y aprobado por World Animal Protection.</li>
-      <li><strong>Plan B en Chiang Rai:</strong> <em>Elephant Valley Chiang Rai</em>, pequeño y solo de observación, por si preferís hacerlo en la etapa anterior.</li>
+      <li><b>Si aun así se os va de presupuesto</b>, una alternativa ética y más barata: <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=The%20Chang%20Thai%20Elephant%20Care%20Center%20Mae%20Sa" target="_blank" rel="noopener"><em>The Chang</em></a> (antes Thai Elephant Care Center, Mae Sa; 2.000 THB el medio día con recogida), residencia de <b>elefantes ancianos jubilados</b> de la tala y de los espectáculos, sin paseos ni espectáculos: se les prepara la comida, se les ve bañarse en el río y se visita el cementerio de los que murieron de viejos. <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Elephant%20Retirement%20Park%20Chiang%20Mai" target="_blank" rel="noopener"><em>Elephant Retirement Park</em></a> (~1.800 THB el medio día) no monta, pero sí hace que los visitantes bañen y embarren a los elefantes, justo lo que conviene evitar. El que descartaría es <em>Patara Elephant Farm</em>: el más caro y ofrece montar a pelo.</li>
+      <li><strong>Alternativa más íntima:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=ChangChill%20Chiang%20Mai" target="_blank" rel="noopener"><em>ChangChill</em></a>, también cerca de Chiang Mai, grupos muy pequeños y aprobado por World Animal Protection.</li>
+      <li><strong>Plan B en Chiang Rai:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Elephant%20Valley%20Thailand%20Chiang%20Rai" target="_blank" rel="noopener"><em>Elephant Valley Chiang Rai</em></a>, pequeño y solo de observación, por si preferís hacerlo en la etapa anterior.</li>
     </ul>
     <div class="ojo">⚠️ Si aún no está reservado, hacedlo <strong>ya</strong> en la web oficial:
     las plazas de Elephant Nature Park para noviembre vuelan. Y desconfiad de cualquier sitio que ofrezca
@@ -1594,11 +1598,11 @@
   cenar bien y coger el ferry por la mañana con calma.</p>
   <div class="dias">
     <div class="dia" data-dia="krabi-1" data-fecha="2026-11-10"><h4>Día 12 · Tarde y noche de mercado <span class="fecha">martes 10 nov</span></h4>
-      <p>Paseo al atardecer por el río (los peñones de Khao Khanab Nam, los manglares) y cena en el
-      <strong>mercado nocturno del muelle</strong> (Chao Fah): marisco, curries del sur y postres, todo
+      <p>Paseo al atardecer por el río (los peñones de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Khao%20Khanab%20Nam%20Krabi" target="_blank" rel="noopener">Khao Khanab Nam</a>, los manglares) y cena en el
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chao%20Fah%20Night%20Market%20Krabi" target="_blank" rel="noopener"><strong>mercado nocturno del muelle</strong></a> (Chao Fah): marisco, curries del sur y postres, todo
       de puestos y a precio local.</p></div>
     <div class="dia" data-dia="krabi-2" data-fecha="2026-11-11"><h4>Día 13 · A la isla tranquila <span class="fecha">miércoles 11 nov</span></h4>
-      <p>Ferry desde el muelle de Krabi a <strong>Koh Jum</strong> (~1 h 30). El barco no atraca: para en
+      <p>Ferry desde <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Klong%20Jilad%20Pier%20Krabi" target="_blank" rel="noopener">el muelle de Krabi</a> a <strong>Koh Jum</strong> (~1 h 30). El barco no atraca: para en
       mitad del mar y una barca de cola larga del alojamiento sale a recogeros.</p></div>
   </div>
   <div class="comer">
@@ -1665,7 +1669,7 @@
 
   <div class="dias">
     <div class="dia" data-dia="kohjum-1" data-fecha="2026-11-11"><h4>Día 13 · Llegada a la isla <span class="fecha">miércoles 11 nov</span></h4>
-      <p><strong>Mañana:</strong> ferry desde el muelle de Klong Jilad, en Krabi. Sale a las
+      <p><strong>Mañana:</strong> ferry desde <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Klong%20Jilad%20Pier%20Krabi" target="_blank" rel="noopener">el muelle de Klong Jilad</a>, en Krabi. Sale a las
       <strong>11:00</strong> (estad en el muelle a las 10:30) y llega frente a Koh Jum hacia las 12:30. Cuesta unos 500 THB. <strong>Ojo:</strong> este ferry solo funciona de noviembre a abril y el primer día de temporada cambia cada año: reservadlo en 12go antes de ir y, si no aparece para el 11, tirad del plan B. Confirmad la hora en el muelle o en el hotel: al principio de temporada cambia.
       <strong>Ojo con esto:</strong> la isla tiene dos muelles pequeños, pero <strong>ninguno tiene calado
       para el ferry</strong>, así que el barco se detiene en mitad del mar y sale una barca de cola larga
@@ -1675,28 +1679,28 @@
       <div class="tip">Confirmad al reservar que el hotel hace la recogida en el ferry: cada alojamiento manda
       su propia barca y no es un servicio general de la isla.<br>
       <b>Plan B si el ferry no opera</b> (a principios de temporada a veces arranca tarde): coche hasta el
-      muelle de <b>Laem Kruat</b>, a unos 40 km al sur de Krabi, y cola larga hasta el muelle de Mutu.
+      muelle de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Laem%20Kruat%20Pier%20Krabi" target="_blank" rel="noopener"><b>Laem Kruat</b></a>, a unos 40 km al sur de Krabi, y cola larga hasta <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Mutu%20Pier%20Koh%20Jum" target="_blank" rel="noopener">el muelle de Mutu</a>.
       Media hora y unos 140 THB. Ahí sí se atraca.</div></div>
 
     <div class="dia" data-dia="kohjum-2" data-fecha="2026-11-12"><h4>Día 14 · La isla en moto <span class="fecha">jueves 12 nov</span></h4>
       <p><strong>Todo el día:</strong> alquilad una moto (200–300 THB al día) o una bici y recorredla entera,
-      que se hace en una mañana. Playas de norte a sur: <strong>Coconut Beach</strong>, arriba del todo y casi siempre vacía; Magic Beach; <strong>Ao Si</strong>, la más fotogénica;
-      y <strong>Golden Pearl</strong>, que sigue como Andaman Beach y es la más larga. Parad en el pueblo de <strong>Ban Ko Jum</strong>, en el sur, un pueblo de pescadores musulmán,
+      que se hace en una mañana. Playas de norte a sur: <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Coconut%20Beach%20Koh%20Jum" target="_blank" rel="noopener"><strong>Coconut Beach</strong></a>, arriba del todo y casi siempre vacía; <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Magic%20Beach%20Koh%20Jum" target="_blank" rel="noopener">Magic Beach</a>; <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ao%20Si%20Beach%20Koh%20Jum" target="_blank" rel="noopener"><strong>Ao Si</strong></a>, la más fotogénica;
+      y <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Golden%20Pearl%20Beach%20Koh%20Jum" target="_blank" rel="noopener"><strong>Golden Pearl</strong></a>, que sigue como Andaman Beach y es la más larga. Parad en el pueblo de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ban%20Ko%20Jum" target="_blank" rel="noopener"><strong>Ban Ko Jum</strong></a>, en el sur, un pueblo de pescadores musulmán,
       con su mezquita y sus comedores de roti.</p>
       <div class="tip">La gasolina se vende en botellas de litro en los puestos de la carretera, a unos 40–60 THB el litro.
       No hay gasolinera.
-      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:15 · Amanecer en la costa este.</b> El sol sale por el lado del pueblo, no por el de las playas. Vete andando hacia Ban Ko Jum y verás salir las barcas de pesca. Café en el pueblo.</p><p class="mad-zona"><b>Zona para juntaros:</b> vuestro bungalow o cualquier playa del oeste. La isla es pequeña y sólo hay una carretera.</p></div></div>
+      </div><div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>6:15 · Amanecer en la costa este.</b> El sol sale por el lado del pueblo, no por el de las playas. Vete andando hacia <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ban%20Ko%20Jum" target="_blank" rel="noopener">Ban Ko Jum</a> y verás salir las barcas de pesca. Café en el pueblo.</p><p class="mad-zona"><b>Zona para juntaros:</b> vuestro bungalow o cualquier playa del oeste. La isla es pequeña y sólo hay una carretera.</p></div></div>
 
     <div class="dia" data-dia="kohjum-3" data-fecha="2026-11-13"><h4>Día 15 · Montaña o pereza <span class="fecha">viernes 13 nov</span></h4>
-      <p><strong>Opción A:</strong> subir el <strong>monte Pu</strong>, los 422 m que dominan el norte de la
+      <p><strong>Opción A:</strong> subir el <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Khao%20Pu%20Koh%20Jum" target="_blank" rel="noopener"><strong>monte Pu</strong></a>, los 422 m que dominan el norte de la
       isla, entre selva y con vistas a toda la bahía. Se sube muy temprano, con guía local y calzado decente:
       no está señalizado. <strong>Opción B:</strong> snorkel o kayak entre los islotes, o una barca a
-      <strong>Koh Siboya</strong>, la isla vecina, pegada a la punta norte: un rato corto de cola larga desde el muelle de Ban Koh Pu (pedid precio en el alojamiento).
-      <strong>Atardecer:</strong> en <strong>Magic Beach</strong>, que se llama así por algo.</p></div>
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Koh%20Siboya" target="_blank" rel="noopener"><strong>Koh Siboya</strong></a>, la isla vecina, pegada a la punta norte: un rato corto de cola larga desde <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ban%20Koh%20Pu%20Koh%20Jum" target="_blank" rel="noopener">el muelle de Ban Koh Pu</a> (pedid precio en el alojamiento).
+      <strong>Atardecer:</strong> en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Magic%20Beach%20Koh%20Jum" target="_blank" rel="noopener"><strong>Magic Beach</strong></a>, que se llama así por algo.</p></div>
 
     <div class="dia" data-dia="kohjum-4" data-fecha="2026-11-14"><h4>Día 16 · Rumbo a Lanta <span class="fecha">sábado 14 nov</span></h4>
       <p>El mismo sistema al revés: vuestra barca os lleva al ferry que baja de Krabi, y en algo más de una hora
-      (hacia las 13:45) estáis en Saladan. Si el ferry no pasa, hay lanchas rápidas Koh Jum–Lanta de 20–30 minutos: que os las pida el hotel. Llegáis con tiempo de sobra para el primer atardecer lanteño.</p></div>
+      (hacia las 13:45) estáis en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Saladan%20Pier%20Koh%20Lanta" target="_blank" rel="noopener">Saladan</a>. Si el ferry no pasa, hay lanchas rápidas Koh Jum–Lanta de 20–30 minutos: que os las pida el hotel. Llegáis con tiempo de sobra para el primer atardecer lanteño.</p></div>
   </div>
 
   <div class="comer">
@@ -1755,33 +1759,33 @@
 
   <div class="dias">
     <div class="dia" data-dia="kohlanta-1" data-fecha="2026-11-14"><h4>Día 16 · Llegada y primer atardecer <span class="fecha">sábado 14 nov</span></h4>
-      <p>Llegada a media tarde, bungalow y primer baño. Elegid base en <strong>Klong Nin</strong> o
-      <strong>Long Beach</strong> (Phra Ae). Cena en la arena viendo el atardecer sobre el Andamán.</p></div>
+      <p>Llegada a media tarde, bungalow y primer baño. Elegid base en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Klong%20Nin%20Beach%20Koh%20Lanta" target="_blank" rel="noopener"><strong>Klong Nin</strong></a> o
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Long%20Beach%20Phra%20Ae%20Koh%20Lanta" target="_blank" rel="noopener"><strong>Long Beach</strong></a> (Phra Ae). Cena en la arena viendo el atardecer sobre el Andamán.</p></div>
     <div class="dia" data-dia="kohlanta-2" data-fecha="2026-11-15"><h4>Día 17 · La isla a vuestro ritmo <span class="fecha">domingo 15 nov</span></h4>
       <p>Playa, baño, comida, siesta, paseo. Un día para bajar al sur en scooter hasta la bahía de
-      <strong>Kantiang</strong> y el <strong>parque nacional de Mu Ko Lanta</strong>, con su faro sobre
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Kantiang%20Bay%20Koh%20Lanta" target="_blank" rel="noopener"><strong>Kantiang</strong></a> y el <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Mu%20Ko%20Lanta%20National%20Park" target="_blank" rel="noopener"><strong>parque nacional de Mu Ko Lanta</strong></a>, con su faro sobre
       los acantilados en la punta de la isla. Sin prisa.</p>
-      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>7:00 · Mercado del domingo en Lanta Old Town.</b> Es el único mercado de mañana de la isla (los demás son de tarde). Desayuna allí y vuelve por la costa este.</p><p class="mad-zona"><b>Zona para juntaros:</b> la costa oeste. Vuelves con la moto y os vais a la playa juntos.</p></div></div>
+      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>7:00 · <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Lanta%20Old%20Town%20Koh%20Lanta" target="_blank" rel="noopener">Mercado del domingo en Lanta Old Town</a>.</b> Es el único mercado de mañana de la isla (los demás son de tarde). Desayuna allí y vuelve por la costa este.</p><p class="mad-zona"><b>Zona para juntaros:</b> la costa oeste. Vuelves con la moto y os vais a la playa juntos.</p></div></div>
     <div class="dia" data-dia="kohlanta-3" data-fecha="2026-11-16"><h4>Día 18 · El paraíso de postre: Koh Rok y Koh Haa <span class="fecha">lunes 16 nov</span></h4>
-      <p>Excursión en barco a <strong>Koh Rok</strong>, dos islas vírgenes de parque nacional al sur de
+      <p>Excursión en barco a <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Koh%20Rok" target="_blank" rel="noopener"><strong>Koh Rok</strong></a>, dos islas vírgenes de parque nacional al sur de
       Lanta: arena blanca y agua transparente. <strong>Pedid la salida combinada que añade
-      <em>Koh Haa</em></strong> —«las cinco islas»—, que es el mejor sitio para bucear y hacer esnórquel
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Koh%20Haa%20Koh%20Lanta" target="_blank" rel="noopener"><em>Koh Haa</em></a></strong> —«las cinco islas»—, que es el mejor sitio para bucear y hacer esnórquel
       de toda esta costa: cinco peñascos de caliza con una laguna interior de apenas cinco metros de
       profundidad, protegida de la corriente, con coral duro y blando, tortugas y visibilidad de veinte a
-      treinta metros. Las lanchas salen del muelle de <strong>Saladan</strong> sobre las 8:30 y vuelven a
+      treinta metros. Las lanchas salen del muelle de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Saladan%20Pier%20Koh%20Lanta" target="_blank" rel="noopener"><strong>Saladan</strong></a> sobre las 8:30 y vuelven a
       las 16:00, con tres paradas de esnórquel y comida: unos <strong>1.700–2.100 THB</strong> por persona en
       grupo reducido, <strong>más 400 THB de tasa de parque nacional</strong>, que casi nunca va incluida.
-      Alternativa: las <strong>4 Islands</strong> con la cueva Esmeralda de <strong>Koh Mook</strong> (se
+      Alternativa: las <strong>4 Islands</strong> con la cueva Esmeralda de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Emerald%20Cave%20Koh%20Mook" target="_blank" rel="noopener"><strong>Koh Mook</strong></a> (se
       entra nadando por un túnel hasta una playa interior escondida).</p>
       <div class="tip">Contratad la versión en lancha con grupo reducido y salida temprana: llegaréis antes que los barcos grandes. Y un golpe de suerte del calendario: las islas pequeñas del parque de Mu Ko Lanta —Koh Rok y Koh Haa— cierran en la temporada de lluvias y en noviembre ya están abiertas (las fuentes no coinciden en la fecha exacta de reapertura; el operador os lo confirma al reservar). Vais al principio de temporada, con el coral descansado y sin la gente de diciembre.</div></div>
     <div class="dia" data-dia="kohlanta-4" data-fecha="2026-11-17"><h4>Día 19 · Lanta Old Town y despedida del sur <span class="fecha">martes 17 nov</span></h4>
-      <p><strong>Día:</strong> la antigua capital, en la costa este: casas centenarias de madera sobre
+      <p><strong>Día:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Lanta%20Old%20Town%20Koh%20Lanta" target="_blank" rel="noopener">la antigua capital</a>, en la costa este: casas centenarias de madera sobre
       pilotes en el mar, comunidad chino-malaya y de gitanos del mar, tiendecitas y cafés con terraza
       sobre el agua. <strong>Tarde:</strong> la playa que más os haya gustado, un último masaje frente al
       mar y cena de despedida del sur viendo el atardecer.</p>
-      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>7:00 · Lanta Old Town sin nadie.</b> El pueblo viejo a primera hora, con las casas de madera sobre el agua y los pescadores volviendo, no se parece en nada al de media mañana.</p><p class="mad-zona"><b>Zona para juntaros:</b> el propio pueblo viejo. Ella se acerca en moto o en taxi de isla y desayunáis en una terraza sobre el mar.</p></div></div>
+      <div class="madrugador"><div class="mad-cab"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M12 3.5v2M4.9 6.4l1.4 1.4M2.5 13.5h2M19.5 13.5h2M17.7 7.8l1.4-1.4"/><path d="M7 13.5a5 5 0 0 1 10 0"/><path d="M3.5 17.5h17M6 20.5h12"/></svg>Mientras ella se arregla</div><p><b>7:00 · <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Lanta%20Old%20Town%20Koh%20Lanta" target="_blank" rel="noopener">Lanta Old Town sin nadie</a>.</b> El pueblo viejo a primera hora, con las casas de madera sobre el agua y los pescadores volviendo, no se parece en nada al de media mañana.</p><p class="mad-zona"><b>Zona para juntaros:</b> el propio pueblo viejo. Ella se acerca en moto o en taxi de isla y desayunáis en una terraza sobre el mar.</p></div></div>
     <div class="dia" data-dia="kohlanta-5" data-fecha="2026-11-18"><h4>Día 20 · Vuelta a Bangkok <span class="fecha">miércoles 18 nov</span></h4>
-      <p>Furgoneta hasta el aeropuerto (incluye el ferry de coches a tierra firme: todavía no hay puente; 2–2 h 30 más la cola del ferry, salid al menos 4 h antes del vuelo) y vuelo <strong>Krabi → Bangkok</strong> (1 h 20) a media tarde.</p></div>
+      <p>Furgoneta hasta <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Krabi%20International%20Airport" target="_blank" rel="noopener">el aeropuerto</a> (incluye el ferry de coches a tierra firme: todavía no hay puente; 2–2 h 30 más la cola del ferry, salid al menos 4 h antes del vuelo) y vuelo <strong>Krabi → Bangkok</strong> (1 h 20) a media tarde.</p></div>
   </div>
 
   <div class="duo">
@@ -1936,7 +1940,7 @@
         <h4>Pad thai <span class="pc-th" lang="th">ผัดไทย</span></h4>
         <div class="pc-fon">se dice <b>pat tai</b></div>
         <p>Fideos de arroz salteados con tamarindo, huevo, cacahuete y lima. El plato bandera, y una invención política de los años cuarenta.</p>
-        <div class="pc-donde"><b>Dónde</b> Thipsamai o Pad Thai Fai Ta Lu, los dos en el casco antiguo de Bangkok.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Thipsamai%20Pad%20Thai%20Bangkok" target="_blank" rel="noopener">Thipsamai</a> o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Pad%20Thai%20Fai%20Ta%20Lu%20Dinso%20Road" target="_blank" rel="noopener">Pad Thai Fai Ta Lu</a>, los dos en el casco antiguo de Bangkok.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -1946,7 +1950,7 @@
         <h4>Khao soi <span class="pc-th" lang="th">ข้าวซอย</span></h4>
         <div class="pc-fon">se dice <b>kao soi</b></div>
         <p>Curri de coco con fideos de huevo blandos dentro y fideos fritos crujientes encima. Viene de las caravanas chinas musulmanas de Yunnan. El rey del norte.</p>
-        <div class="pc-donde"><b>Dónde</b> Khao Soi Khun Yai o Mae Sai en Chiang Mai; Phor Jai en Chiang Rai.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Khun%20Yai%20Chiang%20Mai" target="_blank" rel="noopener">Khao Soi Khun Yai</a> o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Mae%20Sai%20Chiang%20Mai" target="_blank" rel="noopener">Mae Sai</a> en Chiang Mai; <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Phor%20Jai%20Chiang%20Rai" target="_blank" rel="noopener">Phor Jai</a> en Chiang Rai.</div>
         <div class="pc-etapa">Chiang Mai · Chiang Rai</div>
       </div>
     </article>
@@ -1956,7 +1960,7 @@
         <h4>Jok (congee) <span class="pc-th" lang="th">โจ๊ก</span></h4>
         <div class="pc-fon">se dice <b>chok</b></div>
         <p>Gachas de arroz cocidas hasta deshacerse, con cerdo, jengibre y huevo. El desayuno de toda la vida: caliente, suave y reconfortante.</p>
-        <div class="pc-donde"><b>Dónde</b> Jok Pa Mali, en Talat Noi. Sólo por la mañana.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B9%82%E0%B8%88%E0%B9%8A%E0%B8%81%E0%B8%9B%E0%B9%89%E0%B8%B2%E0%B8%A1%E0%B8%B0%E0%B8%A5%E0%B8%B4%20Bangkok" target="_blank" rel="noopener">Jok Pa Mali</a>, en Talat Noi. Sólo por la mañana.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -1966,7 +1970,7 @@
         <h4>Moo ping <span class="pc-th" lang="th">หมูปิ้ง</span></h4>
         <div class="pc-fon">se dice <b>mu ping</b></div>
         <p>Brochetas de cerdo marinado en leche de coco y salsa de soja, a la brasa. Se comen con una bolsita de arroz glutinoso.</p>
-        <div class="pc-donde"><b>Dónde</b> Lalai Sap Market, en Silom, a un paseo del hotel. Solo de lunes a viernes: os toca el viernes de llegada o el lunes antes del vuelo.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Lalai%20Sap%20Market%20Silom" target="_blank" rel="noopener">Lalai Sap Market</a>, en Silom, a un paseo del hotel. Solo de lunes a viernes: os toca el viernes de llegada o el lunes antes del vuelo.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -1986,7 +1990,7 @@
         <h4>Tom yum goong <span class="pc-th" lang="th">ต้มยำกุ้ง</span></h4>
         <div class="pc-fon">se dice <b>tom yam kung</b></div>
         <p>Sopa agripicante con gambas, hierba limón, galanga y hoja de lima. Las hierbas no se comen: se apartan.</p>
-        <div class="pc-donde"><b>Dónde</b> Jeh O Chula hace la versión con fideos instantáneos que es una locura.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Jeh%20O%20Chula%20Bangkok" target="_blank" rel="noopener">Jeh O Chula</a> hace la versión con fideos instantáneos que es una locura.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -1996,7 +2000,7 @@
         <h4>Som tam <span class="pc-th" lang="th">ส้มตำ</span></h4>
         <div class="pc-fon">se dice <b>som tam</b></div>
         <p>Papaya verde machacada en mortero con lima, cacahuete, judía larga y chile. Viene del noreste y conquistó el país.</p>
-        <div class="pc-donde"><b>Dónde</b> Somtum Der en Silom, o cualquier puesto con mortero.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Somtum%20Der%20Saladaeng" target="_blank" rel="noopener">Somtum Der</a> en Silom, o cualquier puesto con mortero.</div>
         <div class="pc-etapa">todo el viaje</div>
       </div>
     </article>
@@ -2006,7 +2010,7 @@
         <h4>Khao man gai <span class="pc-th" lang="th">ข้าวมันไก่</span></h4>
         <div class="pc-fon">se dice <b>kao man gai</b></div>
         <p>Pollo hervido sobre arroz cocido en su propio caldo. Parece sosísimo y es adictivo. La clave está en la salsa de soja fermentada con jengibre.</p>
-        <div class="pc-donde"><b>Dónde</b> Go-Ang Pratunam, los de las camisetas rosas.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Go-Ang%20Kaomunkai%20Pratunam" target="_blank" rel="noopener">Go-Ang Pratunam</a>, los de las camisetas rosas.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -2016,7 +2020,7 @@
         <h4>Kuaitiao <span class="pc-th" lang="th">ก๋วยเตี๋ยว</span></h4>
         <div class="pc-fon">se dice <b>kuai tiao</b></div>
         <p>La sopa de fideos de cada día. Eliges fideo, carne y si la quieres con caldo o seca. Hay una versión en cuencos minúsculos, los boat noodles, que se piden de cuatro en cuatro.</p>
-        <div class="pc-donde"><b>Dónde</b> El callejón de boat noodles de Victory Monument.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Victory%20Monument%20Boat%20Noodle%20Alley" target="_blank" rel="noopener">El callejón de boat noodles de Victory Monument</a>.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -2026,7 +2030,7 @@
         <h4>Kuay jab <span class="pc-th" lang="th">ก๋วยจั๊บ</span></h4>
         <div class="pc-fon">se dice <b>kuai chap</b></div>
         <p>Fideos de arroz enrollados en un caldo de pimienta blanca, con panceta crujiente y huevo. Reconfortante y muy poco turístico.</p>
-        <div class="pc-donde"><b>Dónde</b> Nai Ek Roll Noodle, en Yaowarat.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Nai%20Ek%20Roll%20Noodle%20Yaowarat" target="_blank" rel="noopener">Nai Ek Roll Noodle</a>, en Yaowarat.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -2036,7 +2040,7 @@
         <h4>Hoi tod <span class="pc-th" lang="th">หอยทอด</span></h4>
         <div class="pc-fon">se dice <b>hoi tot</b></div>
         <p>Tortilla crujiente de ostras o mejillones, hecha en plancha a fuego bestial, con brotes de soja y salsa de chile.</p>
-        <div class="pc-donde"><b>Dónde</b> Heng Hoi Tod Chaw Lae, en Charoen Nakhon (Khlong San, cruzando el río); también tiene local en Ekkamai Soi 14.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Heng%20Hoitod%20Chawlae%20Charoen%20Nakhon" target="_blank" rel="noopener">Heng Hoi Tod Chaw Lae</a>, en Charoen Nakhon (Khlong San, cruzando el río); también tiene local en Ekkamai Soi 14.</div>
         <div class="pc-etapa">Bangkok</div>
       </div>
     </article>
@@ -2046,7 +2050,7 @@
         <h4>Khao kha moo <span class="pc-th" lang="th">ข้าวขาหมู</span></h4>
         <div class="pc-fon">se dice <b>kao ka mu</b></div>
         <p>Codillo de cerdo estofado durante horas en salsa de soja y cinco especias, sobre arroz, con huevo cocido y verdura encurtida.</p>
-        <div class="pc-donde"><b>Dónde</b> La señora del sombrero vaquero, en la puerta de Chang Phuak, Chiang Mai. Sólo de noche.</div>
+        <div class="pc-donde"><b>Dónde</b> La señora del sombrero vaquero, en <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chang%20Phuak%20Gate%20Night%20Market" target="_blank" rel="noopener">la puerta de Chang Phuak</a>, Chiang Mai. Sólo de noche.</div>
         <div class="pc-etapa">Chiang Mai</div>
       </div>
     </article>
@@ -2056,7 +2060,7 @@
         <h4>Sai ua <span class="pc-th" lang="th">ไส้อั่ว</span></h4>
         <div class="pc-fon">se dice <b>sai ua</b></div>
         <p>La salchicha del norte: cerdo con hierba limón, hoja de lima, cúrcuma y chile. Se come a la brasa, cortada en rodajas.</p>
-        <div class="pc-donde"><b>Dónde</b> Mercado de Warorot, en Chiang Mai. Compra para el camino.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Warorot%20Market%20Chiang%20Mai" target="_blank" rel="noopener">Mercado de Warorot</a>, en Chiang Mai. Compra para el camino.</div>
         <div class="pc-etapa">Chiang Mai · Chiang Rai</div>
       </div>
     </article>
@@ -2066,7 +2070,7 @@
         <h4>Nam prik ong <span class="pc-th" lang="th">น้ำพริกอ่อง</span></h4>
         <div class="pc-fon">se dice <b>nam prik ong</b></div>
         <p>Salsa espesa de tomate y cerdo picado, para mojar verduras crudas y chicharrones. Es lo más lanna que hay.</p>
-        <div class="pc-donde"><b>Dónde</b> Huen Muan Jai o Huen Phen, en Chiang Mai.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Huen%20Muan%20Jai%20Chiang%20Mai" target="_blank" rel="noopener">Huen Muan Jai</a> o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Huen%20Phen%20Chiang%20Mai" target="_blank" rel="noopener">Huen Phen</a>, en Chiang Mai.</div>
         <div class="pc-etapa">Chiang Mai</div>
       </div>
     </article>
@@ -2076,7 +2080,7 @@
         <h4>Gaeng hang lay <span class="pc-th" lang="th">แกงฮังเล</span></h4>
         <div class="pc-fon">se dice <b>keng hang le</b></div>
         <p>Curri de cerdo de herencia birmana, con jengibre, tamarindo y cacahuete. Sin leche de coco y con mucha panceta. Espeso y dulzón.</p>
-        <div class="pc-donde"><b>Dónde</b> Huen Muan Jai, Chiang Mai. O en Chiang Dao, si lo hacen.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Huen%20Muan%20Jai%20Chiang%20Mai" target="_blank" rel="noopener">Huen Muan Jai</a>, Chiang Mai. O en Chiang Dao, si lo hacen.</div>
         <div class="pc-etapa">Chiang Mai · Chiang Dao</div>
       </div>
     </article>
@@ -2086,7 +2090,7 @@
         <h4>Laab <span class="pc-th" lang="th">ลาบ</span></h4>
         <div class="pc-fon">se dice <b>lap</b></div>
         <p>Carne picada con hierbas, arroz tostado molido y lima. La del norte lleva especias y sangre; la del noreste es más ácida.</p>
-        <div class="pc-donde"><b>Dónde</b> Lung Eed, en Chiang Rai: famoso por su laab de pollo con piel crujiente.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Lung%20Eed%20Chiang%20Rai" target="_blank" rel="noopener">Lung Eed</a>, en Chiang Rai: famoso por su laab de pollo con piel crujiente.</div>
         <div class="pc-etapa">Chiang Rai</div>
       </div>
     </article>
@@ -2096,7 +2100,7 @@
         <h4>Nam ngiao <span class="pc-th" lang="th">น้ำเงี้ยว</span></h4>
         <div class="pc-fon">se dice <b>nam ngiao</b></div>
         <p>Fideos con tomate, cerdo y flor de algodón. Es el plato del norte, de origen shan, que casi ningún viajero prueba.</p>
-        <div class="pc-donde"><b>Dónde</b> El mercado matinal de Chiang Rai, a primera hora.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Municipality%20Market" target="_blank" rel="noopener">El mercado matinal de Chiang Rai</a>, a primera hora.</div>
         <div class="pc-etapa">Chiang Rai</div>
       </div>
     </article>
@@ -2136,7 +2140,7 @@
         <h4>Khao mok gai <span class="pc-th" lang="th">ข้าวหมกไก่</span></h4>
         <div class="pc-fon">se dice <b>kao mok gai</b></div>
         <p>El biryani tailandés: arroz especiado con cúrcuma y pollo, herencia musulmana. Se come con una salsa verde de menta.</p>
-        <div class="pc-donde"><b>Dónde</b> Khao Soi Islam, en Chiang Mai.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Khao%20Soi%20Islam%20Chiang%20Mai" target="_blank" rel="noopener">Khao Soi Islam</a>, en Chiang Mai.</div>
         <div class="pc-etapa">Chiang Mai</div>
       </div>
     </article>
@@ -2146,7 +2150,7 @@
         <h4>Roti <span class="pc-th" lang="th">โรตี</span></h4>
         <div class="pc-fon">se dice <b>roti</b></div>
         <p>Masa estirada al aire y frita en plancha. Dulce con plátano y leche condensada, o salada con huevo y curri.</p>
-        <div class="pc-donde"><b>Dónde</b> Roti Pa Day, frente a un templo en Chiang Mai: Bib Gourmand por 30 baht.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Roti%20Pa%20Day%20Chiang%20Mai" target="_blank" rel="noopener">Roti Pa Day</a>, frente a un templo en Chiang Mai: Bib Gourmand por 30 baht.</div>
         <div class="pc-etapa">Chiang Mai · sur</div>
       </div>
     </article>
@@ -2156,7 +2160,7 @@
         <h4>Kanom jeen <span class="pc-th" lang="th">ขนมจีน</span></h4>
         <div class="pc-fon">se dice <b>kanom chin</b></div>
         <p>Fideos de arroz fermentados, ahogados en curri, con verduras y hierbas a discreción. Desayuno del sur.</p>
-        <div class="pc-donde"><b>Dónde</b> El mercado de la mañana de Krabi.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Maharat%20Market%20Krabi" target="_blank" rel="noopener">El mercado de la mañana de Krabi</a>.</div>
         <div class="pc-etapa">Krabi · sur</div>
       </div>
     </article>
@@ -2166,7 +2170,7 @@
         <h4>Gaeng som <span class="pc-th" lang="th">แกงส้ม</span></h4>
         <div class="pc-fon">se dice <b>keng som</b></div>
         <p>Curri del sur, ácido y muy picante, sin leche de coco, con pescado y verduras. No se parece a nada que hayas probado.</p>
-        <div class="pc-donde"><b>Dónde</b> Ruen Mai, en Krabi: el mejor de la zona.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ruen%20Mai%20Restaurant%20Krabi" target="_blank" rel="noopener">Ruen Mai</a>, en Krabi: el mejor de la zona.</div>
         <div class="pc-etapa">Krabi · sur</div>
       </div>
     </article>
@@ -2176,7 +2180,7 @@
         <h4>Pu phat pong curry <span class="pc-th" lang="th">ปูผัดผงกะหรี่</span></h4>
         <div class="pc-fon">se dice <b>pu pat pong ka-ri</b></div>
         <p>Cangrejo salteado con curri en polvo, huevo y leche evaporada. Cremoso y con la mano hasta el codo.</p>
-        <div class="pc-donde"><b>Dónde</b> Krua Apsorn en Bangkok, o cualquier marisquería del sur.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Krua%20Apsorn%20Samsen" target="_blank" rel="noopener">Krua Apsorn</a> en Bangkok, o cualquier marisquería del sur.</div>
         <div class="pc-etapa">Bangkok · sur</div>
       </div>
     </article>
@@ -2186,7 +2190,7 @@
         <h4>Pescado a la brasa <span class="pc-th" lang="th">ปลาเผา</span></h4>
         <div class="pc-fon">se dice <b>pla pao</b></div>
         <p>Pescado entero cubierto de sal gorda y hierba limón, hecho a la brasa. Se abre la costra y se moja en salsa de marisco picante.</p>
-        <div class="pc-donde"><b>Dónde</b> Mercado nocturno de Krabi, o en la arena en Koh Lanta.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chao%20Fah%20Night%20Market%20Krabi" target="_blank" rel="noopener">Mercado nocturno de Krabi</a>, o en la arena en Koh Lanta.</div>
         <div class="pc-etapa">sur</div>
       </div>
     </article>
@@ -2206,7 +2210,7 @@
         <h4>Khao niao mamuang <span class="pc-th" lang="th">ข้าวเหนียวมะม่วง</span></h4>
         <div class="pc-fon">se dice <b>kao niao ma-muang</b></div>
         <p>Mango con arroz glutinoso y leche de coco. La religión local del postre. Mejor de marzo a junio, pero se encuentra casi siempre.</p>
-        <div class="pc-donde"><b>Dónde</b> K. Panich, en Bangkok, haciéndolo desde 1932.</div>
+        <div class="pc-donde"><b>Dónde</b> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=K%20Panich%20Tanao%20Road%20Bangkok" target="_blank" rel="noopener">K. Panich</a>, en Bangkok, haciéndolo desde 1932.</div>
         <div class="pc-etapa">todo el viaje</div>
       </div>
     </article>
@@ -2229,30 +2233,30 @@
 
   <div class="barrios-grid">
     <div class="bcard"><h4>🏙️ Bangkok · llegada (Silom)</h4>
-      <p><b>Silom / Bang Rak</b> — donde tenéis el hotel.</p>
-      <p>Barrio de oficinas de día y de mercados y comida de noche. A cinco minutos andando del BTS Sala Daeng y del MRT Silom, así que llegáis a todo. Y tiene una ventaja para vosotros: el BTS baja hasta Saphan Taksin, donde se coge el barco del río, que es como se va a los grandes templos sin pisar un atasco. Al lado está el mercado de Soi Convent para desayunar como un local.</div>
+      <p><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Silom%20Bangkok" target="_blank" rel="noopener"><b>Silom / Bang Rak</b></a> — donde tenéis el hotel.</p>
+      <p>Barrio de oficinas de día y de mercados y comida de noche. A cinco minutos andando del BTS Sala Daeng y del MRT Silom, así que llegáis a todo. Y tiene una ventaja para vosotros: el BTS baja hasta Saphan Taksin, donde se coge el barco del río, que es como se va a los grandes templos sin pisar un atasco. Al lado está el <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Soi%20Convent%20Silom%20Bangkok" target="_blank" rel="noopener">mercado de Soi Convent</a> para desayunar como un local.</div>
     <div class="bcard"><h4>🛕 Chiang Rai</h4>
-      <p class="barrio">Centro, junto a la torre del reloj y el night bazaar</p>
+      <p class="barrio">Centro, junto a <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Rai%20Night%20Bazaar" target="_blank" rel="noopener">la torre del reloj y el night bazaar</a></p>
       <p>Ciudad pequeña: desde el centro se hace todo a pie y el mercado nocturno es agradable, nada agobiante.</p></div>
     <div class="bcard"><h4>⛰️ Chiang Dao</h4>
-      <p class="barrio">El valle, a los pies del Doi Luang</p>
+      <p class="barrio">El valle, a los pies del <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Doi%20Luang%20Chiang%20Dao" target="_blank" rel="noopener">Doi Luang</a></p>
       <p>No hay "centro": se elige por el entorno. Aquí el alojamiento <em>es</em> el plan — naturaleza y silencio.</p></div>
     <div class="bcard"><h4>🏯 Chiang Mai</h4>
-      <p class="barrio">Old City (dentro de las murallas)</p>
-      <p>Templos, mercados y cafés caminando. Alternativas: <strong>Nimman</strong> (moderno, cafés) o
-      <strong>Riverside</strong> (elegante y verde).</p></div>
+      <p class="barrio"><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Old%20City%20Chiang%20Mai" target="_blank" rel="noopener">Old City (dentro de las murallas)</a></p>
+      <p>Templos, mercados y cafés caminando. Alternativas: <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Nimmanhaemin%20Road%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Nimman</strong></a> (moderno, cafés) o
+      <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Charoen%20Rat%20Road%20Chiang%20Mai" target="_blank" rel="noopener"><strong>Riverside</strong></a> (elegante y verde).</p></div>
     <div class="bcard"><h4>🚤 Krabi town</h4>
-      <p class="barrio">Centro / riverside (mercado nocturno Chao Fah)</p>
+      <p class="barrio">Centro / riverside (<a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chao%20Fah%20Night%20Market%20Krabi" target="_blank" rel="noopener">mercado nocturno Chao Fah</a>)</p>
       <p>Junto al mercado y al embarcadero, perfecto para una noche. No tiene playa: es etapa de paso.</p></div>
     <div class="bcard"><h4>🏝️ Koh Jum</h4>
-      <p><b>Ao Si o Golden Pearl</b> — las dos mejores playas y donde están casi todos los alojamientos.</p>
-      <p>Isla mayoritariamente musulmana, con el pueblo de pescadores de Ban Ko Jum en el sur. Sin cajeros, sin gasolinera y con cuatro restaurantes: llevad efectivo desde Krabi.</p></div>
+      <p><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ao%20Si%20Beach%20Koh%20Jum" target="_blank" rel="noopener"><b>Ao Si</b></a> o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Golden%20Pearl%20Beach%20Koh%20Jum" target="_blank" rel="noopener"><b>Golden Pearl</b></a> — las dos mejores playas y donde están casi todos los alojamientos.</p>
+      <p>Isla mayoritariamente musulmana, con el pueblo de pescadores de <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Ban%20Ko%20Jum" target="_blank" rel="noopener">Ban Ko Jum</a> en el sur. Sin cajeros, sin gasolinera y con cuatro restaurantes: llevad efectivo desde Krabi.</p></div>
     <div class="bcard"><h4>🏖️ Koh Lanta</h4>
-      <p class="barrio">Klong Nin (equilibrio) o Long Beach / Phra Ae</p>
-      <p>Playa larga y ambiente relajado con servicios. Alternativas: <strong>Kantiang</strong> (más aislado)
-      u <strong>Old Town</strong> (encanto histórico sobre el mar).</p></div>
+      <p class="barrio"><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Klong%20Nin%20Beach%20Koh%20Lanta" target="_blank" rel="noopener">Klong Nin</a> (equilibrio) o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Long%20Beach%20Phra%20Ae%20Koh%20Lanta" target="_blank" rel="noopener">Long Beach / Phra Ae</a></p>
+      <p>Playa larga y ambiente relajado con servicios. Alternativas: <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Kantiang%20Bay%20Koh%20Lanta" target="_blank" rel="noopener"><strong>Kantiang</strong></a> (más aislado)
+      u <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Lanta%20Old%20Town%20Koh%20Lanta" target="_blank" rel="noopener"><strong>Old Town</strong></a> (encanto histórico sobre el mar).</p></div>
     <div class="bcard"><h4>🌆 Bangkok · final (tranquilo)</h4>
-      <p class="barrio">Riverside / Rattanakosin (casco antiguo)</p>
+      <p class="barrio"><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Rattanakosin%20Bangkok" target="_blank" rel="noopener">Riverside / Rattanakosin</a> (casco antiguo)</p>
       <p>Junto al río y a los grandes templos, con ambiente sereno para los dos últimos días de calma:
       atardeceres sobre el Chao Phraya. Evitad Khao San si buscáis silencio.</p></div>
   </div>
@@ -2524,7 +2528,8 @@
       <li><strong>Si falta:</strong> Elephant Nature Park y la clase de cocina en Chiang Mai.</li>
       <li><strong>Allí mismo:</strong> excursiones de barco, masajes, traslados por carretera.</li>
     </ul></div>
-    <div class="pcard"><h4>💱 ¿Cuánto es esto en euros?</h4>
+    <div class="pcard" id="cambio"><h4>💱 ¿Cuánto es esto en euros?</h4>
+      <a class="cambio-hoy" href="https://www.google.com/search?q=100+THB+en+EUR" target="_blank" rel="noopener">📈 Ver el cambio de hoy (100 ฿ en €) ↗</a>
       <div id="conversor"></div></div>
     <div class="pcard"><h4>💸 Dinero y papeles</h4><ul>
       <li class="aviso"><strong>TDAC: obligatorio y gratis.</strong> Desde mayo de 2025 hay que rellenar online la
@@ -2956,17 +2961,17 @@
         <span style="font-size:.85rem">Solo para casos de urgente necesidad: detención, accidente grave,
         pérdida de documentación estando bloqueados.</span></li>
       <li>Centralita: <a href="tel:+6626618284">+66 2 661 8284</a> a 8287</li>
-      <li>193/98-99 Lake Rajada Office Complex, planta 23 · Ratchadaphisek Rd, Klongtoey, Bangkok 10110</li>
+      <li><a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Embassy%20of%20Spain%20Bangkok%20Lake%20Rajada%20Office%20Complex" target="_blank" rel="noopener">193/98-99 Lake Rajada Office Complex, planta 23 · Ratchadaphisek Rd, Klongtoey, Bangkok 10110</a></li>
       <li>Metro: BTS Asok / MRT Sukhumvit</li>
       <li>Correo: emb.bangkok@maec.es · consular: emb.bangkok.inf@maec.es</li>
     </ul></div>
 
     <div class="pcard"><h4>🏥 Hospitales para extranjeros</h4><ul>
-      <li><strong>Bangkok:</strong> Bumrungrad International o Samitivej Sukhumvit. De los mejores de Asia,
+      <li><strong>Bangkok:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Bumrungrad%20International%20Hospital" target="_blank" rel="noopener">Bumrungrad International</a> o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Samitivej%20Sukhumvit%20Hospital" target="_blank" rel="noopener">Samitivej Sukhumvit</a>. De los mejores de Asia,
       con personal en inglés y trato a seguros internacionales.</li>
-      <li><strong>Chiang Mai:</strong> Bangkok Hospital Chiang Mai o Chiang Mai Ram.</li>
-      <li><strong>Krabi:</strong> Krabi Nakharin International Hospital.</li>
-      <li><strong>Koh Lanta:</strong> hay un hospital público pequeño en Old Town y clínicas privadas en Klong Dao. Lo serio se traslada a Krabi.</li>
+      <li><strong>Chiang Mai:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Bangkok%20Hospital%20Chiang%20Mai" target="_blank" rel="noopener">Bangkok Hospital Chiang Mai</a> o <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Chiang%20Mai%20Ram%20Hospital" target="_blank" rel="noopener">Chiang Mai Ram</a>.</li>
+      <li><strong>Krabi:</strong> <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Krabi%20Nakharin%20International%20Hospital" target="_blank" rel="noopener">Krabi Nakharin International Hospital</a>.</li>
+      <li><strong>Koh Lanta:</strong> hay <a class="mapa" href="https://www.google.com/maps/search/?api=1&query=Koh%20Lanta%20Hospital" target="_blank" rel="noopener">un hospital público pequeño en Old Town</a> y clínicas privadas en Klong Dao. Lo serio se traslada a Krabi.</li>
       <li>En privado hay que <strong>pagar y reclamar después</strong> al seguro: guardad todas las facturas
       y el informe médico en inglés.</li>
     </ul></div>
@@ -3847,6 +3852,7 @@ function avisaNueva(reg){
     {ic:'📍', t:'Cerca',     a:'cerca'},
     {ic:'🗣️', t:'Frases',    a:'#hablar'},
     {ic:'🆘', t:'Urgencias', a:'#acaso'},
+    {ic:'💱', t:'Baht → €',  a:'#cambio'},
     {ic:'↑',  t:'Arriba',    a:'top'}
   ];
 
