@@ -712,6 +712,12 @@
   .cerca-sello.k-leyenda{background:var(--teca)} .cerca-sello.k-bib{background:#b31b34}
   .cerca-sello.k-local{background:var(--verde)} .cerca-sello.k-barato{background:var(--mar)}
   .cerca-sello.k-cena{background:#6b4a8a}
+  .cerca-hora{display:block;font-size:.78rem;font-weight:700;margin-top:3px}
+  .cerca-hora::before{content:'● '}
+  .cerca-hora.h-abierto{color:#2e7d4f} .cerca-hora.h-pronto{color:#c26a00} .cerca-hora.h-cerrado{color:#c0392b}
+  .cerca-hora.h-duda{color:var(--tinta2);font-weight:600}
+  html[data-tema="oscuro"] .cerca-hora.h-abierto{color:#6fcf97} html[data-tema="oscuro"] .cerca-hora.h-pronto{color:#f2a54a}
+  html[data-tema="oscuro"] .cerca-hora.h-cerrado{color:#ff7b6b}
   .btn-cerca{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;margin:16px 0 4px;
     background:var(--verde);color:#fff;border:none;border-radius:12px;padding:14px;font-size:1rem;
     font-weight:700;cursor:pointer;font-family:-apple-system,'Segoe UI',sans-serif;
@@ -3928,6 +3934,134 @@ function avisaNueva(reg){
   var SELLO = {leyenda:'lleva décadas abierto', bib:'Bib Gourmand', local:'donde come la gente de aquí',
                barato:'muy barato', cena:'mesa especial', '':''};
 
+  // Horarios de las fichas de la guía, para decir si está abierto AHORA (hora de Tailandia).
+  // Días: 0 domingo … 6 sábado.  h = tramos del día ("9:00-14:00,17:00-22:00"; si el cierre es
+  // menor que la apertura, pasa de medianoche) · c = días que cierra · o = horario distinto ese
+  // día ('?' = dudoso) · a = horario aproximado · v = sin hora concreta (se enseña el texto).
+  // Si cambia el horario de una ficha, cámbialo también aquí.
+  var HORARIOS = {
+    'Thipsamai': {h:'9:00-24:00', c:[2]},
+    'Nai Ek Roll Noodle': {h:'8:00-24:00'},
+    'T&K Seafood': {h:'16:30-2:00'},
+    'Guay Jub Ouan Pochana': {h:'11:00-24:00', c:[1], a:1},
+    'Wattana Panich': {h:'9:00-19:30'},
+    'Or Tor Kor Market': {h:'6:00-18:00'},
+    'Khao Gaeng Jek Pui': {h:'14:00-19:30', a:1},
+    'Sanguan Sri': {v:'solo a mediodía, hasta ~15:00', c:[0]},
+    'Somtum Der': {h:'11:00-22:30'},
+    'Mae Varee': {h:'6:00-22:00'},
+    'Boat noodles de Victory Monument': {h:'9:00-20:00', a:1},
+    'Krua Apsorn': {h:'10:00-20:00'},
+    'Pad Thai Fai Ta Lu': {h:'10:00-24:00'},
+    'Here Hai': {h:'10:00-15:00', c:[1]},
+    'Somsak Pu Ob': {h:'16:00-21:30', c:[1]},
+    'K. Panich': {h:'7:00-17:00', c:[0]},
+    'Ten Suns': {h:'9:00-16:00', c:[1]},
+    'Jeh O Chula': {h:'16:30-24:00'},
+    'Go-Ang Kaomunkai Pratunam': {h:'6:00-14:00,15:00-22:30'},
+    'Rung Rueang': {h:'8:00-17:00'},
+    'Jok Pa Mali': {h:'5:00-12:00', a:1},
+    'Kway Teow Roo': {h:'7:30-16:00', o:{1:'10:30-16:00', 5:'9:30-16:00'}},
+    'Puesto de coco y khanom krok': {v:'de día'},
+    'Lalai Sap Market': {v:'de día, en horario de oficina', c:[0,6]},
+    'DK Bakery': {h:'9:00-17:00', o:{0:'?', 6:'?'}},
+    'Heng Hoitod Chawlae': {h:'9:30-22:30', a:1},
+    'Noor': {v:'de día'},
+    'ROTINI': {h:'9:30-17:00', c:[0]},
+    'Patongo con leche de soja': {h:'7:30-22:00', c:[3,4]},
+    'Tang Bak Seng': {v:'de mañana'},
+    'Pa Lek-Pa Yai': {v:'de día, solo en temporada'},
+    'Jai Rad Na Noodle': {h:'16:00-22:00', c:[0,1]},
+    'Bok Kia Tha Din Daeng': {h:'17:30-20:00', c:[5], o:{0:'9:00-12:00', 6:'9:00-12:00'}},
+    'Pork Satay Tee Tha Din Daeng': {v:'tarde y noche'},
+    'Amin Mutton & Chicken Biryani': {h:'5:00-13:00', c:[0]},
+    "Jack's Chicken Rice": {h:'10:00-15:00', a:1},
+    'ViVi The Coffee Place': {h:'10:00-20:00'},
+    'Th. Plaeng Nam': {v:'de día y de noche'},
+    'Song Wat': {v:'calle: mejor por la mañana'},
+    'Talat Noi al amanecer': {v:'antes de las 8:00'},
+    'Comer en Chatuchak': {h:'9:00-18:00', c:[1,2,3,4,5]},
+    'Khao Soi Phor Jai': {h:'7:00-15:30', a:1},
+    'Lung Eed': {h:'11:30-21:00', c:[0], a:1},
+    'Mercado matinal (Kad Luang)': {h:'5:00-11:00', a:1},
+    'Night Bazaar': {h:'18:00-23:00'},
+    'Paa Suk': {h:'9:00-14:00', c:[1], a:1},
+    'Chivit Thamma Da': {h:'9:00-22:00'},
+    'Mercado de Chiang Dao': {h:'15:00-20:00', c:[0,1,3,5,6], o:{2:'?'}, a:1},
+    'Chiang Dao Nest': {h:'10:30-15:30,18:00-21:30'},
+    'Khao Soi Khun Yai': {h:'10:00-14:00', c:[0]},
+    'Khao Soi Mae Sai': {h:'8:00-16:00', c:[0]},
+    'Khao Soi Lam Duan Fah Ham': {h:'8:30-15:30'},
+    'Cowboy Hat Lady': {h:'17:00-24:00', a:1},
+    'SP Chicken': {h:'10:00-17:00', a:1},
+    'Huen Phen': {h:'8:30-16:00,17:00-22:00'},
+    'Tong Tem Toh': {h:'11:00-22:00'},
+    'Mercado de Warorot (Kad Luang)': {h:'6:00-17:00'},
+    'Mercado del domingo': {h:'16:00-22:00', c:[1,2,3,4,5,6]},
+    'Chang Phuak Night Market': {h:'17:00-24:00'},
+    'Akha Ama Coffee': {h:'8:00-17:00', c:[3]},
+    'Huen Muan Jai': {h:'11:00-21:00', c:[3], o:{6:'11:00-15:00,17:00-21:00'}},
+    'Meena Rice Based Cuisine': {h:'10:00-20:00', a:1},
+    'Guay Jub Chang Moi': {h:'10:00-15:00'},
+    'Roti Pa Day': {h:'18:30-24:00'},
+    'Ruen Mai': {h:'10:30-15:00,17:00-21:00', a:1},
+    'Mercado nocturno de Chao Fah': {h:'17:00-22:00'},
+    'Puestos de kanom jeen': {h:'6:00-11:00'},
+    'Marisco de Ao Nang': {h:'17:00-23:00'},
+    "May & Mark's": {h:'8:00-21:00', a:1},
+    'Cafés del paseo del río': {h:'8:00-18:00'},
+    'Ban Ban Restaurant': {h:'8:00-21:00', a:1},
+    'Restaurantes halal del pueblo': {v:'todo el día'},
+    'Luboa Café': {h:'8:00-17:00'},
+    'Caoutchouc': {v:'horario irregular: llamad antes'},
+    'Terrazas del pueblo viejo': {h:'11:00-22:00'},
+    'Fresh Restaurant': {h:'11:00-22:00'},
+    'Time For Lime': {v:'clase de cocina con reserva', c:[0,1]}
+  };
+  var DIAS = ['el domingo','el lunes','el martes','el miércoles','el jueves','el viernes','el sábado'];
+
+  function minutos(t){ var p = t.split(':'); return +p[0]*60 + +p[1]; }
+  function hora(m){ m = m % 1440; return Math.floor(m/60) + ':' + ('0' + m%60).slice(-2); }
+  function tramos(ho, dia){              // tramos de ese día: [[ini, fin]] · null si cierra · '?' si dudoso
+    if (ho.c && ho.c.indexOf(dia) > -1) return null;
+    var t = (ho.o && ho.o[dia] !== undefined) ? ho.o[dia] : ho.h;
+    if (t === '?') return '?';
+    return t.split(',').map(function(r){ var x = r.split('-'); return [minutos(x[0]), minutos(x[1])]; });
+  }
+  // abierto / a punto de cerrar / cerrado, con la hora de Tailandia (UTC+7, sin horario de verano)
+  function estadoHorario(nombre){
+    var ho = HORARIOS[nombre];
+    if (!ho) return null;
+    var th = new Date(Date.now() + 7*3600e3);
+    var dia = th.getUTCDay(), m = th.getUTCHours()*60 + th.getUTCMinutes();
+    var cerradoHoy = ho.c && ho.c.indexOf(dia) > -1;
+    if (ho.v) return cerradoHoy ? {k:'cerrado', t:'Hoy no abre'} : {k:'duda', t:'Horario: ' + ho.v};
+    var aprox = ho.a ? ' (aprox.)' : '';
+    var hoy = tramos(ho, dia), ayer = tramos(ho, (dia + 6) % 7);
+    if (hoy === '?') return {k:'duda', t:'Hoy el horario es dudoso: miradlo en Maps'};
+    var abiertoHasta = null;
+    if (ayer && ayer !== '?') ayer.forEach(function(r){ if (r[1] <= r[0] && m < r[1]) abiertoHasta = r[1]; });
+    if (hoy) hoy.forEach(function(r){
+      var fin = r[1] <= r[0] ? r[1] + 1440 : r[1];
+      if (m >= r[0] && m < fin) abiertoHasta = fin;
+    });
+    if (abiertoHasta !== null) {
+      var falta = (abiertoHasta < m ? abiertoHasta + 1440 : abiertoHasta) - m;
+      var a = abiertoHasta % 1440 === 0 ? 'medianoche' : 'las ' + hora(abiertoHasta);
+      return falta <= 45 ? {k:'pronto', t:'Cierra pronto, a ' + a + aprox}
+                         : {k:'abierto', t:'Abierto · hasta ' + (a === 'medianoche' ? 'medianoche' : a) + aprox};
+    }
+    if (hoy) for (var i = 0; i < hoy.length; i++)
+      if (hoy[i][0] > m) return {k:'cerrado', t:'Cerrado · abre a las ' + hora(hoy[i][0]) + aprox};
+    for (var n = 1; n <= 7; n++) {
+      var t = tramos(ho, (dia + n) % 7);
+      if (t === '?') return {k:'cerrado', t: cerradoHoy ? 'Hoy no abre' : 'Cerrado ahora'};
+      if (t) return {k:'cerrado', t:(cerradoHoy ? 'Hoy no abre' : 'Cerrado') + ' · abre ' +
+        (n === 1 ? 'mañana' : DIAS[(dia + n) % 7]) + ' a las ' + hora(t[0][0]) + aprox};
+    }
+    return {k:'cerrado', t:'Cerrado'};
+  }
+
   var panel = document.createElement('div');
   panel.id = 'cerca';
   panel.innerHTML =
@@ -3966,7 +4100,7 @@ function avisaNueva(reg){
       var d = km(lat, lon, s.la, s.lo);
       // los de posición aproximada llevan la coordenada del barrio, no la del local:
       // se penalizan al ordenar para que no adelanten a los que sí están situados
-      return {s: s, d: d, orden: s.ap ? d + 0.6 : d};
+      return {s: s, d: d, orden: s.ap ? d + 0.6 : d, h: estadoHorario(s.n)};
     }).sort(function(a,b){ return a.orden - b.orden; });
 
     var enEtapa = cerca[0].d < 60 ? cerca[0].s.e : null;
@@ -3980,6 +4114,8 @@ function avisaNueva(reg){
     }
     estado.innerHTML = enEtapa ? 'Estás en <b>' + enEtapa + '</b>. Lo más cercano de la guía:'
       : 'Lo más cercano de la guía está en <b>' + cerca[0].s.e + '</b>, a ' + distancia(cerca[0].d) + ':';
+    estado.innerHTML += '<br><small>Abierto o cerrado según el horario de la guía, con la hora de Tailandia. ' +
+      'Al pulsar se abre en Maps, que lo confirma en directo.</small>';
     lista.innerHTML = top.map(function(x){
       var s = x.s;
       var url = 'https://www.google.com/maps/search/?api=1&query=' + s.q;
@@ -3988,7 +4124,8 @@ function avisaNueva(reg){
           (s.ap ? (x.d < 3 ? 'por aquí' : '~' + distancia(x.d)) : distancia(x.d)) + '</span>' +
         '<span class="cerca-n">' + s.n +
           (s.s ? '<span class="cerca-sello k-' + s.s + '">' + SELLO[s.s] + '</span>' : '') +
-        '<small>' + s.z + (s.ap ? ' · no tengo su punto exacto' : andando(x.d)) + '</small></span></a>';
+        '<small>' + s.z + (s.ap ? ' · no tengo su punto exacto' : andando(x.d)) + '</small>' +
+        (x.h ? '<span class="cerca-hora h-' + x.h.k + '">' + x.h.t + '</span>' : '') + '</span></a>';
     }).join('');
   }
 
