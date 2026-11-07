@@ -38,7 +38,7 @@ META = {
  '04-doi-suthep-guia':     ('Doi Suthep, el templo de la montaña', 'chiangmai-2', 'guia'),
  '04-wat-phra-singh-capsula':('Wat Phra Singh', 'chiangmai-1', 'capsula'),
  '04-wat-chedi-luang-capsula':('Wat Chedi Luang', 'chiangmai-1', 'capsula'),
- '04-elefantes':           ('El elefante en Tailandia', 'chiangmai-4', 'fondo'),
+ '04-doi-inthanon':        ('Doi Inthanon: la montaña del rey', 'chiangmai-4', 'fondo'),
  '05-krabi-historia':      ('Krabi y el mar de Andamán', 'krabi-1', 'fondo'),
  '05-tsunami-2004':        ('El tsunami de 2004', 'krabi-1', 'fondo'),
  '06-koh-jum-historia':    ('Koh Jum: la isla que casi nadie pisa', 'kohjum-1', 'fondo'),
