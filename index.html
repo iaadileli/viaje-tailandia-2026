@@ -3779,17 +3779,19 @@ function avisaNueva(reg){
   /* --- conversor de baht: sin conexión, con tipo editable --- */
   var caja = document.getElementById('conversor');
   if (caja) {
-    var TIPO = 'thb-eur';
-    var tipo = 38.5;                       // baht por euro; se puede ajustar
-    try { var g = localStorage.getItem(TIPO); if (g) tipo = parseFloat(g); } catch(e){}
+    // Baht por euro. Sin cobertura, el último cambio oficial que se bajó (o este, del 6-nov-2026,
+    // ~37,45 según el cambio medio del mercado). Con cobertura se pide el del día al abrir la web.
+    var AUTO = 'thb-eur-auto';
+    var tipo = 37.45, cuando = '6 nov';
+    try { var g = JSON.parse(localStorage.getItem(AUTO) || 'null'); if (g && g.r > 0) { tipo = g.r; cuando = g.f; } } catch(e){}
 
     caja.innerHTML =
       '<div class="conv-fila"><input id="convThb" type="number" inputmode="decimal" placeholder="100" aria-label="Baht">' +
       '<span class="conv-uni">฿</span><span class="conv-igual">=</span>' +
-      '<output id="convEur">2,60 €</output></div>' +
+      '<output id="convEur">2,67 €</output></div>' +
       '<div class="conv-tabla" id="convTabla"></div>' +
       '<label class="conv-tipo">1 € = <input id="convTipo" type="number" inputmode="decimal" step="0.1" aria-label="Baht por euro" value="' +
-      tipo + '"> ฿ <span>(ajustadlo al llegar con el cambio real)</span></label>';
+      tipo + '"> ฿ <span id="convSello">(cambio del ' + cuando + ')</span></label>';
 
     var inThb = caja.querySelector('#convThb'), out = caja.querySelector('#convEur');
     var inTipo = caja.querySelector('#convTipo'), tabla = caja.querySelector('#convTabla');
@@ -3803,11 +3805,35 @@ function avisaNueva(reg){
       }).join('');
     }
     inThb.addEventListener('input', pinta);
+    var sello = caja.querySelector('#convSello');
     inTipo.addEventListener('input', function(){
       var t = parseFloat(inTipo.value);
-      if (t > 0) { tipo = t; try { localStorage.setItem(TIPO, t); } catch(e){} pinta(); }
+      if (t > 0) { tipo = t; sello.textContent = '(a mano, para echar cuentas)'; pinta(); }
     });
     pinta();
+
+    // El cambio del día: primero el del BCE (Frankfurter) y, si falla, otro servicio abierto.
+    // Las casas de cambio y las tarjetas dan algo menos que este cambio medio.
+    var MESES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+    function fecha(d){ return d.getUTCDate() + ' ' + MESES[d.getUTCMonth()]; }
+    function aplica(r, f){
+      if (!(r > 20 && r < 60)) throw new Error('cambio raro');   // por si una API devuelve basura
+      r = Math.round(r * 100) / 100;
+      try { localStorage.setItem(AUTO, JSON.stringify({r: r, f: f})); } catch(e){}
+      if (document.activeElement === inTipo) return;              // no pisar lo que se está tecleando
+      tipo = r; inTipo.value = r; sello.textContent = '(cambio del ' + f + ')'; pinta();
+    }
+    if (navigator.onLine !== false) {
+      fetch('https://api.frankfurter.app/latest?from=EUR&to=THB')
+        .then(function(x){ return x.json(); })
+        .then(function(j){ aplica(j.rates.THB, fecha(new Date(j.date + 'T12:00:00Z'))); })
+        .catch(function(){
+          return fetch('https://open.er-api.com/v6/latest/EUR')
+            .then(function(x){ return x.json(); })
+            .then(function(j){ aplica(j.rates.THB, fecha(new Date(j.time_last_update_unix * 1000))); });
+        })
+        .catch(function(){});                                     // sin red: se queda el guardado
+    }
   }
 })();
 </script>
