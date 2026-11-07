@@ -36,6 +36,7 @@ META = {
  '04-chiang-mai-historia': ('Historia de Chiang Mai', 'chiangmai-1', 'fondo'),
  '04-doi-suthep-capsula':  ('Doi Suthep, el templo de la montaña', 'chiangmai-2', 'capsula'),
  '04-doi-suthep-guia':     ('Doi Suthep, el templo de la montaña', 'chiangmai-2', 'guia'),
+ '04-baan-kang-wat-capsula':('Baan Kang Wat, el pueblo de artesanos', 'chiangmai-2', 'capsula'),
  '04-wat-phra-singh-capsula':('Wat Phra Singh', 'chiangmai-1', 'capsula'),
  '04-wat-chedi-luang-capsula':('Wat Chedi Luang', 'chiangmai-1', 'capsula'),
  '04-doi-inthanon':        ('Doi Inthanon: la montaña del rey', 'chiangmai-4', 'fondo'),
