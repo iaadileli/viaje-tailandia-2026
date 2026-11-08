@@ -50,6 +50,7 @@ META = {
  '00-masaje-tailandes':    ('El masaje tailandés', 'bangkok2-2', 'fondo'),
  '01-wat-traimit-capsula': ('Wat Traimit, el Buda de oro', 'bangkok1-2', 'capsula'),
  '04-mercados-chiang-mai': ('Los mercados de Chiang Mai', 'chiangmai-3', 'fondo'),
+ '04-wat-sri-suphan-capsula':('Wat Sri Suphan, el Templo de Plata', 'chiangmai-3', 'capsula'),
  '05-railay-capsula':      ('Railay', 'krabi-1', 'capsula'),
  '05-phang-nga-capsula':   ('La bahía de Phang Nga', 'krabi-1', 'capsula'),
  '07-playas-koh-lanta':    ('Las playas, una por una', 'kohlanta-2', 'fondo'),
