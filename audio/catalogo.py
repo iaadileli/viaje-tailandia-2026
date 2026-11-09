@@ -39,7 +39,7 @@ META = {
  '04-baan-kang-wat-capsula':('Baan Kang Wat, el pueblo de artesanos', 'chiangmai-2', 'capsula'),
  '04-wat-phra-singh-capsula':('Wat Phra Singh', 'chiangmai-1', 'capsula'),
  '04-wat-chedi-luang-capsula':('Wat Chedi Luang', 'chiangmai-1', 'capsula'),
- '04-warorot-capsula':     ('Warorot, el gran mercado (Kad Luang)', 'chiangmai-4', 'capsula'),
+ '04-warorot-capsula':     ('Warorot, el gran mercado (Kad Luang)', 'chiangmai-4', 'guia'),
  '04-wat-umong-guia':      ('Wat Umong, el templo de los túneles', 'chiangmai-4', 'guia'),
  '05-krabi-historia':      ('Krabi y el mar de Andamán', 'krabi-1', 'fondo'),
  '05-tsunami-2004':        ('El tsunami de 2004', 'krabi-1', 'fondo'),
