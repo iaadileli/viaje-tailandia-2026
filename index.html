@@ -126,6 +126,21 @@
   .intro{font-size:1.08rem;max-width:760px;margin-bottom:22px}
 
   .dias{display:grid;gap:14px;margin:10px 0 24px}
+  /* ---------- CALENDARIO DEL VIAJE ---------- */
+  .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:14px 0 6px}
+  .cal-dsem{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--tinta2);text-align:center;padding:2px 0}
+  .cal-c{min-height:64px;border-radius:9px;padding:5px 2px 6px 4px;font-size:.57rem;letter-spacing:-.25px;line-height:1.2;color:#fff;
+    border:0;text-align:left;font-family:inherit;cursor:pointer;display:flex;flex-direction:column;gap:2px;overflow:hidden}
+  .cal-c b{font-size:.95rem;font-weight:800}
+  .cal-c.fuera{background:transparent;color:var(--tinta2);opacity:.45;cursor:default;border:1px dashed var(--linea)}
+  .cal-c.hoy{outline:3px solid var(--oro);outline-offset:1px}
+  .cal-c.hoy b::after{content:' · hoy';font-size:.62rem;font-weight:700}
+  .cal-lista{margin:18px 0 6px;display:grid;gap:6px}
+  .cal-fila{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;background:var(--card);border:1px solid var(--linea);
+    border-left:6px solid var(--c);border-radius:10px;padding:9px 11px;font-family:inherit;font-size:.86rem;color:inherit;cursor:pointer;line-height:1.35}
+  .cal-fila.hoy{outline:2px solid var(--oro)}
+  .cal-fila .f{flex:0 0 64px;font-weight:700;color:var(--teca)}
+  .cal-fila .q small{display:block;color:var(--tinta2);font-size:.78rem;margin-top:2px}
   .dia{background:var(--card);border:1px solid var(--linea);border-left:5px solid var(--oro);
     border-radius:12px;padding:18px 20px;box-shadow:var(--sombra)}
   .dia h4{font-family:-apple-system,'Segoe UI',sans-serif;font-size:.95rem;color:var(--teca);margin-bottom:6px}
@@ -876,6 +891,7 @@
   <div class="menu-panel" id="menuInfo">
     <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
     <div class="cab">Sobre la marcha</div>
+    <a href="#calendario" onclick="cerrarMenuInfo()">📅 Calendario del viaje</a>
     <a href="#hablar" onclick="cerrarMenuInfo()">🗣️ Hablar tailandés</a>
     <a href="#acaso" onclick="cerrarMenuInfo()">🆘 Por si acaso</a>
     <a href="#comer" onclick="cerrarMenuInfo()">🍜 Comer (todo)</a>
@@ -929,6 +945,15 @@
     <div class="clave"><div class="n">5</div><div class="t">noches en Bangkok (3 al llegar + 2 al final)</div></div>
     <div class="clave"><div class="n">1–2</div><div class="t">cosas al día como máximo: el resto, pasear</div></div>
   </div>
+</section>
+
+<!-- ============ CALENDARIO ============ -->
+<section id="calendario" class="etapa-sec">
+  <div class="kicker">Dónde estáis cada día</div>
+  <h2>Calendario del viaje</h2>
+  <p class="intro">Un color por etapa, y dónde dormís cada noche. Toca un día para ir a su plan.</p>
+  <div class="cal sans" id="cal"></div>
+  <div class="cal-lista sans" id="calLista"></div>
 </section>
 
 <!-- ============ MAPA ============ -->
@@ -4191,5 +4216,87 @@ function avisaNueva(reg){
 
 
 
+<script>
+/* ---------- CALENDARIO: se monta solo a partir de los días de la web ---------- */
+(function(){
+  var caja = document.getElementById('cal'), lista = document.getElementById('calLista');
+  if (!caja || !lista) return;
+  var COLOR = {bangkok1:'#8b5a2b', chiangrai:'#2f6f8f', chiangdao:'#4f7a3a', chiangmai:'#9a4a6a',
+               krabi:'#b0702a', kohjum:'#1f8a7a', kohlanta:'#3b5fa0', bangkok2:'#6b4a8a'};
+  var DSEM = ['dom','lun','mar','mié','jue','vie','sáb'];
+  var MES = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+  // etapas en orden, con su nombre corto
+  var etapas = [].slice.call(document.querySelectorAll('section.etapa-sec')).filter(function(x){ return COLOR[x.id]; });
+  function nombre(sec){ return sec.querySelector('h2').textContent.split('—')[0].trim(); }
+  // el hotel de cada etapa: la fila reservada que sigue a cada grupo de la tabla (mismo orden que las etapas)
+  var hotel = {};
+  var grupos = document.querySelectorAll('#hoteles table.hoteles tr.grupo');
+  [].forEach.call(grupos, function(g, i){
+    var fila = g.nextElementSibling, n = fila && fila.classList.contains('reservado') && fila.querySelector('.hotel');
+    if (etapas[i] && n) hotel[etapas[i].id] = n.textContent.trim();
+  });
+
+  // los días: todos los bloques de una fecha (los de traslado son dos: de dónde salís y adónde llegáis)
+  var dias = {};
+  [].forEach.call(document.querySelectorAll('.dia[data-fecha]'), function(b){
+    var sec = b.closest('section.etapa-sec'); if (!sec || !COLOR[sec.id]) return;
+    (dias[b.dataset.fecha] = dias[b.dataset.fecha] || []).push({b: b, sec: sec});
+  });
+  var fechas = Object.keys(dias).sort();
+  if (!fechas.length) return;
+  var ultima = fechas[fechas.length - 1];
+  var th = new Date(Date.now() + 7*3600e3), hoy = th.toISOString().slice(0,10);
+
+  function d(iso){ return new Date(iso + 'T12:00:00Z'); }
+  function iso(x){ return x.toISOString().slice(0,10); }
+  function ir(f){
+    var b = dias[f][0].b;
+    window.scrollTo({top: b.getBoundingClientRect().top + window.scrollY - 150, behavior: 'smooth'});
+  }
+  function fondo(bs){
+    var c1 = COLOR[bs[0].sec.id], c2 = COLOR[bs[bs.length-1].sec.id];
+    return c1 === c2 ? c1 : 'linear-gradient(135deg,' + c1 + ' 50%,' + c2 + ' 50%)';
+  }
+  function donde(bs){
+    var a = nombre(bs[0].sec), z = nombre(bs[bs.length-1].sec);
+    return a === z ? a : a + ' → ' + z;
+  }
+  function duerme(f, bs){ return f === ultima ? '✈️ vuelta a casa' : (hotel[bs[bs.length-1].sec.id] || nombre(bs[bs.length-1].sec)); }
+
+  // cuadrícula: de lunes a domingo, desde la semana de la salida de Madrid
+  var h = DSEM.slice(1).concat(DSEM[0]).map(function(x){ return '<div class="cal-dsem">' + x + '</div>'; }).join('');
+  var ini = d('2026-10-29'), fin = d(ultima);
+  var c = new Date(ini); c.setUTCDate(c.getUTCDate() - ((c.getUTCDay() + 6) % 7));
+  var tope = new Date(fin); tope.setUTCDate(tope.getUTCDate() + 6 - ((tope.getUTCDay() + 6) % 7));
+  for (; c <= tope; c.setUTCDate(c.getUTCDate() + 1)) {
+    var f = iso(c), bs = dias[f], n = c.getUTCDate();
+    if (bs) {
+      h += '<button class="cal-c' + (f === hoy ? ' hoy' : '') + '" data-f="' + f + '" style="background:' + fondo(bs) + '"><b>' + n + '</b>' + donde(bs) + '</button>';
+    } else if (f === '2026-10-29') {
+      h += '<div class="cal-c" style="background:#7a6f60;cursor:default"><b>' + n + '</b>✈️ Madrid</div>';
+    } else {
+      h += '<div class="cal-c fuera"><b>' + n + '</b></div>';
+    }
+  }
+  caja.innerHTML = h;
+
+  // lista día a día
+  lista.innerHTML = fechas.map(function(f){
+    var bs = dias[f], x = d(f);
+    var num = (bs[bs.length-1].b.querySelector('h4').textContent.match(/Día\s+(\d+)/) || [])[1];
+    var tit = bs[bs.length-1].b.querySelector('h4').cloneNode(true);
+    var fe = tit.querySelector('.fecha'); if (fe) fe.remove();
+    var t = tit.textContent.replace(/^Día\s+\d+\s*·\s*/, '').trim();
+    return '<button class="cal-fila' + (f === hoy ? ' hoy' : '') + '" data-f="' + f + '" style="--c:' + COLOR[bs[bs.length-1].sec.id] + '">' +
+      '<span class="f">' + DSEM[x.getUTCDay()] + ' ' + x.getUTCDate() + ' ' + MES[x.getUTCMonth()] + (num ? '<br><small style="font-weight:400">día ' + num + '</small>' : '') + '</span>' +
+      '<span class="q"><b>' + donde(bs) + '</b> · ' + t + '<small>🛏 ' + duerme(f, bs) + '</small></span></button>';
+  }).join('');
+
+  [].forEach.call(document.querySelectorAll('#calendario [data-f]'), function(e){
+    e.addEventListener('click', function(){ ir(e.dataset.f); });
+  });
+})();
+</script>
 </body>
 </html>
