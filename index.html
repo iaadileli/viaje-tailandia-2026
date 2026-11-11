@@ -127,6 +127,7 @@
 
   .dias{display:grid;gap:14px;margin:10px 0 24px}
   /* ---------- CALENDARIO DEL VIAJE ---------- */
+  #calendario{scroll-margin-top:150px}
   .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin:14px 0 6px}
   .cal-dsem{font-size:.68rem;text-transform:uppercase;letter-spacing:1px;color:var(--tinta2);text-align:center;padding:2px 0}
   .cal-c{min-height:64px;border-radius:9px;padding:5px 2px 6px 4px;font-size:.57rem;letter-spacing:-.25px;line-height:1.2;color:#fff;
@@ -4251,8 +4252,10 @@ function avisaNueva(reg){
   function d(iso){ return new Date(iso + 'T12:00:00Z'); }
   function iso(x){ return x.toISOString().slice(0,10); }
   function ir(f){
+    // salto directo y una segunda corrección: las fotos que cargan por el camino mueven el destino
     var b = dias[f][0].b;
-    window.scrollTo({top: b.getBoundingClientRect().top + window.scrollY - 150, behavior: 'smooth'});
+    function va(){ window.scrollTo(0, b.getBoundingClientRect().top + window.scrollY - 150); }
+    va(); setTimeout(va, 400); setTimeout(va, 1200);
   }
   function fondo(bs){
     var c1 = COLOR[bs[0].sec.id], c2 = COLOR[bs[bs.length-1].sec.id];
