@@ -476,6 +476,8 @@
   .rebajando{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);z-index:60;max-width:92vw;
     background:#2b2620;color:#faf6ef;border-radius:12px;padding:11px 16px;font-size:.9rem;
     font-family:-apple-system,'Segoe UI',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.25)}
+  .idioma{position:absolute;top:14px;right:14px;z-index:2;background:rgba(0,0,0,.45);color:#fff;text-decoration:none;
+    border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 12px;font:600 .85rem -apple-system,'Segoe UI',sans-serif}
   .tema-btn{flex:0 0 auto;background:none;border:1px solid var(--linea);border-radius:9px;
     width:36px;height:36px;font-size:.95rem;cursor:pointer;margin-left:8px;color:var(--tinta2)}
   .tema-btn:hover{border-color:var(--oro);color:var(--oro)}
@@ -859,6 +861,7 @@
 <body>
 
 <header class="hero">
+  <a class="idioma" data-idioma href="https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&amp;_x_tr_tl=en&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp">🇬🇧 English</a>
   <div class="hero-inner">
     <div class="fechas">Salida de Madrid el 29 oct · en Tailandia del 30 oct al 20 nov de 2026 · 21 noches</div>
     <h1>Tailandia con calma</h1>
@@ -891,6 +894,7 @@
   </button>
   <div class="menu-panel" id="menuInfo">
     <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
+    <a href="https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&amp;_x_tr_tl=en&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp" data-idioma onclick="cerrarMenuInfo()">🇬🇧 Read it in English</a>
     <div class="cab">Sobre la marcha</div>
     <a href="#calendario" onclick="cerrarMenuInfo()">📅 Calendario del viaje</a>
     <a href="#hablar" onclick="cerrarMenuInfo()">🗣️ Hablar tailandés</a>
@@ -4298,6 +4302,20 @@ function avisaNueva(reg){
 
   [].forEach.call(document.querySelectorAll('#calendario [data-f]'), function(e){
     e.addEventListener('click', function(){ ir(e.dataset.f); });
+  });
+})();
+</script>
+<script>
+/* ---------- IDIOMA: la versión en inglés es la traducción automática de Google (translate.goog) ---------- */
+(function(){
+  var enIngles = /translate\.goog$/.test(location.hostname);
+  var ES = 'https://iaadileli.github.io/viaje-tailandia-2026/';
+  var EN = 'https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&_x_tr_tl=en&_x_tr_hl=en&_x_tr_pto=wapp';
+  document.querySelectorAll('[data-idioma]').forEach(function(a){
+    a.setAttribute('translate', 'no');          // que Google no traduzca la propia bandera
+    a.classList.add('notranslate');
+    if (enIngles) { a.href = ES; a.textContent = a.classList.contains('idioma') ? '🇪🇸 Español' : '🇪🇸 Volver al español'; }
+    a.addEventListener('click', function(){ a.href = (enIngles ? ES : EN) + location.hash; });
   });
 })();
 </script>
