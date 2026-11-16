@@ -478,7 +478,7 @@
     font-family:-apple-system,'Segoe UI',sans-serif;box-shadow:0 4px 18px rgba(0,0,0,.25)}
   .idiomas{position:absolute;top:14px;right:14px;z-index:2;display:flex;gap:6px}
   .idioma{background:rgba(0,0,0,.45);color:#fff;text-decoration:none;
-    border:1px solid rgba(255,255,255,.5);border-radius:20px;padding:6px 12px;font:600 .85rem -apple-system,'Segoe UI',sans-serif}
+    border:1px solid rgba(255,255,255,.5);border-radius:16px;padding:2px 7px;font:1.05rem/1.4 -apple-system,'Segoe UI',sans-serif}
   .tema-btn{flex:0 0 auto;background:none;border:1px solid var(--linea);border-radius:9px;
     width:36px;height:36px;font-size:.95rem;cursor:pointer;margin-left:8px;color:var(--tinta2)}
   .tema-btn:hover{border-color:var(--oro);color:var(--oro)}
@@ -862,7 +862,7 @@
 <body>
 
 <header class="hero">
-  <div class="idiomas"><a class="idioma" data-idioma="en" href="https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&amp;_x_tr_tl=en&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp">🇬🇧 English</a><a class="idioma" data-idioma="th" href="https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&amp;_x_tr_tl=th&amp;_x_tr_hl=th&amp;_x_tr_pto=wapp">🇹🇭 ไทย</a></div>
+  <div class="idiomas"><a class="idioma" data-idioma="en" href="https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&amp;_x_tr_tl=en&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp" aria-label="English" title="English">🇬🇧</a></div>
   <div class="hero-inner">
     <div class="fechas">Salida de Madrid el 29 oct · en Tailandia del 30 oct al 20 nov de 2026 · 21 noches</div>
     <h1>Tailandia con calma</h1>
@@ -895,8 +895,6 @@
   </button>
   <div class="menu-panel" id="menuInfo">
     <button id="temaMenu" class="tema-en-menu">☾ Modo oscuro</button>
-    <a href="https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&amp;_x_tr_tl=en&amp;_x_tr_hl=en&amp;_x_tr_pto=wapp" data-idioma="en" onclick="cerrarMenuInfo()">🇬🇧 Read it in English</a>
-    <a href="https://iaadileli-github-io.translate.goog/viaje-tailandia-2026/?_x_tr_sl=es&amp;_x_tr_tl=th&amp;_x_tr_hl=th&amp;_x_tr_pto=wapp" data-idioma="th" onclick="cerrarMenuInfo()">🇹🇭 อ่านเป็นภาษาไทย</a>
     <div class="cab">Sobre la marcha</div>
     <a href="#calendario" onclick="cerrarMenuInfo()">📅 Calendario del viaje</a>
     <a href="#hablar" onclick="cerrarMenuInfo()">🗣️ Hablar tailandés</a>
@@ -4319,7 +4317,7 @@ function avisaNueva(reg){
     a.setAttribute('translate', 'no');          // que Google no traduzca las propias banderas
     a.classList.add('notranslate');
     var vuelve = (l === ahora);                  // la bandera del idioma actual pasa a ser «volver al español»
-    if (vuelve) a.textContent = a.classList.contains('idioma') ? '🇪🇸 Español' : '🇪🇸 Volver al español';
+    if (vuelve) { a.textContent = '🇪🇸'; a.setAttribute('aria-label', 'Español'); a.title = 'Español'; }
     a.href = vuelve ? ES : url(l);
     a.addEventListener('click', function(){ a.href = (vuelve ? ES : url(l)) + location.hash; });
   });
