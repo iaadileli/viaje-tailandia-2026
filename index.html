@@ -3241,7 +3241,7 @@ function avisaNueva(reg){
           if (hit) { try { localStorage.setItem('tailandia2026-rebajar', '1'); } catch(e){} }
           return caches.keys();
         })
-        .then(function(ks){ return Promise.all(ks.map(function(k){ return caches.delete(k); })); })
+        .then(function(ks){ return Promise.all(ks.filter(function(k){ return k.indexOf('tailandia2026-') === 0; }).map(function(k){ return caches.delete(k); })); })
         .then(function(){ setTimeout(recarga, 300); })
         .catch(function(){ setTimeout(recarga, 300); });
     } else {
